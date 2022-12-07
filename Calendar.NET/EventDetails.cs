@@ -137,7 +137,7 @@ namespace Calendar.NET
            // chkEnableTooltip.Checked = _event.TooltipEnabled;
 
             Text = char.ToUpper(_event.EventText[0]) + _event.EventText.Substring(1) + " Details";
-            MessageBox.Show(Text);
+            
             _newEvent = _event.Clone();
         }
 

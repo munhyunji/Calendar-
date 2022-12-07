@@ -44,6 +44,8 @@ namespace Calendar.NETDemo
             calendar1.CalendarView = CalendarViews.Month;
             calendar1.AllowEditingEvents = true;
 
+
+            
             dateTimePicker1.Format = DateTimePickerFormat.Long;//날짜 + 시간 형태
             dateTimePicker2.Format = DateTimePickerFormat.Time;
             dateTimePicker2.ShowUpDown = true;
@@ -100,44 +102,53 @@ namespace Calendar.NETDemo
         /// <param name="e"></param>
         private void AddEvent2_Click(object sender, EventArgs e)
         {
-            DateTime dt = dateTimePicker1.Value;
-            DateTime dt_time = dateTimePicker2.Value;
-
-            Color user_color = colorDialog2.Color;
-
-            if (user_color == Color.Black)
+            if (dateTimePicker1.Checked == true)
             {
-                user_color = Color.Transparent;
-            }
-            String user_color_string = user_color.ToString();
-
-
-            String datetime = dt.ToString("yyyy-MM-dd");
-            //String datetime_time = dt_time.ToString("HH:mm:ss");
-           // String total_datetime = datetime + " " + datetime_time;
-            String total_datetime = datetime;
-
-            var Specimen = new CustomEvent
-            {
-                Date = DateTime.Parse(total_datetime),
-                EventText = gum_name.Text,
-                EventColor = user_color,
-                EventLengthInHours = 2f,
-                RecurringFrequency = RecurringFrequencies.None,
-                EventFont = new Font("나눔고딕", 10, FontStyle.Regular),
-                EventTextColor = Color.Black
-            };
-
-                calendar1.AddEvent(Specimen);
-
-            XML_save(gum_name.Text, total_datetime, user_color_string, null, "GumChe");
+                    DateTime dt = dateTimePicker1.Value;
+                    DateTime dt_time = dateTimePicker2.Value;
            
-            if (!string.IsNullOrEmpty(gum_name.Text))
-            {
-                comboBox1.Items.Add(gum_name.Text);
-            }
-            gum_name.Text = "";
 
+                Color user_color = colorDialog2.Color;
+
+                if (user_color == Color.Black)
+                {
+                    user_color = Color.Transparent;
+                }
+                String user_color_string = user_color.ToString();
+
+
+                String datetime = dt.ToString("yyyy-MM-dd");
+                //String datetime_time = dt_time.ToString("HH:mm:ss");
+               // String total_datetime = datetime + " " + datetime_time;
+                String total_datetime = datetime;
+
+                var Specimen = new CustomEvent
+                {
+                    Date = DateTime.Parse(total_datetime),
+                    EventText = gum_name.Text,
+                    EventColor = user_color,
+                    EventLengthInHours = 2f,
+                    RecurringFrequency = RecurringFrequencies.None,
+                    EventFont = new Font("나눔고딕", 10, FontStyle.Regular),
+                    Rank = 1,
+                    EventTextColor = Color.Black
+                };
+
+                    calendar1.AddEvent(Specimen);
+
+                XML_save(gum_name.Text, total_datetime, user_color_string, null, "GumChe");
+           
+                if (!string.IsNullOrEmpty(gum_name.Text))
+                {
+                    comboBox1.Items.Add(gum_name.Text);
+                }
+                gum_name.Text = "";
+                dateTimePicker1.Checked = false;
+                }
+            else
+            {
+                MessageBox.Show("날짜를 선택하세요");
+            }
         }
 
 

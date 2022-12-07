@@ -27,6 +27,8 @@ namespace Calendar.NET
         Day = 2
     }
 
+
+
     /// <summary>
     /// A Winforms Calendar Control
     /// </summary>
@@ -54,7 +56,7 @@ namespace Calendar.NET
         private bool _highlightCurrentDay;
         private CalendarViews _calendarView;
         private readonly ScrollPanel _scrollPanel;
-
+       
         private readonly List<IEvent> _events;
         private readonly List<Rectangle> _rectangles;
         private readonly Dictionary<int, Point> _calendarDays;
@@ -65,6 +67,11 @@ namespace Calendar.NET
         private ToolStripMenuItem _miProperties;
         private ToolStripMenuItem 삭제하기ToolStripMenuItem;
         private const int MarginSize = 20;
+
+        XmlDocument xmlDoc;
+        String XmlFileName = "Data.xml";
+
+
 
         /// <summary>
         /// Indicates the font for the times on the day view
@@ -78,6 +85,18 @@ namespace Calendar.NET
                 if (_calendarView == CalendarViews.Day)
                     _scrollPanel.Refresh();
                 else Refresh();
+            }
+        }
+
+        private IEvent _event;
+          
+        public IEvent Event
+        {
+            get { return _event; }
+            set
+            {
+                _event = value;
+                //FillValues();
             }
         }
 
@@ -352,7 +371,6 @@ namespace Calendar.NET
             this._btnToday = new TodayButton();
             this._btnLeft = new NavigateLeftButton();
             this._btnRight = new NavigateRightButton();
-
             this._contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this._miProperties = new System.Windows.Forms.ToolStripMenuItem();
             this.삭제하기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -370,6 +388,7 @@ namespace Calendar.NET
             this._btnToday.HighlightBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
             this._btnToday.HighlightButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this._btnToday.Location = new System.Drawing.Point(19, 20);
+            this._btnToday.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this._btnToday.Name = "_btnToday";
             this._btnToday.Size = new System.Drawing.Size(72, 29);
             this._btnToday.TabIndex = 0;
@@ -387,6 +406,7 @@ namespace Calendar.NET
             this._btnLeft.HighlightBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
             this._btnLeft.HighlightButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this._btnLeft.Location = new System.Drawing.Point(98, 20);
+            this._btnLeft.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this._btnLeft.Name = "_btnLeft";
             this._btnLeft.Size = new System.Drawing.Size(42, 29);
             this._btnLeft.TabIndex = 1;
@@ -404,6 +424,7 @@ namespace Calendar.NET
             this._btnRight.HighlightBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
             this._btnRight.HighlightButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this._btnRight.Location = new System.Drawing.Point(138, 20);
+            this._btnRight.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this._btnRight.Name = "_btnRight";
             this._btnRight.Size = new System.Drawing.Size(42, 29);
             this._btnRight.TabIndex = 2;
@@ -412,24 +433,26 @@ namespace Calendar.NET
             // 
             // _contextMenuStrip1
             // 
+            this._contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this._contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._miProperties,
             this.삭제하기ToolStripMenuItem});
             this._contextMenuStrip1.Name = "_contextMenuStrip1";
-            this._contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            this._contextMenuStrip1.Size = new System.Drawing.Size(144, 52);
             // 
             // _miProperties
             // 
             this._miProperties.Name = "_miProperties";
-            this._miProperties.Size = new System.Drawing.Size(180, 22);
+            this._miProperties.Size = new System.Drawing.Size(143, 24);
             this._miProperties.Text = "일정 속성";
             this._miProperties.Click += new System.EventHandler(this.MenuItemPropertiesClick);
             // 
             // 삭제하기ToolStripMenuItem
             // 
             this.삭제하기ToolStripMenuItem.Name = "삭제하기ToolStripMenuItem";
-            this.삭제하기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.삭제하기ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.삭제하기ToolStripMenuItem.Text = "삭제하기";
+            this.삭제하기ToolStripMenuItem.Click += new System.EventHandler(this.삭제하기ToolStripMenuItem_Click);
             // 
             // Calendar
             // 
@@ -510,11 +533,11 @@ namespace Calendar.NET
                     _showingToolTip = true;
 
 
-                    if (File.Exists("Data.xml"))
+                    if (File.Exists(XmlFileName))
                     {
 
                         XmlDocument xmlDoc = new XmlDocument();
-                        xmlDoc.Load("Data.xml");
+                        xmlDoc.Load(XmlFileName);
 
                         //xml 속성가져오기
 
@@ -1194,5 +1217,48 @@ namespace Calendar.NET
             if (_calendarView == CalendarViews.Day)
                 ResizeScrollPanel();
         }
+
+
+        private void 삭제하기ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           var ed = new EventDetails { Event = _clickedEvent.Event };
+            //sed.Event = false;
+            String eventText = ed.Event.EventText;
+           //String eventDate = ed.Event.Date.ToString();
+
+            if (File.Exists(XmlFileName))
+              {
+
+                     XmlDocument xmlDoc = new XmlDocument();
+                     xmlDoc.Load(XmlFileName);
+
+                     //xml 속성가져오기
+
+                     //시험등록 comboBox에 item추가
+                     XmlNode GumcheNodes = xmlDoc.SelectSingleNode("Root");
+                     if (GumcheNodes != null)
+                     {
+                        for (int i = 0; i < GumcheNodes.ChildNodes.Count; i++)
+                        {
+                            string name_value = GumcheNodes.ChildNodes[i].Attributes["Name"].Value;
+
+                            if (name_value.CompareTo(eventText) == 0)
+                            {
+                                XmlNode deleteNode = GumcheNodes.ChildNodes[i];
+                                XmlNode parentNode = deleteNode.ParentNode; // 삭제할 노드의 부모 노드 찾고
+
+                                parentNode.RemoveChild(deleteNode);
+
+                                xmlDoc.Save(XmlFileName);
+                                xmlDoc = null;
+                            }
+                        }
+                     }
+              }
+
+
+        }
+
+
     }
 }

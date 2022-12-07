@@ -54,34 +54,36 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 36);
+            this.label1.Location = new System.Drawing.Point(18, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 12);
+            this.label1.Size = new System.Drawing.Size(77, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "일정 이름:";
             // 
             // txtEventName
             // 
-            this.txtEventName.Location = new System.Drawing.Point(83, 33);
+            this.txtEventName.Location = new System.Drawing.Point(95, 41);
+            this.txtEventName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEventName.Name = "txtEventName";
-            this.txtEventName.Size = new System.Drawing.Size(233, 21);
+            this.txtEventName.Size = new System.Drawing.Size(266, 25);
             this.txtEventName.TabIndex = 1;
             // 
             // dtDate
             // 
             this.dtDate.CustomFormat = "M/d/yyyy h:mm tt";
             this.dtDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDate.Location = new System.Drawing.Point(83, 12);
+            this.dtDate.Location = new System.Drawing.Point(95, 15);
+            this.dtDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtDate.Name = "dtDate";
-            this.dtDate.Size = new System.Drawing.Size(233, 21);
+            this.dtDate.Size = new System.Drawing.Size(266, 25);
             this.dtDate.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 17);
+            this.label2.Location = new System.Drawing.Point(18, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 12);
+            this.label2.Size = new System.Drawing.Size(77, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "일정 날짜:";
             // 
@@ -93,9 +95,11 @@
             this.gbBasics.Controls.Add(this.label1);
             this.gbBasics.Controls.Add(this.dtDate);
             this.gbBasics.Controls.Add(this.txtEventName);
-            this.gbBasics.Location = new System.Drawing.Point(14, 11);
+            this.gbBasics.Location = new System.Drawing.Point(16, 14);
+            this.gbBasics.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbBasics.Name = "gbBasics";
-            this.gbBasics.Size = new System.Drawing.Size(380, 79);
+            this.gbBasics.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gbBasics.Size = new System.Drawing.Size(434, 99);
             this.gbBasics.TabIndex = 4;
             this.gbBasics.TabStop = false;
             this.gbBasics.Text = "기본설정";
@@ -105,9 +109,10 @@
             this.chkIgnoreTimeComponent.AutoSize = true;
             this.chkIgnoreTimeComponent.Checked = true;
             this.chkIgnoreTimeComponent.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkIgnoreTimeComponent.Location = new System.Drawing.Point(225, 57);
+            this.chkIgnoreTimeComponent.Location = new System.Drawing.Point(257, 71);
+            this.chkIgnoreTimeComponent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkIgnoreTimeComponent.Name = "chkIgnoreTimeComponent";
-            this.chkIgnoreTimeComponent.Size = new System.Drawing.Size(124, 16);
+            this.chkIgnoreTimeComponent.Size = new System.Drawing.Size(154, 19);
             this.chkIgnoreTimeComponent.TabIndex = 5;
             this.chkIgnoreTimeComponent.Text = "시간 표시하지않음";
             this.chkIgnoreTimeComponent.UseVisualStyleBackColor = true;
@@ -116,9 +121,10 @@
             // chkEnabled
             // 
             this.chkEnabled.AutoSize = true;
-            this.chkEnabled.Location = new System.Drawing.Point(32, 57);
+            this.chkEnabled.Location = new System.Drawing.Point(37, 71);
+            this.chkEnabled.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkEnabled.Name = "chkEnabled";
-            this.chkEnabled.Size = new System.Drawing.Size(72, 16);
+            this.chkEnabled.Size = new System.Drawing.Size(89, 19);
             this.chkEnabled.TabIndex = 4;
             this.chkEnabled.Text = "일정삭제";
             this.chkEnabled.UseVisualStyleBackColor = true;
@@ -132,9 +138,11 @@
             this.groupBox1.Controls.Add(this.btnFont);
             this.groupBox1.Controls.Add(this.lblFont);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(14, 96);
+            this.groupBox1.Location = new System.Drawing.Point(16, 120);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(380, 75);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(434, 94);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "일정 상태 설정";
@@ -142,44 +150,47 @@
             // pnlTextColor
             // 
             this.pnlTextColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlTextColor.Location = new System.Drawing.Point(313, 51);
+            this.pnlTextColor.Location = new System.Drawing.Point(358, 64);
+            this.pnlTextColor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlTextColor.Name = "pnlTextColor";
-            this.pnlTextColor.Size = new System.Drawing.Size(35, 14);
+            this.pnlTextColor.Size = new System.Drawing.Size(40, 17);
             this.pnlTextColor.TabIndex = 6;
             this.pnlTextColor.DoubleClick += new System.EventHandler(this.PnlTextColorDoubleClick);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(208, 51);
+            this.label6.Location = new System.Drawing.Point(238, 64);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 12);
+            this.label6.Size = new System.Drawing.Size(112, 15);
             this.label6.TabIndex = 5;
             this.label6.Text = "일정 글씨 색상:";
             // 
             // pnlEventColor
             // 
             this.pnlEventColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlEventColor.Location = new System.Drawing.Point(118, 51);
+            this.pnlEventColor.Location = new System.Drawing.Point(135, 64);
+            this.pnlEventColor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlEventColor.Name = "pnlEventColor";
-            this.pnlEventColor.Size = new System.Drawing.Size(35, 14);
+            this.pnlEventColor.Size = new System.Drawing.Size(40, 17);
             this.pnlEventColor.TabIndex = 4;
             this.pnlEventColor.DoubleClick += new System.EventHandler(this.PnlEventColorDoubleClick);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(39, 51);
+            this.label5.Location = new System.Drawing.Point(45, 64);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 12);
+            this.label5.Size = new System.Drawing.Size(77, 15);
             this.label5.TabIndex = 3;
             this.label5.Text = "일정 색상:";
             // 
             // btnFont
             // 
-            this.btnFont.Location = new System.Drawing.Point(321, 17);
+            this.btnFont.Location = new System.Drawing.Point(367, 21);
+            this.btnFont.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFont.Name = "btnFont";
-            this.btnFont.Size = new System.Drawing.Size(28, 18);
+            this.btnFont.Size = new System.Drawing.Size(32, 22);
             this.btnFont.TabIndex = 2;
             this.btnFont.Text = "...";
             this.btnFont.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -189,9 +200,9 @@
             // lblFont
             // 
             this.lblFont.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblFont.Location = new System.Drawing.Point(113, 18);
+            this.lblFont.Location = new System.Drawing.Point(129, 22);
             this.lblFont.Name = "lblFont";
-            this.lblFont.Size = new System.Drawing.Size(205, 15);
+            this.lblFont.Size = new System.Drawing.Size(234, 19);
             this.lblFont.TabIndex = 1;
             this.lblFont.Text = "폰트설정";
             this.lblFont.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -199,9 +210,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(71, 18);
+            this.label4.Location = new System.Drawing.Point(81, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 12);
+            this.label4.Size = new System.Drawing.Size(42, 15);
             this.label4.TabIndex = 0;
             this.label4.Text = "폰트:";
             // 
@@ -211,9 +222,10 @@
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(27, 177);
+            this.btnOk.Location = new System.Drawing.Point(31, 221);
+            this.btnOk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(87, 21);
+            this.btnOk.Size = new System.Drawing.Size(99, 26);
             this.btnOk.TabIndex = 7;
             this.btnOk.Text = "&확인";
             this.btnOk.UseVisualStyleBackColor = true;
@@ -221,9 +233,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(293, 177);
+            this.btnCancel.Location = new System.Drawing.Point(335, 221);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(87, 21);
+            this.btnCancel.Size = new System.Drawing.Size(99, 26);
             this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "&취소";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -231,15 +244,16 @@
             // 
             // EventDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(406, 222);
+            this.ClientSize = new System.Drawing.Size(464, 278);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbBasics);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "EventDetails";
