@@ -85,8 +85,8 @@
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ddToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.calendar1 = new Calendar.NET.Calendar();
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
+            this.calendar1 = new Calendar.NET.Calendar();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -127,7 +127,7 @@
             this.dateTimePicker1.Checked = false;
             this.dateTimePicker1.CustomFormat = "yyyy-MM-dd hh:mm";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(86, 25);
+            this.dateTimePicker1.Location = new System.Drawing.Point(86, 38);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.ShowCheckBox = true;
@@ -150,6 +150,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.CustomFormat = "HH:mm:ss";
+            this.dateTimePicker2.Enabled = false;
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker2.Location = new System.Drawing.Point(86, 59);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -157,6 +158,7 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(198, 25);
             this.dateTimePicker2.TabIndex = 35;
             this.dateTimePicker2.Value = new System.DateTime(2022, 11, 9, 0, 0, 0, 0);
+            this.dateTimePicker2.Visible = false;
             // 
             // textBox1
             // 
@@ -495,7 +497,7 @@
             // 
             // Test_add
             // 
-            this.Test_add.Location = new System.Drawing.Point(23, 622);
+            this.Test_add.Location = new System.Drawing.Point(19, 544);
             this.Test_add.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Test_add.Name = "Test_add";
             this.Test_add.Size = new System.Drawing.Size(86, 29);
@@ -663,6 +665,7 @@
             this.calendar1.DaysFont = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calendar1.DayViewTimeFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.calendar1.DimDisabledEvents = true;
+            this.calendar1.Event = null;
             this.calendar1.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.calendar1.HighlightCurrentDay = true;
             this.calendar1.LoadPresetHolidays = true;

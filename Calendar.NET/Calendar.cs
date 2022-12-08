@@ -517,17 +517,17 @@ namespace Calendar.NET
         /// <param name="e"></param>
         private void CalendarMouseMove(object sender, MouseEventArgs e)
         {
+           
             if (!_showEventTooltips)
                 return;
-
 
             int num = _calendarEvents.Count;
             for (int i = 0; i < num; i++)
             {
                 var z = _calendarEvents[i];
 
-                if ((z.EventArea.Contains(e.X, e.Y) && z.Event.TooltipEnabled && _calendarView == CalendarViews.Month) ||
-                    (_calendarView == CalendarViews.Day && z.EventArea.Contains(e.X, e.Y + _scrollPanel.ScrollOffset) && z.Event.TooltipEnabled))
+                if ((z.EventArea.Contains(e.X, e.Y) && z.Event.TooltipEnabled && _calendarView == CalendarViews.Month && z.Event.Rank == 2 ) ||
+                    (_calendarView == CalendarViews.Day && z.EventArea.Contains(e.X, e.Y + _scrollPanel.ScrollOffset) && z.Event.TooltipEnabled) && z.Event.Rank == 2)
                 {
                     _eventTip.ShouldRender = false;
                     _showingToolTip = true;
@@ -539,17 +539,16 @@ namespace Calendar.NET
                         XmlDocument xmlDoc = new XmlDocument();
                         xmlDoc.Load(XmlFileName);
 
-                        //xml 속성가져오기
-
-                        //시험등록 comboBox에 item추가
                         XmlNodeList GumcheNodes = xmlDoc.SelectNodes("Root/Test");
                         if (GumcheNodes != null)
                         {
                             foreach (XmlNode emp in GumcheNodes)
                             {
-                                if (emp.Attributes["GumCheName"].Value == z.Event.EventText)
+                                if (emp.Attributes["Name"].Value == z.Event.EventText)
                                     // _eventTip.EventToolTipText = z.Event.EventText;
-                                    _eventTip.EventToolTipText = emp.Attributes["GumCheName"].Value;
+                                    _eventTip.EventToolTipText = "검체 등록 일시 : " + emp.Attributes["GumCheDate"].Value + "\n" + "등록 검체 명 : " + emp.Attributes["GumCheName"].Value;
+                                   
+
                             }
                         }
                     } 

@@ -104,10 +104,9 @@ namespace Calendar.NETDemo
         {
             if (dateTimePicker1.Checked == true)
             {
-                    DateTime dt = dateTimePicker1.Value;
-                    DateTime dt_time = dateTimePicker2.Value;
+                DateTime dt = dateTimePicker1.Value;
+                //DateTime dt_time = dateTimePicker2.Value;
            
-
                 Color user_color = colorDialog2.Color;
 
                 if (user_color == Color.Black)
@@ -121,7 +120,7 @@ namespace Calendar.NETDemo
                 //String datetime_time = dt_time.ToString("HH:mm:ss");
                // String total_datetime = datetime + " " + datetime_time;
                 String total_datetime = datetime;
-
+                
                 var Specimen = new CustomEvent
                 {
                     Date = DateTime.Parse(total_datetime),
@@ -136,11 +135,11 @@ namespace Calendar.NETDemo
 
                     calendar1.AddEvent(Specimen);
 
-                XML_save(gum_name.Text, total_datetime, user_color_string, null, "GumChe");
+                XML_save(gum_name.Text, total_datetime, user_color_string, null, null, "GumChe");
            
                 if (!string.IsNullOrEmpty(gum_name.Text))
                 {
-                    comboBox1.Items.Add(gum_name.Text);
+                    comboBox1.Items.Add("(" + total_datetime + ")"+ gum_name.Text);
                 }
                 gum_name.Text = "";
                 dateTimePicker1.Checked = false;
@@ -184,7 +183,9 @@ namespace Calendar.NETDemo
             //시험명, 시험자 선택 여부
             if (!String.IsNullOrEmpty(test_name) && comboBox2.SelectedIndex != 0 && comboBox1.SelectedIndex != 0 ) {
 
-                String GumCheName = comboBox1.SelectedItem.ToString();
+                String GumCheInfo = comboBox1.SelectedItem.ToString();
+                String GumCheDate = GumCheInfo.Substring(1, 10);
+                String GumCheName = GumCheInfo.Substring(12).TrimStart();
                 
                     var test_case = new CustomEvent
                     {
@@ -194,12 +195,13 @@ namespace Calendar.NETDemo
                         EventLengthInHours = 2f,
                         RecurringFrequency = RecurringFrequencies.None,
                         EventFont = new Font("나눔고딕", 10, FontStyle.Regular),
+                        Rank = 2,
                         EventTextColor = Color.Black,
 
                     };
 
                     calendar1.AddEvent(test_case);
-                    XML_save(test, total_datetime, user_color_string, GumCheName, "Test");
+                    XML_save(test, total_datetime, user_color_string, GumCheName, GumCheDate, "Test");
 
 
                 for (int i = 0; i < test_days.CheckedItems.Count; i++)
@@ -213,7 +215,7 @@ namespace Calendar.NETDemo
                         
 
                         DateTime Added_datetime = dt.AddDays(day);
-                        String Added_datetime_string = Added_datetime.ToString();
+                        String Added_datetime_string = Added_datetime.ToString("yyyy-MM-dd");
 
                         String eventText = Controls["textbox" + day].Text;
                         
@@ -237,7 +239,7 @@ namespace Calendar.NETDemo
                             };
 
                             calendar1.AddEvent(added_test_case);
-                            XML_save(eventText_Total, Added_datetime_string, user_color_string, GumCheName, "Test");
+                            XML_save(eventText_Total, Added_datetime_string, user_color_string, GumCheName, GumCheDate,  "Test");
                     }
                 }
 
@@ -254,7 +256,7 @@ namespace Calendar.NETDemo
         }
 
 
-        private void XML_save(String text, String datetime, String color, String GumName, String nodeName) {
+        private void XML_save(String text, String datetime, String color, String GumCheName, String GumCheDate, String nodeName) {
 
             XmlDocument xmlDoc;
 
@@ -263,8 +265,7 @@ namespace Calendar.NETDemo
 
             if (File.Exists(XmlFileName))
             {
-                //검체등록을 누른경우
-                
+              
                     try
                     {
                         if (!String.IsNullOrEmpty(text))
@@ -273,11 +274,19 @@ namespace Calendar.NETDemo
                             // XmlElement root = xmlDoc.CreateElement("TestInfo");
                             XmlElement childNode = xmlDoc.CreateElement(nodeName);
 
-
+                        if (nodeName == "GumChe") {
                             childNode.SetAttribute("Name", text);
                             childNode.SetAttribute("Datetime", datetime);
                             childNode.SetAttribute("Color", color);
-                            childNode.SetAttribute("GumCheName", GumName);
+                            
+                        } else
+                        {
+                            childNode.SetAttribute("Name", text);
+                            childNode.SetAttribute("Datetime", datetime);
+                            childNode.SetAttribute("Color", color);
+                            childNode.SetAttribute("GumCheName", GumCheName);
+                            childNode.SetAttribute("GumCheDate", GumCheDate);
+                        }
 
                             node.AppendChild(childNode);
                             //node.AppendChild(root);

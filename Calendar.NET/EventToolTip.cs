@@ -90,9 +90,9 @@ namespace Calendar.NET
             InitializeComponent();
 
             _shouldRender = false;
-            _eventToolTipBorderColor = Color.Black;
-            _eventToolTipColor = Color.Yellow;
-            _eventToolTipFont = new Font("Arial", 10, FontStyle.Regular);
+            _eventToolTipBorderColor = Color.Transparent;
+            _eventToolTipColor = Color.Beige;
+            _eventToolTipFont = new Font("나눔고딕", 10, FontStyle.Regular);
             _eventToolTipText = "";
             _eventToolTipTextColor = Color.Black;
             _eventToolTipMargins = new Margin { Top = 10, Right = 10, Bottom = 10, Left = 10 };
