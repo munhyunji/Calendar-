@@ -129,7 +129,7 @@ namespace Calendar.NET
             dtDate.CustomFormat = _event.IgnoreTimeComponent ? "M/d/yyyy" : "M/d/yyyy h:mm tt";
            // cbRecurringFrequency.SelectedItem = RecurringFrequencyToString(_event.RecurringFrequency);
            // chkThisDayForwardOnly.Enabled = _event.RecurringFrequency != RecurringFrequencies.None;
-            chkEnabled.Checked = _event.Enabled;
+            //chkEnabled.Checked = _event.Enabled;
             lblFont.Text = _event.EventFont.FontFamily.Name + " " + _event.EventFont.Size.ToString(CultureInfo.InvariantCulture) + "pt";
             pnlEventColor.BackColor = _event.EventColor;
             pnlTextColor.BackColor = _event.EventTextColor;
@@ -245,5 +245,6 @@ namespace Calendar.NET
             DialogResult = DialogResult.Cancel;
             Close();
         }
+
     }
 }

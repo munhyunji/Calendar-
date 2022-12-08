@@ -1222,9 +1222,9 @@ namespace Calendar.NET
         private void 삭제하기ToolStripMenuItem_Click(object sender, EventArgs e)
         {
            var ed = new EventDetails { Event = _clickedEvent.Event };
-            //sed.Event = false;
+            
             String eventText = ed.Event.EventText;
-           //String eventDate = ed.Event.Date.ToString();
+            String eventDate = ed.Event.Date.ToString("yyyy-MM-dd");
 
             if (File.Exists(XmlFileName))
               {
@@ -1241,9 +1241,11 @@ namespace Calendar.NET
                         for (int i = 0; i < GumcheNodes.ChildNodes.Count; i++)
                         {
                             string name_value = GumcheNodes.ChildNodes[i].Attributes["Name"].Value;
-
-                            if (name_value.CompareTo(eventText) == 0)
-                            {
+                            string date_value = GumcheNodes.ChildNodes[i].Attributes["Datetime"].Value;
+                            
+                            if (name_value.CompareTo(eventText) == 0 && date_value.CompareTo(eventDate) == 0)
+                            {   
+                                //xml 노드삭제
                                 XmlNode deleteNode = GumcheNodes.ChildNodes[i];
                                 XmlNode parentNode = deleteNode.ParentNode; // 삭제할 노드의 부모 노드 찾고
 
@@ -1251,6 +1253,10 @@ namespace Calendar.NET
 
                                 xmlDoc.Save(XmlFileName);
                                 xmlDoc = null;
+                                
+                                //이벤트 삭제
+                                RemoveEvent(_clickedEvent.Event);
+                                Refresh();
                             }
                         }
                      }

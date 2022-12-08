@@ -121,11 +121,14 @@
             // chkEnabled
             // 
             this.chkEnabled.AutoSize = true;
+            this.chkEnabled.Checked = true;
+            this.chkEnabled.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkEnabled.Location = new System.Drawing.Point(37, 71);
             this.chkEnabled.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkEnabled.Name = "chkEnabled";
             this.chkEnabled.Size = new System.Drawing.Size(89, 19);
             this.chkEnabled.TabIndex = 4;
+            this.chkEnabled.TabStop = false;
             this.chkEnabled.Text = "일정삭제";
             this.chkEnabled.UseVisualStyleBackColor = true;
             // 
