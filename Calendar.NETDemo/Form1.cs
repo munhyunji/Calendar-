@@ -143,6 +143,8 @@ namespace Calendar.NETDemo
                 }
                 gum_name.Text = "";
                 dateTimePicker1.Checked = false;
+                colorDialog2.Color = Color.Transparent;
+                panel2.BackColor = Color.Transparent;
                 }
             else
             {
@@ -246,7 +248,7 @@ namespace Calendar.NETDemo
                 //선택사항 초기화 
                 testTitle.Text = "";
                 comboBox2.SelectedIndex = 0;
-               
+                panel1.BackColor = Color.Transparent;
                 colorDialog1.Color = Color.Transparent;
 
             } else
