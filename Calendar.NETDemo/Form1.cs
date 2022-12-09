@@ -248,8 +248,8 @@ namespace Calendar.NETDemo
                 //선택사항 초기화 
                 testTitle.Text = "";
                 comboBox2.SelectedIndex = 0;
-                panel1.BackColor = Color.Transparent;
-                colorDialog1.Color = Color.Transparent;
+               // panel1.BackColor = Color.Transparent;
+               // colorDialog1.Color = Color.Transparent;
 
             } else
             {
