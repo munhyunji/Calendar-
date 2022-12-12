@@ -139,7 +139,7 @@ namespace Calendar.NETDemo
            
                 if (!string.IsNullOrEmpty(gum_name.Text))
                 {
-                    comboBox1.Items.Add("(" + total_datetime + ")"+ gum_name.Text);
+                    comboBox1.Items.Add("(" + total_datetime + ") "+ gum_name.Text);
                 }
                 gum_name.Text = "";
                 dateTimePicker1.Checked = false;
@@ -248,8 +248,8 @@ namespace Calendar.NETDemo
                 //선택사항 초기화 
                 testTitle.Text = "";
                 comboBox2.SelectedIndex = 0;
-               // panel1.BackColor = Color.Transparent;
-               // colorDialog1.Color = Color.Transparent;
+                panel1.BackColor = Color.Transparent;
+                colorDialog1.Color = Color.Transparent;
 
             } else
             {
@@ -381,7 +381,7 @@ namespace Calendar.NETDemo
                     {
                         foreach (XmlElement GumcheNode in GumcheNodes)
                         {
-                            comboBox1.Items.Add(GumcheNode.Attributes["Name"].Value);
+                            comboBox1.Items.Add("{" + GumcheNode.Attributes["Datetime"].Value +") " + GumcheNode.Attributes["Name"].Value);
                         }
                     }
 
