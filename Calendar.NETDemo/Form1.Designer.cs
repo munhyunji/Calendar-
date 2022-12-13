@@ -669,7 +669,7 @@
             this.calendar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.calendar1.HighlightCurrentDay = true;
             this.calendar1.LoadPresetHolidays = true;
-            this.calendar1.Location = new System.Drawing.Point(333, 15);
+            this.calendar1.Location = new System.Drawing.Point(332, 1);
             this.calendar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.calendar1.Name = "calendar1";
             this.calendar1.ShowArrowControls = true;
@@ -678,7 +678,7 @@
             this.calendar1.ShowDisabledEvents = false;
             this.calendar1.ShowEventTooltips = true;
             this.calendar1.ShowTodayButton = true;
-            this.calendar1.Size = new System.Drawing.Size(1163, 875);
+            this.calendar1.Size = new System.Drawing.Size(1163, 841);
             this.calendar1.TabIndex = 0;
             this.calendar1.TodayFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             // 
@@ -687,7 +687,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1489, 950);
+            this.ClientSize = new System.Drawing.Size(1489, 908);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label18);
