@@ -288,6 +288,7 @@ namespace Calendar.NETDemo
                             childNode.SetAttribute("Color", color);
                             childNode.SetAttribute("GumCheName", GumCheName);
                             childNode.SetAttribute("GumCheDate", GumCheDate);
+                            childNode.SetAttribute("Rank", "2");
                         }
 
                             node.AppendChild(childNode);

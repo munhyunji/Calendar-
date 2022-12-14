@@ -193,10 +193,10 @@
             "13",
             "14"});
             this.test_days.Location = new System.Drawing.Point(59, 490);
-            this.test_days.Margin = new System.Windows.Forms.Padding(17, 38, 34, 38);
+            this.test_days.Margin = new System.Windows.Forms.Padding(17, 38, 34, 50);
             this.test_days.MultiColumn = true;
             this.test_days.Name = "test_days";
-            this.test_days.Size = new System.Drawing.Size(42, 285);
+            this.test_days.Size = new System.Drawing.Size(49, 285);
             this.test_days.TabIndex = 38;
             // 
             // textBox2
@@ -478,7 +478,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(47, 26);
             this.panel2.TabIndex = 76;
-            this.panel2.DoubleClick += new System.EventHandler(this.panel2_DoubleClick);
+            this.panel2.Click += new System.EventHandler(this.panel2_DoubleClick);
             // 
             // groupBox3
             // 
@@ -558,7 +558,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(47, 26);
             this.panel1.TabIndex = 75;
-            this.panel1.DoubleClick += new System.EventHandler(this.panel1_DoubleClick);
+            this.panel1.Click += new System.EventHandler(this.panel1_DoubleClick);
             // 
             // label20
             // 
