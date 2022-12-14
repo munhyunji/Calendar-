@@ -156,7 +156,7 @@ namespace Calendar.NET
         {
             _newEvent.EventText = txtEventName.Text;
             _newEvent.Date = dtDate.Value;
-            _newEvent.Enabled = chkEnabled.Checked;
+           // _newEvent.Enabled = chkEnabled.Checked;
            // _newEvent.RecurringFrequency = StringToRecurringFrequencies(cbRecurringFrequency.SelectedItem.ToString());
            // _newEvent.ThisDayForwardOnly = chkThisDayForwardOnly.Checked;
             _newEvent.IgnoreTimeComponent = chkIgnoreTimeComponent.Checked;

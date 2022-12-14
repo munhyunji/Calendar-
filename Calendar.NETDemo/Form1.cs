@@ -43,9 +43,7 @@ namespace Calendar.NETDemo
             calendar1.CalendarDate = DateTime.Today;
             calendar1.CalendarView = CalendarViews.Month;
             calendar1.AllowEditingEvents = true;
-
-
-            
+         
             dateTimePicker1.Format = DateTimePickerFormat.Long;//날짜 + 시간 형태
             dateTimePicker2.Format = DateTimePickerFormat.Time;
             dateTimePicker2.ShowUpDown = true;
@@ -53,7 +51,12 @@ namespace Calendar.NETDemo
             comboBox1.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
 
+            
+
             Form1_Load();
+
+
+
 
 
 
