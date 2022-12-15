@@ -1,18 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using Calendar.NET;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 using System.Xml;
 using System.IO;
 using System.Text.RegularExpressions;
-
 
 
 namespace Calendar.NETDemo
@@ -51,14 +43,8 @@ namespace Calendar.NETDemo
             comboBox1.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
 
-            
-
+        
             Form1_Load();
-
-
-
-
-
 
              //var ce = new CustomEvent();
 
@@ -123,28 +109,29 @@ namespace Calendar.NETDemo
                 //String datetime_time = dt_time.ToString("HH:mm:ss");
                // String total_datetime = datetime + " " + datetime_time;
                 String total_datetime = datetime;
+                String GumCheName = gum_name.Texts;
                 
                 var Specimen = new CustomEvent
                 {
                     Date = DateTime.Parse(total_datetime),
-                    EventText = gum_name.Text,
+                    EventText = GumCheName,
                     EventColor = user_color,
                     EventLengthInHours = 2f,
                     RecurringFrequency = RecurringFrequencies.None,
-                    EventFont = new Font("나눔고딕", 10, FontStyle.Regular),
+                    EventFont = new Font("나눔고딕", 8, FontStyle.Regular),
                     Rank = 1,
                     EventTextColor = Color.Black
                 };
 
-                    calendar1.AddEvent(Specimen);
+                 calendar1.AddEvent(Specimen);
 
-                XML_save(gum_name.Text, total_datetime, user_color_string, null, null, "GumChe");
+                 XML_save(GumCheName, total_datetime, user_color_string, null, null, "GumChe");
            
-                if (!string.IsNullOrEmpty(gum_name.Text))
+                if (!string.IsNullOrEmpty(GumCheName))
                 {
-                    comboBox1.Items.Add("(" + total_datetime + ") "+ gum_name.Text);
+                    comboBox1.Items.Add("(" + total_datetime + ") "+ GumCheName);
                 }
-                gum_name.Text = "";
+                gum_name.Texts = "";
                 dateTimePicker1.Checked = false;
                 colorDialog2.Color = Color.Transparent;
                 panel2.BackColor = Color.Transparent;
@@ -172,10 +159,12 @@ namespace Calendar.NETDemo
             //String total_datetime = datetime + " " + datetime_time;
             String total_datetime = datetime;
 
-            String test_name = testTitle.Text;
+            String test_name = testTitle.Texts;
+
+           
             String test_person = comboBox2.SelectedItem.ToString();
 
-            String test = test_name + " - " + test_person;
+            String test = test_name + "[" + test_person+ "]";
 
             Color user_color = colorDialog1.Color;
           
@@ -199,7 +188,7 @@ namespace Calendar.NETDemo
                         EventColor = user_color,
                         EventLengthInHours = 2f,
                         RecurringFrequency = RecurringFrequencies.None,
-                        EventFont = new Font("나눔고딕", 10, FontStyle.Regular),
+                        EventFont = new Font("나눔고딕", 8, FontStyle.Regular),
                         Rank = 2,
                         EventTextColor = Color.Black,
 
@@ -215,20 +204,20 @@ namespace Calendar.NETDemo
                     {
                        int day =  Convert.ToInt32(test_days.CheckedItems[i].ToString());
                        
-                        //String ppo = Controls["textbox" + i].Text;
-                        //MessageBox.Show(ppo);
-                        
+                        Control ppo = Controls.Find("rjTextBox"+day, true)[0];
+
+                        String eventText = ((CustomControls.RJControls.RJTextBox)ppo).Texts;
+
+                        //MessageBox.Show(tt);
 
                         DateTime Added_datetime = dt.AddDays(day);
                         String Added_datetime_string = Added_datetime.ToString("yyyy-MM-dd");
-
-                        String eventText = Controls["textbox" + day].Text;
-                        
-                        if(String.IsNullOrEmpty(eventText))
+                  
+                        if (string.IsNullOrEmpty(eventText))
                         {
-                           eventText = "계수";
+                            eventText = "계수";
                         }
-
+                        
                         String eventText_Total = test_name+ " " + day + "일차 " + eventText;
 
                             var added_test_case = new CustomEvent
@@ -238,7 +227,7 @@ namespace Calendar.NETDemo
                                 EventColor = user_color,
                                 EventLengthInHours = 2f,
                                 RecurringFrequency = RecurringFrequencies.None,
-                                EventFont = new Font("나눔고딕", 10, FontStyle.Regular),
+                                EventFont = new Font("나눔고딕", 8, FontStyle.Regular),
                                 EventTextColor = Color.Black,
 
                             };
@@ -249,7 +238,7 @@ namespace Calendar.NETDemo
                 }
 
                 //선택사항 초기화 
-                testTitle.Text = "";
+                testTitle.Texts = "";
                 comboBox2.SelectedIndex = 0;
                 panel1.BackColor = Color.Transparent;
                 colorDialog1.Color = Color.Transparent;
@@ -424,5 +413,6 @@ namespace Calendar.NETDemo
                 panel2.BackColor = colorDialog2.Color;
             }
         }
+
     }
 }

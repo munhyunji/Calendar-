@@ -30,26 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.gum_name = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.test_days = new System.Windows.Forms.CheckedListBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
             this.Text_date = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -65,18 +47,13 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.Test_add = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.testTitle = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.Uncheck = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -86,66 +63,34 @@
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.calendar1 = new Calendar.NET.Calendar();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new Calendar.NETDemo.RashiDateTimePicker();
+            this.gum_name = new CustomControls.RJControls.RJTextBox();
             this.AddEvent2 = new Calendar.NETDemo.RJButton();
-            this.groupBox1.SuspendLayout();
+            this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox14 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox13 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox12 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox11 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox10 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox9 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox8 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox7 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox6 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox5 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox4 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox3 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox2 = new CustomControls.RJControls.RJTextBox();
+            this.gum_amt = new CustomControls.RJControls.RJTextBox();
+            this.testTitle = new CustomControls.RJControls.RJTextBox();
+            this.Test_add = new Calendar.NETDemo.RJButton();
+            this.Uncheck = new Calendar.NETDemo.RJButton();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // gum_name
-            // 
-            this.gum_name.BackColor = System.Drawing.SystemColors.Window;
-            this.gum_name.ForeColor = System.Drawing.SystemColors.Window;
-            this.gum_name.Location = new System.Drawing.Point(86, 25);
-            this.gum_name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gum_name.Multiline = true;
-            this.gum_name.Name = "gum_name";
-            this.gum_name.Size = new System.Drawing.Size(146, 25);
-            this.gum_name.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(16, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 17);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "검체명";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(12, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 17);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "인수일시";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Checked = false;
-            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd hh:mm";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(86, 38);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.ShowCheckBox = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(198, 25);
-            this.dateTimePicker1.TabIndex = 14;
-            this.dateTimePicker1.Value = new System.DateTime(2022, 12, 4, 0, 0, 0, 0);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(192, 434);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(114, 20);
-            this.textBox1.TabIndex = 40;
             // 
             // test_days
             // 
@@ -171,140 +116,18 @@
             "12",
             "13",
             "14"});
-            this.test_days.Location = new System.Drawing.Point(37, 225);
+            this.test_days.Location = new System.Drawing.Point(17, 266);
             this.test_days.Margin = new System.Windows.Forms.Padding(17, 38, 34, 50);
             this.test_days.MultiColumn = true;
             this.test_days.Name = "test_days";
             this.test_days.Size = new System.Drawing.Size(49, 280);
             this.test_days.TabIndex = 38;
             // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox2.Location = new System.Drawing.Point(192, 460);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(114, 20);
-            this.textBox2.TabIndex = 41;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(192, 487);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(114, 20);
-            this.textBox3.TabIndex = 42;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(192, 514);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(114, 20);
-            this.textBox4.TabIndex = 43;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(192, 542);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(114, 20);
-            this.textBox5.TabIndex = 44;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(192, 570);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(114, 20);
-            this.textBox6.TabIndex = 45;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(192, 597);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(114, 20);
-            this.textBox7.TabIndex = 46;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(192, 625);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(114, 20);
-            this.textBox8.TabIndex = 47;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(192, 653);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(114, 20);
-            this.textBox9.TabIndex = 48;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox10.Location = new System.Drawing.Point(170, 429);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(114, 20);
-            this.textBox10.TabIndex = 49;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(192, 705);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(114, 20);
-            this.textBox11.TabIndex = 50;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox12.Location = new System.Drawing.Point(170, 483);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(114, 20);
-            this.textBox12.TabIndex = 51;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox13.Location = new System.Drawing.Point(170, 510);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(114, 20);
-            this.textBox13.TabIndex = 52;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox14.Location = new System.Drawing.Point(170, 538);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox14.Multiline = true;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(114, 20);
-            this.textBox14.TabIndex = 53;
-            // 
             // Text_date
             // 
             this.Text_date.AutoSize = true;
             this.Text_date.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Text_date.Location = new System.Drawing.Point(16, 155);
+            this.Text_date.Location = new System.Drawing.Point(18, 195);
             this.Text_date.Name = "Text_date";
             this.Text_date.Size = new System.Drawing.Size(96, 17);
             this.Text_date.TabIndex = 55;
@@ -314,7 +137,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(148, 435);
+            this.label5.Location = new System.Drawing.Point(124, 195);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 17);
             this.label5.TabIndex = 56;
@@ -324,7 +147,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(147, 461);
+            this.label6.Location = new System.Drawing.Point(126, 225);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 17);
             this.label6.TabIndex = 57;
@@ -334,7 +157,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(148, 488);
+            this.label7.Location = new System.Drawing.Point(127, 253);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 17);
             this.label7.TabIndex = 58;
@@ -344,7 +167,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label8.Location = new System.Drawing.Point(148, 515);
+            this.label8.Location = new System.Drawing.Point(127, 280);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 17);
             this.label8.TabIndex = 59;
@@ -354,7 +177,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label9.Location = new System.Drawing.Point(148, 543);
+            this.label9.Location = new System.Drawing.Point(127, 308);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(45, 17);
             this.label9.TabIndex = 60;
@@ -364,7 +187,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label10.Location = new System.Drawing.Point(148, 571);
+            this.label10.Location = new System.Drawing.Point(127, 335);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(45, 17);
             this.label10.TabIndex = 61;
@@ -374,7 +197,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label11.Location = new System.Drawing.Point(148, 598);
+            this.label11.Location = new System.Drawing.Point(127, 362);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(45, 17);
             this.label11.TabIndex = 62;
@@ -384,7 +207,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label12.Location = new System.Drawing.Point(148, 626);
+            this.label12.Location = new System.Drawing.Point(127, 393);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(45, 17);
             this.label12.TabIndex = 63;
@@ -394,7 +217,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label13.Location = new System.Drawing.Point(148, 654);
+            this.label13.Location = new System.Drawing.Point(127, 421);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(45, 17);
             this.label13.TabIndex = 64;
@@ -404,7 +227,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label14.Location = new System.Drawing.Point(118, 430);
+            this.label14.Location = new System.Drawing.Point(118, 448);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(54, 17);
             this.label14.TabIndex = 65;
@@ -414,7 +237,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label15.Location = new System.Drawing.Point(140, 706);
+            this.label15.Location = new System.Drawing.Point(119, 475);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(50, 18);
             this.label15.TabIndex = 66;
@@ -424,7 +247,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label16.Location = new System.Drawing.Point(118, 484);
+            this.label16.Location = new System.Drawing.Point(118, 505);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(54, 17);
             this.label16.TabIndex = 67;
@@ -434,7 +257,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label17.Location = new System.Drawing.Point(118, 511);
+            this.label17.Location = new System.Drawing.Point(118, 535);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(54, 17);
             this.label17.TabIndex = 68;
@@ -444,94 +267,46 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label18.Location = new System.Drawing.Point(118, 539);
+            this.label18.Location = new System.Drawing.Point(118, 564);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(54, 17);
             this.label18.TabIndex = 69;
             this.label18.Text = "14일차";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.AddEvent2);
-            this.groupBox1.Controls.Add(this.panel2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.gum_name);
-            this.groupBox1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox1.Location = new System.Drawing.Point(22, 30);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(304, 102);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = " 검체등록";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(239, 24);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(47, 26);
-            this.panel2.TabIndex = 76;
-            this.panel2.Click += new System.EventHandler(this.panel2_DoubleClick);
-            // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.dateTimePicker1);
-            this.groupBox3.Controls.Add(this.dateTimePicker2);
             this.groupBox3.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox3.ForeColor = System.Drawing.Color.Black;
             this.groupBox3.Location = new System.Drawing.Point(22, 140);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Size = new System.Drawing.Size(304, 102);
+            this.groupBox3.Size = new System.Drawing.Size(304, 86);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "등록일자";
-            // 
-            // Test_add
-            // 
-            this.Test_add.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Test_add.Location = new System.Drawing.Point(19, 530);
-            this.Test_add.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Test_add.Name = "Test_add";
-            this.Test_add.Size = new System.Drawing.Size(86, 29);
-            this.Test_add.TabIndex = 3;
-            this.Test_add.Text = "시험 등록";
-            this.Test_add.UseVisualStyleBackColor = true;
-            this.Test_add.Click += new System.EventHandler(this.Test_add_Click);
+            this.groupBox3.Text = "인수일시";
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "시험자 선택",
-            "강희해",
-            "신아라",
-            "장서영",
-            "문미래"});
-            this.comboBox2.Location = new System.Drawing.Point(71, 109);
+            "희해",
+            "아라",
+            "서영",
+            "미래"});
+            this.comboBox2.Location = new System.Drawing.Point(72, 143);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(213, 25);
             this.comboBox2.TabIndex = 36;
             // 
-            // testTitle
-            // 
-            this.testTitle.Location = new System.Drawing.Point(71, 69);
-            this.testTitle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.testTitle.Name = "testTitle";
-            this.testTitle.Size = new System.Drawing.Size(161, 25);
-            this.testTitle.TabIndex = 73;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(16, 112);
+            this.label4.Location = new System.Drawing.Point(17, 146);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 17);
             this.label4.TabIndex = 37;
@@ -547,70 +322,81 @@
             this.label3.TabIndex = 19;
             this.label3.Text = "시험명";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(239, 69);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(47, 24);
-            this.panel1.TabIndex = 75;
-            this.panel1.Click += new System.EventHandler(this.panel1_DoubleClick);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label20.Location = new System.Drawing.Point(135, 155);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(152, 17);
-            this.label20.TabIndex = 72;
-            this.label20.Text = "내용작성 안할시 \'계수\'";
-            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.rjTextBox1);
+            this.groupBox2.Controls.Add(this.rjTextBox14);
+            this.groupBox2.Controls.Add(this.rjTextBox13);
+            this.groupBox2.Controls.Add(this.rjTextBox12);
+            this.groupBox2.Controls.Add(this.rjTextBox11);
+            this.groupBox2.Controls.Add(this.rjTextBox10);
+            this.groupBox2.Controls.Add(this.rjTextBox9);
+            this.groupBox2.Controls.Add(this.rjTextBox8);
+            this.groupBox2.Controls.Add(this.rjTextBox7);
+            this.groupBox2.Controls.Add(this.rjTextBox6);
+            this.groupBox2.Controls.Add(this.rjTextBox5);
+            this.groupBox2.Controls.Add(this.rjTextBox4);
+            this.groupBox2.Controls.Add(this.rjTextBox3);
+            this.groupBox2.Controls.Add(this.rjTextBox2);
+            this.groupBox2.Controls.Add(this.gum_amt);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.testTitle);
+            this.groupBox2.Controls.Add(this.panel1);
+            this.groupBox2.Controls.Add(this.Test_add);
             this.groupBox2.Controls.Add(this.Uncheck);
             this.groupBox2.Controls.Add(this.label19);
+            this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.label20);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.panel1);
+            this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.testTitle);
+            this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.Test_add);
             this.groupBox2.Controls.Add(this.Text_date);
             this.groupBox2.Controls.Add(this.test_days);
-            this.groupBox2.Controls.Add(this.textBox14);
-            this.groupBox2.Controls.Add(this.textBox10);
-            this.groupBox2.Controls.Add(this.textBox12);
-            this.groupBox2.Controls.Add(this.textBox13);
             this.groupBox2.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox2.Location = new System.Drawing.Point(22, 250);
+            this.groupBox2.ForeColor = System.Drawing.Color.Black;
+            this.groupBox2.Location = new System.Drawing.Point(22, 234);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(304, 580);
+            this.groupBox2.Size = new System.Drawing.Size(304, 685);
             this.groupBox2.TabIndex = 76;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "시험등록";
+            this.groupBox2.Text = "시험";
             // 
-            // Uncheck
+            // label1
             // 
-            this.Uncheck.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Uncheck.Location = new System.Drawing.Point(19, 184);
-            this.Uncheck.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Uncheck.Name = "Uncheck";
-            this.Uncheck.Size = new System.Drawing.Size(86, 29);
-            this.Uncheck.TabIndex = 77;
-            this.Uncheck.Text = "전체해제";
-            this.Uncheck.UseVisualStyleBackColor = true;
-            this.Uncheck.Click += new System.EventHandler(this.Uncheck_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(17, 109);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 17);
+            this.label1.TabIndex = 81;
+            this.label1.Text = "검체량";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Location = new System.Drawing.Point(238, 69);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(51, 25);
+            this.panel1.TabIndex = 77;
+            this.panel1.Click += new System.EventHandler(this.panel1_DoubleClick);
             // 
             // label19
             // 
@@ -678,7 +464,7 @@
             this.calendar1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.calendar1.HighlightCurrentDay = true;
             this.calendar1.LoadPresetHolidays = true;
-            this.calendar1.Location = new System.Drawing.Point(332, 1);
+            this.calendar1.Location = new System.Drawing.Point(331, 1);
             this.calendar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.calendar1.Name = "calendar1";
             this.calendar1.ShowArrowControls = true;
@@ -687,7 +473,7 @@
             this.calendar1.ShowDisabledEvents = false;
             this.calendar1.ShowEventTooltips = true;
             this.calendar1.ShowTodayButton = true;
-            this.calendar1.Size = new System.Drawing.Size(1163, 849);
+            this.calendar1.Size = new System.Drawing.Size(1204, 837);
             this.calendar1.TabIndex = 0;
             this.calendar1.TodayFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             // 
@@ -696,7 +482,7 @@
             this.dateTimePicker2.CustomFormat = "HH:mm:ss";
             this.dateTimePicker2.Enabled = false;
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(86, 59);
+            this.dateTimePicker2.Location = new System.Drawing.Point(790, 1);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(198, 25);
@@ -704,94 +490,480 @@
             this.dateTimePicker2.Value = new System.DateTime(2022, 11, 9, 0, 0, 0, 0);
             this.dateTimePicker2.Visible = false;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Location = new System.Drawing.Point(248, 31);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(49, 25);
+            this.panel2.TabIndex = 76;
+            this.panel2.Click += new System.EventHandler(this.panel2_DoubleClick);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.gum_name);
+            this.groupBox1.Controls.Add(this.panel2);
+            this.groupBox1.Controls.Add(this.AddEvent2);
+            this.groupBox1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
+            this.groupBox1.Location = new System.Drawing.Point(22, 13);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(304, 119);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = " 검체";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.BorderColor = System.Drawing.Color.Gray;
+            this.dateTimePicker1.BorderSize = 0;
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.InactiveCaptionText;
+            this.dateTimePicker1.FillColor = System.Drawing.Color.Thistle;
+            this.dateTimePicker1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(6, 33);
+            this.dateTimePicker1.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.ShowCheckBox = true;
+            this.dateTimePicker1.Size = new System.Drawing.Size(292, 35);
+            this.dateTimePicker1.TabIndex = 77;
+            this.dateTimePicker1.TextColor = System.Drawing.Color.White;
+            // 
+            // gum_name
+            // 
+            this.gum_name.BackColor = System.Drawing.SystemColors.Window;
+            this.gum_name.BorderColor = System.Drawing.Color.Lavender;
+            this.gum_name.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.gum_name.BorderSize = 2;
+            this.gum_name.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gum_name.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gum_name.ForeColor = System.Drawing.Color.Black;
+            this.gum_name.Location = new System.Drawing.Point(20, 32);
+            this.gum_name.Margin = new System.Windows.Forms.Padding(4);
+            this.gum_name.Multiline = false;
+            this.gum_name.Name = "gum_name";
+            this.gum_name.Padding = new System.Windows.Forms.Padding(7);
+            this.gum_name.PasswordChar = false;
+            this.gum_name.Size = new System.Drawing.Size(222, 37);
+            this.gum_name.TabIndex = 77;
+            this.gum_name.Texts = "";
+            this.gum_name.UnderlinedStyle = false;
+            // 
             // AddEvent2
             // 
-            this.AddEvent2.BackColor = System.Drawing.Color.LightCoral;
-            this.AddEvent2.BackgroundColor = System.Drawing.Color.LightCoral;
+            this.AddEvent2.BackColor = System.Drawing.Color.Thistle;
+            this.AddEvent2.BackgroundColor = System.Drawing.Color.Thistle;
             this.AddEvent2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.AddEvent2.BorderRadius = 0;
+            this.AddEvent2.BorderRadius = 7;
             this.AddEvent2.BorderSize = 0;
             this.AddEvent2.FlatAppearance.BorderSize = 0;
             this.AddEvent2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddEvent2.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.AddEvent2.ForeColor = System.Drawing.Color.White;
-            this.AddEvent2.Location = new System.Drawing.Point(128, 57);
+            this.AddEvent2.Location = new System.Drawing.Point(98, 82);
             this.AddEvent2.Name = "AddEvent2";
-            this.AddEvent2.Size = new System.Drawing.Size(93, 28);
+            this.AddEvent2.Size = new System.Drawing.Size(98, 30);
             this.AddEvent2.TabIndex = 78;
-            this.AddEvent2.Text = "검체 등록";
+            this.AddEvent2.Text = "검체 접수";
             this.AddEvent2.TextColor = System.Drawing.Color.White;
             this.AddEvent2.UseVisualStyleBackColor = false;
+            this.AddEvent2.Click += new System.EventHandler(this.AddEvent2_Click);
+            // 
+            // rjTextBox1
+            // 
+            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox1.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox1.BorderSize = 2;
+            this.rjTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox1.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox1.Location = new System.Drawing.Point(170, 186);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox1.Multiline = true;
+            this.rjTextBox1.Name = "rjTextBox1";
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox1.PasswordChar = false;
+            this.rjTextBox1.Size = new System.Drawing.Size(119, 33);
+            this.rjTextBox1.TabIndex = 98;
+            this.rjTextBox1.Texts = "";
+            this.rjTextBox1.UnderlinedStyle = false;
+            // 
+            // rjTextBox14
+            // 
+            this.rjTextBox14.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox14.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox14.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox14.BorderSize = 2;
+            this.rjTextBox14.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox14.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox14.Location = new System.Drawing.Point(170, 558);
+            this.rjTextBox14.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox14.Multiline = true;
+            this.rjTextBox14.Name = "rjTextBox14";
+            this.rjTextBox14.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox14.PasswordChar = false;
+            this.rjTextBox14.Size = new System.Drawing.Size(119, 34);
+            this.rjTextBox14.TabIndex = 96;
+            this.rjTextBox14.Texts = "";
+            this.rjTextBox14.UnderlinedStyle = false;
+            // 
+            // rjTextBox13
+            // 
+            this.rjTextBox13.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox13.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox13.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox13.BorderSize = 2;
+            this.rjTextBox13.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox13.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox13.Location = new System.Drawing.Point(170, 528);
+            this.rjTextBox13.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox13.Multiline = true;
+            this.rjTextBox13.Name = "rjTextBox13";
+            this.rjTextBox13.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox13.PasswordChar = false;
+            this.rjTextBox13.Size = new System.Drawing.Size(119, 33);
+            this.rjTextBox13.TabIndex = 95;
+            this.rjTextBox13.Texts = "";
+            this.rjTextBox13.UnderlinedStyle = false;
+            // 
+            // rjTextBox12
+            // 
+            this.rjTextBox12.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox12.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox12.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox12.BorderSize = 2;
+            this.rjTextBox12.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox12.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox12.Location = new System.Drawing.Point(170, 498);
+            this.rjTextBox12.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox12.Multiline = true;
+            this.rjTextBox12.Name = "rjTextBox12";
+            this.rjTextBox12.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox12.PasswordChar = false;
+            this.rjTextBox12.Size = new System.Drawing.Size(119, 33);
+            this.rjTextBox12.TabIndex = 94;
+            this.rjTextBox12.Texts = "";
+            this.rjTextBox12.UnderlinedStyle = false;
+            // 
+            // rjTextBox11
+            // 
+            this.rjTextBox11.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox11.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox11.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox11.BorderSize = 2;
+            this.rjTextBox11.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox11.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox11.Location = new System.Drawing.Point(170, 469);
+            this.rjTextBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox11.Multiline = true;
+            this.rjTextBox11.Name = "rjTextBox11";
+            this.rjTextBox11.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox11.PasswordChar = false;
+            this.rjTextBox11.Size = new System.Drawing.Size(119, 33);
+            this.rjTextBox11.TabIndex = 93;
+            this.rjTextBox11.Texts = "";
+            this.rjTextBox11.UnderlinedStyle = false;
+            // 
+            // rjTextBox10
+            // 
+            this.rjTextBox10.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox10.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox10.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox10.BorderSize = 2;
+            this.rjTextBox10.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox10.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox10.Location = new System.Drawing.Point(170, 442);
+            this.rjTextBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox10.Multiline = true;
+            this.rjTextBox10.Name = "rjTextBox10";
+            this.rjTextBox10.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox10.PasswordChar = false;
+            this.rjTextBox10.Size = new System.Drawing.Size(119, 33);
+            this.rjTextBox10.TabIndex = 92;
+            this.rjTextBox10.Texts = "";
+            this.rjTextBox10.UnderlinedStyle = false;
+            // 
+            // rjTextBox9
+            // 
+            this.rjTextBox9.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox9.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox9.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox9.BorderSize = 2;
+            this.rjTextBox9.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox9.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox9.Location = new System.Drawing.Point(170, 415);
+            this.rjTextBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox9.Multiline = true;
+            this.rjTextBox9.Name = "rjTextBox9";
+            this.rjTextBox9.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox9.PasswordChar = false;
+            this.rjTextBox9.Size = new System.Drawing.Size(119, 33);
+            this.rjTextBox9.TabIndex = 91;
+            this.rjTextBox9.Texts = "";
+            this.rjTextBox9.UnderlinedStyle = false;
+            // 
+            // rjTextBox8
+            // 
+            this.rjTextBox8.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox8.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox8.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox8.BorderSize = 2;
+            this.rjTextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox8.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox8.Location = new System.Drawing.Point(170, 385);
+            this.rjTextBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox8.Multiline = true;
+            this.rjTextBox8.Name = "rjTextBox8";
+            this.rjTextBox8.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox8.PasswordChar = false;
+            this.rjTextBox8.Size = new System.Drawing.Size(119, 33);
+            this.rjTextBox8.TabIndex = 90;
+            this.rjTextBox8.Texts = "";
+            this.rjTextBox8.UnderlinedStyle = false;
+            // 
+            // rjTextBox7
+            // 
+            this.rjTextBox7.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox7.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox7.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox7.BorderSize = 2;
+            this.rjTextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox7.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox7.Location = new System.Drawing.Point(170, 356);
+            this.rjTextBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox7.Multiline = true;
+            this.rjTextBox7.Name = "rjTextBox7";
+            this.rjTextBox7.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox7.PasswordChar = false;
+            this.rjTextBox7.Size = new System.Drawing.Size(119, 33);
+            this.rjTextBox7.TabIndex = 89;
+            this.rjTextBox7.Texts = "";
+            this.rjTextBox7.UnderlinedStyle = false;
+            // 
+            // rjTextBox6
+            // 
+            this.rjTextBox6.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox6.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox6.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox6.BorderSize = 2;
+            this.rjTextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox6.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox6.Location = new System.Drawing.Point(170, 330);
+            this.rjTextBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox6.Multiline = true;
+            this.rjTextBox6.Name = "rjTextBox6";
+            this.rjTextBox6.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox6.PasswordChar = false;
+            this.rjTextBox6.Size = new System.Drawing.Size(119, 33);
+            this.rjTextBox6.TabIndex = 88;
+            this.rjTextBox6.Texts = "";
+            this.rjTextBox6.UnderlinedStyle = false;
+            // 
+            // rjTextBox5
+            // 
+            this.rjTextBox5.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox5.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox5.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox5.BorderSize = 2;
+            this.rjTextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox5.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox5.Location = new System.Drawing.Point(170, 304);
+            this.rjTextBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox5.Multiline = true;
+            this.rjTextBox5.Name = "rjTextBox5";
+            this.rjTextBox5.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox5.PasswordChar = false;
+            this.rjTextBox5.Size = new System.Drawing.Size(119, 33);
+            this.rjTextBox5.TabIndex = 87;
+            this.rjTextBox5.Texts = "";
+            this.rjTextBox5.UnderlinedStyle = false;
+            // 
+            // rjTextBox4
+            // 
+            this.rjTextBox4.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox4.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox4.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox4.BorderSize = 2;
+            this.rjTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox4.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox4.Location = new System.Drawing.Point(170, 274);
+            this.rjTextBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox4.Multiline = true;
+            this.rjTextBox4.Name = "rjTextBox4";
+            this.rjTextBox4.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox4.PasswordChar = false;
+            this.rjTextBox4.Size = new System.Drawing.Size(119, 33);
+            this.rjTextBox4.TabIndex = 86;
+            this.rjTextBox4.Texts = "";
+            this.rjTextBox4.UnderlinedStyle = false;
+            // 
+            // rjTextBox3
+            // 
+            this.rjTextBox3.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox3.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox3.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox3.BorderSize = 2;
+            this.rjTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox3.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox3.Location = new System.Drawing.Point(170, 245);
+            this.rjTextBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox3.Multiline = true;
+            this.rjTextBox3.Name = "rjTextBox3";
+            this.rjTextBox3.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox3.PasswordChar = false;
+            this.rjTextBox3.Size = new System.Drawing.Size(119, 33);
+            this.rjTextBox3.TabIndex = 85;
+            this.rjTextBox3.Texts = "";
+            this.rjTextBox3.UnderlinedStyle = false;
+            // 
+            // rjTextBox2
+            // 
+            this.rjTextBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox2.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox2.BorderSize = 2;
+            this.rjTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox2.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox2.Location = new System.Drawing.Point(170, 216);
+            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox2.Multiline = true;
+            this.rjTextBox2.Name = "rjTextBox2";
+            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox2.PasswordChar = false;
+            this.rjTextBox2.Size = new System.Drawing.Size(119, 33);
+            this.rjTextBox2.TabIndex = 84;
+            this.rjTextBox2.Texts = "";
+            this.rjTextBox2.UnderlinedStyle = false;
+            // 
+            // gum_amt
+            // 
+            this.gum_amt.BackColor = System.Drawing.SystemColors.Window;
+            this.gum_amt.BorderColor = System.Drawing.Color.Lavender;
+            this.gum_amt.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.gum_amt.BorderSize = 2;
+            this.gum_amt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gum_amt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gum_amt.ForeColor = System.Drawing.Color.DimGray;
+            this.gum_amt.Location = new System.Drawing.Point(71, 102);
+            this.gum_amt.Margin = new System.Windows.Forms.Padding(4);
+            this.gum_amt.Multiline = true;
+            this.gum_amt.Name = "gum_amt";
+            this.gum_amt.Padding = new System.Windows.Forms.Padding(7);
+            this.gum_amt.PasswordChar = false;
+            this.gum_amt.Size = new System.Drawing.Size(213, 32);
+            this.gum_amt.TabIndex = 82;
+            this.gum_amt.Texts = "";
+            this.gum_amt.UnderlinedStyle = false;
+            // 
+            // testTitle
+            // 
+            this.testTitle.BackColor = System.Drawing.SystemColors.Window;
+            this.testTitle.BorderColor = System.Drawing.Color.Lavender;
+            this.testTitle.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.testTitle.BorderSize = 2;
+            this.testTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.testTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.testTitle.ForeColor = System.Drawing.Color.DimGray;
+            this.testTitle.Location = new System.Drawing.Point(71, 65);
+            this.testTitle.Margin = new System.Windows.Forms.Padding(4);
+            this.testTitle.Multiline = true;
+            this.testTitle.Name = "testTitle";
+            this.testTitle.Padding = new System.Windows.Forms.Padding(7);
+            this.testTitle.PasswordChar = false;
+            this.testTitle.Size = new System.Drawing.Size(170, 32);
+            this.testTitle.TabIndex = 79;
+            this.testTitle.Texts = "";
+            this.testTitle.UnderlinedStyle = false;
+            // 
+            // Test_add
+            // 
+            this.Test_add.BackColor = System.Drawing.Color.Thistle;
+            this.Test_add.BackgroundColor = System.Drawing.Color.Thistle;
+            this.Test_add.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.Test_add.BorderRadius = 7;
+            this.Test_add.BorderSize = 0;
+            this.Test_add.FlatAppearance.BorderSize = 0;
+            this.Test_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Test_add.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Test_add.ForeColor = System.Drawing.Color.White;
+            this.Test_add.Location = new System.Drawing.Point(17, 564);
+            this.Test_add.Name = "Test_add";
+            this.Test_add.Size = new System.Drawing.Size(93, 30);
+            this.Test_add.TabIndex = 80;
+            this.Test_add.Text = "시험 등록";
+            this.Test_add.TextColor = System.Drawing.Color.White;
+            this.Test_add.UseVisualStyleBackColor = false;
+            this.Test_add.Click += new System.EventHandler(this.Test_add_Click);
+            // 
+            // Uncheck
+            // 
+            this.Uncheck.BackColor = System.Drawing.Color.LightGray;
+            this.Uncheck.BackgroundColor = System.Drawing.Color.LightGray;
+            this.Uncheck.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.Uncheck.BorderRadius = 7;
+            this.Uncheck.BorderSize = 0;
+            this.Uncheck.FlatAppearance.BorderSize = 0;
+            this.Uncheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Uncheck.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Uncheck.ForeColor = System.Drawing.Color.White;
+            this.Uncheck.Location = new System.Drawing.Point(17, 223);
+            this.Uncheck.Name = "Uncheck";
+            this.Uncheck.Size = new System.Drawing.Size(93, 30);
+            this.Uncheck.TabIndex = 79;
+            this.Uncheck.Text = "전체 해제";
+            this.Uncheck.TextColor = System.Drawing.Color.White;
+            this.Uncheck.UseVisualStyleBackColor = false;
+            this.Uncheck.Click += new System.EventHandler(this.Uncheck_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1489, 857);
+            this.ClientSize = new System.Drawing.Size(1532, 891);
+            this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.calendar1);
             this.Controls.Add(this.groupBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "일정 달력 by HJ";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.contextMenuStrip2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private NET.Calendar calendar1;
-        private System.Windows.Forms.TextBox gum_name;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckedListBox test_days;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.Label Text_date;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -807,27 +979,44 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button Test_add;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox testTitle;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button Uncheck;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.ToolStripMenuItem ddToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ddToolStripMenuItem1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ColorDialog colorDialog2;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private RJButton Uncheck;
+        private RJButton Test_add;
+        private Calendar.NETDemo.RashiDateTimePicker dateTimePicker1;
         private RJButton AddEvent2;
+        private System.Windows.Forms.Panel panel2;
+        private CustomControls.RJControls.RJTextBox gum_name;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel panel1;
+        private CustomControls.RJControls.RJTextBox testTitle;
+        private CustomControls.RJControls.RJTextBox gum_amt;
+        private System.Windows.Forms.Label label1;
+        private CustomControls.RJControls.RJTextBox rjTextBox14;
+        private CustomControls.RJControls.RJTextBox rjTextBox13;
+        private CustomControls.RJControls.RJTextBox rjTextBox12;
+        private CustomControls.RJControls.RJTextBox rjTextBox11;
+        private CustomControls.RJControls.RJTextBox rjTextBox10;
+        private CustomControls.RJControls.RJTextBox rjTextBox9;
+        private CustomControls.RJControls.RJTextBox rjTextBox8;
+        private CustomControls.RJControls.RJTextBox rjTextBox7;
+        private CustomControls.RJControls.RJTextBox rjTextBox6;
+        private CustomControls.RJControls.RJTextBox rjTextBox5;
+        private CustomControls.RJControls.RJTextBox rjTextBox4;
+        private CustomControls.RJControls.RJTextBox rjTextBox3;
+        private CustomControls.RJControls.RJTextBox rjTextBox2;
+        private CustomControls.RJControls.RJTextBox rjTextBox1;
     }
 }
 
