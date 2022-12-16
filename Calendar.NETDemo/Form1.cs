@@ -76,6 +76,8 @@ namespace Calendar.NETDemo
 
         }
 
+
+
         [CustomRecurringFunction("Get Monday and Wednesday", "Selects the Monday and Wednesday of each month")]
         public bool GetMondayAndWednesday(IEvent evnt, DateTime dt)
         {
@@ -125,12 +127,22 @@ namespace Calendar.NETDemo
 
                  calendar1.AddEvent(Specimen);
 
-                 XML_save(GumCheName, total_datetime, user_color_string, null, null, "GumChe");
-           
-                if (!string.IsNullOrEmpty(GumCheName))
-                {
-                    comboBox1.Items.Add("(" + total_datetime + ") "+ GumCheName);
-                }
+                 XML_save(GumCheName, total_datetime, user_color_string, null, null, null, "GumChe");
+               
+                    if (File.Exists(XmlFileName))
+                    {
+                        XmlDocument xmlDoc = new XmlDocument();
+                        xmlDoc.Load(XmlFileName);
+
+                        //xml 속성가져오기
+                        XmlNodeList node = xmlDoc.SelectNodes("Root/GumChe");
+                     
+                        for (int i = 0; i < node.Count; i++)
+                        {
+                        comboBox1.Items.Add("(" + node[i].Attributes["Datetime"].Value + ") " + node[i].Attributes["Name"].Value);
+                       }
+                    }
+
                 gum_name.Texts = "";
                 dateTimePicker1.Checked = false;
                 colorDialog2.Color = Color.Transparent;
@@ -154,17 +166,22 @@ namespace Calendar.NETDemo
             DateTime dt = dateTimePicker1.Value;
             DateTime dt_time = dateTimePicker2.Value;
 
+            //시험일자
             String datetime = dt.ToString("yyyy-MM-dd");
             //String datetime_time = dt_time.ToString("HH:mm:ss");
             //String total_datetime = datetime + " " + datetime_time;
             String total_datetime = datetime;
 
+            //시험명
             String test_name = testTitle.Texts;
-
-           
+            
+            //시험자
             String test_person = comboBox2.SelectedItem.ToString();
 
             String test = test_name + "[" + test_person+ "]";
+
+            //검체량
+            String GumAmt = gum_amt.Texts;
 
             Color user_color = colorDialog1.Color;
           
@@ -195,7 +212,7 @@ namespace Calendar.NETDemo
                     };
 
                     calendar1.AddEvent(test_case);
-                    XML_save(test, total_datetime, user_color_string, GumCheName, GumCheDate, "Test");
+                    XML_save(test, total_datetime, user_color_string, GumCheName, GumCheDate, GumAmt, "Test");
 
 
                 for (int i = 0; i < test_days.CheckedItems.Count; i++)
@@ -218,7 +235,7 @@ namespace Calendar.NETDemo
                             eventText = "계수";
                         }
                         
-                        String eventText_Total = test_name+ " " + day + "일차 " + eventText;
+                        String eventText_Total = test_name + "\n" + day + "일차 " + eventText;
 
                             var added_test_case = new CustomEvent
                             {
@@ -233,13 +250,17 @@ namespace Calendar.NETDemo
                             };
 
                             calendar1.AddEvent(added_test_case);
-                            XML_save(eventText_Total, Added_datetime_string, user_color_string, GumCheName, GumCheDate,  "Test");
+                            XML_save(eventText_Total, Added_datetime_string, user_color_string, GumCheName, GumCheDate, GumAmt,  "Test");
                     }
                 }
 
                 //선택사항 초기화 
                 testTitle.Texts = "";
+                comboBox1.SelectedIndex = 0;
                 comboBox2.SelectedIndex = 0;
+                gum_amt.Texts = "";
+                Uncheck_Click();
+
                 panel1.BackColor = Color.Transparent;
                 colorDialog1.Color = Color.Transparent;
 
@@ -250,7 +271,7 @@ namespace Calendar.NETDemo
         }
 
 
-        private void XML_save(String text, String datetime, String color, String GumCheName, String GumCheDate, String nodeName) {
+        private void XML_save(String text, String datetime, String color, String GumCheName, String GumCheDate, String GumAmt, String nodeName) {
 
             XmlDocument xmlDoc;
 
@@ -280,6 +301,7 @@ namespace Calendar.NETDemo
                             childNode.SetAttribute("Color", color);
                             childNode.SetAttribute("GumCheName", GumCheName);
                             childNode.SetAttribute("GumCheDate", GumCheDate);
+                            childNode.SetAttribute("GumAmt", GumAmt);
                             childNode.SetAttribute("Rank", "2");
                         }
 
@@ -313,9 +335,9 @@ namespace Calendar.NETDemo
            
             try
             {
-                if (File.Exists("Data.xml")) {
+                if (File.Exists(XmlFileName)) {
                     XmlDocument xmlDoc = new XmlDocument();
-                    xmlDoc.Load( "Data.xml");
+                    xmlDoc.Load(XmlFileName);
 
                     //xml 속성가져오기
                     XmlNode node = xmlDoc.SelectSingleNode("Root");
@@ -357,7 +379,7 @@ namespace Calendar.NETDemo
                             EventColor = c,
                             EventLengthInHours = 2f,
                             RecurringFrequency = RecurringFrequencies.None,
-                            EventFont = new Font("나눔고딕", 10, FontStyle.Regular),
+                            EventFont = new Font("나눔고딕", 8, FontStyle.Regular),
                             EventTextColor = Color.Black,
                             
                         };
@@ -398,7 +420,7 @@ namespace Calendar.NETDemo
             }
         }
 
-        private void Uncheck_Click(object sender, EventArgs e)
+        private void Uncheck_Click()
         {
             for (int i = 0; i < test_days.Items.Count; i++)
             {

@@ -70,6 +70,7 @@ namespace Calendar.NET
 
         XmlDocument xmlDoc;
         String XmlFileName = "Data.xml";
+        private ToolStripMenuItem 시험일정전체삭제ToolStripMenuItem;
 
 
 
@@ -368,50 +369,46 @@ namespace Calendar.NET
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this._btnToday = new TodayButton();
-            this._btnLeft = new NavigateLeftButton();
-            this._btnRight = new NavigateRightButton();
             this._contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this._miProperties = new System.Windows.Forms.ToolStripMenuItem();
             this.삭제하기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.시험일정전체삭제ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._btnRight = new NavigateRightButton();
+            this._btnLeft = new NavigateLeftButton();
+            this._btnToday = new TodayButton();
             this._contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // _btnToday
+            // _contextMenuStrip1
             // 
-            this._btnToday.BackColor = System.Drawing.Color.Transparent;
-            this._btnToday.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this._btnToday.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this._btnToday.ButtonFont = new System.Drawing.Font("나눔고딕", 8F, System.Drawing.FontStyle.Bold);
-            this._btnToday.ButtonText = "오늘";
-            this._btnToday.FocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(144)))), ((int)(((byte)(254)))));
-            this._btnToday.HighlightBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
-            this._btnToday.HighlightButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this._btnToday.Location = new System.Drawing.Point(19, 20);
-            this._btnToday.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this._btnToday.Name = "_btnToday";
-            this._btnToday.Size = new System.Drawing.Size(72, 29);
-            this._btnToday.TabIndex = 0;
-            this._btnToday.TextColor = System.Drawing.Color.Black;
-            this._btnToday.ButtonClicked += new CoolButton.ButtonClickedArgs(this.BtnTodayButtonClicked);
+            this._contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this._contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._miProperties,
+            this.삭제하기ToolStripMenuItem,
+            this.시험일정전체삭제ToolStripMenuItem});
+            this._contextMenuStrip1.Name = "_contextMenuStrip1";
+            this._contextMenuStrip1.Size = new System.Drawing.Size(211, 104);
             // 
-            // _btnLeft
+            // _miProperties
             // 
-            this._btnLeft.BackColor = System.Drawing.Color.Transparent;
-            this._btnLeft.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this._btnLeft.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this._btnLeft.ButtonFont = new System.Drawing.Font("나눔고딕", 8F, System.Drawing.FontStyle.Bold);
-            this._btnLeft.ButtonText = "<";
-            this._btnLeft.FocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(144)))), ((int)(((byte)(254)))));
-            this._btnLeft.HighlightBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
-            this._btnLeft.HighlightButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this._btnLeft.Location = new System.Drawing.Point(98, 20);
-            this._btnLeft.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this._btnLeft.Name = "_btnLeft";
-            this._btnLeft.Size = new System.Drawing.Size(42, 29);
-            this._btnLeft.TabIndex = 1;
-            this._btnLeft.TextColor = System.Drawing.Color.Black;
-            this._btnLeft.ButtonClicked += new CoolButton.ButtonClickedArgs(this.BtnLeftButtonClicked);
+            this._miProperties.Name = "_miProperties";
+            this._miProperties.Size = new System.Drawing.Size(210, 24);
+            this._miProperties.Text = "일정 속성";
+            this._miProperties.Click += new System.EventHandler(this.MenuItemPropertiesClick);
+            // 
+            // 삭제하기ToolStripMenuItem
+            // 
+            this.삭제하기ToolStripMenuItem.Name = "삭제하기ToolStripMenuItem";
+            this.삭제하기ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.삭제하기ToolStripMenuItem.Text = "일정 삭제하기";
+            this.삭제하기ToolStripMenuItem.Click += new System.EventHandler(this.삭제하기ToolStripMenuItem_Click);
+            // 
+            // 시험일정전체삭제ToolStripMenuItem
+            // 
+            this.시험일정전체삭제ToolStripMenuItem.Name = "시험일정전체삭제ToolStripMenuItem";
+            this.시험일정전체삭제ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.시험일정전체삭제ToolStripMenuItem.Text = "일정 전체삭제";
+            this.시험일정전체삭제ToolStripMenuItem.Click += new System.EventHandler(this.시험일정전체삭제ToolStripMenuItem_Click);
             // 
             // _btnRight
             // 
@@ -431,28 +428,41 @@ namespace Calendar.NET
             this._btnRight.TextColor = System.Drawing.Color.Black;
             this._btnRight.ButtonClicked += new CoolButton.ButtonClickedArgs(this.BtnRightButtonClicked);
             // 
-            // _contextMenuStrip1
+            // _btnLeft
             // 
-            this._contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this._contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this._miProperties,
-            this.삭제하기ToolStripMenuItem});
-            this._contextMenuStrip1.Name = "_contextMenuStrip1";
-            this._contextMenuStrip1.Size = new System.Drawing.Size(144, 52);
+            this._btnLeft.BackColor = System.Drawing.Color.Transparent;
+            this._btnLeft.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this._btnLeft.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this._btnLeft.ButtonFont = new System.Drawing.Font("나눔고딕", 8F, System.Drawing.FontStyle.Bold);
+            this._btnLeft.ButtonText = "<";
+            this._btnLeft.FocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(144)))), ((int)(((byte)(254)))));
+            this._btnLeft.HighlightBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
+            this._btnLeft.HighlightButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this._btnLeft.Location = new System.Drawing.Point(98, 20);
+            this._btnLeft.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this._btnLeft.Name = "_btnLeft";
+            this._btnLeft.Size = new System.Drawing.Size(42, 29);
+            this._btnLeft.TabIndex = 1;
+            this._btnLeft.TextColor = System.Drawing.Color.Black;
+            this._btnLeft.ButtonClicked += new CoolButton.ButtonClickedArgs(this.BtnLeftButtonClicked);
             // 
-            // _miProperties
+            // _btnToday
             // 
-            this._miProperties.Name = "_miProperties";
-            this._miProperties.Size = new System.Drawing.Size(143, 24);
-            this._miProperties.Text = "일정 속성";
-            this._miProperties.Click += new System.EventHandler(this.MenuItemPropertiesClick);
-            // 
-            // 삭제하기ToolStripMenuItem
-            // 
-            this.삭제하기ToolStripMenuItem.Name = "삭제하기ToolStripMenuItem";
-            this.삭제하기ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
-            this.삭제하기ToolStripMenuItem.Text = "삭제하기";
-            this.삭제하기ToolStripMenuItem.Click += new System.EventHandler(this.삭제하기ToolStripMenuItem_Click);
+            this._btnToday.BackColor = System.Drawing.Color.Transparent;
+            this._btnToday.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this._btnToday.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this._btnToday.ButtonFont = new System.Drawing.Font("나눔고딕", 8F, System.Drawing.FontStyle.Bold);
+            this._btnToday.ButtonText = "오늘";
+            this._btnToday.FocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(144)))), ((int)(((byte)(254)))));
+            this._btnToday.HighlightBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
+            this._btnToday.HighlightButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this._btnToday.Location = new System.Drawing.Point(19, 20);
+            this._btnToday.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this._btnToday.Name = "_btnToday";
+            this._btnToday.Size = new System.Drawing.Size(72, 29);
+            this._btnToday.TabIndex = 0;
+            this._btnToday.TextColor = System.Drawing.Color.Black;
+            this._btnToday.ButtonClicked += new CoolButton.ButtonClickedArgs(this.BtnTodayButtonClicked);
             // 
             // Calendar
             // 
@@ -546,7 +556,7 @@ namespace Calendar.NET
                             {
                                 if (emp.Attributes["Name"].Value == z.Event.EventText)
                                     // _eventTip.EventToolTipText = z.Event.EventText;
-                                    _eventTip.EventToolTipText = "검체 등록 일시 : " + emp.Attributes["GumCheDate"].Value + "\n" + "등록 검체 명 : " + emp.Attributes["GumCheName"].Value;
+                                    _eventTip.EventToolTipText = "검체 등록 일시 : " + emp.Attributes["GumCheDate"].Value + "\n" + "등록 검체 명 : " + emp.Attributes["GumCheName"].Value + "\n" + "검체량 : " + emp.Attributes["GumAmt"].Value;
                                    
 
                             }
@@ -1255,15 +1265,22 @@ namespace Calendar.NET
                                 
                                 //이벤트 삭제
                                 RemoveEvent(_clickedEvent.Event);
+                                
                                 Refresh();
                             }
                         }
                      }
               }
 
+            
+
 
         }
 
 
+        private void 시험일정전체삭제ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
