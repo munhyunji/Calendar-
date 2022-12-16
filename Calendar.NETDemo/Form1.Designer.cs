@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.test_days = new System.Windows.Forms.CheckedListBox();
             this.Text_date = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,11 +47,26 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new Calendar.NETDemo.RashiDateTimePicker();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ddToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.colorDialog2 = new System.Windows.Forms.ColorDialog();
+            this.calendar1 = new Calendar.NET.Calendar();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new Calendar.NETDemo.RashiDateTimePicker();
+            this.gum_name = new CustomControls.RJControls.RJTextBox();
+            this.AddEvent2 = new Calendar.NETDemo.RJButton();
+            this.comboBox2 = new CustomControls.RJControls.RJComboBox();
+            this.comboBox1 = new CustomControls.RJControls.RJComboBox();
             this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
             this.rjTextBox14 = new CustomControls.RJControls.RJTextBox();
             this.rjTextBox13 = new CustomControls.RJControls.RJTextBox();
@@ -68,76 +82,31 @@
             this.rjTextBox3 = new CustomControls.RJControls.RJTextBox();
             this.rjTextBox2 = new CustomControls.RJControls.RJTextBox();
             this.gum_amt = new CustomControls.RJControls.RJTextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.testTitle = new CustomControls.RJControls.RJTextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.Test_add = new Calendar.NETDemo.RJButton();
             this.Uncheck = new Calendar.NETDemo.RJButton();
-            this.label19 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.ddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ddToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.colorDialog2 = new System.Windows.Forms.ColorDialog();
-            this.calendar1 = new Calendar.NET.Calendar();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.gum_name = new CustomControls.RJControls.RJTextBox();
-            this.AddEvent2 = new Calendar.NETDemo.RJButton();
+            this.test_days = new Calendar.NETDemo.MyListBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // test_days
-            // 
-            this.test_days.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.test_days.CheckOnClick = true;
-            this.test_days.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.test_days.ForeColor = System.Drawing.Color.Black;
-            this.test_days.FormattingEnabled = true;
-            this.test_days.HorizontalExtent = 30;
-            this.test_days.HorizontalScrollbar = true;
-            this.test_days.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14"});
-            this.test_days.Location = new System.Drawing.Point(18, 255);
-            this.test_days.Margin = new System.Windows.Forms.Padding(17, 38, 34, 50);
-            this.test_days.MultiColumn = true;
-            this.test_days.Name = "test_days";
-            this.test_days.Size = new System.Drawing.Size(49, 280);
-            this.test_days.TabIndex = 38;
-            // 
             // Text_date
             // 
             this.Text_date.AutoSize = true;
             this.Text_date.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Text_date.Location = new System.Drawing.Point(15, 187);
+            this.Text_date.Location = new System.Drawing.Point(19, 192);
             this.Text_date.Name = "Text_date";
-            this.Text_date.Size = new System.Drawing.Size(96, 17);
+            this.Text_date.Size = new System.Drawing.Size(64, 17);
             this.Text_date.TabIndex = 55;
-            this.Text_date.Text = "시험 일차선택";
+            this.Text_date.Text = "시험일차";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(120, 187);
+            this.label5.Location = new System.Drawing.Point(120, 192);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 17);
             this.label5.TabIndex = 56;
@@ -147,7 +116,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(122, 217);
+            this.label6.Location = new System.Drawing.Point(122, 225);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 17);
             this.label6.TabIndex = 57;
@@ -157,7 +126,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(123, 245);
+            this.label7.Location = new System.Drawing.Point(123, 255);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 17);
             this.label7.TabIndex = 58;
@@ -167,7 +136,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label8.Location = new System.Drawing.Point(123, 272);
+            this.label8.Location = new System.Drawing.Point(123, 283);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 17);
             this.label8.TabIndex = 59;
@@ -177,7 +146,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label9.Location = new System.Drawing.Point(123, 300);
+            this.label9.Location = new System.Drawing.Point(123, 313);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(45, 17);
             this.label9.TabIndex = 60;
@@ -187,7 +156,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label10.Location = new System.Drawing.Point(123, 327);
+            this.label10.Location = new System.Drawing.Point(123, 340);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(45, 17);
             this.label10.TabIndex = 61;
@@ -197,7 +166,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label11.Location = new System.Drawing.Point(123, 354);
+            this.label11.Location = new System.Drawing.Point(123, 368);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(45, 17);
             this.label11.TabIndex = 62;
@@ -207,7 +176,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label12.Location = new System.Drawing.Point(123, 385);
+            this.label12.Location = new System.Drawing.Point(123, 398);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(45, 17);
             this.label12.TabIndex = 63;
@@ -217,7 +186,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label13.Location = new System.Drawing.Point(123, 413);
+            this.label13.Location = new System.Drawing.Point(123, 427);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(45, 17);
             this.label13.TabIndex = 64;
@@ -227,7 +196,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label14.Location = new System.Drawing.Point(113, 444);
+            this.label14.Location = new System.Drawing.Point(113, 454);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(54, 17);
             this.label14.TabIndex = 65;
@@ -237,7 +206,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label15.Location = new System.Drawing.Point(115, 470);
+            this.label15.Location = new System.Drawing.Point(116, 482);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(50, 18);
             this.label15.TabIndex = 66;
@@ -247,7 +216,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label16.Location = new System.Drawing.Point(114, 497);
+            this.label16.Location = new System.Drawing.Point(114, 511);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(54, 17);
             this.label16.TabIndex = 67;
@@ -257,7 +226,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label17.Location = new System.Drawing.Point(114, 527);
+            this.label17.Location = new System.Drawing.Point(114, 541);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(54, 17);
             this.label17.TabIndex = 68;
@@ -267,7 +236,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label18.Location = new System.Drawing.Point(114, 556);
+            this.label18.Location = new System.Drawing.Point(114, 571);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(54, 17);
             this.label18.TabIndex = 69;
@@ -278,7 +247,7 @@
             this.groupBox3.Controls.Add(this.dateTimePicker1);
             this.groupBox3.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
-            this.groupBox3.Location = new System.Drawing.Point(22, 140);
+            this.groupBox3.Location = new System.Drawing.Point(22, 136);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -286,37 +255,6 @@
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "인수일시";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.BorderColor = System.Drawing.Color.Gray;
-            this.dateTimePicker1.BorderSize = 0;
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.InactiveCaptionText;
-            this.dateTimePicker1.FillColor = System.Drawing.Color.Thistle;
-            this.dateTimePicker1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(6, 33);
-            this.dateTimePicker1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.ShowCheckBox = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(292, 35);
-            this.dateTimePicker1.TabIndex = 77;
-            this.dateTimePicker1.TextColor = System.Drawing.Color.White;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "시험자 선택",
-            "희해",
-            "아라",
-            "서영",
-            "미래"});
-            this.comboBox2.Location = new System.Drawing.Point(71, 144);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(213, 25);
-            this.comboBox2.TabIndex = 36;
             // 
             // label4
             // 
@@ -340,6 +278,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.test_days);
+            this.groupBox2.Controls.Add(this.comboBox2);
+            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.rjTextBox1);
             this.groupBox2.Controls.Add(this.rjTextBox14);
             this.groupBox2.Controls.Add(this.rjTextBox13);
@@ -357,12 +298,10 @@
             this.groupBox2.Controls.Add(this.gum_amt);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.testTitle);
-            this.groupBox2.Controls.Add(this.panel1);
             this.groupBox2.Controls.Add(this.Test_add);
             this.groupBox2.Controls.Add(this.Uncheck);
             this.groupBox2.Controls.Add(this.label19);
             this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label11);
@@ -378,319 +317,17 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.comboBox2);
             this.groupBox2.Controls.Add(this.Text_date);
-            this.groupBox2.Controls.Add(this.test_days);
             this.groupBox2.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(22, 234);
+            this.groupBox2.Location = new System.Drawing.Point(22, 225);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(304, 604);
+            this.groupBox2.Size = new System.Drawing.Size(304, 609);
             this.groupBox2.TabIndex = 76;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "시험";
-            // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox1.Location = new System.Drawing.Point(166, 178);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = true;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.Size = new System.Drawing.Size(119, 33);
-            this.rjTextBox1.TabIndex = 98;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
-            // 
-            // rjTextBox14
-            // 
-            this.rjTextBox14.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox14.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox14.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox14.BorderSize = 2;
-            this.rjTextBox14.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox14.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox14.Location = new System.Drawing.Point(166, 554);
-            this.rjTextBox14.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox14.Multiline = false;
-            this.rjTextBox14.Name = "rjTextBox14";
-            this.rjTextBox14.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox14.PasswordChar = false;
-            this.rjTextBox14.Size = new System.Drawing.Size(119, 35);
-            this.rjTextBox14.TabIndex = 96;
-            this.rjTextBox14.Texts = "";
-            this.rjTextBox14.UnderlinedStyle = false;
-            // 
-            // rjTextBox13
-            // 
-            this.rjTextBox13.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox13.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox13.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox13.BorderSize = 2;
-            this.rjTextBox13.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox13.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox13.Location = new System.Drawing.Point(166, 524);
-            this.rjTextBox13.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox13.Multiline = false;
-            this.rjTextBox13.Name = "rjTextBox13";
-            this.rjTextBox13.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox13.PasswordChar = false;
-            this.rjTextBox13.Size = new System.Drawing.Size(119, 35);
-            this.rjTextBox13.TabIndex = 95;
-            this.rjTextBox13.Texts = "";
-            this.rjTextBox13.UnderlinedStyle = false;
-            // 
-            // rjTextBox12
-            // 
-            this.rjTextBox12.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox12.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox12.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox12.BorderSize = 2;
-            this.rjTextBox12.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox12.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox12.Location = new System.Drawing.Point(166, 494);
-            this.rjTextBox12.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox12.Multiline = false;
-            this.rjTextBox12.Name = "rjTextBox12";
-            this.rjTextBox12.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox12.PasswordChar = false;
-            this.rjTextBox12.Size = new System.Drawing.Size(119, 35);
-            this.rjTextBox12.TabIndex = 94;
-            this.rjTextBox12.Texts = "";
-            this.rjTextBox12.UnderlinedStyle = false;
-            // 
-            // rjTextBox11
-            // 
-            this.rjTextBox11.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox11.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox11.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox11.BorderSize = 2;
-            this.rjTextBox11.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox11.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox11.Location = new System.Drawing.Point(166, 464);
-            this.rjTextBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox11.Multiline = false;
-            this.rjTextBox11.Name = "rjTextBox11";
-            this.rjTextBox11.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox11.PasswordChar = false;
-            this.rjTextBox11.Size = new System.Drawing.Size(119, 35);
-            this.rjTextBox11.TabIndex = 93;
-            this.rjTextBox11.Texts = "";
-            this.rjTextBox11.UnderlinedStyle = false;
-            // 
-            // rjTextBox10
-            // 
-            this.rjTextBox10.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox10.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox10.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox10.BorderSize = 2;
-            this.rjTextBox10.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox10.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox10.Location = new System.Drawing.Point(166, 438);
-            this.rjTextBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox10.Multiline = false;
-            this.rjTextBox10.Name = "rjTextBox10";
-            this.rjTextBox10.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox10.PasswordChar = false;
-            this.rjTextBox10.Size = new System.Drawing.Size(119, 35);
-            this.rjTextBox10.TabIndex = 92;
-            this.rjTextBox10.Texts = "";
-            this.rjTextBox10.UnderlinedStyle = false;
-            // 
-            // rjTextBox9
-            // 
-            this.rjTextBox9.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox9.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox9.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox9.BorderSize = 2;
-            this.rjTextBox9.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox9.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox9.Location = new System.Drawing.Point(166, 412);
-            this.rjTextBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox9.Multiline = false;
-            this.rjTextBox9.Name = "rjTextBox9";
-            this.rjTextBox9.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox9.PasswordChar = false;
-            this.rjTextBox9.Size = new System.Drawing.Size(119, 35);
-            this.rjTextBox9.TabIndex = 91;
-            this.rjTextBox9.Texts = "";
-            this.rjTextBox9.UnderlinedStyle = false;
-            // 
-            // rjTextBox8
-            // 
-            this.rjTextBox8.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox8.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox8.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox8.BorderSize = 2;
-            this.rjTextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox8.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox8.Location = new System.Drawing.Point(166, 381);
-            this.rjTextBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox8.Multiline = false;
-            this.rjTextBox8.Name = "rjTextBox8";
-            this.rjTextBox8.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox8.PasswordChar = false;
-            this.rjTextBox8.Size = new System.Drawing.Size(119, 35);
-            this.rjTextBox8.TabIndex = 90;
-            this.rjTextBox8.Texts = "";
-            this.rjTextBox8.UnderlinedStyle = false;
-            // 
-            // rjTextBox7
-            // 
-            this.rjTextBox7.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox7.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox7.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox7.BorderSize = 2;
-            this.rjTextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox7.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox7.Location = new System.Drawing.Point(166, 353);
-            this.rjTextBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox7.Multiline = false;
-            this.rjTextBox7.Name = "rjTextBox7";
-            this.rjTextBox7.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox7.PasswordChar = false;
-            this.rjTextBox7.Size = new System.Drawing.Size(119, 35);
-            this.rjTextBox7.TabIndex = 89;
-            this.rjTextBox7.Texts = "";
-            this.rjTextBox7.UnderlinedStyle = false;
-            // 
-            // rjTextBox6
-            // 
-            this.rjTextBox6.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox6.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox6.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox6.BorderSize = 2;
-            this.rjTextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox6.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox6.Location = new System.Drawing.Point(166, 325);
-            this.rjTextBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox6.Multiline = false;
-            this.rjTextBox6.Name = "rjTextBox6";
-            this.rjTextBox6.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox6.PasswordChar = false;
-            this.rjTextBox6.Size = new System.Drawing.Size(119, 35);
-            this.rjTextBox6.TabIndex = 88;
-            this.rjTextBox6.Texts = "";
-            this.rjTextBox6.UnderlinedStyle = false;
-            // 
-            // rjTextBox5
-            // 
-            this.rjTextBox5.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox5.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox5.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox5.BorderSize = 2;
-            this.rjTextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox5.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox5.Location = new System.Drawing.Point(166, 297);
-            this.rjTextBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox5.Multiline = false;
-            this.rjTextBox5.Name = "rjTextBox5";
-            this.rjTextBox5.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox5.PasswordChar = false;
-            this.rjTextBox5.Size = new System.Drawing.Size(119, 35);
-            this.rjTextBox5.TabIndex = 87;
-            this.rjTextBox5.Texts = "";
-            this.rjTextBox5.UnderlinedStyle = false;
-            // 
-            // rjTextBox4
-            // 
-            this.rjTextBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox4.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox4.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox4.BorderSize = 2;
-            this.rjTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox4.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox4.Location = new System.Drawing.Point(166, 267);
-            this.rjTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox4.Multiline = false;
-            this.rjTextBox4.Name = "rjTextBox4";
-            this.rjTextBox4.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox4.PasswordChar = false;
-            this.rjTextBox4.Size = new System.Drawing.Size(119, 35);
-            this.rjTextBox4.TabIndex = 86;
-            this.rjTextBox4.Texts = "";
-            this.rjTextBox4.UnderlinedStyle = false;
-            // 
-            // rjTextBox3
-            // 
-            this.rjTextBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox3.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox3.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox3.BorderSize = 2;
-            this.rjTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox3.Location = new System.Drawing.Point(166, 238);
-            this.rjTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox3.Multiline = false;
-            this.rjTextBox3.Name = "rjTextBox3";
-            this.rjTextBox3.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox3.PasswordChar = false;
-            this.rjTextBox3.Size = new System.Drawing.Size(119, 35);
-            this.rjTextBox3.TabIndex = 85;
-            this.rjTextBox3.Texts = "";
-            this.rjTextBox3.UnderlinedStyle = false;
-            // 
-            // rjTextBox2
-            // 
-            this.rjTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox2.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox2.BorderSize = 2;
-            this.rjTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox2.Location = new System.Drawing.Point(166, 209);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox2.Multiline = true;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.Size = new System.Drawing.Size(119, 33);
-            this.rjTextBox2.TabIndex = 84;
-            this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderlinedStyle = false;
-            // 
-            // gum_amt
-            // 
-            this.gum_amt.BackColor = System.Drawing.SystemColors.Window;
-            this.gum_amt.BorderColor = System.Drawing.Color.Lavender;
-            this.gum_amt.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.gum_amt.BorderSize = 2;
-            this.gum_amt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gum_amt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gum_amt.ForeColor = System.Drawing.Color.DimGray;
-            this.gum_amt.Location = new System.Drawing.Point(72, 102);
-            this.gum_amt.Margin = new System.Windows.Forms.Padding(4);
-            this.gum_amt.Multiline = false;
-            this.gum_amt.Name = "gum_amt";
-            this.gum_amt.Padding = new System.Windows.Forms.Padding(7);
-            this.gum_amt.PasswordChar = false;
-            this.gum_amt.Size = new System.Drawing.Size(213, 35);
-            this.gum_amt.TabIndex = 82;
-            this.gum_amt.Texts = "";
-            this.gum_amt.UnderlinedStyle = false;
             // 
             // label1
             // 
@@ -702,78 +339,6 @@
             this.label1.TabIndex = 81;
             this.label1.Text = "검체량";
             // 
-            // testTitle
-            // 
-            this.testTitle.BackColor = System.Drawing.SystemColors.Window;
-            this.testTitle.BorderColor = System.Drawing.Color.Lavender;
-            this.testTitle.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.testTitle.BorderSize = 2;
-            this.testTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.testTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.testTitle.ForeColor = System.Drawing.Color.DimGray;
-            this.testTitle.ImeMode = System.Windows.Forms.ImeMode.Hangul;
-            this.testTitle.Location = new System.Drawing.Point(71, 60);
-            this.testTitle.Margin = new System.Windows.Forms.Padding(4);
-            this.testTitle.Multiline = false;
-            this.testTitle.Name = "testTitle";
-            this.testTitle.Padding = new System.Windows.Forms.Padding(7);
-            this.testTitle.PasswordChar = false;
-            this.testTitle.Size = new System.Drawing.Size(170, 35);
-            this.testTitle.TabIndex = 79;
-            this.testTitle.Texts = "";
-            this.testTitle.UnderlinedStyle = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Location = new System.Drawing.Point(238, 62);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(47, 29);
-            this.panel1.TabIndex = 77;
-            this.panel1.Click += new System.EventHandler(this.panel1_DoubleClick);
-            // 
-            // Test_add
-            // 
-            this.Test_add.BackColor = System.Drawing.Color.Thistle;
-            this.Test_add.BackgroundColor = System.Drawing.Color.Thistle;
-            this.Test_add.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.Test_add.BorderRadius = 7;
-            this.Test_add.BorderSize = 0;
-            this.Test_add.FlatAppearance.BorderSize = 0;
-            this.Test_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Test_add.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Test_add.ForeColor = System.Drawing.Color.White;
-            this.Test_add.Location = new System.Drawing.Point(14, 543);
-            this.Test_add.Name = "Test_add";
-            this.Test_add.Size = new System.Drawing.Size(93, 30);
-            this.Test_add.TabIndex = 80;
-            this.Test_add.Text = "시험 등록";
-            this.Test_add.TextColor = System.Drawing.Color.White;
-            this.Test_add.UseVisualStyleBackColor = false;
-            this.Test_add.Click += new System.EventHandler(this.Test_add_Click);
-            // 
-            // Uncheck
-            // 
-            this.Uncheck.BackColor = System.Drawing.Color.LightGray;
-            this.Uncheck.BackgroundColor = System.Drawing.Color.LightGray;
-            this.Uncheck.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.Uncheck.BorderRadius = 7;
-            this.Uncheck.BorderSize = 0;
-            this.Uncheck.FlatAppearance.BorderSize = 0;
-            this.Uncheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Uncheck.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Uncheck.ForeColor = System.Drawing.Color.White;
-            this.Uncheck.Location = new System.Drawing.Point(14, 215);
-            this.Uncheck.Name = "Uncheck";
-            this.Uncheck.Size = new System.Drawing.Size(93, 30);
-            this.Uncheck.TabIndex = 79;
-            this.Uncheck.Text = "전체 해제";
-            this.Uncheck.TextColor = System.Drawing.Color.White;
-            this.Uncheck.UseVisualStyleBackColor = false;
-            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -784,16 +349,17 @@
             this.label19.TabIndex = 77;
             this.label19.Text = "검체명";
             // 
-            // comboBox1
+            // panel1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "검체 선택"});
-            this.comboBox1.Location = new System.Drawing.Point(71, 29);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(214, 25);
-            this.comboBox1.TabIndex = 76;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Location = new System.Drawing.Point(601, 13);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(47, 29);
+            this.panel1.TabIndex = 77;
+            this.panel1.Click += new System.EventHandler(this.panel1_DoubleClick);
             // 
             // contextMenuStrip1
             // 
@@ -840,7 +406,7 @@
             this.calendar1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.calendar1.HighlightCurrentDay = true;
             this.calendar1.LoadPresetHolidays = true;
-            this.calendar1.Location = new System.Drawing.Point(331, 1);
+            this.calendar1.Location = new System.Drawing.Point(331, -7);
             this.calendar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.calendar1.Name = "calendar1";
             this.calendar1.ShowArrowControls = true;
@@ -849,7 +415,7 @@
             this.calendar1.ShowDisabledEvents = false;
             this.calendar1.ShowEventTooltips = true;
             this.calendar1.ShowTodayButton = true;
-            this.calendar1.Size = new System.Drawing.Size(1204, 837);
+            this.calendar1.Size = new System.Drawing.Size(1204, 862);
             this.calendar1.TabIndex = 0;
             this.calendar1.TodayFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             // 
@@ -895,6 +461,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " 검체";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.BorderColor = System.Drawing.Color.Gray;
+            this.dateTimePicker1.BorderSize = 0;
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.InactiveCaptionText;
+            this.dateTimePicker1.FillColor = System.Drawing.Color.Thistle;
+            this.dateTimePicker1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(6, 33);
+            this.dateTimePicker1.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.ShowCheckBox = true;
+            this.dateTimePicker1.Size = new System.Drawing.Size(292, 35);
+            this.dateTimePicker1.TabIndex = 77;
+            this.dateTimePicker1.TextColor = System.Drawing.Color.White;
+            // 
             // gum_name
             // 
             this.gum_name.BackColor = System.Drawing.SystemColors.Window;
@@ -936,17 +518,450 @@
             this.AddEvent2.UseVisualStyleBackColor = false;
             this.AddEvent2.Click += new System.EventHandler(this.AddEvent2_Click);
             // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.White;
+            this.comboBox2.BorderColor = System.Drawing.Color.Lavender;
+            this.comboBox2.BorderSize = 2;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboBox2.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.comboBox2.ForeColor = System.Drawing.Color.DimGray;
+            this.comboBox2.IconColor = System.Drawing.Color.MediumOrchid;
+            this.comboBox2.Items.AddRange(new object[] {
+            "시험자를 선택하세요.",
+            "희해",
+            "아라",
+            "서영",
+            "미래"});
+            this.comboBox2.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboBox2.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboBox2.Location = new System.Drawing.Point(70, 147);
+            this.comboBox2.MinimumSize = new System.Drawing.Size(200, 30);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.comboBox2.Size = new System.Drawing.Size(214, 30);
+            this.comboBox2.TabIndex = 99;
+            this.comboBox2.Texts = "";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.White;
+            this.comboBox1.BorderColor = System.Drawing.Color.Lavender;
+            this.comboBox1.BorderSize = 2;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboBox1.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.comboBox1.ForeColor = System.Drawing.Color.DimGray;
+            this.comboBox1.IconColor = System.Drawing.Color.MediumOrchid;
+            this.comboBox1.Items.AddRange(new object[] {
+            "검체를 선택하세요."});
+            this.comboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboBox1.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboBox1.Location = new System.Drawing.Point(70, 25);
+            this.comboBox1.MinimumSize = new System.Drawing.Size(200, 30);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Size = new System.Drawing.Size(214, 30);
+            this.comboBox1.TabIndex = 77;
+            this.comboBox1.Texts = "";
+            // 
+            // rjTextBox1
+            // 
+            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox1.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox1.BorderSize = 2;
+            this.rjTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox1.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox1.Location = new System.Drawing.Point(166, 187);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox1.Multiline = true;
+            this.rjTextBox1.Name = "rjTextBox1";
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox1.PasswordChar = false;
+            this.rjTextBox1.Size = new System.Drawing.Size(119, 33);
+            this.rjTextBox1.TabIndex = 98;
+            this.rjTextBox1.Texts = "";
+            this.rjTextBox1.UnderlinedStyle = false;
+            // 
+            // rjTextBox14
+            // 
+            this.rjTextBox14.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox14.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox14.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox14.BorderSize = 2;
+            this.rjTextBox14.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox14.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox14.Location = new System.Drawing.Point(166, 563);
+            this.rjTextBox14.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox14.Multiline = false;
+            this.rjTextBox14.Name = "rjTextBox14";
+            this.rjTextBox14.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox14.PasswordChar = false;
+            this.rjTextBox14.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox14.TabIndex = 96;
+            this.rjTextBox14.Texts = "";
+            this.rjTextBox14.UnderlinedStyle = false;
+            // 
+            // rjTextBox13
+            // 
+            this.rjTextBox13.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox13.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox13.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox13.BorderSize = 2;
+            this.rjTextBox13.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox13.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox13.Location = new System.Drawing.Point(166, 533);
+            this.rjTextBox13.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox13.Multiline = false;
+            this.rjTextBox13.Name = "rjTextBox13";
+            this.rjTextBox13.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox13.PasswordChar = false;
+            this.rjTextBox13.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox13.TabIndex = 95;
+            this.rjTextBox13.Texts = "";
+            this.rjTextBox13.UnderlinedStyle = false;
+            // 
+            // rjTextBox12
+            // 
+            this.rjTextBox12.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox12.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox12.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox12.BorderSize = 2;
+            this.rjTextBox12.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox12.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox12.Location = new System.Drawing.Point(166, 503);
+            this.rjTextBox12.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox12.Multiline = false;
+            this.rjTextBox12.Name = "rjTextBox12";
+            this.rjTextBox12.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox12.PasswordChar = false;
+            this.rjTextBox12.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox12.TabIndex = 94;
+            this.rjTextBox12.Texts = "";
+            this.rjTextBox12.UnderlinedStyle = false;
+            // 
+            // rjTextBox11
+            // 
+            this.rjTextBox11.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox11.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox11.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox11.BorderSize = 2;
+            this.rjTextBox11.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox11.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox11.Location = new System.Drawing.Point(166, 473);
+            this.rjTextBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox11.Multiline = false;
+            this.rjTextBox11.Name = "rjTextBox11";
+            this.rjTextBox11.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox11.PasswordChar = false;
+            this.rjTextBox11.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox11.TabIndex = 93;
+            this.rjTextBox11.Texts = "";
+            this.rjTextBox11.UnderlinedStyle = false;
+            // 
+            // rjTextBox10
+            // 
+            this.rjTextBox10.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox10.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox10.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox10.BorderSize = 2;
+            this.rjTextBox10.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox10.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox10.Location = new System.Drawing.Point(166, 447);
+            this.rjTextBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox10.Multiline = false;
+            this.rjTextBox10.Name = "rjTextBox10";
+            this.rjTextBox10.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox10.PasswordChar = false;
+            this.rjTextBox10.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox10.TabIndex = 92;
+            this.rjTextBox10.Texts = "";
+            this.rjTextBox10.UnderlinedStyle = false;
+            // 
+            // rjTextBox9
+            // 
+            this.rjTextBox9.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox9.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox9.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox9.BorderSize = 2;
+            this.rjTextBox9.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox9.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox9.Location = new System.Drawing.Point(166, 421);
+            this.rjTextBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox9.Multiline = false;
+            this.rjTextBox9.Name = "rjTextBox9";
+            this.rjTextBox9.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox9.PasswordChar = false;
+            this.rjTextBox9.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox9.TabIndex = 91;
+            this.rjTextBox9.Texts = "";
+            this.rjTextBox9.UnderlinedStyle = false;
+            // 
+            // rjTextBox8
+            // 
+            this.rjTextBox8.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox8.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox8.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox8.BorderSize = 2;
+            this.rjTextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox8.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox8.Location = new System.Drawing.Point(166, 390);
+            this.rjTextBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox8.Multiline = false;
+            this.rjTextBox8.Name = "rjTextBox8";
+            this.rjTextBox8.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox8.PasswordChar = false;
+            this.rjTextBox8.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox8.TabIndex = 90;
+            this.rjTextBox8.Texts = "";
+            this.rjTextBox8.UnderlinedStyle = false;
+            // 
+            // rjTextBox7
+            // 
+            this.rjTextBox7.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox7.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox7.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox7.BorderSize = 2;
+            this.rjTextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox7.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox7.Location = new System.Drawing.Point(166, 362);
+            this.rjTextBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox7.Multiline = false;
+            this.rjTextBox7.Name = "rjTextBox7";
+            this.rjTextBox7.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox7.PasswordChar = false;
+            this.rjTextBox7.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox7.TabIndex = 89;
+            this.rjTextBox7.Texts = "";
+            this.rjTextBox7.UnderlinedStyle = false;
+            // 
+            // rjTextBox6
+            // 
+            this.rjTextBox6.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox6.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox6.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox6.BorderSize = 2;
+            this.rjTextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox6.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox6.Location = new System.Drawing.Point(166, 334);
+            this.rjTextBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox6.Multiline = false;
+            this.rjTextBox6.Name = "rjTextBox6";
+            this.rjTextBox6.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox6.PasswordChar = false;
+            this.rjTextBox6.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox6.TabIndex = 88;
+            this.rjTextBox6.Texts = "";
+            this.rjTextBox6.UnderlinedStyle = false;
+            // 
+            // rjTextBox5
+            // 
+            this.rjTextBox5.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox5.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox5.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox5.BorderSize = 2;
+            this.rjTextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox5.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox5.Location = new System.Drawing.Point(166, 306);
+            this.rjTextBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox5.Multiline = false;
+            this.rjTextBox5.Name = "rjTextBox5";
+            this.rjTextBox5.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox5.PasswordChar = false;
+            this.rjTextBox5.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox5.TabIndex = 87;
+            this.rjTextBox5.Texts = "";
+            this.rjTextBox5.UnderlinedStyle = false;
+            // 
+            // rjTextBox4
+            // 
+            this.rjTextBox4.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox4.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox4.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox4.BorderSize = 2;
+            this.rjTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox4.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox4.Location = new System.Drawing.Point(166, 276);
+            this.rjTextBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox4.Multiline = false;
+            this.rjTextBox4.Name = "rjTextBox4";
+            this.rjTextBox4.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox4.PasswordChar = false;
+            this.rjTextBox4.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox4.TabIndex = 86;
+            this.rjTextBox4.Texts = "";
+            this.rjTextBox4.UnderlinedStyle = false;
+            // 
+            // rjTextBox3
+            // 
+            this.rjTextBox3.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox3.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox3.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox3.BorderSize = 2;
+            this.rjTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox3.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox3.Location = new System.Drawing.Point(166, 247);
+            this.rjTextBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox3.Multiline = false;
+            this.rjTextBox3.Name = "rjTextBox3";
+            this.rjTextBox3.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox3.PasswordChar = false;
+            this.rjTextBox3.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox3.TabIndex = 85;
+            this.rjTextBox3.Texts = "";
+            this.rjTextBox3.UnderlinedStyle = false;
+            // 
+            // rjTextBox2
+            // 
+            this.rjTextBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox2.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox2.BorderSize = 2;
+            this.rjTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox2.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox2.Location = new System.Drawing.Point(166, 218);
+            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox2.Multiline = true;
+            this.rjTextBox2.Name = "rjTextBox2";
+            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox2.PasswordChar = false;
+            this.rjTextBox2.Size = new System.Drawing.Size(119, 33);
+            this.rjTextBox2.TabIndex = 84;
+            this.rjTextBox2.Texts = "";
+            this.rjTextBox2.UnderlinedStyle = false;
+            // 
+            // gum_amt
+            // 
+            this.gum_amt.BackColor = System.Drawing.SystemColors.Window;
+            this.gum_amt.BorderColor = System.Drawing.Color.Lavender;
+            this.gum_amt.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.gum_amt.BorderSize = 2;
+            this.gum_amt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gum_amt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gum_amt.ForeColor = System.Drawing.Color.DimGray;
+            this.gum_amt.Location = new System.Drawing.Point(72, 104);
+            this.gum_amt.Margin = new System.Windows.Forms.Padding(4);
+            this.gum_amt.Multiline = false;
+            this.gum_amt.Name = "gum_amt";
+            this.gum_amt.Padding = new System.Windows.Forms.Padding(7);
+            this.gum_amt.PasswordChar = false;
+            this.gum_amt.Size = new System.Drawing.Size(213, 35);
+            this.gum_amt.TabIndex = 82;
+            this.gum_amt.Texts = "";
+            this.gum_amt.UnderlinedStyle = false;
+            // 
+            // testTitle
+            // 
+            this.testTitle.BackColor = System.Drawing.SystemColors.Window;
+            this.testTitle.BorderColor = System.Drawing.Color.Lavender;
+            this.testTitle.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.testTitle.BorderSize = 2;
+            this.testTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.testTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.testTitle.ForeColor = System.Drawing.Color.DimGray;
+            this.testTitle.ImeMode = System.Windows.Forms.ImeMode.Hangul;
+            this.testTitle.Location = new System.Drawing.Point(71, 63);
+            this.testTitle.Margin = new System.Windows.Forms.Padding(4);
+            this.testTitle.Multiline = false;
+            this.testTitle.Name = "testTitle";
+            this.testTitle.Padding = new System.Windows.Forms.Padding(7);
+            this.testTitle.PasswordChar = false;
+            this.testTitle.Size = new System.Drawing.Size(213, 35);
+            this.testTitle.TabIndex = 79;
+            this.testTitle.Texts = "";
+            this.testTitle.UnderlinedStyle = false;
+            // 
+            // Test_add
+            // 
+            this.Test_add.BackColor = System.Drawing.Color.Thistle;
+            this.Test_add.BackgroundColor = System.Drawing.Color.Thistle;
+            this.Test_add.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.Test_add.BorderRadius = 7;
+            this.Test_add.BorderSize = 0;
+            this.Test_add.FlatAppearance.BorderSize = 0;
+            this.Test_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Test_add.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Test_add.ForeColor = System.Drawing.Color.White;
+            this.Test_add.Location = new System.Drawing.Point(14, 558);
+            this.Test_add.Name = "Test_add";
+            this.Test_add.Size = new System.Drawing.Size(80, 30);
+            this.Test_add.TabIndex = 80;
+            this.Test_add.Text = "시험 등록";
+            this.Test_add.TextColor = System.Drawing.Color.White;
+            this.Test_add.UseVisualStyleBackColor = false;
+            this.Test_add.Click += new System.EventHandler(this.Test_add_Click);
+            // 
+            // Uncheck
+            // 
+            this.Uncheck.BackColor = System.Drawing.Color.LightGray;
+            this.Uncheck.BackgroundColor = System.Drawing.Color.LightGray;
+            this.Uncheck.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.Uncheck.BorderRadius = 7;
+            this.Uncheck.BorderSize = 0;
+            this.Uncheck.FlatAppearance.BorderSize = 0;
+            this.Uncheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Uncheck.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Uncheck.ForeColor = System.Drawing.Color.White;
+            this.Uncheck.Location = new System.Drawing.Point(14, 218);
+            this.Uncheck.Name = "Uncheck";
+            this.Uncheck.Size = new System.Drawing.Size(80, 30);
+            this.Uncheck.TabIndex = 79;
+            this.Uncheck.Text = "전체 해제";
+            this.Uncheck.TextColor = System.Drawing.Color.White;
+            this.Uncheck.UseVisualStyleBackColor = false;
+            this.Uncheck.Click += new System.EventHandler(this.Uncheck_Click);
+            // 
+            // test_days
+            // 
+            this.test_days.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.test_days.CheckOnClick = true;
+            this.test_days.FormattingEnabled = true;
+            this.test_days.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14"});
+            this.test_days.Location = new System.Drawing.Point(98, 189);
+            this.test_days.Name = "test_days";
+            this.test_days.Size = new System.Drawing.Size(17, 414);
+            this.test_days.TabIndex = 78;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1532, 891);
+            this.ClientSize = new System.Drawing.Size(1532, 916);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.calendar1);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
@@ -964,7 +979,6 @@
 
         private NET.Calendar calendar1;
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.CheckedListBox test_days;
         private System.Windows.Forms.Label Text_date;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -981,12 +995,10 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.ToolStripMenuItem ddToolStripMenuItem;
@@ -1018,6 +1030,9 @@
         private CustomControls.RJControls.RJTextBox rjTextBox3;
         private CustomControls.RJControls.RJTextBox rjTextBox2;
         private CustomControls.RJControls.RJTextBox rjTextBox1;
+        private CustomControls.RJControls.RJComboBox comboBox1;
+        private CustomControls.RJControls.RJComboBox comboBox2;
+        private MyListBox test_days;
     }
 }
 

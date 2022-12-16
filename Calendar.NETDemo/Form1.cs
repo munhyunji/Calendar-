@@ -40,10 +40,8 @@ namespace Calendar.NETDemo
             dateTimePicker2.Format = DateTimePickerFormat.Time;
             dateTimePicker2.ShowUpDown = true;
 
-            comboBox1.SelectedIndex = 0;
-            comboBox2.SelectedIndex = 0;
+            
 
-        
             Form1_Load();
 
              //var ce = new CustomEvent();
@@ -174,10 +172,13 @@ namespace Calendar.NETDemo
 
             //시험명
             String test_name = testTitle.Texts;
-            
+
             //시험자
             String test_person = comboBox2.SelectedItem.ToString();
 
+           // Font tester = new Font(test_person, FontStyle.Bold);
+
+           
             String test = test_name + "[" + test_person+ "]";
 
             //검체량
@@ -213,8 +214,8 @@ namespace Calendar.NETDemo
 
                     calendar1.AddEvent(test_case);
                     XML_save(test, total_datetime, user_color_string, GumCheName, GumCheDate, GumAmt, "Test");
-
-
+                    
+                    
                 for (int i = 0; i < test_days.CheckedItems.Count; i++)
                 {
                     if (test_days.SelectedItem != null)
@@ -235,7 +236,7 @@ namespace Calendar.NETDemo
                             eventText = "계수";
                         }
                         
-                        String eventText_Total = test_name + "\n" + day + "일차 " + eventText;
+                        String eventText_Total = "["+ test_person + "] " + test_name + "\n" + day + "일차 " + eventText;
 
                             var added_test_case = new CustomEvent
                             {
@@ -259,7 +260,7 @@ namespace Calendar.NETDemo
                 comboBox1.SelectedIndex = 0;
                 comboBox2.SelectedIndex = 0;
                 gum_amt.Texts = "";
-                Uncheck_Click();
+                Uncheck_Click(null,null);
 
                 panel1.BackColor = Color.Transparent;
                 colorDialog1.Color = Color.Transparent;
@@ -404,6 +405,9 @@ namespace Calendar.NETDemo
                 {
                     MessageBox.Show("Xml 파일없는데요");
                 }
+
+                comboBox1.SelectedIndex = 0;
+                comboBox2.SelectedIndex = 0;
             }
             catch (Exception ex) {
                 MessageBox.Show(ex.ToString());
@@ -420,7 +424,7 @@ namespace Calendar.NETDemo
             }
         }
 
-        private void Uncheck_Click()
+        private void Uncheck_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < test_days.Items.Count; i++)
             {

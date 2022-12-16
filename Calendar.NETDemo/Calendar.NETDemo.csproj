@@ -135,6 +135,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RjCheckboxlist.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RJComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="RJTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
