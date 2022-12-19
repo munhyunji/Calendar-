@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.Text_date = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -65,6 +64,7 @@
             this.dateTimePicker1 = new Calendar.NETDemo.RashiDateTimePicker();
             this.gum_name = new CustomControls.RJControls.RJTextBox();
             this.AddEvent2 = new Calendar.NETDemo.RJButton();
+            this.test_days = new Calendar.NETDemo.MyListBox();
             this.comboBox2 = new CustomControls.RJControls.RJComboBox();
             this.comboBox1 = new CustomControls.RJControls.RJComboBox();
             this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
@@ -85,7 +85,6 @@
             this.testTitle = new CustomControls.RJControls.RJTextBox();
             this.Test_add = new Calendar.NETDemo.RJButton();
             this.Uncheck = new Calendar.NETDemo.RJButton();
-            this.test_days = new Calendar.NETDemo.MyListBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
@@ -196,7 +195,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label14.Location = new System.Drawing.Point(113, 454);
+            this.label14.Location = new System.Drawing.Point(116, 454);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(54, 17);
             this.label14.TabIndex = 65;
@@ -206,7 +205,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label15.Location = new System.Drawing.Point(116, 482);
+            this.label15.Location = new System.Drawing.Point(116, 481);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(50, 18);
             this.label15.TabIndex = 66;
@@ -226,7 +225,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label17.Location = new System.Drawing.Point(114, 541);
+            this.label17.Location = new System.Drawing.Point(113, 541);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(54, 17);
             this.label17.TabIndex = 68;
@@ -260,7 +259,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(19, 147);
+            this.label4.Location = new System.Drawing.Point(19, 152);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 17);
             this.label4.TabIndex = 37;
@@ -270,7 +269,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(16, 68);
+            this.label3.Location = new System.Drawing.Point(18, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 17);
             this.label3.TabIndex = 19;
@@ -333,7 +332,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(17, 111);
+            this.label1.Location = new System.Drawing.Point(17, 113);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 17);
             this.label1.TabIndex = 81;
@@ -343,7 +342,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label19.Location = new System.Drawing.Point(16, 33);
+            this.label19.Location = new System.Drawing.Point(18, 31);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(50, 17);
             this.label19.TabIndex = 77;
@@ -359,7 +358,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(47, 29);
             this.panel1.TabIndex = 77;
-            this.panel1.Click += new System.EventHandler(this.panel1_DoubleClick);
             // 
             // contextMenuStrip1
             // 
@@ -437,10 +435,10 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(248, 31);
+            this.panel2.Location = new System.Drawing.Point(242, 32);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(49, 25);
+            this.panel2.Size = new System.Drawing.Size(49, 36);
             this.panel2.TabIndex = 76;
             this.panel2.Click += new System.EventHandler(this.panel2_DoubleClick);
             // 
@@ -507,16 +505,41 @@
             this.AddEvent2.BorderSize = 0;
             this.AddEvent2.FlatAppearance.BorderSize = 0;
             this.AddEvent2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddEvent2.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AddEvent2.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.AddEvent2.ForeColor = System.Drawing.Color.White;
-            this.AddEvent2.Location = new System.Drawing.Point(98, 82);
+            this.AddEvent2.Location = new System.Drawing.Point(98, 72);
             this.AddEvent2.Name = "AddEvent2";
-            this.AddEvent2.Size = new System.Drawing.Size(98, 30);
+            this.AddEvent2.Size = new System.Drawing.Size(98, 38);
             this.AddEvent2.TabIndex = 78;
             this.AddEvent2.Text = "검체 접수";
             this.AddEvent2.TextColor = System.Drawing.Color.White;
             this.AddEvent2.UseVisualStyleBackColor = false;
             this.AddEvent2.Click += new System.EventHandler(this.AddEvent2_Click);
+            // 
+            // test_days
+            // 
+            this.test_days.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.test_days.CheckOnClick = true;
+            this.test_days.FormattingEnabled = true;
+            this.test_days.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14"});
+            this.test_days.Location = new System.Drawing.Point(98, 190);
+            this.test_days.Name = "test_days";
+            this.test_days.Size = new System.Drawing.Size(17, 414);
+            this.test_days.TabIndex = 78;
             // 
             // comboBox2
             // 
@@ -535,7 +558,7 @@
             "미래"});
             this.comboBox2.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.comboBox2.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBox2.Location = new System.Drawing.Point(70, 147);
+            this.comboBox2.Location = new System.Drawing.Point(70, 146);
             this.comboBox2.MinimumSize = new System.Drawing.Size(200, 30);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Padding = new System.Windows.Forms.Padding(2);
@@ -853,7 +876,7 @@
             this.gum_amt.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gum_amt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gum_amt.ForeColor = System.Drawing.Color.DimGray;
-            this.gum_amt.Location = new System.Drawing.Point(72, 104);
+            this.gum_amt.Location = new System.Drawing.Point(70, 104);
             this.gum_amt.Margin = new System.Windows.Forms.Padding(4);
             this.gum_amt.Multiline = false;
             this.gum_amt.Name = "gum_amt";
@@ -874,7 +897,7 @@
             this.testTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.testTitle.ForeColor = System.Drawing.Color.DimGray;
             this.testTitle.ImeMode = System.Windows.Forms.ImeMode.Hangul;
-            this.testTitle.Location = new System.Drawing.Point(71, 63);
+            this.testTitle.Location = new System.Drawing.Point(70, 63);
             this.testTitle.Margin = new System.Windows.Forms.Padding(4);
             this.testTitle.Multiline = false;
             this.testTitle.Name = "testTitle";
@@ -894,13 +917,13 @@
             this.Test_add.BorderSize = 0;
             this.Test_add.FlatAppearance.BorderSize = 0;
             this.Test_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Test_add.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Test_add.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Test_add.ForeColor = System.Drawing.Color.White;
-            this.Test_add.Location = new System.Drawing.Point(14, 558);
+            this.Test_add.Location = new System.Drawing.Point(14, 533);
             this.Test_add.Name = "Test_add";
-            this.Test_add.Size = new System.Drawing.Size(80, 30);
+            this.Test_add.Size = new System.Drawing.Size(78, 55);
             this.Test_add.TabIndex = 80;
-            this.Test_add.Text = "시험 등록";
+            this.Test_add.Text = "시험\r\n등록";
             this.Test_add.TextColor = System.Drawing.Color.White;
             this.Test_add.UseVisualStyleBackColor = false;
             this.Test_add.Click += new System.EventHandler(this.Test_add_Click);
@@ -916,39 +939,14 @@
             this.Uncheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Uncheck.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Uncheck.ForeColor = System.Drawing.Color.White;
-            this.Uncheck.Location = new System.Drawing.Point(14, 218);
+            this.Uncheck.Location = new System.Drawing.Point(13, 218);
             this.Uncheck.Name = "Uncheck";
-            this.Uncheck.Size = new System.Drawing.Size(80, 30);
+            this.Uncheck.Size = new System.Drawing.Size(78, 30);
             this.Uncheck.TabIndex = 79;
             this.Uncheck.Text = "전체 해제";
             this.Uncheck.TextColor = System.Drawing.Color.White;
             this.Uncheck.UseVisualStyleBackColor = false;
             this.Uncheck.Click += new System.EventHandler(this.Uncheck_Click);
-            // 
-            // test_days
-            // 
-            this.test_days.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.test_days.CheckOnClick = true;
-            this.test_days.FormattingEnabled = true;
-            this.test_days.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14"});
-            this.test_days.Location = new System.Drawing.Point(98, 189);
-            this.test_days.Name = "test_days";
-            this.test_days.Size = new System.Drawing.Size(17, 414);
-            this.test_days.TabIndex = 78;
             // 
             // Form1
             // 
@@ -978,7 +976,6 @@
         #endregion
 
         private NET.Calendar calendar1;
-        private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Label Text_date;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
