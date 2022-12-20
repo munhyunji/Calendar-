@@ -518,8 +518,10 @@
             // 
             // test_days
             // 
+            this.test_days.BackColor = System.Drawing.SystemColors.Window;
             this.test_days.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.test_days.CheckOnClick = true;
+            this.test_days.ForeColor = System.Drawing.SystemColors.Window;
             this.test_days.FormattingEnabled = true;
             this.test_days.Items.AddRange(new object[] {
             "1",
@@ -594,7 +596,7 @@
             this.rjTextBox1.BorderFocusColor = System.Drawing.Color.Thistle;
             this.rjTextBox1.BorderSize = 2;
             this.rjTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.rjTextBox1.ForeColor = System.Drawing.Color.DimGray;
             this.rjTextBox1.Location = new System.Drawing.Point(166, 187);
             this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -614,7 +616,7 @@
             this.rjTextBox14.BorderFocusColor = System.Drawing.Color.Thistle;
             this.rjTextBox14.BorderSize = 2;
             this.rjTextBox14.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox14.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.rjTextBox14.ForeColor = System.Drawing.Color.DimGray;
             this.rjTextBox14.Location = new System.Drawing.Point(166, 563);
             this.rjTextBox14.Margin = new System.Windows.Forms.Padding(4);
@@ -622,7 +624,7 @@
             this.rjTextBox14.Name = "rjTextBox14";
             this.rjTextBox14.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox14.PasswordChar = false;
-            this.rjTextBox14.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox14.Size = new System.Drawing.Size(119, 32);
             this.rjTextBox14.TabIndex = 96;
             this.rjTextBox14.Texts = "";
             this.rjTextBox14.UnderlinedStyle = false;
@@ -634,7 +636,7 @@
             this.rjTextBox13.BorderFocusColor = System.Drawing.Color.Thistle;
             this.rjTextBox13.BorderSize = 2;
             this.rjTextBox13.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox13.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.rjTextBox13.ForeColor = System.Drawing.Color.DimGray;
             this.rjTextBox13.Location = new System.Drawing.Point(166, 533);
             this.rjTextBox13.Margin = new System.Windows.Forms.Padding(4);
@@ -642,7 +644,7 @@
             this.rjTextBox13.Name = "rjTextBox13";
             this.rjTextBox13.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox13.PasswordChar = false;
-            this.rjTextBox13.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox13.Size = new System.Drawing.Size(119, 32);
             this.rjTextBox13.TabIndex = 95;
             this.rjTextBox13.Texts = "";
             this.rjTextBox13.UnderlinedStyle = false;
@@ -654,7 +656,7 @@
             this.rjTextBox12.BorderFocusColor = System.Drawing.Color.Thistle;
             this.rjTextBox12.BorderSize = 2;
             this.rjTextBox12.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox12.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.rjTextBox12.ForeColor = System.Drawing.Color.DimGray;
             this.rjTextBox12.Location = new System.Drawing.Point(166, 503);
             this.rjTextBox12.Margin = new System.Windows.Forms.Padding(4);
@@ -662,7 +664,7 @@
             this.rjTextBox12.Name = "rjTextBox12";
             this.rjTextBox12.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox12.PasswordChar = false;
-            this.rjTextBox12.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox12.Size = new System.Drawing.Size(119, 32);
             this.rjTextBox12.TabIndex = 94;
             this.rjTextBox12.Texts = "";
             this.rjTextBox12.UnderlinedStyle = false;
@@ -674,7 +676,7 @@
             this.rjTextBox11.BorderFocusColor = System.Drawing.Color.Thistle;
             this.rjTextBox11.BorderSize = 2;
             this.rjTextBox11.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox11.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.rjTextBox11.ForeColor = System.Drawing.Color.DimGray;
             this.rjTextBox11.Location = new System.Drawing.Point(166, 473);
             this.rjTextBox11.Margin = new System.Windows.Forms.Padding(4);
@@ -682,7 +684,7 @@
             this.rjTextBox11.Name = "rjTextBox11";
             this.rjTextBox11.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox11.PasswordChar = false;
-            this.rjTextBox11.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox11.Size = new System.Drawing.Size(119, 32);
             this.rjTextBox11.TabIndex = 93;
             this.rjTextBox11.Texts = "";
             this.rjTextBox11.UnderlinedStyle = false;
@@ -694,7 +696,7 @@
             this.rjTextBox10.BorderFocusColor = System.Drawing.Color.Thistle;
             this.rjTextBox10.BorderSize = 2;
             this.rjTextBox10.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox10.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.rjTextBox10.ForeColor = System.Drawing.Color.DimGray;
             this.rjTextBox10.Location = new System.Drawing.Point(166, 447);
             this.rjTextBox10.Margin = new System.Windows.Forms.Padding(4);
@@ -702,7 +704,7 @@
             this.rjTextBox10.Name = "rjTextBox10";
             this.rjTextBox10.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox10.PasswordChar = false;
-            this.rjTextBox10.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox10.Size = new System.Drawing.Size(119, 32);
             this.rjTextBox10.TabIndex = 92;
             this.rjTextBox10.Texts = "";
             this.rjTextBox10.UnderlinedStyle = false;
@@ -714,7 +716,7 @@
             this.rjTextBox9.BorderFocusColor = System.Drawing.Color.Thistle;
             this.rjTextBox9.BorderSize = 2;
             this.rjTextBox9.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox9.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.rjTextBox9.ForeColor = System.Drawing.Color.DimGray;
             this.rjTextBox9.Location = new System.Drawing.Point(166, 421);
             this.rjTextBox9.Margin = new System.Windows.Forms.Padding(4);
@@ -722,7 +724,7 @@
             this.rjTextBox9.Name = "rjTextBox9";
             this.rjTextBox9.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox9.PasswordChar = false;
-            this.rjTextBox9.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox9.Size = new System.Drawing.Size(119, 32);
             this.rjTextBox9.TabIndex = 91;
             this.rjTextBox9.Texts = "";
             this.rjTextBox9.UnderlinedStyle = false;
@@ -734,7 +736,7 @@
             this.rjTextBox8.BorderFocusColor = System.Drawing.Color.Thistle;
             this.rjTextBox8.BorderSize = 2;
             this.rjTextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox8.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.rjTextBox8.ForeColor = System.Drawing.Color.DimGray;
             this.rjTextBox8.Location = new System.Drawing.Point(166, 390);
             this.rjTextBox8.Margin = new System.Windows.Forms.Padding(4);
@@ -742,7 +744,7 @@
             this.rjTextBox8.Name = "rjTextBox8";
             this.rjTextBox8.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox8.PasswordChar = false;
-            this.rjTextBox8.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox8.Size = new System.Drawing.Size(119, 32);
             this.rjTextBox8.TabIndex = 90;
             this.rjTextBox8.Texts = "";
             this.rjTextBox8.UnderlinedStyle = false;
@@ -754,7 +756,7 @@
             this.rjTextBox7.BorderFocusColor = System.Drawing.Color.Thistle;
             this.rjTextBox7.BorderSize = 2;
             this.rjTextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox7.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.rjTextBox7.ForeColor = System.Drawing.Color.DimGray;
             this.rjTextBox7.Location = new System.Drawing.Point(166, 362);
             this.rjTextBox7.Margin = new System.Windows.Forms.Padding(4);
@@ -762,7 +764,7 @@
             this.rjTextBox7.Name = "rjTextBox7";
             this.rjTextBox7.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox7.PasswordChar = false;
-            this.rjTextBox7.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox7.Size = new System.Drawing.Size(119, 32);
             this.rjTextBox7.TabIndex = 89;
             this.rjTextBox7.Texts = "";
             this.rjTextBox7.UnderlinedStyle = false;
@@ -774,7 +776,7 @@
             this.rjTextBox6.BorderFocusColor = System.Drawing.Color.Thistle;
             this.rjTextBox6.BorderSize = 2;
             this.rjTextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox6.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.rjTextBox6.ForeColor = System.Drawing.Color.DimGray;
             this.rjTextBox6.Location = new System.Drawing.Point(166, 334);
             this.rjTextBox6.Margin = new System.Windows.Forms.Padding(4);
@@ -782,7 +784,7 @@
             this.rjTextBox6.Name = "rjTextBox6";
             this.rjTextBox6.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox6.PasswordChar = false;
-            this.rjTextBox6.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox6.Size = new System.Drawing.Size(119, 32);
             this.rjTextBox6.TabIndex = 88;
             this.rjTextBox6.Texts = "";
             this.rjTextBox6.UnderlinedStyle = false;
@@ -794,7 +796,7 @@
             this.rjTextBox5.BorderFocusColor = System.Drawing.Color.Thistle;
             this.rjTextBox5.BorderSize = 2;
             this.rjTextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox5.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.rjTextBox5.ForeColor = System.Drawing.Color.DimGray;
             this.rjTextBox5.Location = new System.Drawing.Point(166, 306);
             this.rjTextBox5.Margin = new System.Windows.Forms.Padding(4);
@@ -802,7 +804,7 @@
             this.rjTextBox5.Name = "rjTextBox5";
             this.rjTextBox5.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox5.PasswordChar = false;
-            this.rjTextBox5.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox5.Size = new System.Drawing.Size(119, 32);
             this.rjTextBox5.TabIndex = 87;
             this.rjTextBox5.Texts = "";
             this.rjTextBox5.UnderlinedStyle = false;
@@ -814,7 +816,7 @@
             this.rjTextBox4.BorderFocusColor = System.Drawing.Color.Thistle;
             this.rjTextBox4.BorderSize = 2;
             this.rjTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox4.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.rjTextBox4.ForeColor = System.Drawing.Color.DimGray;
             this.rjTextBox4.Location = new System.Drawing.Point(166, 276);
             this.rjTextBox4.Margin = new System.Windows.Forms.Padding(4);
@@ -822,7 +824,7 @@
             this.rjTextBox4.Name = "rjTextBox4";
             this.rjTextBox4.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox4.PasswordChar = false;
-            this.rjTextBox4.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox4.Size = new System.Drawing.Size(119, 32);
             this.rjTextBox4.TabIndex = 86;
             this.rjTextBox4.Texts = "";
             this.rjTextBox4.UnderlinedStyle = false;
@@ -834,7 +836,7 @@
             this.rjTextBox3.BorderFocusColor = System.Drawing.Color.Thistle;
             this.rjTextBox3.BorderSize = 2;
             this.rjTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox3.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.rjTextBox3.ForeColor = System.Drawing.Color.DimGray;
             this.rjTextBox3.Location = new System.Drawing.Point(166, 247);
             this.rjTextBox3.Margin = new System.Windows.Forms.Padding(4);
@@ -842,7 +844,7 @@
             this.rjTextBox3.Name = "rjTextBox3";
             this.rjTextBox3.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox3.PasswordChar = false;
-            this.rjTextBox3.Size = new System.Drawing.Size(119, 35);
+            this.rjTextBox3.Size = new System.Drawing.Size(119, 32);
             this.rjTextBox3.TabIndex = 85;
             this.rjTextBox3.Texts = "";
             this.rjTextBox3.UnderlinedStyle = false;
@@ -854,7 +856,7 @@
             this.rjTextBox2.BorderFocusColor = System.Drawing.Color.Thistle;
             this.rjTextBox2.BorderSize = 2;
             this.rjTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox2.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.rjTextBox2.ForeColor = System.Drawing.Color.DimGray;
             this.rjTextBox2.Location = new System.Drawing.Point(166, 218);
             this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
@@ -894,7 +896,7 @@
             this.testTitle.BorderFocusColor = System.Drawing.Color.Thistle;
             this.testTitle.BorderSize = 2;
             this.testTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.testTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.testTitle.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.testTitle.ForeColor = System.Drawing.Color.DimGray;
             this.testTitle.ImeMode = System.Windows.Forms.ImeMode.Hangul;
             this.testTitle.Location = new System.Drawing.Point(70, 63);
@@ -921,7 +923,7 @@
             this.Test_add.ForeColor = System.Drawing.Color.White;
             this.Test_add.Location = new System.Drawing.Point(14, 533);
             this.Test_add.Name = "Test_add";
-            this.Test_add.Size = new System.Drawing.Size(78, 55);
+            this.Test_add.Size = new System.Drawing.Size(69, 55);
             this.Test_add.TabIndex = 80;
             this.Test_add.Text = "시험\r\n등록";
             this.Test_add.TextColor = System.Drawing.Color.White;
@@ -1027,9 +1029,9 @@
         private CustomControls.RJControls.RJTextBox rjTextBox3;
         private CustomControls.RJControls.RJTextBox rjTextBox2;
         private CustomControls.RJControls.RJTextBox rjTextBox1;
-        private CustomControls.RJControls.RJComboBox comboBox1;
         private CustomControls.RJControls.RJComboBox comboBox2;
         private MyListBox test_days;
+        public CustomControls.RJControls.RJComboBox comboBox1;
     }
 }
 

@@ -5,6 +5,7 @@ using Calendar.NET;
 using System.Xml;
 using System.IO;
 using System.Text.RegularExpressions;
+using static Calendar.NET.Calendar;
 
 
 namespace Calendar.NETDemo
@@ -12,6 +13,7 @@ namespace Calendar.NETDemo
     public partial class Form1 : Form
 
     {
+       
         String XmlFileName = "Data.xml";
 
 
@@ -31,16 +33,13 @@ namespace Calendar.NETDemo
         public Form1()
         {
             InitializeComponent();
+            
 
             calendar1.CalendarDate = DateTime.Today;
             calendar1.CalendarView = CalendarViews.Month;
             calendar1.AllowEditingEvents = true;
 
             dateTimePicker1.Format = DateTimePickerFormat.Long;//날짜 + 시간 형태
-            dateTimePicker2.Format = DateTimePickerFormat.Time;
-            dateTimePicker2.ShowUpDown = true;
-
-
 
             Form1_Load();
 
@@ -73,7 +72,6 @@ namespace Calendar.NETDemo
             calendar1.AddEvent(ce);*/
 
         }
-
 
 
         [CustomRecurringFunction("Get Monday and Wednesday", "Selects the Monday and Wednesday of each month")]
@@ -240,13 +238,20 @@ namespace Calendar.NETDemo
                             eventText = "계수";
                         }
 
+                        String TestText = "[" + test_person + "] " + test_name + "\n";
+                        String DaysText = day + "일차 " + eventText;
+                        String AlignedText = TextAlignCenter(test, DaysText);
+                        
+
+                        //xml 저장용
                         String eventText_Total = "[" + test_person + "] " + test_name + "\n" + day + "일차 " + eventText;
 
-
+                        String total = TestText + AlignedText;
+                        
                         var added_test_case = new CustomEvent
                         {
                             Date = Added_datetime,
-                            EventText = eventText_Total,
+                            EventText = total,
                             EventColor = user_color,
                             EventLengthInHours = 2f,
                             RecurringFrequency = RecurringFrequencies.None,
@@ -283,18 +288,6 @@ namespace Calendar.NETDemo
         }
 
 
-        private String TextAlignCenter(int col, String text)
-        {
-            int indent = (col - text.Length) / 2;
-            for (int i = 0; i < indent; i++) {
-                text.PadLeft(indent);
-            }
-
-            MessageBox.Show(text);
-            return null;
-        }
-
-
         private int XML_save(String text, String datetime, String color, String GumCheName, String GumCheDate, String GumAmt, String nodeName) {
 
             XmlDocument xmlDoc;
@@ -317,6 +310,7 @@ namespace Calendar.NETDemo
                             childNode.SetAttribute("Name", text);
                             childNode.SetAttribute("Datetime", datetime);
                             childNode.SetAttribute("Color", color);
+                            childNode.SetAttribute("Rank", "1");
                             
                         } else
                         {
@@ -374,6 +368,11 @@ namespace Calendar.NETDemo
                         String nodeName = node.ChildNodes[i].Attributes["Name"].Value.ToString();
                         String datetime = node.ChildNodes[i].Attributes["Datetime"].Value.ToString();
                         String color = node.ChildNodes[i].Attributes["Color"].Value.ToString();
+                        int rank = Int32.Parse(node.ChildNodes[i].Attributes["Rank"].Value.ToString());
+
+                        String TestText = nodeName.Substring(nodeName.IndexOf("일차")-1);
+                        MessageBox.Show(TestText);
+                        String DaysText = "ㅇ";
 
                         Color c;
 
@@ -398,6 +397,8 @@ namespace Calendar.NETDemo
                             c = Color.FromName(real_color);
                         }
 
+
+
                         var custom = new CustomEvent
                         {
                             Date = DateTime.Parse(datetime),
@@ -407,6 +408,7 @@ namespace Calendar.NETDemo
                             RecurringFrequency = RecurringFrequencies.None,
                             EventFont = new Font("나눔고딕", 8, FontStyle.Regular),
                             EventTextColor = Color.Black,
+                            Rank = rank
                             
                         };
 
@@ -422,9 +424,10 @@ namespace Calendar.NETDemo
                     {
                         foreach (XmlElement GumcheNode in GumcheNodes)
                         {
-                            comboBox1.Items.Add("{" + GumcheNode.Attributes["Datetime"].Value +") " + GumcheNode.Attributes["Name"].Value);
+                            comboBox1.Items.Add("(" + GumcheNode.Attributes["Datetime"].Value +") " + GumcheNode.Attributes["Name"].Value);
                         }
                     }
+
 
                 } else
                 {
@@ -439,6 +442,15 @@ namespace Calendar.NETDemo
             }
 
         }
+
+        private String TextAlignCenter(String TestName, String DaysName)
+        {
+           
+            DaysName =  DaysName.PadLeft(TestName.Length+2);
+            
+            return DaysName;
+        }
+
 
         private void Uncheck_Click(object sender, EventArgs e)
         {

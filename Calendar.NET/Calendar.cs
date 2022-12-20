@@ -7,7 +7,8 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Xml;
 using System.IO;
-using System.Text.RegularExpressions;
+
+
 
 
 namespace Calendar.NET
@@ -71,7 +72,6 @@ namespace Calendar.NET
         XmlDocument xmlDoc;
         String XmlFileName = "Data.xml";
         private ToolStripMenuItem 시험일정전체삭제ToolStripMenuItem;
-
 
 
         /// <summary>
@@ -1231,19 +1231,18 @@ namespace Calendar.NET
         private void 삭제하기ToolStripMenuItem_Click(object sender, EventArgs e)
         {
            var ed = new EventDetails { Event = _clickedEvent.Event };
+
+           
             
             String eventText = ed.Event.EventText;
             String eventDate = ed.Event.Date.ToString("yyyy-MM-dd");
 
             if (File.Exists(XmlFileName))
               {
-
+                     //xml 속성가져오기
                      XmlDocument xmlDoc = new XmlDocument();
                      xmlDoc.Load(XmlFileName);
-
-                     //xml 속성가져오기
-
-                     //시험등록 comboBox에 item추가
+   
                      XmlNode GumcheNodes = xmlDoc.SelectSingleNode("Root");
                      if (GumcheNodes != null)
                      {
@@ -1265,8 +1264,12 @@ namespace Calendar.NET
                                 
                                 //이벤트 삭제
                                 RemoveEvent(_clickedEvent.Event);
+
                                 
+
                                 Refresh();
+
+                                
                             }
                         }
                      }

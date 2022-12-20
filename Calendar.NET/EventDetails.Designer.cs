@@ -33,6 +33,8 @@
             this.dtDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.gbBasics = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.chkIgnoreTimeComponent = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -47,8 +49,6 @@
             this.btnOk = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.gbBasics.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -64,10 +64,10 @@
             // 
             // txtEventName
             // 
-            this.txtEventName.Location = new System.Drawing.Point(17, 300);
+            this.txtEventName.Location = new System.Drawing.Point(6, 300);
             this.txtEventName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEventName.Name = "txtEventName";
-            this.txtEventName.Size = new System.Drawing.Size(248, 25);
+            this.txtEventName.Size = new System.Drawing.Size(297, 25);
             this.txtEventName.TabIndex = 1;
             // 
             // dtDate
@@ -105,14 +105,31 @@
             this.gbBasics.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbBasics.Name = "gbBasics";
             this.gbBasics.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbBasics.Size = new System.Drawing.Size(284, 407);
+            this.gbBasics.Size = new System.Drawing.Size(309, 407);
             this.gbBasics.TabIndex = 4;
             this.gbBasics.TabStop = false;
             this.gbBasics.Text = "기본설정";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(6, 361);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(297, 25);
+            this.textBox1.TabIndex = 11;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 334);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 17);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "검체량";
+            // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(17, 56);
+            this.monthCalendar1.Location = new System.Drawing.Point(36, 57);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 9;
             // 
@@ -145,7 +162,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(284, 168);
+            this.groupBox1.Size = new System.Drawing.Size(309, 168);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "일정 상태 설정";
@@ -153,7 +170,7 @@
             // pnlTextColor
             // 
             this.pnlTextColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlTextColor.Location = new System.Drawing.Point(223, 76);
+            this.pnlTextColor.Location = new System.Drawing.Point(261, 76);
             this.pnlTextColor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlTextColor.Name = "pnlTextColor";
             this.pnlTextColor.Size = new System.Drawing.Size(40, 17);
@@ -172,7 +189,7 @@
             // pnlEventColor
             // 
             this.pnlEventColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlEventColor.Location = new System.Drawing.Point(223, 39);
+            this.pnlEventColor.Location = new System.Drawing.Point(261, 39);
             this.pnlEventColor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlEventColor.Name = "pnlEventColor";
             this.pnlEventColor.Size = new System.Drawing.Size(40, 17);
@@ -199,7 +216,7 @@
             // 
             // btnFont
             // 
-            this.btnFont.Location = new System.Drawing.Point(223, 116);
+            this.btnFont.Location = new System.Drawing.Point(261, 116);
             this.btnFont.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFont.Name = "btnFont";
             this.btnFont.Size = new System.Drawing.Size(42, 22);
@@ -212,9 +229,9 @@
             // lblFont
             // 
             this.lblFont.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblFont.Location = new System.Drawing.Point(61, 119);
+            this.lblFont.Location = new System.Drawing.Point(61, 116);
             this.lblFont.Name = "lblFont";
-            this.lblFont.Size = new System.Drawing.Size(156, 19);
+            this.lblFont.Size = new System.Drawing.Size(194, 22);
             this.lblFont.TabIndex = 1;
             this.lblFont.Text = "폰트설정";
             this.lblFont.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -247,29 +264,12 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancelClick);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(17, 361);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(248, 25);
-            this.textBox1.TabIndex = 11;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 334);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 17);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "검체량";
-            // 
             // EventDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(326, 646);
+            this.ClientSize = new System.Drawing.Size(339, 646);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.groupBox1);
