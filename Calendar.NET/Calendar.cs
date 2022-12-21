@@ -6,8 +6,7 @@ using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml;
-using System.IO;
-
+using System.IO; 
 
 
 
@@ -1213,6 +1212,7 @@ namespace Calendar.NET
 
         private int NumberOfWeeks(DateTime date)
         {
+
             var beginningOfMonth = new DateTime(date.Year, date.Month, 1);
 
             while (date.Date.AddDays(1).DayOfWeek != CultureInfo.CurrentCulture.DateTimeFormat.FirstDayOfWeek)
@@ -1227,18 +1227,20 @@ namespace Calendar.NET
                 ResizeScrollPanel();
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void 삭제하기ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           var ed = new EventDetails { Event = _clickedEvent.Event };
+            var ed = new EventDetails { Event = _clickedEvent.Event };
 
-           
-            
-            String eventText = ed.Event.EventText;
+            String eventText = ed.Event.EventText.Trim();
             String eventDate = ed.Event.Date.ToString("yyyy-MM-dd");
 
             if (File.Exists(XmlFileName))
-              {
+            {
                      //xml 속성가져오기
                      XmlDocument xmlDoc = new XmlDocument();
                      xmlDoc.Load(XmlFileName);
@@ -1246,9 +1248,10 @@ namespace Calendar.NET
                      XmlNode GumcheNodes = xmlDoc.SelectSingleNode("Root");
                      if (GumcheNodes != null)
                      {
+                        
                         for (int i = 0; i < GumcheNodes.ChildNodes.Count; i++)
                         {
-                            string name_value = GumcheNodes.ChildNodes[i].Attributes["Name"].Value;
+                            string name_value = GumcheNodes.ChildNodes[i].Attributes["Name"].Value.Trim();
                             string date_value = GumcheNodes.ChildNodes[i].Attributes["Datetime"].Value;
                             
                             if (name_value.CompareTo(eventText) == 0 && date_value.CompareTo(eventDate) == 0)
@@ -1264,18 +1267,18 @@ namespace Calendar.NET
                                 
                                 //이벤트 삭제
                                 RemoveEvent(_clickedEvent.Event);
-
-                                
-
                                 Refresh();
 
-                                
-                            }
+                               
+                           
+                            } 
                         }
-                     }
-              }
-
-            
+                    
+                     } 
+            } else
+            {
+                MessageBox.Show("파일이 없습니다..");
+            }
 
 
         }

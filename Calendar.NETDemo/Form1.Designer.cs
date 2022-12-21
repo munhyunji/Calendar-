@@ -46,27 +46,12 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new Calendar.NETDemo.RashiDateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.ddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ddToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.colorDialog2 = new System.Windows.Forms.ColorDialog();
-            this.calendar1 = new Calendar.NET.Calendar();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new Calendar.NETDemo.RashiDateTimePicker();
-            this.gum_name = new CustomControls.RJControls.RJTextBox();
-            this.AddEvent2 = new Calendar.NETDemo.RJButton();
             this.test_days = new Calendar.NETDemo.MyListBox();
-            this.comboBox2 = new CustomControls.RJControls.RJComboBox();
-            this.comboBox1 = new CustomControls.RJControls.RJComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
             this.rjTextBox14 = new CustomControls.RJControls.RJTextBox();
             this.rjTextBox13 = new CustomControls.RJControls.RJTextBox();
@@ -82,9 +67,24 @@
             this.rjTextBox3 = new CustomControls.RJControls.RJTextBox();
             this.rjTextBox2 = new CustomControls.RJControls.RJTextBox();
             this.gum_amt = new CustomControls.RJControls.RJTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.testTitle = new CustomControls.RJControls.RJTextBox();
             this.Test_add = new Calendar.NETDemo.RJButton();
             this.Uncheck = new Calendar.NETDemo.RJButton();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ddToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.colorDialog2 = new System.Windows.Forms.ColorDialog();
+            this.calendar1 = new Calendar.NET.Calendar();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gum_name = new CustomControls.RJControls.RJTextBox();
+            this.AddEvent2 = new Calendar.NETDemo.RJButton();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
@@ -255,6 +255,22 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "인수일시";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.BorderColor = System.Drawing.Color.Gray;
+            this.dateTimePicker1.BorderSize = 0;
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.InactiveCaptionText;
+            this.dateTimePicker1.FillColor = System.Drawing.Color.Thistle;
+            this.dateTimePicker1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(6, 33);
+            this.dateTimePicker1.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.ShowCheckBox = true;
+            this.dateTimePicker1.Size = new System.Drawing.Size(292, 35);
+            this.dateTimePicker1.TabIndex = 77;
+            this.dateTimePicker1.TextColor = System.Drawing.Color.White;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -278,8 +294,8 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.test_days);
-            this.groupBox2.Controls.Add(this.comboBox2);
             this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.comboBox2);
             this.groupBox2.Controls.Add(this.rjTextBox1);
             this.groupBox2.Controls.Add(this.rjTextBox14);
             this.groupBox2.Controls.Add(this.rjTextBox13);
@@ -328,194 +344,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "시험";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(17, 113);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 17);
-            this.label1.TabIndex = 81;
-            this.label1.Text = "검체량";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label19.Location = new System.Drawing.Point(18, 31);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(50, 17);
-            this.label19.TabIndex = 77;
-            this.label19.Text = "검체명";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Location = new System.Drawing.Point(601, 13);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(47, 29);
-            this.panel1.TabIndex = 77;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // contextMenuStrip2
-            // 
-            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ddToolStripMenuItem,
-            this.ddToolStripMenuItem1});
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(97, 52);
-            // 
-            // ddToolStripMenuItem
-            // 
-            this.ddToolStripMenuItem.Name = "ddToolStripMenuItem";
-            this.ddToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
-            this.ddToolStripMenuItem.Text = "dd";
-            // 
-            // ddToolStripMenuItem1
-            // 
-            this.ddToolStripMenuItem1.Name = "ddToolStripMenuItem1";
-            this.ddToolStripMenuItem1.Size = new System.Drawing.Size(96, 24);
-            this.ddToolStripMenuItem1.Text = "dd";
-            // 
-            // calendar1
-            // 
-            this.calendar1.AllowEditingEvents = false;
-            this.calendar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.calendar1.BackColor = System.Drawing.Color.Transparent;
-            this.calendar1.CalendarDate = new System.DateTime(2012, 4, 24, 13, 16, 0, 0);
-            this.calendar1.CalendarView = Calendar.NET.CalendarViews.Month;
-            this.calendar1.DateHeaderFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.calendar1.DayOfWeekFont = new System.Drawing.Font("Arial", 10F);
-            this.calendar1.DaysFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calendar1.DayViewTimeFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.calendar1.DimDisabledEvents = true;
-            this.calendar1.Event = null;
-            this.calendar1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.calendar1.HighlightCurrentDay = true;
-            this.calendar1.LoadPresetHolidays = true;
-            this.calendar1.Location = new System.Drawing.Point(331, -7);
-            this.calendar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.calendar1.Name = "calendar1";
-            this.calendar1.ShowArrowControls = true;
-            this.calendar1.ShowDashedBorderOnDisabledEvents = true;
-            this.calendar1.ShowDateInHeader = true;
-            this.calendar1.ShowDisabledEvents = false;
-            this.calendar1.ShowEventTooltips = true;
-            this.calendar1.ShowTodayButton = true;
-            this.calendar1.Size = new System.Drawing.Size(1204, 862);
-            this.calendar1.TabIndex = 0;
-            this.calendar1.TodayFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CustomFormat = "HH:mm:ss";
-            this.dateTimePicker2.Enabled = false;
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(790, 1);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(198, 25);
-            this.dateTimePicker2.TabIndex = 35;
-            this.dateTimePicker2.Value = new System.DateTime(2022, 11, 9, 0, 0, 0, 0);
-            this.dateTimePicker2.Visible = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(242, 32);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(49, 36);
-            this.panel2.TabIndex = 76;
-            this.panel2.Click += new System.EventHandler(this.panel2_DoubleClick);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.gum_name);
-            this.groupBox1.Controls.Add(this.panel2);
-            this.groupBox1.Controls.Add(this.AddEvent2);
-            this.groupBox1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(22, 13);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(304, 119);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = " 검체";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.BorderColor = System.Drawing.Color.Gray;
-            this.dateTimePicker1.BorderSize = 0;
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.InactiveCaptionText;
-            this.dateTimePicker1.FillColor = System.Drawing.Color.Thistle;
-            this.dateTimePicker1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(6, 33);
-            this.dateTimePicker1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.ShowCheckBox = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(292, 35);
-            this.dateTimePicker1.TabIndex = 77;
-            this.dateTimePicker1.TextColor = System.Drawing.Color.White;
-            // 
-            // gum_name
-            // 
-            this.gum_name.BackColor = System.Drawing.SystemColors.Window;
-            this.gum_name.BorderColor = System.Drawing.Color.Lavender;
-            this.gum_name.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.gum_name.BorderSize = 2;
-            this.gum_name.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gum_name.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gum_name.ForeColor = System.Drawing.Color.Black;
-            this.gum_name.ImeMode = System.Windows.Forms.ImeMode.Hangul;
-            this.gum_name.Location = new System.Drawing.Point(20, 32);
-            this.gum_name.Margin = new System.Windows.Forms.Padding(4);
-            this.gum_name.Multiline = false;
-            this.gum_name.Name = "gum_name";
-            this.gum_name.Padding = new System.Windows.Forms.Padding(7);
-            this.gum_name.PasswordChar = false;
-            this.gum_name.Size = new System.Drawing.Size(222, 35);
-            this.gum_name.TabIndex = 77;
-            this.gum_name.Texts = "";
-            this.gum_name.UnderlinedStyle = false;
-            // 
-            // AddEvent2
-            // 
-            this.AddEvent2.BackColor = System.Drawing.Color.Thistle;
-            this.AddEvent2.BackgroundColor = System.Drawing.Color.Thistle;
-            this.AddEvent2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.AddEvent2.BorderRadius = 7;
-            this.AddEvent2.BorderSize = 0;
-            this.AddEvent2.FlatAppearance.BorderSize = 0;
-            this.AddEvent2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddEvent2.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AddEvent2.ForeColor = System.Drawing.Color.White;
-            this.AddEvent2.Location = new System.Drawing.Point(98, 72);
-            this.AddEvent2.Name = "AddEvent2";
-            this.AddEvent2.Size = new System.Drawing.Size(98, 38);
-            this.AddEvent2.TabIndex = 78;
-            this.AddEvent2.Text = "검체 접수";
-            this.AddEvent2.TextColor = System.Drawing.Color.White;
-            this.AddEvent2.UseVisualStyleBackColor = false;
-            this.AddEvent2.Click += new System.EventHandler(this.AddEvent2_Click);
-            // 
             // test_days
             // 
             this.test_days.BackColor = System.Drawing.SystemColors.Window;
@@ -543,51 +371,19 @@
             this.test_days.Size = new System.Drawing.Size(17, 414);
             this.test_days.TabIndex = 78;
             // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.White;
-            this.comboBox2.BorderColor = System.Drawing.Color.Lavender;
-            this.comboBox2.BorderSize = 2;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboBox2.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBox2.IconColor = System.Drawing.Color.MediumOrchid;
-            this.comboBox2.Items.AddRange(new object[] {
-            "시험자를 선택하세요.",
-            "희해",
-            "아라",
-            "서영",
-            "미래"});
-            this.comboBox2.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.comboBox2.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBox2.Location = new System.Drawing.Point(70, 146);
-            this.comboBox2.MinimumSize = new System.Drawing.Size(200, 30);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.comboBox2.Size = new System.Drawing.Size(214, 30);
-            this.comboBox2.TabIndex = 99;
-            this.comboBox2.Texts = "";
-            // 
             // comboBox1
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.BorderColor = System.Drawing.Color.Lavender;
-            this.comboBox1.BorderSize = 2;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboBox1.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBox1.IconColor = System.Drawing.Color.MediumOrchid;
+            this.comboBox1.BackColor = System.Drawing.Color.Thistle;
+            this.comboBox1.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "검체를 선택하세요."});
-            this.comboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.comboBox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBox1.Location = new System.Drawing.Point(70, 25);
-            this.comboBox1.MinimumSize = new System.Drawing.Size(200, 30);
+            this.comboBox1.Location = new System.Drawing.Point(69, 29);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Size = new System.Drawing.Size(214, 30);
-            this.comboBox1.TabIndex = 77;
-            this.comboBox1.Texts = "";
+            this.comboBox1.Size = new System.Drawing.Size(214, 28);
+            this.comboBox1.TabIndex = 78;
+            this.comboBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBox1_MouseClick);
             // 
             // rjTextBox1
             // 
@@ -889,6 +685,16 @@
             this.gum_amt.Texts = "";
             this.gum_amt.UnderlinedStyle = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(17, 113);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 17);
+            this.label1.TabIndex = 81;
+            this.label1.Text = "검체량";
+            // 
             // testTitle
             // 
             this.testTitle.BackColor = System.Drawing.SystemColors.Window;
@@ -949,6 +755,185 @@
             this.Uncheck.TextColor = System.Drawing.Color.White;
             this.Uncheck.UseVisualStyleBackColor = false;
             this.Uncheck.Click += new System.EventHandler(this.Uncheck_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label19.Location = new System.Drawing.Point(18, 31);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(50, 17);
+            this.label19.TabIndex = 77;
+            this.label19.Text = "검체명";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Location = new System.Drawing.Point(601, 13);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(47, 29);
+            this.panel1.TabIndex = 77;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ddToolStripMenuItem,
+            this.ddToolStripMenuItem1});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(97, 52);
+            // 
+            // ddToolStripMenuItem
+            // 
+            this.ddToolStripMenuItem.Name = "ddToolStripMenuItem";
+            this.ddToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
+            this.ddToolStripMenuItem.Text = "dd";
+            // 
+            // ddToolStripMenuItem1
+            // 
+            this.ddToolStripMenuItem1.Name = "ddToolStripMenuItem1";
+            this.ddToolStripMenuItem1.Size = new System.Drawing.Size(96, 24);
+            this.ddToolStripMenuItem1.Text = "dd";
+            // 
+            // calendar1
+            // 
+            this.calendar1.AllowEditingEvents = false;
+            this.calendar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.calendar1.BackColor = System.Drawing.Color.Transparent;
+            this.calendar1.CalendarDate = new System.DateTime(2012, 4, 24, 13, 16, 0, 0);
+            this.calendar1.CalendarView = Calendar.NET.CalendarViews.Month;
+            this.calendar1.DateHeaderFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.calendar1.DayOfWeekFont = new System.Drawing.Font("Arial", 10F);
+            this.calendar1.DaysFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calendar1.DayViewTimeFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.calendar1.DimDisabledEvents = true;
+            this.calendar1.Event = null;
+            this.calendar1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.calendar1.HighlightCurrentDay = true;
+            this.calendar1.LoadPresetHolidays = true;
+            this.calendar1.Location = new System.Drawing.Point(331, -7);
+            this.calendar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.calendar1.Name = "calendar1";
+            this.calendar1.ShowArrowControls = true;
+            this.calendar1.ShowDashedBorderOnDisabledEvents = true;
+            this.calendar1.ShowDateInHeader = true;
+            this.calendar1.ShowDisabledEvents = false;
+            this.calendar1.ShowEventTooltips = true;
+            this.calendar1.ShowTodayButton = true;
+            this.calendar1.Size = new System.Drawing.Size(1204, 862);
+            this.calendar1.TabIndex = 0;
+            this.calendar1.TodayFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CustomFormat = "HH:mm:ss";
+            this.dateTimePicker2.Enabled = false;
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(790, 1);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(198, 25);
+            this.dateTimePicker2.TabIndex = 35;
+            this.dateTimePicker2.Value = new System.DateTime(2022, 11, 9, 0, 0, 0, 0);
+            this.dateTimePicker2.Visible = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Location = new System.Drawing.Point(242, 32);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(49, 36);
+            this.panel2.TabIndex = 76;
+            this.panel2.Click += new System.EventHandler(this.panel2_DoubleClick);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.gum_name);
+            this.groupBox1.Controls.Add(this.panel2);
+            this.groupBox1.Controls.Add(this.AddEvent2);
+            this.groupBox1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
+            this.groupBox1.Location = new System.Drawing.Point(22, 13);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(304, 119);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = " 검체";
+            // 
+            // gum_name
+            // 
+            this.gum_name.BackColor = System.Drawing.SystemColors.Window;
+            this.gum_name.BorderColor = System.Drawing.Color.Lavender;
+            this.gum_name.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.gum_name.BorderSize = 2;
+            this.gum_name.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gum_name.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gum_name.ForeColor = System.Drawing.Color.Black;
+            this.gum_name.ImeMode = System.Windows.Forms.ImeMode.Hangul;
+            this.gum_name.Location = new System.Drawing.Point(20, 32);
+            this.gum_name.Margin = new System.Windows.Forms.Padding(4);
+            this.gum_name.Multiline = false;
+            this.gum_name.Name = "gum_name";
+            this.gum_name.Padding = new System.Windows.Forms.Padding(7);
+            this.gum_name.PasswordChar = false;
+            this.gum_name.Size = new System.Drawing.Size(222, 35);
+            this.gum_name.TabIndex = 77;
+            this.gum_name.Texts = "";
+            this.gum_name.UnderlinedStyle = false;
+            // 
+            // AddEvent2
+            // 
+            this.AddEvent2.BackColor = System.Drawing.Color.Thistle;
+            this.AddEvent2.BackgroundColor = System.Drawing.Color.Thistle;
+            this.AddEvent2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.AddEvent2.BorderRadius = 7;
+            this.AddEvent2.BorderSize = 0;
+            this.AddEvent2.FlatAppearance.BorderSize = 0;
+            this.AddEvent2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddEvent2.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AddEvent2.ForeColor = System.Drawing.Color.White;
+            this.AddEvent2.Location = new System.Drawing.Point(98, 72);
+            this.AddEvent2.Name = "AddEvent2";
+            this.AddEvent2.Size = new System.Drawing.Size(98, 38);
+            this.AddEvent2.TabIndex = 78;
+            this.AddEvent2.Text = "검체 접수";
+            this.AddEvent2.TextColor = System.Drawing.Color.White;
+            this.AddEvent2.UseVisualStyleBackColor = false;
+            this.AddEvent2.Click += new System.EventHandler(this.AddEvent2_Click);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.Thistle;
+            this.comboBox2.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.comboBox2.ForeColor = System.Drawing.SystemColors.Window;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "시험자를 선택하세요.",
+            "희해",
+            "아라",
+            "서영",
+            "미래"});
+            this.comboBox2.Location = new System.Drawing.Point(70, 147);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(214, 28);
+            this.comboBox2.TabIndex = 100;
             // 
             // Form1
             // 
@@ -1029,9 +1014,9 @@
         private CustomControls.RJControls.RJTextBox rjTextBox3;
         private CustomControls.RJControls.RJTextBox rjTextBox2;
         private CustomControls.RJControls.RJTextBox rjTextBox1;
-        private CustomControls.RJControls.RJComboBox comboBox2;
         private MyListBox test_days;
-        public CustomControls.RJControls.RJComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
 
