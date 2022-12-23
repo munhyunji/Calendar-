@@ -64,10 +64,10 @@
             // 
             // txtEventName
             // 
-            this.txtEventName.Location = new System.Drawing.Point(6, 300);
+            this.txtEventName.Location = new System.Drawing.Point(19, 300);
             this.txtEventName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEventName.Name = "txtEventName";
-            this.txtEventName.Size = new System.Drawing.Size(297, 25);
+            this.txtEventName.Size = new System.Drawing.Size(265, 25);
             this.txtEventName.TabIndex = 1;
             // 
             // dtDate
@@ -112,10 +112,10 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 361);
+            this.textBox1.Location = new System.Drawing.Point(17, 361);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(297, 25);
+            this.textBox1.Size = new System.Drawing.Size(267, 25);
             this.textBox1.TabIndex = 11;
             // 
             // label3
@@ -129,9 +129,12 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(36, 57);
+            this.monthCalendar1.BackColor = System.Drawing.SystemColors.Window;
+            this.monthCalendar1.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.monthCalendar1.Location = new System.Drawing.Point(19, 57);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 9;
+            this.monthCalendar1.TrailingForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             // 
             // chkIgnoreTimeComponent
             // 
@@ -170,7 +173,7 @@
             // pnlTextColor
             // 
             this.pnlTextColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlTextColor.Location = new System.Drawing.Point(261, 76);
+            this.pnlTextColor.Location = new System.Drawing.Point(244, 76);
             this.pnlTextColor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlTextColor.Name = "pnlTextColor";
             this.pnlTextColor.Size = new System.Drawing.Size(40, 17);
@@ -189,7 +192,7 @@
             // pnlEventColor
             // 
             this.pnlEventColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlEventColor.Location = new System.Drawing.Point(261, 39);
+            this.pnlEventColor.Location = new System.Drawing.Point(244, 37);
             this.pnlEventColor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlEventColor.Name = "pnlEventColor";
             this.pnlEventColor.Size = new System.Drawing.Size(40, 17);
@@ -216,7 +219,7 @@
             // 
             // btnFont
             // 
-            this.btnFont.Location = new System.Drawing.Point(261, 116);
+            this.btnFont.Location = new System.Drawing.Point(244, 115);
             this.btnFont.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFont.Name = "btnFont";
             this.btnFont.Size = new System.Drawing.Size(42, 22);
@@ -231,7 +234,7 @@
             this.lblFont.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblFont.Location = new System.Drawing.Point(61, 116);
             this.lblFont.Name = "lblFont";
-            this.lblFont.Size = new System.Drawing.Size(194, 22);
+            this.lblFont.Size = new System.Drawing.Size(169, 22);
             this.lblFont.TabIndex = 1;
             this.lblFont.Text = "폰트설정";
             this.lblFont.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -269,7 +272,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(339, 646);
+            this.ClientSize = new System.Drawing.Size(350, 646);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.groupBox1);

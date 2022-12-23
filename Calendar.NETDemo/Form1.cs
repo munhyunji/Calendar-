@@ -194,7 +194,7 @@ namespace Calendar.NETDemo
 
             // Font tester = new Font(test_person, FontStyle.Bold);
 
-            String test =  "[" + test_person + "]" + test_name;
+            String test = "【" + test_person + "】 " + test_name;
 
             String aligned_test = TextAlignCenter_TestName(test);
 
@@ -253,7 +253,7 @@ namespace Calendar.NETDemo
                             eventText = "계수";
                         }
 
-                        String TestText = "[" + test_person + "] " + test_name + "\n";
+                        String TestText = "【" + test_person + "】 " + test_name + "\n";
                         String AlignedTest = TextAlignCenter_TestName(TestText);
                         String DaysText = day + "일차 " + eventText;
                         String AlignedText = TextAlignCenter_DaysName(test, DaysText);
@@ -499,7 +499,10 @@ namespace Calendar.NETDemo
                     {
                         foreach (XmlElement GumcheNode in GumcheNodes)
                         {
+                            if (GumcheNode.Attributes["Name"].Value != "")
+                            {
                             comboBox1.Items.Add("(" + GumcheNode.Attributes["Datetime"].Value + ") " + GumcheNode.Attributes["Name"].Value);
+                            }
                         }
                     }
             }

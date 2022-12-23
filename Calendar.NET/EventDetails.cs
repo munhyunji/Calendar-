@@ -124,11 +124,13 @@ namespace Calendar.NET
 
         private void FillValues()
         {
-            txtEventName.Text = _event.EventText;
-            dtDate.Value = _event.Date;
-            dtDate.CustomFormat = _event.IgnoreTimeComponent ? "M/d/yyyy" : "M/d/yyyy h:mm tt";
-           // cbRecurringFrequency.SelectedItem = RecurringFrequencyToString(_event.RecurringFrequency);
-           // chkThisDayForwardOnly.Enabled = _event.RecurringFrequency != RecurringFrequencies.None;
+            txtEventName.Text = _event.EventText;          
+            monthCalendar1.SelectionRange = new SelectionRange(_event.Date, _event.Date);
+            
+            //dtDate.Value = _event.Date;
+            //dtDate.CustomFormat = _event.IgnoreTimeComponent ? "M/d/yyyy" : "M/d/yyyy h:mm tt";
+            // cbRecurringFrequency.SelectedItem = RecurringFrequencyToString(_event.RecurringFrequency);
+            // chkThisDayForwardOnly.Enabled = _event.RecurringFrequency != RecurringFrequencies.None;
             //chkEnabled.Checked = _event.Enabled;
             lblFont.Text = _event.EventFont.FontFamily.Name + " " + _event.EventFont.Size.ToString(CultureInfo.InvariantCulture) + "pt";
             pnlEventColor.BackColor = _event.EventColor;

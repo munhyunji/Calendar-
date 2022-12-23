@@ -71,6 +71,7 @@ namespace Calendar.NET
         XmlDocument xmlDoc;
         String XmlFileName = "Data.xml";
         private ToolStripMenuItem 시험일정전체삭제ToolStripMenuItem;
+        private ToolStripMenuItem 시험일차추가하기ToolStripMenuItem;
 
 
         /// <summary>
@@ -375,6 +376,7 @@ namespace Calendar.NET
             this._btnRight = new NavigateRightButton();
             this._btnLeft = new NavigateLeftButton();
             this._btnToday = new TodayButton();
+            this.시험일차추가하기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -384,9 +386,10 @@ namespace Calendar.NET
             this._contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._miProperties,
             this.삭제하기ToolStripMenuItem,
-            this.시험일정전체삭제ToolStripMenuItem});
+            this.시험일정전체삭제ToolStripMenuItem,
+            this.시험일차추가하기ToolStripMenuItem});
             this._contextMenuStrip1.Name = "_contextMenuStrip1";
-            this._contextMenuStrip1.Size = new System.Drawing.Size(211, 104);
+            this._contextMenuStrip1.Size = new System.Drawing.Size(211, 128);
             // 
             // _miProperties
             // 
@@ -462,6 +465,13 @@ namespace Calendar.NET
             this._btnToday.TabIndex = 0;
             this._btnToday.TextColor = System.Drawing.Color.Black;
             this._btnToday.ButtonClicked += new CoolButton.ButtonClickedArgs(this.BtnTodayButtonClicked);
+            // 
+            // 시험일차추가하기ToolStripMenuItem
+            // 
+            this.시험일차추가하기ToolStripMenuItem.Name = "시험일차추가하기ToolStripMenuItem";
+            this.시험일차추가하기ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.시험일차추가하기ToolStripMenuItem.Text = "시험일차 추가하기";
+            this.시험일차추가하기ToolStripMenuItem.Click += new System.EventHandler(this.시험일차추가하기ToolStripMenuItem_Click);
             // 
             // Calendar
             // 
@@ -1286,6 +1296,12 @@ namespace Calendar.NET
         private void 시험일정전체삭제ToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void 시험일차추가하기ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EventAdd eventadd = new EventAdd();
+            eventadd.Show();
         }
     }
 }
