@@ -114,6 +114,15 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RectangleComparer.cs" />
+    <Compile Include="RjButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RJTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RJTextBox.designer.cs">
+      <DependentUpon>RJTextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="RoundedRectangle.cs" />
     <Compile Include="CoolButton.cs">
       <SubType>UserControl</SubType>
@@ -152,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NavigateRightButton.resx">
       <DependentUpon>NavigateRightButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RJTextBox.resx">
+      <DependentUpon>RJTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ScrollPanel.resx">
       <DependentUpon>ScrollPanel.cs</DependentUpon>

@@ -252,8 +252,10 @@ namespace Calendar.NETDemo
                         {
                             eventText = "계수";
                         }
-
-                        String TestText = "【" + test_person + "】 " + test_name + "\n";
+                        comboBox2.Font = new Font(comboBox2.Font, FontStyle.Bold);
+                        String TestText = @"【" + test_person + "】 ";
+                        
+                        TestText += test_name + "\n";
                         String AlignedTest = TextAlignCenter_TestName(TestText);
                         String DaysText = day + "일차 " + eventText;
                         String AlignedText = TextAlignCenter_DaysName(test, DaysText);

@@ -52,6 +52,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.test_days = new Calendar.NETDemo.MyListBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
             this.rjTextBox14 = new CustomControls.RJControls.RJTextBox();
             this.rjTextBox13 = new CustomControls.RJControls.RJTextBox();
@@ -84,7 +85,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gum_name = new CustomControls.RJControls.RJTextBox();
             this.AddEvent2 = new Calendar.NETDemo.RJButton();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
@@ -384,6 +384,23 @@
             this.comboBox1.Size = new System.Drawing.Size(214, 28);
             this.comboBox1.TabIndex = 78;
             this.comboBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBox1_MouseClick);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.Thistle;
+            this.comboBox2.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.comboBox2.ForeColor = System.Drawing.SystemColors.Window;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "시험자를 선택하세요.",
+            "희해",
+            "아라",
+            "서영",
+            "미래"});
+            this.comboBox2.Location = new System.Drawing.Point(70, 147);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(214, 28);
+            this.comboBox2.TabIndex = 100;
             // 
             // rjTextBox1
             // 
@@ -917,23 +934,6 @@
             this.AddEvent2.TextColor = System.Drawing.Color.White;
             this.AddEvent2.UseVisualStyleBackColor = false;
             this.AddEvent2.Click += new System.EventHandler(this.AddEvent2_Click);
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.Thistle;
-            this.comboBox2.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox2.ForeColor = System.Drawing.SystemColors.Window;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "시험자를 선택하세요.",
-            "희해",
-            "아라",
-            "서영",
-            "미래"});
-            this.comboBox2.Location = new System.Drawing.Point(70, 147);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(214, 28);
-            this.comboBox2.TabIndex = 100;
             // 
             // Form1
             // 

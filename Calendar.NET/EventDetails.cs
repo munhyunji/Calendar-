@@ -122,9 +122,12 @@ namespace Calendar.NET
             return retval;
         }
 
+        /// <summary>
+        /// 이벤트 데이터 불러오기 
+        /// </summary>
         private void FillValues()
         {
-            txtEventName.Text = _event.EventText;          
+            txtEventName.Texts = _event.EventText;          
             monthCalendar1.SelectionRange = new SelectionRange(_event.Date, _event.Date);
             
             //dtDate.Value = _event.Date;
@@ -154,17 +157,19 @@ namespace Calendar.NET
             }
         }
 
+
+        /// <summary>
+        /// 이벤트 디테일 저장완료
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnOkClick(object sender, EventArgs e)
         {
-            _newEvent.EventText = txtEventName.Text;
-            _newEvent.Date = dtDate.Value;
-           // _newEvent.Enabled = chkEnabled.Checked;
-           // _newEvent.RecurringFrequency = StringToRecurringFrequencies(cbRecurringFrequency.SelectedItem.ToString());
-           // _newEvent.ThisDayForwardOnly = chkThisDayForwardOnly.Checked;
-            _newEvent.IgnoreTimeComponent = chkIgnoreTimeComponent.Checked;
-           // _newEvent.TooltipEnabled = chkEnableTooltip.Checked;
+            _newEvent.EventText = txtEventName.Texts;
+            _newEvent.Date = monthCalendar1.SelectionStart;
+            _newEvent.EventColor = colorDialog1.Color;
 
-           DialogResult = DialogResult.OK;
+            DialogResult = DialogResult.OK;
             
             //xml파일 로드 
             xmlDoc = new XmlDocument();
@@ -174,8 +179,9 @@ namespace Calendar.NET
             {
                 try
                 {
-                    if (!String.IsNullOrEmpty(_event.EventText))
+                    if (!String.IsNullOrEmpty(_newEvent.EventText))
                     {
+                         
                        /* XmlNode node = xmlDoc.SelectSingleNode("Root");
                         // XmlElement root = xmlDoc.CreateElement("TestInfo");
                         XmlElement childNode = xmlDoc.CreateElement("Test");
@@ -195,7 +201,7 @@ namespace Calendar.NET
                     }
                     else
                     {
-                        MessageBox.Show("내용을 입력해주세요");
+                        MessageBox.Show("일정제목을 입력해주세요");
                         return;
                     }
                 }
@@ -208,9 +214,6 @@ namespace Calendar.NET
             {
                 MessageBox.Show("설정 저장에 실패했습니다.");
             }
-
-
-
 
             Close();
         }
@@ -239,7 +242,7 @@ namespace Calendar.NET
 
         private void ChkIgnoreTimeComponentCheckedChanged(object sender, EventArgs e)
         {
-            dtDate.CustomFormat = chkIgnoreTimeComponent.Checked ? "M/d/yyyy" : "M/d/yyyy h:mm tt";
+            //dtDate.CustomFormat = chkIgnoreTimeComponent.Checked ? "M/d/yyyy" : "M/d/yyyy h:mm tt";
         }
 
         private void BtnCancelClick(object sender, EventArgs e)
