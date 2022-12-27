@@ -167,8 +167,7 @@ namespace Calendar.NET
         {
             _newEvent.EventText = txtEventName.Texts;
             _newEvent.Date = monthCalendar1.SelectionStart;
-            _newEvent.EventColor = colorDialog1.Color;
-
+            
             DialogResult = DialogResult.OK;
             
             //xml파일 로드 
@@ -182,18 +181,12 @@ namespace Calendar.NET
                     if (!String.IsNullOrEmpty(_newEvent.EventText))
                     {
                          
-                       /* XmlNode node = xmlDoc.SelectSingleNode("Root");
-                        // XmlElement root = xmlDoc.CreateElement("TestInfo");
-                        XmlElement childNode = xmlDoc.CreateElement("Test");
+                        XmlNode node = xmlDoc.SelectSingleNode("Root");
 
-
-                        childNode.SetAttribute("Name", );
+                        
+                        /* childNode.SetAttribute("Name", );
                         childNode.SetAttribute("Datetime", datetime);
                         childNode.SetAttribute("Color", color);
-
-
-                        node.AppendChild(childNode);
-                        //node.AppendChild(root);
 
                         xmlDoc.Save("Data.xml");
                         xmlDoc = null;*/

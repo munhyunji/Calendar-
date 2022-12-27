@@ -371,8 +371,7 @@ namespace Calendar.NETDemo
 
                     //xml 속성가져오기
                     XmlNode node = xmlDoc.SelectSingleNode("Root");
-                    
-                    
+                                     
                     for (int i = 0; i < node.ChildNodes.Count; i++)
                     {
                         String nodeName = node.ChildNodes[i].Attributes["Name"].Value.ToString();
