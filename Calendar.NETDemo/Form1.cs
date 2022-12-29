@@ -33,7 +33,6 @@ namespace Calendar.NETDemo
         public Form1()
         {
             InitializeComponent();
-
             
             calendar1.CalendarDate = DateTime.Today;
             calendar1.CalendarView = CalendarViews.Month;

@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gbBasics = new System.Windows.Forms.GroupBox();
+            this.EventTitle = new System.Windows.Forms.Label();
             this.txtTestAmt = new CustomControls.RJControls.RJTextBox();
             this.txtEventName = new CustomControls.RJControls.RJTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -51,6 +52,7 @@
             this.btnOk = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.gbBasics.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -76,6 +78,8 @@
             // 
             // gbBasics
             // 
+            this.gbBasics.Controls.Add(this.label9);
+            this.gbBasics.Controls.Add(this.EventTitle);
             this.gbBasics.Controls.Add(this.txtTestAmt);
             this.gbBasics.Controls.Add(this.txtEventName);
             this.gbBasics.Controls.Add(this.panel1);
@@ -93,6 +97,16 @@
             this.gbBasics.TabIndex = 4;
             this.gbBasics.TabStop = false;
             this.gbBasics.Text = "일정 설정";
+            // 
+            // EventTitle
+            // 
+            this.EventTitle.AutoSize = true;
+            this.EventTitle.Location = new System.Drawing.Point(134, 30);
+            this.EventTitle.Name = "EventTitle";
+            this.EventTitle.Size = new System.Drawing.Size(92, 17);
+            this.EventTitle.TabIndex = 9;
+            this.EventTitle.Text = "이벤트타이틀";
+            this.EventTitle.Visible = false;
             // 
             // txtTestAmt
             // 
@@ -314,6 +328,16 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancelClick);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("나눔고딕", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label9.Location = new System.Drawing.Point(31, 369);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(47, 16);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "개발중";
+            // 
             // EventDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -367,5 +391,7 @@
         private System.Windows.Forms.Label label8;
         private CustomControls.RJControls.RJTextBox txtEventName;
         private CustomControls.RJControls.RJTextBox txtTestAmt;
+        private System.Windows.Forms.Label EventTitle;
+        private System.Windows.Forms.Label label9;
     }
 }

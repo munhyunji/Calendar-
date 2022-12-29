@@ -127,7 +127,8 @@ namespace Calendar.NET
         /// </summary>
         private void FillValues()
         {
-            txtEventName.Texts = _event.EventText;          
+            txtEventName.Texts = _event.EventText;
+            EventTitle.Text = _event.EventText;
             monthCalendar1.SelectionRange = new SelectionRange(_event.Date, _event.Date);
             
             //dtDate.Value = _event.Date;
@@ -167,7 +168,9 @@ namespace Calendar.NET
         {
             _newEvent.EventText = txtEventName.Texts;
             _newEvent.Date = monthCalendar1.SelectionStart;
-            
+            _newEvent.EventColor = pnlEventColor.BackColor;
+
+
             DialogResult = DialogResult.OK;
             
             //xml파일 로드 
@@ -178,19 +181,23 @@ namespace Calendar.NET
             {
                 try
                 {
-                    if (!String.IsNullOrEmpty(_newEvent.EventText))
+                    if (!String.IsNullOrEmpty(EventTitle.Text))
                     {
                          
                         XmlNode node = xmlDoc.SelectSingleNode("Root");
 
-                        
-                        /* childNode.SetAttribute("Name", );
-                        childNode.SetAttribute("Datetime", datetime);
-                        childNode.SetAttribute("Color", color);
+                        for (int i = 0; i < node.ChildNodes.Count; i++)
+                        {
+                            if(node.ChildNodes[i].Attributes["Name"].Value == EventTitle.Text)
+                            {
+                                node.ChildNodes[i].Attributes["Name"].Value = _newEvent.EventText;
+                                node.ChildNodes[i].Attributes["Datetime"].Value = _newEvent.Date.ToString("yyyy-MM-dd");
+                                node.ChildNodes[i].Attributes["Color"].Value = _newEvent.EventColor.ToString();
 
-                        xmlDoc.Save("Data.xml");
-                        xmlDoc = null;*/
 
+                                xmlDoc.Save(XmlFileName);
+                            }
+                        }
                     }
                     else
                     {
