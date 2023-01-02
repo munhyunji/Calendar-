@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Windows.Forms;
 using System.Xml;
 using System.IO;
+using Calendar.NETDemo;
 
 namespace Calendar.NET
 {
@@ -127,10 +128,25 @@ namespace Calendar.NET
         /// </summary>
         private void FillValues()
         {
-            txtEventName.Texts = _event.EventText;
-            EventTitle.Text = _event.EventText;
+           
+            txtEventName1.Texts = _event.EventText;
+
+           
+            //검체량 값 불러오기...,
+            xmlDoc = new XmlDocument();
+            xmlDoc.Load(XmlFileName);
+
+            if (File.Exists(XmlFileName))
+            {
+                XmlNodeList TestNodes = xmlDoc.SelectNodes("Root");
+
+                
+            }
+
             monthCalendar1.SelectionRange = new SelectionRange(_event.Date, _event.Date);
-            
+
+
+            //txtTestAmt.Texts = 
             //dtDate.Value = _event.Date;
             //dtDate.CustomFormat = _event.IgnoreTimeComponent ? "M/d/yyyy" : "M/d/yyyy h:mm tt";
             // cbRecurringFrequency.SelectedItem = RecurringFrequencyToString(_event.RecurringFrequency);
@@ -166,9 +182,10 @@ namespace Calendar.NET
         /// <param name="e"></param>
         private void BtnOkClick(object sender, EventArgs e)
         {
-            _newEvent.EventText = txtEventName.Texts;
+            _newEvent.EventText = txtEventName1.Texts;
             _newEvent.Date = monthCalendar1.SelectionStart;
             _newEvent.EventColor = pnlEventColor.BackColor;
+
 
 
             DialogResult = DialogResult.OK;
@@ -193,7 +210,7 @@ namespace Calendar.NET
                                 node.ChildNodes[i].Attributes["Name"].Value = _newEvent.EventText;
                                 node.ChildNodes[i].Attributes["Datetime"].Value = _newEvent.Date.ToString("yyyy-MM-dd");
                                 node.ChildNodes[i].Attributes["Color"].Value = _newEvent.EventColor.ToString();
-
+                                node.ChildNodes[i].Attributes["GumAmt"].Value = txtTestAmt.Texts;
 
                                 xmlDoc.Save(XmlFileName);
                             }
@@ -218,6 +235,11 @@ namespace Calendar.NET
             Close();
         }
 
+        /// <summary>
+        /// 이벤트 색상 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PnlEventColorDoubleClick(object sender, EventArgs e)
         {
             colorDialog1.Color = _newEvent.EventColor;
@@ -229,6 +251,11 @@ namespace Calendar.NET
             }
         }
 
+        /// <summary>
+        /// 이벤트 텍스트 색상
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PnlTextColorDoubleClick(object sender, EventArgs e)
         {
             colorDialog1.Color = _newEvent.EventColor;
@@ -240,10 +267,6 @@ namespace Calendar.NET
             }
         }
 
-        private void ChkIgnoreTimeComponentCheckedChanged(object sender, EventArgs e)
-        {
-            //dtDate.CustomFormat = chkIgnoreTimeComponent.Checked ? "M/d/yyyy" : "M/d/yyyy h:mm tt";
-        }
 
         private void BtnCancelClick(object sender, EventArgs e)
         {

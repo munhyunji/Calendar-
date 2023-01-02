@@ -136,7 +136,7 @@ namespace Calendar.NETDemo
 
                 calendar1.AddEvent(Specimen);
 
-                int IsSuccess = XML_save(GumCheName, total_datetime, user_color_string, null, null, null, "GumChe");
+                int IsSuccess = XML_save(GumCheName, null, total_datetime, user_color_string, null, null, null, "GumChe");
 
                 
                 //XML저장이 성공했을시에만...!! 
@@ -186,14 +186,15 @@ namespace Calendar.NETDemo
             //시험명
             String test_name = testTitle.Texts;
             int test_name_len = test_name.Length;
-            //TextAlignCenter(test_name_len, "Heloo");
-
+            
             //시험자
             String test_person = comboBox2.SelectedItem.ToString();
 
             // Font tester = new Font(test_person, FontStyle.Bold);
 
             String test = "【" + test_person + "】 " + test_name;
+
+            
 
             String aligned_test = TextAlignCenter_TestName(test);
 
@@ -229,7 +230,7 @@ namespace Calendar.NETDemo
                 };
 
                 calendar1.AddEvent(test_case);
-                XML_save(test, total_datetime, user_color_string, GumCheName, GumCheDate, GumAmt, "Test");
+                XML_save(test, null, total_datetime, user_color_string, GumCheName, GumCheDate, GumAmt, "Test");
 
 
                 for (int i = 0; i < test_days.CheckedItems.Count; i++)
@@ -255,7 +256,7 @@ namespace Calendar.NETDemo
                         String TestText = @"【" + test_person + "】 ";
                         
                         TestText += test_name + "\n";
-                        String AlignedTest = TextAlignCenter_TestName(TestText);
+                       
                         String DaysText = day + "일차 " + eventText;
                         String AlignedText = TextAlignCenter_DaysName(test, DaysText);
                         
@@ -273,7 +274,7 @@ namespace Calendar.NETDemo
                         };
 
                         calendar1.AddEvent(added_test_case);
-                        XML_save(total, Added_datetime_string, user_color_string, GumCheName, GumCheDate, GumAmt, "Test");
+                        XML_save(TestText, DaysText, Added_datetime_string, user_color_string, GumCheName, GumCheDate, GumAmt, "Test");
 
 
                         //textbox 초기화
@@ -297,7 +298,7 @@ namespace Calendar.NETDemo
         }
 
 
-        private int XML_save(String text, String datetime, String color, String GumCheName, String GumCheDate, String GumAmt, String nodeName) {
+        private int XML_save(String text, String textDate, String datetime, String color, String GumCheName, String GumCheDate, String GumAmt, String nodeName) {
 
             XmlDocument xmlDoc;
 
@@ -319,11 +320,13 @@ namespace Calendar.NETDemo
                             childNode.SetAttribute("Name", text);
                             childNode.SetAttribute("Datetime", datetime);
                             childNode.SetAttribute("Color", color);
+                            childNode.SetAttribute("GumAmt", GumAmt);
                             childNode.SetAttribute("Rank", "1");
                             
                         } else
                         {
                             childNode.SetAttribute("Name", text);
+                            childNode.SetAttribute("NameDate", textDate);
                             childNode.SetAttribute("Datetime", datetime);
                             childNode.SetAttribute("Color", color);
                             childNode.SetAttribute("GumCheName", GumCheName);
@@ -373,14 +376,23 @@ namespace Calendar.NETDemo
                                      
                     for (int i = 0; i < node.ChildNodes.Count; i++)
                     {
-                        String nodeName = node.ChildNodes[i].Attributes["Name"].Value.ToString();
+                        // attribute 존재하는지  검사 
+                        String nodeName;
+
+                        if (node.ChildNodes[i].Attributes.GetNamedItem("NameDate") == null)
+                        {
+                             nodeName = node.ChildNodes[i].Attributes["Name"].Value.ToString();
+
+                        }
+                        else
+                        {
+                             nodeName = node.ChildNodes[i].Attributes["Name"].Value.ToString() + "" + TextAlignCenter_DaysName(node.ChildNodes[i].Attributes["Name"].Value.ToString(), node.ChildNodes[i].Attributes["NameDate"].Value);
+
+                        }
+                      
                         String datetime = node.ChildNodes[i].Attributes["Datetime"].Value.ToString();
                         String color = node.ChildNodes[i].Attributes["Color"].Value.ToString();
                         int rank = Int32.Parse(node.ChildNodes[i].Attributes["Rank"].Value.ToString());
-
-                       // String TestText = nodeName.Substring(nodeName.IndexOf("일차")-1);
-                      //  MessageBox.Show(TestText);
-                       // String DaysText = "ㅇ";
 
                         Color c;
 
@@ -447,6 +459,12 @@ namespace Calendar.NETDemo
 
         }
 
+        /// <summary>
+        /// 시험 일차 가운데 정렬 
+        /// </summary>
+        /// <param name="TestName"></param>
+        /// <param name="DaysName"></param>
+        /// <returns></returns>
         private String TextAlignCenter_DaysName(String TestName, String DaysName)
         {
            
@@ -454,6 +472,7 @@ namespace Calendar.NETDemo
             
             return DaysName;
         }
+
 
         private String TextAlignCenter_TestName(String TestName)
         {

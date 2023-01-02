@@ -31,12 +31,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gbBasics = new System.Windows.Forms.GroupBox();
+            this.txtEventName2 = new CustomControls.RJControls.RJTextBox();
             this.EventTitle = new System.Windows.Forms.Label();
             this.txtTestAmt = new CustomControls.RJControls.RJTextBox();
-            this.txtEventName = new CustomControls.RJControls.RJTextBox();
+            this.txtEventName1 = new CustomControls.RJControls.RJTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.chkIgnoreTimeComponent = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -52,7 +52,6 @@
             this.btnOk = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
             this.gbBasics.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -78,12 +77,11 @@
             // 
             // gbBasics
             // 
-            this.gbBasics.Controls.Add(this.label9);
+            this.gbBasics.Controls.Add(this.txtEventName2);
             this.gbBasics.Controls.Add(this.EventTitle);
             this.gbBasics.Controls.Add(this.txtTestAmt);
-            this.gbBasics.Controls.Add(this.txtEventName);
+            this.gbBasics.Controls.Add(this.txtEventName1);
             this.gbBasics.Controls.Add(this.panel1);
-            this.gbBasics.Controls.Add(this.label7);
             this.gbBasics.Controls.Add(this.label3);
             this.gbBasics.Controls.Add(this.chkIgnoreTimeComponent);
             this.gbBasics.Controls.Add(this.label1);
@@ -93,15 +91,34 @@
             this.gbBasics.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbBasics.Name = "gbBasics";
             this.gbBasics.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbBasics.Size = new System.Drawing.Size(309, 413);
+            this.gbBasics.Size = new System.Drawing.Size(309, 453);
             this.gbBasics.TabIndex = 4;
             this.gbBasics.TabStop = false;
             this.gbBasics.Text = "일정 설정";
             // 
+            // txtEventName2
+            // 
+            this.txtEventName2.BackColor = System.Drawing.SystemColors.Window;
+            this.txtEventName2.BorderColor = System.Drawing.Color.Lavender;
+            this.txtEventName2.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.txtEventName2.BorderSize = 2;
+            this.txtEventName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEventName2.ForeColor = System.Drawing.Color.DimGray;
+            this.txtEventName2.Location = new System.Drawing.Point(17, 335);
+            this.txtEventName2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEventName2.Multiline = false;
+            this.txtEventName2.Name = "txtEventName2";
+            this.txtEventName2.Padding = new System.Windows.Forms.Padding(7);
+            this.txtEventName2.PasswordChar = false;
+            this.txtEventName2.Size = new System.Drawing.Size(265, 35);
+            this.txtEventName2.TabIndex = 14;
+            this.txtEventName2.Texts = "";
+            this.txtEventName2.UnderlinedStyle = false;
+            // 
             // EventTitle
             // 
             this.EventTitle.AutoSize = true;
-            this.EventTitle.Location = new System.Drawing.Point(134, 30);
+            this.EventTitle.Location = new System.Drawing.Point(120, 22);
             this.EventTitle.Name = "EventTitle";
             this.EventTitle.Size = new System.Drawing.Size(92, 17);
             this.EventTitle.TabIndex = 9;
@@ -116,7 +133,7 @@
             this.txtTestAmt.BorderSize = 2;
             this.txtTestAmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTestAmt.ForeColor = System.Drawing.Color.DimGray;
-            this.txtTestAmt.Location = new System.Drawing.Point(17, 359);
+            this.txtTestAmt.Location = new System.Drawing.Point(17, 400);
             this.txtTestAmt.Margin = new System.Windows.Forms.Padding(4);
             this.txtTestAmt.Multiline = false;
             this.txtTestAmt.Name = "txtTestAmt";
@@ -127,24 +144,24 @@
             this.txtTestAmt.Texts = "";
             this.txtTestAmt.UnderlinedStyle = false;
             // 
-            // txtEventName
+            // txtEventName1
             // 
-            this.txtEventName.BackColor = System.Drawing.SystemColors.Window;
-            this.txtEventName.BorderColor = System.Drawing.Color.Lavender;
-            this.txtEventName.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.txtEventName.BorderSize = 2;
-            this.txtEventName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEventName.ForeColor = System.Drawing.Color.DimGray;
-            this.txtEventName.Location = new System.Drawing.Point(17, 297);
-            this.txtEventName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEventName.Multiline = false;
-            this.txtEventName.Name = "txtEventName";
-            this.txtEventName.Padding = new System.Windows.Forms.Padding(7);
-            this.txtEventName.PasswordChar = false;
-            this.txtEventName.Size = new System.Drawing.Size(265, 35);
-            this.txtEventName.TabIndex = 9;
-            this.txtEventName.Texts = "";
-            this.txtEventName.UnderlinedStyle = false;
+            this.txtEventName1.BackColor = System.Drawing.SystemColors.Window;
+            this.txtEventName1.BorderColor = System.Drawing.Color.Lavender;
+            this.txtEventName1.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.txtEventName1.BorderSize = 2;
+            this.txtEventName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEventName1.ForeColor = System.Drawing.Color.DimGray;
+            this.txtEventName1.Location = new System.Drawing.Point(17, 296);
+            this.txtEventName1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEventName1.Multiline = false;
+            this.txtEventName1.Name = "txtEventName1";
+            this.txtEventName1.Padding = new System.Windows.Forms.Padding(7);
+            this.txtEventName1.PasswordChar = false;
+            this.txtEventName1.Size = new System.Drawing.Size(265, 35);
+            this.txtEventName1.TabIndex = 9;
+            this.txtEventName1.Texts = "";
+            this.txtEventName1.UnderlinedStyle = false;
             // 
             // panel1
             // 
@@ -164,20 +181,10 @@
             this.monthCalendar1.TitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.monthCalendar1.TrailingForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("나눔고딕", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(134, 275);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(150, 16);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "*공백은 수정하지마세요";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 337);
+            this.label3.Location = new System.Drawing.Point(16, 378);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 17);
             this.label3.TabIndex = 10;
@@ -208,7 +215,7 @@
             this.groupBox1.Controls.Add(this.btnFont);
             this.groupBox1.Controls.Add(this.lblFont);
             this.groupBox1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox1.Location = new System.Drawing.Point(18, 438);
+            this.groupBox1.Location = new System.Drawing.Point(18, 485);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -307,7 +314,7 @@
             // btnOk
             // 
             this.btnOk.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnOk.Location = new System.Drawing.Point(18, 614);
+            this.btnOk.Location = new System.Drawing.Point(18, 661);
             this.btnOk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(99, 26);
@@ -319,7 +326,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnCancel.Location = new System.Drawing.Point(203, 614);
+            this.btnCancel.Location = new System.Drawing.Point(203, 661);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(99, 26);
@@ -328,22 +335,12 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancelClick);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("나눔고딕", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label9.Location = new System.Drawing.Point(31, 369);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 16);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "개발중";
-            // 
             // EventDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(346, 665);
+            this.ClientSize = new System.Drawing.Size(346, 703);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.groupBox1);
@@ -386,12 +383,11 @@
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Panel pnlEventColor;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label8;
-        private CustomControls.RJControls.RJTextBox txtEventName;
+        private CustomControls.RJControls.RJTextBox txtEventName1;
         private CustomControls.RJControls.RJTextBox txtTestAmt;
         private System.Windows.Forms.Label EventTitle;
-        private System.Windows.Forms.Label label9;
+        private CustomControls.RJControls.RJTextBox txtEventName2;
     }
 }
