@@ -483,7 +483,7 @@ namespace Calendar.NET
             this.Size = new System.Drawing.Size(512, 440);
             this.Load += new System.EventHandler(this.CalendarLoad);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.CalendarPaint);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CalendarMouseClick);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CalendarMouseClick_1);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CalendarMouseMove);
             this.Resize += new System.EventHandler(this.CalendarResize);
             this._contextMenuStrip1.ResumeLayout(false);
@@ -563,11 +563,9 @@ namespace Calendar.NET
                         {
                             foreach (XmlNode emp in GumcheNodes)
                             {
-                                if (emp.Attributes["Name"].Value == z.Event.EventText)
+                                if (z.Event.EventText.Contains(emp.Attributes["Name"].Value))
                                     // _eventTip.EventToolTipText = z.Event.EventText;
-                                    _eventTip.EventToolTipText = "검체 등록 일시 : " + emp.Attributes["GumCheDate"].Value + "\n" + "등록 검체 명 : " + emp.Attributes["GumCheName"].Value + "\n" + "검체량 : " + emp.Attributes["GumAmt"].Value;
-                                   
-
+                                    _eventTip.EventToolTipText = "검체 등록 일시 : " + emp.Attributes["GumCheDate"].Value + "\n" + "등록 검체 명 : " + emp.Attributes["GumCheName"].Value + "\n" + "검체량 : " + emp.Attributes["GumAmt"].Value;                                  
                             }
                         }
                     } 
@@ -608,7 +606,7 @@ namespace Calendar.NET
             }
         }
 
-        private void CalendarMouseClick(object sender, MouseEventArgs e)
+        private void CalendarMouseClick_1(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right && AllowEditingEvents)
             {

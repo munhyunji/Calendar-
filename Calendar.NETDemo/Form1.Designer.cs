@@ -689,7 +689,7 @@
             this.gum_amt.BorderFocusColor = System.Drawing.Color.Thistle;
             this.gum_amt.BorderSize = 2;
             this.gum_amt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gum_amt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gum_amt.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gum_amt.ForeColor = System.Drawing.Color.DimGray;
             this.gum_amt.Location = new System.Drawing.Point(70, 104);
             this.gum_amt.Margin = new System.Windows.Forms.Padding(4);

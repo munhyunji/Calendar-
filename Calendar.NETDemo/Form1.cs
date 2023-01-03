@@ -252,15 +252,13 @@ namespace Calendar.NETDemo
                         {
                             eventText = "계수";
                         }
-                        comboBox2.Font = new Font(comboBox2.Font, FontStyle.Bold);
-                        String TestText = @"【" + test_person + "】 ";
+                       String TestText = @"【" + test_person + "】 ";
                         
                         TestText += test_name + "\n";
                        
                         String DaysText = day + "일차 " + eventText;
-                        String AlignedText = TextAlignCenter_DaysName(test, DaysText);
-                        
-                        String total = TestText + AlignedText;
+                       
+                        String total = TestText + TextAlignCenter_DaysName(test, DaysText);
                         
                         var added_test_case = new CustomEvent
                         {
@@ -468,7 +466,7 @@ namespace Calendar.NETDemo
         private String TextAlignCenter_DaysName(String TestName, String DaysName)
         {
            
-            DaysName =  DaysName.PadLeft(TestName.Length + 2);
+            DaysName =  DaysName.PadLeft(TestName.Length+1);
             
             return DaysName;
         }
@@ -477,7 +475,7 @@ namespace Calendar.NETDemo
         private String TextAlignCenter_TestName(String TestName)
         {
 
-            TestName = TestName.PadLeft(TestName.Length + 2);
+            TestName = TestName.PadLeft(TestName.Length+1);
 
             return TestName;
         }
