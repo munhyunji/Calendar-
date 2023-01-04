@@ -135,12 +135,15 @@ namespace Calendar.NET
             {
                 txtEventName1.Texts = ev.Substring(0, ev.IndexOf("\n"));
                 txtEventName2.Texts = ev.Substring(ev.LastIndexOf("\n")).Trim();
+                txtEventName1.Enabled = false;
             } else
             {
                 txtEventName1.Texts = ev;
                 txtEventName2.Enabled = false;
             }
 
+
+            
             monthCalendar1.SelectionRange = new SelectionRange(_event.Date, _event.Date);
 
             //검체량 값 불러오기...,
@@ -198,21 +201,7 @@ namespace Calendar.NET
         /// <param name="e"></param>
         private void BtnOkClick(object sender, EventArgs e)
         {
-            if (txtEventName2.Enabled == false)
-            {
-                _newEvent.EventText = txtEventName1.Texts;
-            } else
-            {
-                if (!String.IsNullOrEmpty(txtEventName1.Texts) && !String.IsNullOrEmpty(txtEventName2.Texts))
-                {
-                    _newEvent.EventText = txtEventName1.Texts + "\n" + TextAlignCenter_DaysName(txtEventName1.Texts, txtEventName2.Texts);
-                    
-                } else
-                {
-                    MessageBox.Show("시험명과 시험일차 내용을 입력해주세요");
-                    return;
-                }
-            }
+            
             _newEvent.Date = monthCalendar1.SelectionStart;
             _newEvent.EventColor = pnlEventColor.BackColor;
             
@@ -229,25 +218,49 @@ namespace Calendar.NET
                 {
                     if (!String.IsNullOrEmpty(_newEvent.EventText))
                     {
-                         
-                        XmlNode node = xmlDoc.SelectSingleNode("Root");
+                        if (_event.Rank == 1)
+                        {
+                            XmlNodeList GumChe = xmlDoc.SelectNodes("Root/GumChe");
 
-                       for (int i = 0; i < node.ChildNodes.Count; i++)
-                        {       
-                                //NameDate가 있는경우 (~일차 행동) 비교
-                                if (node.ChildNodes[i].Attributes.GetNamedItem("NameDate") != null)
+                            for(int i = 0; i < GumChe.Count; i++)
+                            {
+                                if(_event.EventText == GumChe[i].Attributes["Name"].Value && _event.Date.ToString("yyyy-MM-dd") == GumChe[i].Attributes["Datetime"].Value)
                                 {
-                                   
-                                        node.ChildNodes[i].Attributes["Name"].Value = _newEvent.EventText;
-                                        node.ChildNodes[i].Attributes["Datetime"].Value = _newEvent.Date.ToString("yyyy-MM-dd");
-                                        node.ChildNodes[i].Attributes["Color"].Value = _newEvent.EventColor.ToString();
-                                        node.ChildNodes[i].Attributes["GumAmt"].Value = txtTestAmt.Texts;
+                                    GumChe[i].Attributes["Name"].Value = txtEventName1.Texts;
+                                    
+                                    xmlDoc.Save(XmlFileName);
 
-                                        xmlDoc.Save(XmlFileName);
-                                   
-                              
-                                } 
+                                    _newEvent.EventText = txtEventName1.Texts;
+
+                                }
                             }
+                        } else if ( _event.Rank == 2)
+                        {
+                            XmlNodeList Test = xmlDoc.SelectNodes("Root/Test");
+
+                            for (int i = 0; i < Test.Count; i++)
+                            {
+                                if(_event.EventText.Contains(Test[i].Attributes["Name"].Value))
+                                {
+                                    Test[i].Attributes["Name"].Value = txtEventName1.Texts;
+
+                                    xmlDoc.Save(XmlFileName);
+
+
+                                    if (txtEventName2.Enabled == false)
+                                    {
+                                        _newEvent.EventText = txtEventName1.Texts;
+                                    }
+                                    else
+                                    {
+                                        
+                                    }
+                                }
+                            }
+                        }
+
+
+                       
                     }
                     else
                     {
