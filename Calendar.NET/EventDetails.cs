@@ -136,6 +136,8 @@ namespace Calendar.NET
                 txtEventName1.Texts = ev.Substring(0, ev.IndexOf("\n"));
                 txtEventName2.Texts = ev.Substring(ev.LastIndexOf("\n")).Trim();
                 txtEventName1.Enabled = false;
+                txtTestAmt.Enabled = false;
+                
             } else
             {
                 txtEventName1.Texts = ev;
@@ -240,27 +242,34 @@ namespace Calendar.NET
 
                             for (int i = 0; i < Test.Count; i++)
                             {
-                                if(_event.EventText.Contains(Test[i].Attributes["Name"].Value))
+                                if(_event.EventText.Contains(Test[i].Attributes["Name"].Value.Replace("\n", "")))
                                 {
-                                    Test[i].Attributes["Name"].Value = txtEventName1.Texts;
+                                     Test[i].Attributes["Name"].Value = txtEventName1.Texts;
+                                     Test[i].Attributes["Color"].Value = _newEvent.EventColor.ToString();
 
-                                    xmlDoc.Save(XmlFileName);
-
-
-                                    if (txtEventName2.Enabled == false)
+                                    if(txtEventName2.Enabled == false)
                                     {
                                         _newEvent.EventText = txtEventName1.Texts;
-                                    }
-                                    else
+                                    } else
                                     {
-                                        
+                                        if (Test[i].Attributes.GetNamedItem("NameDate") != null)
+                                        {
+                                            if (_event.EventText.Contains(Test[i].Attributes["Name"].Value.Replace("\n", "")) && _event.EventText.Contains(Test[i].Attributes["NameDate"].Value.ToString()))
+                                            {
+                                                Test[i].Attributes["NameDate"].Value = txtEventName2.Texts;
+                                                Test[i].Attributes["Datetime"].Value = _newEvent.Date.ToString("yyyy-MM-dd");
+                                            }
+                                        }
+                                        _newEvent.EventText = txtEventName1.Texts + "\n" + TextAlignCenter_DaysName(txtEventName1.Texts, txtEventName2.Texts);
                                     }
-                                }
+                                       
+                                } 
+
+
                             }
-                        }
+                        } 
 
-
-                       
+                        xmlDoc.Save(XmlFileName);
                     }
                     else
                     {

@@ -193,9 +193,7 @@ namespace Calendar.NETDemo
             // Font tester = new Font(test_person, FontStyle.Bold);
 
             String test = "【" + test_person + "】 " + test_name;
-
-            
-
+         
             String aligned_test = TextAlignCenter_TestName(test);
 
             //검체량
@@ -252,13 +250,10 @@ namespace Calendar.NETDemo
                         {
                             eventText = "계수";
                         }
-                       String TestText = @"【" + test_person + "】 ";
-                        
-                        TestText += test_name + "\n";
                        
                         String DaysText = day + "일차 " + eventText;
                        
-                        String total = TestText + TextAlignCenter_DaysName(test, DaysText);
+                        String total = aligned_test + "\n" +  TextAlignCenter_DaysName(test, DaysText);
                         
                         var added_test_case = new CustomEvent
                         {
@@ -272,7 +267,7 @@ namespace Calendar.NETDemo
                         };
 
                         calendar1.AddEvent(added_test_case);
-                        XML_save(TestText, DaysText, Added_datetime_string, user_color_string, GumCheName, GumCheDate, GumAmt, "Test");
+                        XML_save(test, DaysText, Added_datetime_string, user_color_string, GumCheName, GumCheDate, GumAmt, "Test");
 
 
                         //textbox 초기화
@@ -313,14 +308,27 @@ namespace Calendar.NETDemo
                             XmlNode node = xmlDoc.SelectSingleNode("Root");
                             // XmlElement root = xmlDoc.CreateElement("TestInfo");
                             XmlElement childNode = xmlDoc.CreateElement(nodeName);
-
+                        
+                        //검체인경우
                         if (nodeName == "GumChe") {
                             childNode.SetAttribute("Name", text);
                             childNode.SetAttribute("Datetime", datetime);
                             childNode.SetAttribute("Color", color);
                             childNode.SetAttribute("GumAmt", GumAmt);
                             childNode.SetAttribute("Rank", "1");
-                            
+
+                        //시험명인경우  
+                        } else if(nodeName == "Test" && textDate == null)
+                        {
+                            childNode.SetAttribute("Name", text);
+                            childNode.SetAttribute("Datetime", datetime);
+                            childNode.SetAttribute("Color", color);
+                            childNode.SetAttribute("GumCheName", GumCheName);
+                            childNode.SetAttribute("GumCheDate", GumCheDate);
+                            childNode.SetAttribute("GumAmt", GumAmt);
+                            childNode.SetAttribute("Rank", "2");
+
+                        //시험명+일차 인경우
                         } else
                         {
                             childNode.SetAttribute("Name", text);
@@ -384,7 +392,7 @@ namespace Calendar.NETDemo
                         }
                         else
                         {
-                             nodeName = node.ChildNodes[i].Attributes["Name"].Value.ToString() + "" + TextAlignCenter_DaysName(node.ChildNodes[i].Attributes["Name"].Value.ToString(), node.ChildNodes[i].Attributes["NameDate"].Value);
+                             nodeName = node.ChildNodes[i].Attributes["Name"].Value.ToString() + "\n" + TextAlignCenter_DaysName(node.ChildNodes[i].Attributes["Name"].Value.ToString(), node.ChildNodes[i].Attributes["NameDate"].Value);
 
                         }
                       
