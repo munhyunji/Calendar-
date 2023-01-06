@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.gbBasics = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtEventName2 = new CustomControls.RJControls.RJTextBox();
             this.EventTitle = new System.Windows.Forms.Label();
             this.txtTestAmt = new CustomControls.RJControls.RJTextBox();
@@ -51,7 +52,6 @@
             this.btnOk = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.gbBasics.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -68,6 +68,7 @@
             // 
             // gbBasics
             // 
+            this.gbBasics.Controls.Add(this.label2);
             this.gbBasics.Controls.Add(this.txtEventName2);
             this.gbBasics.Controls.Add(this.EventTitle);
             this.gbBasics.Controls.Add(this.txtTestAmt);
@@ -85,6 +86,15 @@
             this.gbBasics.TabIndex = 4;
             this.gbBasics.TabStop = false;
             this.gbBasics.Text = "일정 설정";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(110, 272);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(175, 17);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "* \'일차\'는 수정하지마세요";
             // 
             // txtEventName2
             // 
@@ -113,6 +123,7 @@
             this.EventTitle.Size = new System.Drawing.Size(92, 17);
             this.EventTitle.TabIndex = 9;
             this.EventTitle.Text = "이벤트타이틀";
+            this.EventTitle.Visible = false;
             // 
             // txtTestAmt
             // 
@@ -122,6 +133,7 @@
             this.txtTestAmt.BorderSize = 2;
             this.txtTestAmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTestAmt.ForeColor = System.Drawing.Color.DimGray;
+            this.txtTestAmt.ImeMode = System.Windows.Forms.ImeMode.Hangul;
             this.txtTestAmt.Location = new System.Drawing.Point(17, 405);
             this.txtTestAmt.Margin = new System.Windows.Forms.Padding(4);
             this.txtTestAmt.Multiline = false;
@@ -324,27 +336,18 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancelClick);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(238, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 15);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "label2";
-            // 
             // EventDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(346, 741);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbBasics);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -353,13 +356,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "EventDetails";
             this.Load += new System.EventHandler(this.EventDetailsLoad);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EventDetails_KeyDown);
             this.gbBasics.ResumeLayout(false);
             this.gbBasics.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

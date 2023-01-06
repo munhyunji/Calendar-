@@ -263,7 +263,9 @@ namespace Calendar.NETDemo
                             EventLengthInHours = 2f,
                             RecurringFrequency = RecurringFrequencies.None,
                             EventFont = new Font("나눔고딕", 8, FontStyle.Regular),
-                            EventTextColor = Color.Black,
+                            Rank = 3,
+                            EventTextColor = Color.Black
+                            
                         };
 
                         calendar1.AddEvent(added_test_case);
@@ -338,7 +340,7 @@ namespace Calendar.NETDemo
                             childNode.SetAttribute("GumCheName", GumCheName);
                             childNode.SetAttribute("GumCheDate", GumCheDate);
                             childNode.SetAttribute("GumAmt", GumAmt);
-                            childNode.SetAttribute("Rank", "2");
+                            childNode.SetAttribute("Rank", "3");
                         }
 
                             node.AppendChild(childNode);
@@ -535,6 +537,11 @@ namespace Calendar.NETDemo
             {
                 MessageBox.Show("Data 파일을 찾을수없습니다.");
             }
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            Refresh();
         }
     }
 }

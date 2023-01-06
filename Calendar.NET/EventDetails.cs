@@ -131,17 +131,29 @@ namespace Calendar.NET
             String ev = _event.EventText.ToString();
             EventTitle.Text = _event.EventText;
 
-            if (ev.Contains("\n"))
-            {
-                txtEventName1.Texts = ev.Substring(0, ev.IndexOf("\n"));
-                txtEventName2.Texts = ev.Substring(ev.LastIndexOf("\n")).Trim();
-                txtEventName1.Enabled = false;
-                txtTestAmt.Enabled = false;
-                
-            } else
+            //검체 인경우
+            if (_event.Rank == 1 )
             {
                 txtEventName1.Texts = ev;
                 txtEventName2.Enabled = false;
+                txtTestAmt.Enabled = false;
+
+            //시험명 인경우
+            } else if (_event.Rank == 2 )
+            {
+                txtEventName1.Texts = ev;
+                txtEventName2.Enabled = false;
+                pnlEventColor.Enabled = false;
+            }
+            //시험명+일차 인경우 
+            else if (_event.Rank == 3 )
+            {           
+                
+               txtEventName1.Texts = ev.Substring(0, ev.IndexOf("일차")-1);
+               txtEventName2.Texts = ev.Substring(ev.LastIndexOf("일차")-2).Trim();
+                txtEventName1.Enabled = false;
+                txtTestAmt.Enabled = false;
+                pnlEventColor.Enabled = false;
             }
 
 
@@ -228,48 +240,77 @@ namespace Calendar.NET
                             {
                                 if(_event.EventText == GumChe[i].Attributes["Name"].Value && _event.Date.ToString("yyyy-MM-dd") == GumChe[i].Attributes["Datetime"].Value)
                                 {
-                                    GumChe[i].Attributes["Name"].Value = txtEventName1.Texts;
-                                    
-                                    xmlDoc.Save(XmlFileName);
+                                    XmlNodeList GumCheName = xmlDoc.SelectNodes("Root/Test");
 
+                                    for (int j = 0; j < GumCheName.Count; j++)
+                                    {
+                                        GumCheName[j].Attributes["GumCheName"].Value = txtEventName1.Texts;
+                                        GumCheName[j].Attributes["GumCheDate"].Value = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
+                                        GumCheName[i].Attributes["Color"].Value = pnlEventColor.BackColor.ToString();
+
+                                    }
+
+                                    GumChe[i].Attributes["Name"].Value = txtEventName1.Texts;
+                                    GumChe[i].Attributes["Datetime"].Value = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
+                                    GumChe[i].Attributes["Color"].Value = _newEvent.EventColor.ToString();
+                                    
                                     _newEvent.EventText = txtEventName1.Texts;
 
                                 }
                             }
+
+                            
                         } else if ( _event.Rank == 2)
                         {
                             XmlNodeList Test = xmlDoc.SelectNodes("Root/Test");
 
                             for (int i = 0; i < Test.Count; i++)
                             {
-                                if(_event.EventText.Contains(Test[i].Attributes["Name"].Value.Replace("\n", "")))
+                                if(Test[i].Attributes["Name"].Value.Contains(_event.EventText.Trim()))
                                 {
                                      Test[i].Attributes["Name"].Value = txtEventName1.Texts;
                                      Test[i].Attributes["Color"].Value = _newEvent.EventColor.ToString();
+                                     Test[i].Attributes["GumAmt"].Value = txtTestAmt.Texts;
 
-                                    if(txtEventName2.Enabled == false)
-                                    {
-                                        _newEvent.EventText = txtEventName1.Texts;
-                                    } else
-                                    {
-                                        if (Test[i].Attributes.GetNamedItem("NameDate") != null)
-                                        {
-                                            if (_event.EventText.Contains(Test[i].Attributes["Name"].Value.Replace("\n", "")) && _event.EventText.Contains(Test[i].Attributes["NameDate"].Value.ToString()))
-                                            {
-                                                Test[i].Attributes["NameDate"].Value = txtEventName2.Texts;
-                                                Test[i].Attributes["Datetime"].Value = _newEvent.Date.ToString("yyyy-MM-dd");
-                                            }
-                                        }
-                                        _newEvent.EventText = txtEventName1.Texts + "\n" + TextAlignCenter_DaysName(txtEventName1.Texts, txtEventName2.Texts);
-                                    }
-                                       
-                                } 
+                                    _newEvent.EventText = txtEventName1.Texts;
+                                    
+                                }
 
+                                if (Test[i].Attributes["Rank"].Value == "2")
+                                {
+                                    Test[i].Attributes["Datetime"].Value = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
+                                }
 
                             }
-                        } 
+
+                            
+
+
+                        } else if ( _event.Rank == 3)
+                        {
+                            XmlNodeList TestDate = xmlDoc.SelectNodes("Root/Test");
+
+                            for (int i = 0; i < TestDate.Count; i++)
+                            {
+                                
+                                 if (TestDate[i].Attributes.GetNamedItem("NameDate") != null)
+                                  {
+                                        if (_event.EventText.Contains(TestDate[i].Attributes["Name"].Value.Replace("\n", "")) && _event.EventText.Contains(TestDate[i].Attributes["NameDate"].Value.ToString()))
+                                        {
+                                            TestDate[i].Attributes["NameDate"].Value = txtEventName2.Texts;
+                                            TestDate[i].Attributes["Datetime"].Value = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
+                                             
+                                        }
+                                    }
+                                        _newEvent.EventText = txtEventName1.Texts + txtEventName2.Texts;
+                                
+                            }
+                        }
 
                         xmlDoc.Save(XmlFileName);
+
+                        
+                       
                     }
                     else
                     {
@@ -342,5 +383,20 @@ namespace Calendar.NET
             Close();
         }
 
+        /// <summary>
+        /// ESC 창닫기
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void EventDetails_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            } else if ( e.KeyCode == Keys.Enter)
+            {
+                BtnOkClick(null, null);
+            }
+        }
     }
 }
