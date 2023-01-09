@@ -539,9 +539,5 @@ namespace Calendar.NETDemo
             }
         }
 
-        private void rjButton1_Click(object sender, EventArgs e)
-        {
-            Refresh();
-        }
     }
 }

@@ -151,8 +151,8 @@ namespace Calendar.NET
                 
                txtEventName1.Texts = ev.Substring(0, ev.IndexOf("일차")-1);
                txtEventName2.Texts = ev.Substring(ev.LastIndexOf("일차")-2).Trim();
-                txtEventName1.Enabled = false;
-                txtTestAmt.Enabled = false;
+               txtEventName1.Enabled = false;
+               txtTestAmt.Enabled = false;
                 pnlEventColor.Enabled = false;
             }
 
@@ -246,7 +246,7 @@ namespace Calendar.NET
                                     {
                                         GumCheName[j].Attributes["GumCheName"].Value = txtEventName1.Texts;
                                         GumCheName[j].Attributes["GumCheDate"].Value = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
-                                        GumCheName[i].Attributes["Color"].Value = pnlEventColor.BackColor.ToString();
+                                        GumCheName[j].Attributes["Color"].Value = pnlEventColor.BackColor.ToString();
 
                                     }
 
@@ -283,9 +283,6 @@ namespace Calendar.NET
 
                             }
 
-                            
-
-
                         } else if ( _event.Rank == 3)
                         {
                             XmlNodeList TestDate = xmlDoc.SelectNodes("Root/Test");
@@ -309,7 +306,7 @@ namespace Calendar.NET
 
                         xmlDoc.Save(XmlFileName);
 
-                        
+                       
                        
                     }
                     else
@@ -398,5 +395,7 @@ namespace Calendar.NET
                 BtnOkClick(null, null);
             }
         }
+
+
     }
 }

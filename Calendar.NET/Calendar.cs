@@ -373,10 +373,10 @@ namespace Calendar.NET
             this._miProperties = new System.Windows.Forms.ToolStripMenuItem();
             this.삭제하기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.시험일정전체삭제ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.시험일차추가하기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._btnRight = new NavigateRightButton();
             this._btnLeft = new NavigateLeftButton();
             this._btnToday = new TodayButton();
-            this.시험일차추가하기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -389,28 +389,35 @@ namespace Calendar.NET
             this.시험일정전체삭제ToolStripMenuItem,
             this.시험일차추가하기ToolStripMenuItem});
             this._contextMenuStrip1.Name = "_contextMenuStrip1";
-            this._contextMenuStrip1.Size = new System.Drawing.Size(211, 128);
+            this._contextMenuStrip1.Size = new System.Drawing.Size(204, 100);
             // 
             // _miProperties
             // 
             this._miProperties.Name = "_miProperties";
-            this._miProperties.Size = new System.Drawing.Size(210, 24);
+            this._miProperties.Size = new System.Drawing.Size(203, 24);
             this._miProperties.Text = "일정 속성";
             this._miProperties.Click += new System.EventHandler(this.MenuItemPropertiesClick);
             // 
             // 삭제하기ToolStripMenuItem
             // 
             this.삭제하기ToolStripMenuItem.Name = "삭제하기ToolStripMenuItem";
-            this.삭제하기ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.삭제하기ToolStripMenuItem.Size = new System.Drawing.Size(203, 24);
             this.삭제하기ToolStripMenuItem.Text = "일정 삭제하기";
             this.삭제하기ToolStripMenuItem.Click += new System.EventHandler(this.삭제하기ToolStripMenuItem_Click);
             // 
             // 시험일정전체삭제ToolStripMenuItem
             // 
             this.시험일정전체삭제ToolStripMenuItem.Name = "시험일정전체삭제ToolStripMenuItem";
-            this.시험일정전체삭제ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.시험일정전체삭제ToolStripMenuItem.Size = new System.Drawing.Size(203, 24);
             this.시험일정전체삭제ToolStripMenuItem.Text = "일정 전체삭제";
             this.시험일정전체삭제ToolStripMenuItem.Click += new System.EventHandler(this.시험일정전체삭제ToolStripMenuItem_Click);
+            // 
+            // 시험일차추가하기ToolStripMenuItem
+            // 
+            this.시험일차추가하기ToolStripMenuItem.Name = "시험일차추가하기ToolStripMenuItem";
+            this.시험일차추가하기ToolStripMenuItem.Size = new System.Drawing.Size(203, 24);
+            this.시험일차추가하기ToolStripMenuItem.Text = "시험일차 추가하기";
+            this.시험일차추가하기ToolStripMenuItem.Click += new System.EventHandler(this.시험일차추가하기ToolStripMenuItem_Click);
             // 
             // _btnRight
             // 
@@ -465,13 +472,6 @@ namespace Calendar.NET
             this._btnToday.TabIndex = 0;
             this._btnToday.TextColor = System.Drawing.Color.Black;
             this._btnToday.ButtonClicked += new CoolButton.ButtonClickedArgs(this.BtnTodayButtonClicked);
-            // 
-            // 시험일차추가하기ToolStripMenuItem
-            // 
-            this.시험일차추가하기ToolStripMenuItem.Name = "시험일차추가하기ToolStripMenuItem";
-            this.시험일차추가하기ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.시험일차추가하기ToolStripMenuItem.Text = "시험일차 추가하기";
-            this.시험일차추가하기ToolStripMenuItem.Click += new System.EventHandler(this.시험일차추가하기ToolStripMenuItem_Click);
             // 
             // Calendar
             // 
@@ -1253,36 +1253,62 @@ namespace Calendar.NET
                      XmlDocument xmlDoc = new XmlDocument();
                      xmlDoc.Load(XmlFileName);
    
-                     XmlNode GumcheNodes = xmlDoc.SelectSingleNode("Root");
-                     if (GumcheNodes != null)
+                     XmlNode node = xmlDoc.SelectSingleNode("Root");
+                     if (node != null)
                      {
                         
-                        for (int i = 0; i < GumcheNodes.ChildNodes.Count; i++)
+                        for (int i = 0; i < node.ChildNodes.Count; i++)
                         {
-                            string name_value = GumcheNodes.ChildNodes[i].Attributes["Name"].Value.Trim();
-                            string date_value = GumcheNodes.ChildNodes[i].Attributes["Datetime"].Value;
                             
-                            if (name_value.CompareTo(eventText) == 0 && date_value.CompareTo(eventDate) == 0)
-                            {   
-                                //xml 노드삭제
-                                XmlNode deleteNode = GumcheNodes.ChildNodes[i];
-                                XmlNode parentNode = deleteNode.ParentNode; // 삭제할 노드의 부모 노드 찾고
+                            string date_value = node.ChildNodes[i].Attributes["Datetime"].Value;
 
-                                parentNode.RemoveChild(deleteNode);
 
-                                xmlDoc.Save(XmlFileName);
-                                xmlDoc = null;
-                                
-                                //이벤트 삭제
-                                RemoveEvent(_clickedEvent.Event);
-                                Refresh();
+                            //검체 인경우
+                            if (ed.Event.Rank == 1)
+                            {
+                                if (node.ChildNodes[i].Attributes["Name"].Value.Trim() == eventText)
+                                {
+                                    //xml 노드삭제
+                                    XmlNode deleteNode = node.ChildNodes[i];
+                                    XmlNode parentNode = deleteNode.ParentNode; // 삭제할 노드의 부모 노드 찾고
 
-                               
-                           
-                            } 
+                                    parentNode.RemoveChild(deleteNode);
+
+
+                                }
+                            } else if (ed.Event.Rank == 2)
+                            {
+                                MessageBox.Show("시험명 삭제는 불가능합니다. 전체삭제를 이용해주세요.");
+                                break;
+                            }
+                            else if (ed.Event.Rank == 3)
+                            {
+                                if (node.ChildNodes[i].Attributes.GetNamedItem("NameDate") != null)
+                                {
+                                    if (ed.Event.EventText.Contains(node.ChildNodes[i].Attributes["Name"].Value) && ed.Event.EventText.Contains(node.ChildNodes[i].Attributes["NameDate"].Value))
+                                    {
+                                        XmlNode deleteNode = node.ChildNodes[i];
+                                        XmlNode parentNode = deleteNode.ParentNode;
+
+                                        parentNode.RemoveChild(deleteNode);
+
+                                    }
+                                }
+                            }
                         }
-                    
-                     } 
+
+                    xmlDoc.Save(XmlFileName);
+                    xmlDoc = null;
+
+                    //이벤트 삭제
+                    if (ed.Event.Rank != 2)
+                    {
+                        RemoveEvent(_clickedEvent.Event);
+                    }
+
+                    Refresh();
+
+                } 
             } else
             {
                 MessageBox.Show("파일이 없습니다..");
@@ -1293,7 +1319,36 @@ namespace Calendar.NET
 
         private void 시험일정전체삭제ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            var ed = new EventDetails { Event = _clickedEvent.Event };
 
+            if (ed.Event.Rank == 2)
+            {
+                if (File.Exists(XmlFileName))
+                {
+                    XmlDocument xmlDoc = new XmlDocument();
+                    xmlDoc.Load(XmlFileName);
+
+                    XmlNode node = xmlDoc.SelectSingleNode("Root");
+
+                    MessageBox.Show(ed.Event.EventText);
+
+                    //이벤트 제목과 동일한 노드 찾기
+                    XmlNodeList TestNode = xmlDoc.SelectNodes("descendant::Test[@Name='"+ed.Event.EventText.Trim().ToString()+"']");
+
+                    foreach(XmlNode Testing in TestNode)
+                    {
+                        MessageBox.Show("있음");
+                    }
+
+                    xmlDoc.Save(XmlFileName);
+                    xmlDoc = null;
+
+                    
+                }
+            } else
+            {
+                MessageBox.Show("시험일정 전체삭제는 시험명 선택 후 가능합니다.");
+            }
         }
 
         private void 시험일차추가하기ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1301,5 +1356,6 @@ namespace Calendar.NET
             EventAdd eventadd = new EventAdd();
             eventadd.Show();
         }
+
     }
 }

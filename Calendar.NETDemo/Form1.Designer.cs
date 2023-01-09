@@ -85,7 +85,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gum_name = new CustomControls.RJControls.RJTextBox();
             this.AddEvent2 = new Calendar.NETDemo.RJButton();
-            this.rjButton1 = new Calendar.NETDemo.RJButton();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
@@ -383,7 +382,7 @@
             this.comboBox1.Location = new System.Drawing.Point(69, 29);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(214, 28);
-            this.comboBox1.TabIndex = 78;
+            this.comboBox1.TabIndex = 0;
             this.comboBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBox1_MouseClick);
             // 
             // comboBox2
@@ -401,7 +400,7 @@
             this.comboBox2.Location = new System.Drawing.Point(70, 147);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(214, 28);
-            this.comboBox2.TabIndex = 100;
+            this.comboBox2.TabIndex = 3;
             // 
             // rjTextBox1
             // 
@@ -419,7 +418,7 @@
             this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox1.PasswordChar = false;
             this.rjTextBox1.Size = new System.Drawing.Size(119, 33);
-            this.rjTextBox1.TabIndex = 98;
+            this.rjTextBox1.TabIndex = 4;
             this.rjTextBox1.Texts = "";
             this.rjTextBox1.UnderlinedStyle = false;
             // 
@@ -439,7 +438,7 @@
             this.rjTextBox14.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox14.PasswordChar = false;
             this.rjTextBox14.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox14.TabIndex = 96;
+            this.rjTextBox14.TabIndex = 17;
             this.rjTextBox14.Texts = "";
             this.rjTextBox14.UnderlinedStyle = false;
             // 
@@ -459,7 +458,7 @@
             this.rjTextBox13.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox13.PasswordChar = false;
             this.rjTextBox13.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox13.TabIndex = 95;
+            this.rjTextBox13.TabIndex = 16;
             this.rjTextBox13.Texts = "";
             this.rjTextBox13.UnderlinedStyle = false;
             // 
@@ -479,7 +478,7 @@
             this.rjTextBox12.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox12.PasswordChar = false;
             this.rjTextBox12.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox12.TabIndex = 94;
+            this.rjTextBox12.TabIndex = 15;
             this.rjTextBox12.Texts = "";
             this.rjTextBox12.UnderlinedStyle = false;
             // 
@@ -499,7 +498,7 @@
             this.rjTextBox11.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox11.PasswordChar = false;
             this.rjTextBox11.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox11.TabIndex = 93;
+            this.rjTextBox11.TabIndex = 14;
             this.rjTextBox11.Texts = "";
             this.rjTextBox11.UnderlinedStyle = false;
             // 
@@ -519,7 +518,7 @@
             this.rjTextBox10.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox10.PasswordChar = false;
             this.rjTextBox10.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox10.TabIndex = 92;
+            this.rjTextBox10.TabIndex = 13;
             this.rjTextBox10.Texts = "";
             this.rjTextBox10.UnderlinedStyle = false;
             // 
@@ -539,7 +538,7 @@
             this.rjTextBox9.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox9.PasswordChar = false;
             this.rjTextBox9.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox9.TabIndex = 91;
+            this.rjTextBox9.TabIndex = 12;
             this.rjTextBox9.Texts = "";
             this.rjTextBox9.UnderlinedStyle = false;
             // 
@@ -559,7 +558,7 @@
             this.rjTextBox8.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox8.PasswordChar = false;
             this.rjTextBox8.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox8.TabIndex = 90;
+            this.rjTextBox8.TabIndex = 11;
             this.rjTextBox8.Texts = "";
             this.rjTextBox8.UnderlinedStyle = false;
             // 
@@ -579,7 +578,7 @@
             this.rjTextBox7.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox7.PasswordChar = false;
             this.rjTextBox7.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox7.TabIndex = 89;
+            this.rjTextBox7.TabIndex = 10;
             this.rjTextBox7.Texts = "";
             this.rjTextBox7.UnderlinedStyle = false;
             // 
@@ -599,7 +598,7 @@
             this.rjTextBox6.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox6.PasswordChar = false;
             this.rjTextBox6.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox6.TabIndex = 88;
+            this.rjTextBox6.TabIndex = 9;
             this.rjTextBox6.Texts = "";
             this.rjTextBox6.UnderlinedStyle = false;
             // 
@@ -619,7 +618,7 @@
             this.rjTextBox5.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox5.PasswordChar = false;
             this.rjTextBox5.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox5.TabIndex = 87;
+            this.rjTextBox5.TabIndex = 8;
             this.rjTextBox5.Texts = "";
             this.rjTextBox5.UnderlinedStyle = false;
             // 
@@ -639,7 +638,7 @@
             this.rjTextBox4.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox4.PasswordChar = false;
             this.rjTextBox4.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox4.TabIndex = 86;
+            this.rjTextBox4.TabIndex = 7;
             this.rjTextBox4.Texts = "";
             this.rjTextBox4.UnderlinedStyle = false;
             // 
@@ -659,7 +658,7 @@
             this.rjTextBox3.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox3.PasswordChar = false;
             this.rjTextBox3.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox3.TabIndex = 85;
+            this.rjTextBox3.TabIndex = 6;
             this.rjTextBox3.Texts = "";
             this.rjTextBox3.UnderlinedStyle = false;
             // 
@@ -679,7 +678,7 @@
             this.rjTextBox2.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox2.PasswordChar = false;
             this.rjTextBox2.Size = new System.Drawing.Size(119, 33);
-            this.rjTextBox2.TabIndex = 84;
+            this.rjTextBox2.TabIndex = 5;
             this.rjTextBox2.Texts = "";
             this.rjTextBox2.UnderlinedStyle = false;
             // 
@@ -699,7 +698,7 @@
             this.gum_amt.Padding = new System.Windows.Forms.Padding(7);
             this.gum_amt.PasswordChar = false;
             this.gum_amt.Size = new System.Drawing.Size(213, 35);
-            this.gum_amt.TabIndex = 82;
+            this.gum_amt.TabIndex = 2;
             this.gum_amt.Texts = "";
             this.gum_amt.UnderlinedStyle = false;
             // 
@@ -730,7 +729,7 @@
             this.testTitle.Padding = new System.Windows.Forms.Padding(7);
             this.testTitle.PasswordChar = false;
             this.testTitle.Size = new System.Drawing.Size(213, 35);
-            this.testTitle.TabIndex = 79;
+            this.testTitle.TabIndex = 1;
             this.testTitle.Texts = "";
             this.testTitle.UnderlinedStyle = false;
             // 
@@ -748,7 +747,7 @@
             this.Test_add.Location = new System.Drawing.Point(14, 533);
             this.Test_add.Name = "Test_add";
             this.Test_add.Size = new System.Drawing.Size(69, 55);
-            this.Test_add.TabIndex = 80;
+            this.Test_add.TabIndex = 18;
             this.Test_add.Text = "시험\r\n등록";
             this.Test_add.TextColor = System.Drawing.Color.White;
             this.Test_add.UseVisualStyleBackColor = false;
@@ -875,7 +874,7 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(49, 36);
-            this.panel2.TabIndex = 76;
+            this.panel2.TabIndex = 1;
             this.panel2.Click += new System.EventHandler(this.panel2_DoubleClick);
             // 
             // groupBox1
@@ -912,7 +911,7 @@
             this.gum_name.Padding = new System.Windows.Forms.Padding(7);
             this.gum_name.PasswordChar = false;
             this.gum_name.Size = new System.Drawing.Size(222, 35);
-            this.gum_name.TabIndex = 77;
+            this.gum_name.TabIndex = 0;
             this.gum_name.Texts = "";
             this.gum_name.UnderlinedStyle = false;
             // 
@@ -936,32 +935,12 @@
             this.AddEvent2.UseVisualStyleBackColor = false;
             this.AddEvent2.Click += new System.EventHandler(this.AddEvent2_Click);
             // 
-            // rjButton1
-            // 
-            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 0;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(514, 4);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(95, 35);
-            this.rjButton1.TabIndex = 78;
-            this.rjButton1.Text = "새로고침";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1532, 916);
-            this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
@@ -1038,7 +1017,6 @@
         private MyListBox test_days;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private RJButton rjButton1;
     }
 }
 
