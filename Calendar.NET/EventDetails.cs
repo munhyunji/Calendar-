@@ -268,7 +268,7 @@ namespace Calendar.NET
                             {
                                 if(Test[i].Attributes["Name"].Value.Contains(_event.EventText.Trim()))
                                 {
-                                     Test[i].Attributes["Name"].Value = txtEventName1.Texts;
+                                     Test[i].Attributes["Name"].Value = txtEventName1.Texts.Trim();
                                      Test[i].Attributes["Color"].Value = _newEvent.EventColor.ToString();
                                      Test[i].Attributes["GumAmt"].Value = txtTestAmt.Texts;
 

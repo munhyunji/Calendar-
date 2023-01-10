@@ -1259,22 +1259,30 @@ namespace Calendar.NET
                         
                         for (int i = 0; i < node.ChildNodes.Count; i++)
                         {
-                            
-                            string date_value = node.ChildNodes[i].Attributes["Datetime"].Value;
+                           
 
-
-                            //검체 인경우
-                            if (ed.Event.Rank == 1)
+                        //검체 인경우
+                        if (ed.Event.Rank == 1)
                             {
                                 if (node.ChildNodes[i].Attributes["Name"].Value.Trim() == eventText)
                                 {
-                                    //xml 노드삭제
-                                    XmlNode deleteNode = node.ChildNodes[i];
-                                    XmlNode parentNode = deleteNode.ParentNode; // 삭제할 노드의 부모 노드 찾고
+                                    
+                                        if (node.ChildNodes[i].Attributes["GumCheName"].Value == eventText && node.ChildNodes[i].Attributes["GumCheDate"].Value == eventDate)
+                                        {
+                                            MessageBox.Show("검체가 등록된 시험명이 존재합니다. 시험을 먼저 삭제후 검체를 삭제해주세요.");
+                                            return;
+                                        }
+                                        else
+                                        {
+                                            //xml 노드삭제
+                                            XmlNode deleteNode = node.ChildNodes[i];
+                                            XmlNode parentNode = deleteNode.ParentNode; // 삭제할 노드의 부모 노드 찾고
 
-                                    parentNode.RemoveChild(deleteNode);
+                                            parentNode.RemoveChild(deleteNode);
 
-
+                                            RemoveEvent(_clickedEvent.Event);
+                                        }
+  
                                 }
                             } else if (ed.Event.Rank == 2)
                             {
@@ -1292,21 +1300,16 @@ namespace Calendar.NET
 
                                         parentNode.RemoveChild(deleteNode);
 
+                                        RemoveEvent(_clickedEvent.Event);
                                     }
                                 }
                             }
                         }
 
-                    xmlDoc.Save(XmlFileName);
-                    xmlDoc = null;
+                        xmlDoc.Save(XmlFileName);
+                        xmlDoc = null;
 
-                    //이벤트 삭제
-                    if (ed.Event.Rank != 2)
-                    {
-                        RemoveEvent(_clickedEvent.Event);
-                    }
-
-                    Refresh();
+                        Refresh();
 
                 } 
             } else
@@ -1330,19 +1333,18 @@ namespace Calendar.NET
 
                     XmlNode node = xmlDoc.SelectSingleNode("Root");
 
-                    MessageBox.Show(ed.Event.EventText);
-
                     //이벤트 제목과 동일한 노드 찾기
                     XmlNodeList TestNode = xmlDoc.SelectNodes("descendant::Test[@Name='"+ed.Event.EventText.Trim().ToString()+"']");
 
                     foreach(XmlNode Testing in TestNode)
                     {
-                        MessageBox.Show("있음");
+                        node.RemoveChild(Testing);
                     }
-
-                    xmlDoc.Save(XmlFileName);
+                   xmlDoc.Save(XmlFileName);
                     xmlDoc = null;
 
+                    Refresh();
+                    
                     
                 }
             } else
