@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Text.RegularExpressions;
 
 namespace Calendar.NET
 {
@@ -69,5 +70,16 @@ namespace Calendar.NET
             this.Close();
         }
 
+        private void Date_TextChanged(object sender, EventArgs e)
+        {
+            Regex num = new Regex(@"[0-9]"); //숫자만
+            Boolean isMatch = num.IsMatch(Date.Texts);
+
+            if(!isMatch)
+            {
+                MessageBox.Show("숫자만 입력해주세요.");
+                Date.Texts = "";
+            }
+        }
     }
 }

@@ -38,7 +38,7 @@ namespace Calendar.NET
             this.rjTextBox2 = new CustomControls.RJControls.RJTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
+            this.Date = new CustomControls.RJControls.RJTextBox();
             this.TestName = new System.Windows.Forms.Label();
             this.TestDate = new System.Windows.Forms.Label();
             this.txtTestDate = new System.Windows.Forms.Label();
@@ -83,7 +83,7 @@ namespace Calendar.NET
             this.groupBox1.Controls.Add(this.rjTextBox2);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.rjTextBox1);
+            this.groupBox1.Controls.Add(this.Date);
             this.groupBox1.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox1.Location = new System.Drawing.Point(24, 99);
             this.groupBox1.Name = "groupBox1";
@@ -141,30 +141,31 @@ namespace Calendar.NET
             this.label1.TabIndex = 6;
             this.label1.Text = "시험 일차";
             // 
-            // rjTextBox1
+            // Date
             // 
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox1.Location = new System.Drawing.Point(25, 82);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.Size = new System.Drawing.Size(32, 35);
-            this.rjTextBox1.TabIndex = 0;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
+            this.Date.BackColor = System.Drawing.SystemColors.Window;
+            this.Date.BorderColor = System.Drawing.Color.Lavender;
+            this.Date.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.Date.BorderSize = 2;
+            this.Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date.ForeColor = System.Drawing.Color.DimGray;
+            this.Date.Location = new System.Drawing.Point(25, 82);
+            this.Date.Margin = new System.Windows.Forms.Padding(4);
+            this.Date.Multiline = false;
+            this.Date.Name = "Date";
+            this.Date.Padding = new System.Windows.Forms.Padding(7);
+            this.Date.PasswordChar = false;
+            this.Date.Size = new System.Drawing.Size(32, 35);
+            this.Date.TabIndex = 0;
+            this.Date.Texts = "";
+            this.Date.UnderlinedStyle = false;
+            this.Date._TextChanged += new System.EventHandler(this.Date_TextChanged);
             // 
             // TestName
             // 
             this.TestName.AutoSize = true;
             this.TestName.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.TestName.Location = new System.Drawing.Point(161, 58);
+            this.TestName.Location = new System.Drawing.Point(159, 58);
             this.TestName.Name = "TestName";
             this.TestName.Size = new System.Drawing.Size(55, 20);
             this.TestName.TabIndex = 5;
@@ -221,7 +222,7 @@ namespace Calendar.NET
         private System.Windows.Forms.Label txtTestName;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label TestName;
-        private CustomControls.RJControls.RJTextBox rjTextBox1;
+        private CustomControls.RJControls.RJTextBox Date;
         private System.Windows.Forms.Label label3;
         private CustomControls.RJControls.RJTextBox rjTextBox2;
         private System.Windows.Forms.Label label2;

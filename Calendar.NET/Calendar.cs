@@ -1355,7 +1355,7 @@ namespace Calendar.NET
 
         private void 시험일차추가하기ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (_clickedEvent == null)
+            if (_clickedEvent == null )
                 return;
 
             var ed = new EventAdd { Event = _clickedEvent.Event };
@@ -1365,7 +1365,7 @@ namespace Calendar.NET
                 _events.Add(ed.NewEvent);
                 Refresh();
             }
-
+            
             _clickedEvent = null;
         }
 
