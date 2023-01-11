@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventDetails));
             this.label1 = new System.Windows.Forms.Label();
             this.gbBasics = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -90,11 +91,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(110, 272);
+            this.label2.Font = new System.Drawing.Font("나눔고딕", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(93, 272);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(175, 17);
+            this.label2.Size = new System.Drawing.Size(193, 16);
             this.label2.TabIndex = 9;
-            this.label2.Text = "* \'일차\'는 수정하지마세요";
+            this.label2.Text = "* \'일차\'는 수정/삭제하지마세요";
             // 
             // txtEventName2
             // 
@@ -187,9 +189,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(16, 383);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 17);
+            this.label3.Size = new System.Drawing.Size(50, 17);
             this.label3.TabIndex = 10;
-            this.label3.Text = "검체량 (일정 전체적용)";
+            this.label3.Text = "검체량";
             // 
             // chkIgnoreTimeComponent
             // 
@@ -347,6 +349,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbBasics);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;

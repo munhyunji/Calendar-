@@ -7,19 +7,67 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Calendar.NET
 {
-    public partial class EventAdd : Form
+    internal partial class EventAdd : Form
     {
+
+        private IEvent _event;
+        private IEvent _newEvent;
+
+        XmlDocument xmlDoc;
+        String XmlFileName = "Date.xml";
+
+
+
         public EventAdd()
         {
             InitializeComponent();
         }
 
+        public IEvent Event
+        {
+            get { return Event; }
+            set
+            {
+                _event = value;
+                FillValue();
+            }
+        }
+
+        public IEvent NewEvent
+        {
+            get { return NewEvent; }
+            
+        }
+
+        private void FillValue()
+        {
+            TestName.Text = _event.EventText.ToString();
+            TestDate.Text = _event.Date.ToString("yyyy-MM-dd");
+        }
+
+        /// <summary>
+        /// 확인버튼 클릭시
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 취소버튼 클릭시
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Cancel_btn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
     }
 }
