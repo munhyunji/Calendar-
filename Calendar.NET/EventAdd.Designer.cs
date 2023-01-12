@@ -31,13 +31,12 @@ namespace Calendar.NET
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventAdd));
             this.Cancel_btn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnOk = new System.Windows.Forms.Button();
             this.txtTestName = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.rjTextBox2 = new CustomControls.RJControls.RJTextBox();
+            this.DateText = new CustomControls.RJControls.RJTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.Date = new CustomControls.RJControls.RJTextBox();
             this.TestName = new System.Windows.Forms.Label();
             this.TestDate = new System.Windows.Forms.Label();
@@ -48,7 +47,7 @@ namespace Calendar.NET
             // Cancel_btn
             // 
             this.Cancel_btn.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Cancel_btn.Location = new System.Drawing.Point(259, 301);
+            this.Cancel_btn.Location = new System.Drawing.Point(258, 250);
             this.Cancel_btn.Name = "Cancel_btn";
             this.Cancel_btn.Size = new System.Drawing.Size(99, 26);
             this.Cancel_btn.TabIndex = 0;
@@ -56,16 +55,16 @@ namespace Calendar.NET
             this.Cancel_btn.UseVisualStyleBackColor = true;
             this.Cancel_btn.Click += new System.EventHandler(this.Cancel_btn_Click);
             // 
-            // button1
+            // btnOk
             // 
-            this.button1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Location = new System.Drawing.Point(24, 301);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 26);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "등록";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnOk.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnOk.Location = new System.Drawing.Point(23, 250);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(99, 26);
+            this.btnOk.TabIndex = 1;
+            this.btnOk.Text = "등록";
+            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // txtTestName
             // 
@@ -80,14 +79,13 @@ namespace Calendar.NET
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.rjTextBox2);
+            this.groupBox1.Controls.Add(this.DateText);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.Date);
             this.groupBox1.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox1.Location = new System.Drawing.Point(24, 99);
+            this.groupBox1.Location = new System.Drawing.Point(23, 99);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(334, 178);
+            this.groupBox1.Size = new System.Drawing.Size(334, 136);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "시험일차 추가";
@@ -96,50 +94,40 @@ namespace Calendar.NET
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("나눔고딕", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(18, 134);
+            this.label3.Location = new System.Drawing.Point(19, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(296, 16);
             this.label3.TabIndex = 6;
             this.label3.Text = "*시험일 기준으로 일차 계산되어 자동등록됩니다.";
             // 
-            // rjTextBox2
+            // DateText
             // 
-            this.rjTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox2.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox2.BorderSize = 2;
-            this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox2.Location = new System.Drawing.Point(112, 82);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.Size = new System.Drawing.Size(198, 35);
-            this.rjTextBox2.TabIndex = 8;
-            this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderlinedStyle = false;
+            this.DateText.BackColor = System.Drawing.SystemColors.Window;
+            this.DateText.BorderColor = System.Drawing.Color.Lavender;
+            this.DateText.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.DateText.BorderSize = 2;
+            this.DateText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateText.ForeColor = System.Drawing.Color.DimGray;
+            this.DateText.Location = new System.Drawing.Point(113, 44);
+            this.DateText.Margin = new System.Windows.Forms.Padding(4);
+            this.DateText.Multiline = false;
+            this.DateText.Name = "DateText";
+            this.DateText.Padding = new System.Windows.Forms.Padding(7);
+            this.DateText.PasswordChar = false;
+            this.DateText.Size = new System.Drawing.Size(198, 35);
+            this.DateText.TabIndex = 8;
+            this.DateText.Texts = "";
+            this.DateText.UnderlinedStyle = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(64, 89);
+            this.label2.Location = new System.Drawing.Point(69, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 20);
             this.label2.TabIndex = 7;
             this.label2.Text = "일차";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(21, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 20);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "시험 일차";
             // 
             // Date
             // 
@@ -149,13 +137,13 @@ namespace Calendar.NET
             this.Date.BorderSize = 2;
             this.Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Date.ForeColor = System.Drawing.Color.DimGray;
-            this.Date.Location = new System.Drawing.Point(25, 82);
+            this.Date.Location = new System.Drawing.Point(22, 44);
             this.Date.Margin = new System.Windows.Forms.Padding(4);
             this.Date.Multiline = false;
             this.Date.Name = "Date";
             this.Date.Padding = new System.Windows.Forms.Padding(7);
             this.Date.PasswordChar = false;
-            this.Date.Size = new System.Drawing.Size(32, 35);
+            this.Date.Size = new System.Drawing.Size(44, 35);
             this.Date.TabIndex = 0;
             this.Date.Texts = "";
             this.Date.UnderlinedStyle = false;
@@ -196,18 +184,18 @@ namespace Calendar.NET
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(378, 346);
+            this.ClientSize = new System.Drawing.Size(378, 297);
             this.Controls.Add(this.TestDate);
             this.Controls.Add(this.txtTestDate);
             this.Controls.Add(this.TestName);
             this.Controls.Add(this.txtTestName);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnOk);
             this.Controls.Add(this.Cancel_btn);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EventAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EventAdd";
+            this.Text = "시험 일차 추가";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -218,15 +206,14 @@ namespace Calendar.NET
         #endregion
 
         private System.Windows.Forms.Button Cancel_btn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Label txtTestName;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label TestName;
         private CustomControls.RJControls.RJTextBox Date;
         private System.Windows.Forms.Label label3;
-        private CustomControls.RJControls.RJTextBox rjTextBox2;
+        private CustomControls.RJControls.RJTextBox DateText;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label TestDate;
         private System.Windows.Forms.Label txtTestDate;
     }

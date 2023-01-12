@@ -455,7 +455,7 @@ namespace Calendar.NETDemo
 
                 } else
                 {
-                    MessageBox.Show("Xml 파일없는데요");
+                    MessageBox.Show("Xml 파일이 존재하지않습니다.");
                 }
 
                 comboBox1.SelectedIndex = 0;

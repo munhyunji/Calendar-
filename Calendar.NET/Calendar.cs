@@ -1355,18 +1355,25 @@ namespace Calendar.NET
 
         private void 시험일차추가하기ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (_clickedEvent == null )
-                return;
-
-            var ed = new EventAdd { Event = _clickedEvent.Event };
-
-            if (ed.ShowDialog(this) == DialogResult.OK)
+            if (_clickedEvent.Event.Rank == 2)
             {
-                _events.Add(ed.NewEvent);
-                Refresh();
+                if (_clickedEvent == null)
+                    return;
+
+                var ed = new EventAdd { Event = _clickedEvent.Event };
+
+                if (ed.ShowDialog(this) == DialogResult.OK)
+                {
+                    _events.Add(ed.NewEvent);
+                    Refresh();
+                }
+
+                _clickedEvent = null;
             }
-            
-            _clickedEvent = null;
+            else
+            {
+                MessageBox.Show("시험명에서만 일차 추가가 가능합니다");
+            }
         }
 
     }

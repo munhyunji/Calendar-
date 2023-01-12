@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Text.RegularExpressions;
+using System.IO;
+using CalendarDemo = Calendar.NETDemo;
 
 namespace Calendar.NET
 {
@@ -19,13 +14,15 @@ namespace Calendar.NET
         private IEvent _newEvent;
 
         XmlDocument xmlDoc;
-        String XmlFileName = "Date.xml";
+        String XmlFileName = "Data.xml";
 
 
 
         public EventAdd()
         {
             InitializeComponent();
+
+            Date.TextChanged += Date_TextChanged;
         }
 
         public IEvent Event
@@ -55,11 +52,40 @@ namespace Calendar.NET
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)
+        private void btnOk_Click(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(Date.Texts) && !string.IsNullOrEmpty(DateText.Texts))
+            {
+                int day = Int32.Parse(Date.Texts);
+                String dayText = Date.Texts.Trim() + "일차 " + DateText.Texts.Trim();
 
+                xmlDoc = new XmlDocument();
+                xmlDoc.Load(XmlFileName);
+
+                if (File.Exists(XmlFileName))
+                {
+
+                    try
+                    {
+                     
+                    }catch (Exception ex) {
+                        MessageBox.Show(ex.ToString());
+                    }
+
+                    var Add_custom = new CustomEvent
+                    {
+
+                    };
+
+                }
+
+                this.Close();
+            } else
+            {
+                MessageBox.Show("시험일차와 내용을 작성해주세요.");
+            }
         }
-
+                                          
         /// <summary>
         /// 취소버튼 클릭시
         /// </summary>
@@ -77,9 +103,11 @@ namespace Calendar.NET
 
             if(!isMatch)
             {
-                MessageBox.Show("숫자만 입력해주세요.");
                 Date.Texts = "";
+                return;
             }
         }
+
+ 
     }
 }
