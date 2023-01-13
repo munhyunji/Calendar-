@@ -236,9 +236,9 @@ namespace Calendar.NET
                         {
                             XmlNodeList GumChe = xmlDoc.SelectNodes("Root/GumChe");
 
-                            for(int i = 0; i < GumChe.Count; i++)
+                            for (int i = 0; i < GumChe.Count; i++)
                             {
-                                if(_event.EventText == GumChe[i].Attributes["Name"].Value && _event.Date.ToString("yyyy-MM-dd") == GumChe[i].Attributes["Datetime"].Value)
+                                if (_event.EventText == GumChe[i].Attributes["Name"].Value && _event.Date.ToString("yyyy-MM-dd") == GumChe[i].Attributes["Datetime"].Value)
                                 {
                                     XmlNodeList GumCheName = xmlDoc.SelectNodes("Root/Test");
 
@@ -253,30 +253,30 @@ namespace Calendar.NET
                                     GumChe[i].Attributes["Name"].Value = txtEventName1.Texts;
                                     GumChe[i].Attributes["Datetime"].Value = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
                                     GumChe[i].Attributes["Color"].Value = _newEvent.EventColor.ToString();
-                                    
+
                                     _newEvent.EventText = txtEventName1.Texts;
 
                                 }
                             }
 
-                            
-                        } else if ( _event.Rank == 2)
+
+                        } else if (_event.Rank == 2)
                         {
                             XmlNodeList Test = xmlDoc.SelectNodes("Root/Test");
 
                             for (int i = 0; i < Test.Count; i++)
                             {
-                                if(Test[i].Attributes["Name"].Value.Contains(_event.EventText.Trim()))
+                                if (Test[i].Attributes["Name"].Value.Contains(_event.EventText.Trim()))
                                 {
-                                     Test[i].Attributes["Name"].Value = txtEventName1.Texts.Trim();
-                                     Test[i].Attributes["Color"].Value = _newEvent.EventColor.ToString();
-                                     Test[i].Attributes["GumAmt"].Value = txtTestAmt.Texts;
+                                    Test[i].Attributes["Name"].Value = txtEventName1.Texts.Trim();
+                                    Test[i].Attributes["Color"].Value = _newEvent.EventColor.ToString();
+                                    Test[i].Attributes["GumAmt"].Value = txtTestAmt.Texts;
 
                                     _newEvent.EventText = txtEventName1.Texts;
-                                    
+
                                 }
 
-                                if (Test[i].Attributes["Rank"].Value == "2")
+                                if (Test[i].Attributes["Rank"].Value == "2" && Test[i].Attributes["Name"].Value == _event.EventText.Trim() )
                                 {
                                     Test[i].Attributes["Datetime"].Value = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
                                 }

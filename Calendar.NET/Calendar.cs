@@ -1267,13 +1267,8 @@ namespace Calendar.NET
                                 if (node.ChildNodes[i].Attributes["Name"].Value.Trim() == eventText)
                                 {
                                     
-                                        if (node.ChildNodes[i].Attributes["GumCheName"].Value == eventText && node.ChildNodes[i].Attributes["GumCheDate"].Value == eventDate)
-                                        {
-                                            MessageBox.Show("검체가 등록된 시험명이 존재합니다. 시험을 먼저 삭제후 검체를 삭제해주세요.");
-                                            return;
-                                        }
-                                        else
-                                        {
+                                        
+                                       
                                             //xml 노드삭제
                                             XmlNode deleteNode = node.ChildNodes[i];
                                             XmlNode parentNode = deleteNode.ParentNode; // 삭제할 노드의 부모 노드 찾고
@@ -1281,7 +1276,7 @@ namespace Calendar.NET
                                             parentNode.RemoveChild(deleteNode);
 
                                             RemoveEvent(_clickedEvent.Event);
-                                        }
+                                        
   
                                 }
                             } else if (ed.Event.Rank == 2)

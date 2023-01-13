@@ -3,7 +3,8 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Text.RegularExpressions;
 using System.IO;
-using CalendarDemo = Calendar.NETDemo;
+using Calendar.NET;
+using System.Drawing;
 
 namespace Calendar.NET
 {
@@ -54,11 +55,19 @@ namespace Calendar.NET
         /// <param name="e"></param>
         private void btnOk_Click(object sender, EventArgs e)
         {
+             
+
             if (!string.IsNullOrEmpty(Date.Texts) && !string.IsNullOrEmpty(DateText.Texts))
             {
                 int day = Int32.Parse(Date.Texts);
-                String dayText = Date.Texts.Trim() + "일차 " + DateText.Texts.Trim();
-
+                String text = _event.EventText.Trim();
+                String textDate = Date.Texts.Trim() + "일차 " + DateText.Texts.Trim();
+                DateTime datetime = _event.Date.AddDays(day);
+                Color color = _event.EventColor;
+                String GumCheName = "";
+                String GumCheDate = "";
+                String GumAmt = "";
+                
                 xmlDoc = new XmlDocument();
                 xmlDoc.Load(XmlFileName);
 
@@ -67,17 +76,50 @@ namespace Calendar.NET
 
                     try
                     {
-                     
-                    }catch (Exception ex) {
+                        XmlNode node = xmlDoc.SelectSingleNode("Root");
+                        XmlElement childNode = xmlDoc.CreateElement("Test");
+
+                        childNode.SetAttribute("Name", text);
+                        childNode.SetAttribute("NameDate", textDate);
+                        childNode.SetAttribute("Datetime", datetime.ToString("yyyy-MM-dd"));
+                        childNode.SetAttribute("Color", color.ToString());
+                        childNode.SetAttribute("GumCheName", GumCheName);
+                        childNode.SetAttribute("GumCheDate", GumCheDate);
+                        childNode.SetAttribute("GumAmt", GumAmt);
+                        childNode.SetAttribute("Rank", "3");
+
+                        node.AppendChild(childNode);
+
+                        xmlDoc.Save(XmlFileName);
+                        xmlDoc = null;
+
+                        var Add_custom = new CustomEvent
+                        {
+                            Date = datetime,
+                            EventText = text,
+                            EventColor = color,
+                            EventLengthInHours = 2f,
+                            RecurringFrequency = RecurringFrequencies.None,
+                            EventFont = new Font("나눔고딕", 8, FontStyle.Regular),
+                            Rank = 3,
+                            EventTextColor = Color.Black
+                        };
+
+                        Calendar cal = new Calendar();
+                        cal.AddEvent(Add_custom);
+                        
+
+                    } catch (Exception ex) {
                         MessageBox.Show(ex.ToString());
                     }
 
-                    var Add_custom = new CustomEvent
-                    {
 
-                    };
-
+                } else
+                {
+                    MessageBox.Show("XML 파일이 존재하지 않습니다.");
+                   
                 }
+                
 
                 this.Close();
             } else
