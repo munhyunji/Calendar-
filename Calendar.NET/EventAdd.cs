@@ -150,6 +150,19 @@ namespace Calendar.NET
             }
         }
 
- 
+        /// <summary>
+        /// Enter로 등록
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void EventAdd_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter )
+            {
+                btnOk_Click(sender, e);
+            }
+
+
+        }
     }
 }
