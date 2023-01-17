@@ -59,7 +59,6 @@ namespace Calendar.NET
             // 
             this.btnOk.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnOk.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnOk.Image = ((System.Drawing.Image)(resources.GetObject("btnOk.Image")));
             this.btnOk.Location = new System.Drawing.Point(23, 250);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(99, 26);
@@ -111,7 +110,7 @@ namespace Calendar.NET
             this.DateText.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateText.ForeColor = System.Drawing.Color.DimGray;
             this.DateText.ImeMode = System.Windows.Forms.ImeMode.Hangul;
-            this.DateText.Location = new System.Drawing.Point(113, 44);
+            this.DateText.Location = new System.Drawing.Point(113, 43);
             this.DateText.Margin = new System.Windows.Forms.Padding(4);
             this.DateText.Multiline = false;
             this.DateText.Name = "DateText";
