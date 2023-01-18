@@ -73,9 +73,9 @@ namespace Calendar.NET
             this.txtTestName.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtTestName.Location = new System.Drawing.Point(20, 58);
             this.txtTestName.Name = "txtTestName";
-            this.txtTestName.Size = new System.Drawing.Size(136, 20);
+            this.txtTestName.Size = new System.Drawing.Size(83, 20);
             this.txtTestName.TabIndex = 2;
-            this.txtTestName.Text = "선택한 일정이름 :";
+            this.txtTestName.Text = "일정이름 :";
             // 
             // groupBox1
             // 
@@ -178,9 +178,9 @@ namespace Calendar.NET
             this.txtTestDate.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtTestDate.Location = new System.Drawing.Point(20, 25);
             this.txtTestDate.Name = "txtTestDate";
-            this.txtTestDate.Size = new System.Drawing.Size(136, 20);
+            this.txtTestDate.Size = new System.Drawing.Size(83, 20);
             this.txtTestDate.TabIndex = 6;
-            this.txtTestDate.Text = "선택한 일정날짜 :";
+            this.txtTestDate.Text = "일정날짜 :";
             // 
             // EventAdd
             // 
