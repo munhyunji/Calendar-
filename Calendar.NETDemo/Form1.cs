@@ -16,20 +16,6 @@ namespace Calendar.NETDemo
        
         String XmlFileName = "Data.xml";
 
-
-        [CustomRecurringFunction("RehabDates", "Calculates which days I should be getting Rehab")]
-        private bool RehabDays(IEvent evnt, DateTime day)
-        {
-            if (day.DayOfWeek == DayOfWeek.Monday || day.DayOfWeek == DayOfWeek.Friday)
-            {
-                if (day.Ticks >= (new DateTime(2012, 7, 1)).Ticks)
-                    return false;
-                return true;
-            }
-
-            return false;
-        }
-
         public Form1()
         {
             InitializeComponent();
@@ -42,34 +28,6 @@ namespace Calendar.NETDemo
 
             Form1_Load();
 
-            //var ce = new CustomEvent();
-
-            //ce.EventText = "My Event";
-            //ce.Date = new DateTime(2012, 4, 1);
-            //ce.RecurringFrequency = RecurringFrequencies.Monthly;
-            //ce.EventFont = new Font("Verdana", 12, FontStyle.Regular);
-            //ce.ThisDayForwardOnly = true;
-            //ce.Enabled = true;
-            //calendar1.AddEvent(ce);
-
-            //var ce2 = new HolidayEvent();
-
-            //ce2.EventText = "test";
-            //ce2.Date = new DateTime(2012, 4, 2);
-            //ce2.RecurringFrequency = RecurringFrequencies.EveryMonWedFri;
-            //ce2.Rank = 3;
-            //calendar1.AddEvent(ce2);
-
-            /* var ce = new CustomEvent();
-            ce.IgnoreTimeComponent = false;
-            ce.EventText = "Interview";
-            ce.Date = new DateTime(2022, 11, 2, 15, 30, 0);
-            ce.EventLengthInHours = 2f;
-            ce.RecurringFrequency = RecurringFrequencies.None;
-            ce.EventFont = new Font("Verdana", 12, FontStyle.Regular);
-            ce.Enabled = true;
-            calendar1.AddEvent(ce);*/
-
         }
 
 
@@ -79,20 +37,6 @@ namespace Calendar.NETDemo
             if (dt.DayOfWeek == DayOfWeek.Monday || dt.DayOfWeek == DayOfWeek.Wednesday)
                 return true;
             return false;
-        }
-
-
-        private void MethodDect() {
-
-            //클래스를 선언해준다 => 클래스 쓸꺼다! 
-            // NET.Calendar cal = new NET.Calendar();
-
-            // cal.삭제하기ToolStripMenuItem_Click(null, null);
-
-           //String meth =  MethodBase.GetCurrentMethod().Name;
-
-           // MessageBox.Show(meth);
-
         }
 
         /// <summary>
@@ -175,8 +119,7 @@ namespace Calendar.NETDemo
         {
 
             DateTime dt = dateTimePicker1.Value;
-            DateTime dt_time = dateTimePicker2.Value;
-
+            
             //시험일자
             String datetime = dt.ToString("yyyy-MM-dd");
             //String datetime_time = dt_time.ToString("HH:mm:ss");
@@ -542,6 +485,13 @@ namespace Calendar.NETDemo
         private void rjButton1_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+
+            calendar1.RemoveAllEvent();           
+            Form1_Load();
         }
     }
 }

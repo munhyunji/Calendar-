@@ -226,6 +226,9 @@ namespace Calendar.NET
             xmlDoc = new XmlDocument();
             xmlDoc.Load(XmlFileName);
 
+
+           
+
             if (File.Exists(XmlFileName))
             {
                 try
@@ -327,8 +330,15 @@ namespace Calendar.NET
                 MessageBox.Show("설정 저장에 실패했습니다.");
             }
 
+
+            Calendar cal = new Calendar();
+            //cal.RemoveAllEvent();
+           cal.Events_ReLoad();
+
+
             Close();
         }
+
 
         /// <summary>
         /// 이벤트 색상 

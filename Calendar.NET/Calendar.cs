@@ -6,7 +6,8 @@ using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml;
-using System.IO; 
+using System.IO;
+using System.Text.RegularExpressions;
 
 
 
@@ -70,6 +71,8 @@ namespace Calendar.NET
 
         XmlDocument xmlDoc;
         String XmlFileName = "Data.xml";
+        
+
         private ToolStripMenuItem 시험일정전체삭제ToolStripMenuItem;
         private ToolStripMenuItem 시험일차추가하기ToolStripMenuItem;
 
@@ -484,7 +487,7 @@ namespace Calendar.NET
             this.Load += new System.EventHandler(this.CalendarLoad);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.CalendarPaint);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CalendarMouseClick_1);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CalendarMouseMove);
+            this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.CalendarMouseMove);
             this.Resize += new System.EventHandler(this.CalendarResize);
             this._contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -509,6 +512,109 @@ namespace Calendar.NET
         {
             _events.Remove(calendarEvent);
             Refresh();
+        }
+
+        /// <summary>
+        /// Removes All event from the calendar
+        /// </summary>
+        /// <param name="calendarEvent"></param>
+        public void RemoveAllEvent()
+        {
+           
+            _events.RemoveRange(0, _events.Count);
+            Refresh();
+           
+
+        }
+
+        /// <summary>
+        /// 일정 전부 다시 불러오기
+        /// </summary>
+        public void Events_ReLoad()
+        {
+
+            try
+            {
+                if (File.Exists(XmlFileName))
+                {
+                    XmlDocument xmlDoc = new XmlDocument();
+                    xmlDoc.Load(XmlFileName);
+
+                    //xml 속성가져오기
+                    XmlNode node = xmlDoc.SelectSingleNode("Root");
+
+                    for (int i = 0; i < node.ChildNodes.Count; i++)
+                    {
+                        // attribute 존재하는지  검사 
+                        String nodeName;
+
+                        if (node.ChildNodes[i].Attributes.GetNamedItem("NameDate") == null)
+                        {
+                            nodeName = node.ChildNodes[i].Attributes["Name"].Value.ToString();
+
+                        }
+                        else
+                        {
+                            nodeName = node.ChildNodes[i].Attributes["Name"].Value.ToString() + "\n" + node.ChildNodes[i].Attributes["Name"].Value.ToString()+ node.ChildNodes[i].Attributes["NameDate"].Value;
+
+                        }
+
+                        String datetime = node.ChildNodes[i].Attributes["Datetime"].Value.ToString();
+                        String color = node.ChildNodes[i].Attributes["Color"].Value.ToString();
+                        int rank = Int32.Parse(node.ChildNodes[i].Attributes["Rank"].Value.ToString());
+
+                        Color c;
+
+                        //문자열이 숫자인지아닌지검사
+                        Regex r = new Regex("[0-9]");
+
+                        bool isNum = r.IsMatch(color);
+
+                        if (isNum)
+                        {
+                            Match m = Regex.Match(color, @"A=(?<Alpha>\d+),\s*R=(?<Red>\d+),\s*G=(?<Green>\d+),\s*B=(?<Blue>\d+)");
+
+                            int alpha = int.Parse(m.Groups["Alpha"].Value);
+                            int red = int.Parse(m.Groups["Red"].Value);
+                            int green = int.Parse(m.Groups["Green"].Value);
+                            int blue = int.Parse(m.Groups["Blue"].Value);
+                            c = Color.FromArgb(alpha, red, green, blue);
+
+                        }
+                        else
+                        {
+                            string real_color = color.Substring(color.IndexOf('[') + 1, color.IndexOf(']') - color.IndexOf('[') - 1);
+                            c = Color.FromName(real_color);
+                        }
+
+                        var custom = new CustomEvent
+                        {
+                            Date = DateTime.Parse(datetime),
+                            EventText = nodeName,
+                            EventColor = c,
+                            EventLengthInHours = 2f,
+                            RecurringFrequency = RecurringFrequencies.None,
+                            EventFont = new Font("나눔고딕", 8, FontStyle.Regular),
+                            EventTextColor = Color.Black,
+                            Rank = rank
+
+                        };
+
+                       AddEvent(custom);
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Xml 파일이 존재하지않습니다.");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
         }
 
         private void CalendarLoad(object sender, EventArgs e)
@@ -1276,6 +1382,7 @@ namespace Calendar.NET
                                             parentNode.RemoveChild(deleteNode);
 
                                             RemoveEvent(_clickedEvent.Event);
+                                            
                                         
   
                                 }
@@ -1305,13 +1412,13 @@ namespace Calendar.NET
                         xmlDoc = null;
 
                         Refresh();
-
+                       
                 } 
             } else
             {
                 MessageBox.Show("파일이 없습니다..");
             }
-
+       
 
         }
 
@@ -1335,12 +1442,11 @@ namespace Calendar.NET
                     {
                         node.RemoveChild(Testing);
                     }
-                   xmlDoc.Save(XmlFileName);
+                    xmlDoc.Save(XmlFileName);
                     xmlDoc = null;
 
                     Refresh();
-                    
-                    
+                                        
                 }
             } else
             {
@@ -1370,6 +1476,8 @@ namespace Calendar.NET
                 MessageBox.Show("시험명에서만 일차 추가가 가능합니다");
             }
         }
+
+
 
     }
 }
