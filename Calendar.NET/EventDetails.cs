@@ -244,9 +244,11 @@ namespace Calendar.NET
 
                                     for (int j = 0; j < GumCheName.Count; j++)
                                     {
-                                        GumCheName[j].Attributes["GumCheName"].Value = txtEventName1.Texts;
-                                        GumCheName[j].Attributes["GumCheDate"].Value = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
-                                        GumCheName[j].Attributes["Color"].Value = pnlEventColor.BackColor.ToString();
+                                        if (_event.EventText == GumCheName[j].Attributes["GumCheName"].Value && _event.Date.ToString("yyyy-MM-dd") == GumCheName[j].Attributes["GumCheDate"].Value) {
+                                            GumCheName[j].Attributes["GumCheName"].Value = txtEventName1.Texts;
+                                            GumCheName[j].Attributes["GumCheDate"].Value = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
+                                            GumCheName[j].Attributes["Color"].Value = pnlEventColor.BackColor.ToString();
+                                        }
 
                                     }
 
