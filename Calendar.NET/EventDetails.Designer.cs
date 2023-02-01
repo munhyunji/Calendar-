@@ -33,13 +33,11 @@
             this.gbBasics = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtEventName2 = new CustomControls.RJControls.RJTextBox();
-            this.EventTitle = new System.Windows.Forms.Label();
             this.txtTestAmt = new CustomControls.RJControls.RJTextBox();
             this.txtEventName1 = new CustomControls.RJControls.RJTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.label3 = new System.Windows.Forms.Label();
-            this.chkIgnoreTimeComponent = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.pnlTextColor = new System.Windows.Forms.Panel();
@@ -71,12 +69,10 @@
             // 
             this.gbBasics.Controls.Add(this.label2);
             this.gbBasics.Controls.Add(this.txtEventName2);
-            this.gbBasics.Controls.Add(this.EventTitle);
             this.gbBasics.Controls.Add(this.txtTestAmt);
             this.gbBasics.Controls.Add(this.txtEventName1);
             this.gbBasics.Controls.Add(this.panel1);
             this.gbBasics.Controls.Add(this.label3);
-            this.gbBasics.Controls.Add(this.chkIgnoreTimeComponent);
             this.gbBasics.Controls.Add(this.label1);
             this.gbBasics.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.gbBasics.Location = new System.Drawing.Point(18, 25);
@@ -116,16 +112,6 @@
             this.txtEventName2.TabIndex = 14;
             this.txtEventName2.Texts = "";
             this.txtEventName2.UnderlinedStyle = false;
-            // 
-            // EventTitle
-            // 
-            this.EventTitle.AutoSize = true;
-            this.EventTitle.Location = new System.Drawing.Point(92, 22);
-            this.EventTitle.Name = "EventTitle";
-            this.EventTitle.Size = new System.Drawing.Size(92, 17);
-            this.EventTitle.TabIndex = 9;
-            this.EventTitle.Text = "이벤트타이틀";
-            this.EventTitle.Visible = false;
             // 
             // txtTestAmt
             // 
@@ -192,20 +178,6 @@
             this.label3.Size = new System.Drawing.Size(50, 17);
             this.label3.TabIndex = 10;
             this.label3.Text = "검체량";
-            // 
-            // chkIgnoreTimeComponent
-            // 
-            this.chkIgnoreTimeComponent.AutoSize = true;
-            this.chkIgnoreTimeComponent.Checked = true;
-            this.chkIgnoreTimeComponent.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkIgnoreTimeComponent.Location = new System.Drawing.Point(113, 16);
-            this.chkIgnoreTimeComponent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.chkIgnoreTimeComponent.Name = "chkIgnoreTimeComponent";
-            this.chkIgnoreTimeComponent.Size = new System.Drawing.Size(146, 21);
-            this.chkIgnoreTimeComponent.TabIndex = 5;
-            this.chkIgnoreTimeComponent.Text = "시간 표시하지않음";
-            this.chkIgnoreTimeComponent.UseVisualStyleBackColor = true;
-            this.chkIgnoreTimeComponent.Visible = false;
             // 
             // groupBox1
             // 
@@ -317,10 +289,10 @@
             // btnOk
             // 
             this.btnOk.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnOk.Location = new System.Drawing.Point(18, 692);
+            this.btnOk.Location = new System.Drawing.Point(123, 689);
             this.btnOk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(99, 26);
+            this.btnOk.Size = new System.Drawing.Size(200, 26);
             this.btnOk.TabIndex = 7;
             this.btnOk.Text = "&확인";
             this.btnOk.UseVisualStyleBackColor = true;
@@ -329,7 +301,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnCancel.Location = new System.Drawing.Point(203, 692);
+            this.btnCancel.Location = new System.Drawing.Point(18, 689);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(99, 26);
@@ -383,7 +355,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel pnlTextColor;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox chkIgnoreTimeComponent;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Panel pnlEventColor;
@@ -392,7 +363,6 @@
         private System.Windows.Forms.Label label8;
         private CustomControls.RJControls.RJTextBox txtEventName1;
         private CustomControls.RJControls.RJTextBox txtTestAmt;
-        private System.Windows.Forms.Label EventTitle;
         private CustomControls.RJControls.RJTextBox txtEventName2;
         private System.Windows.Forms.Label label2;
     }

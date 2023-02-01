@@ -527,95 +527,6 @@ namespace Calendar.NET
 
         }
 
-        /// <summary>
-        /// 일정 전부 다시 불러오기
-        /// </summary>
-        public void Events_ReLoad()
-        {
-
-            try
-            {
-                if (File.Exists(XmlFileName))
-                {
-                    XmlDocument xmlDoc = new XmlDocument();
-                    xmlDoc.Load(XmlFileName);
-
-                    //xml 속성가져오기
-                    XmlNode node = xmlDoc.SelectSingleNode("Root");
-
-                    for (int i = 0; i < node.ChildNodes.Count; i++)
-                    {
-                        // attribute 존재하는지  검사 
-                        String nodeName;
-
-                        if (node.ChildNodes[i].Attributes.GetNamedItem("NameDate") == null)
-                        {
-                            nodeName = node.ChildNodes[i].Attributes["Name"].Value.ToString();
-
-                        }
-                        else
-                        {
-                            nodeName = node.ChildNodes[i].Attributes["Name"].Value.ToString() + "\n" + node.ChildNodes[i].Attributes["Name"].Value.ToString()+ node.ChildNodes[i].Attributes["NameDate"].Value;
-
-                        }
-
-                        String datetime = node.ChildNodes[i].Attributes["Datetime"].Value.ToString();
-                        String color = node.ChildNodes[i].Attributes["Color"].Value.ToString();
-                        int rank = Int32.Parse(node.ChildNodes[i].Attributes["Rank"].Value.ToString());
-
-                        Color c;
-
-                        //문자열이 숫자인지아닌지검사
-                        Regex r = new Regex("[0-9]");
-
-                        bool isNum = r.IsMatch(color);
-
-                        if (isNum)
-                        {
-                            Match m = Regex.Match(color, @"A=(?<Alpha>\d+),\s*R=(?<Red>\d+),\s*G=(?<Green>\d+),\s*B=(?<Blue>\d+)");
-
-                            int alpha = int.Parse(m.Groups["Alpha"].Value);
-                            int red = int.Parse(m.Groups["Red"].Value);
-                            int green = int.Parse(m.Groups["Green"].Value);
-                            int blue = int.Parse(m.Groups["Blue"].Value);
-                            c = Color.FromArgb(alpha, red, green, blue);
-
-                        }
-                        else
-                        {
-                            string real_color = color.Substring(color.IndexOf('[') + 1, color.IndexOf(']') - color.IndexOf('[') - 1);
-                            c = Color.FromName(real_color);
-                        }
-
-                        var custom = new CustomEvent
-                        {
-                            Date = DateTime.Parse(datetime),
-                            EventText = nodeName,
-                            EventColor = c,
-                            EventLengthInHours = 2f,
-                            RecurringFrequency = RecurringFrequencies.None,
-                            EventFont = new Font("나눔고딕", 8, FontStyle.Regular),
-                            EventTextColor = Color.Black,
-                            Rank = rank
-
-                        };
-
-                       AddEvent(custom);
-
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Xml 파일이 존재하지않습니다.");
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-
-        }
 
         private void CalendarLoad(object sender, EventArgs e)
         {
@@ -651,8 +562,8 @@ namespace Calendar.NET
             {
                 var z = _calendarEvents[i];
 
-                if ((z.EventArea.Contains(e.X, e.Y) && z.Event.TooltipEnabled && _calendarView == CalendarViews.Month && z.Event.Rank == 3  ) ||
-                    (_calendarView == CalendarViews.Day && z.EventArea.Contains(e.X, e.Y + _scrollPanel.ScrollOffset) && z.Event.TooltipEnabled) && z.Event.Rank == 3 )
+                if ((z.EventArea.Contains(e.X, e.Y) && z.Event.TooltipEnabled && _calendarView == CalendarViews.Month && z.Event.Rank == 3 ) ||
+                    (_calendarView == CalendarViews.Day && z.EventArea.Contains(e.X, e.Y + _scrollPanel.ScrollOffset) && z.Event.TooltipEnabled) && z.Event.Rank == 3)
                 {
                     _eventTip.ShouldRender = false;
                     _showingToolTip = true;
@@ -1365,27 +1276,33 @@ namespace Calendar.NET
                         
                         for (int i = 0; i < node.ChildNodes.Count; i++)
                         {
-                           
+
 
                         //검체 인경우
                         if (ed.Event.Rank == 1)
+                        {
+                            if (node.ChildNodes[i].Attributes["Name"].Value.Trim() == eventText)
                             {
-                                if (node.ChildNodes[i].Attributes["Name"].Value.Trim() == eventText)
+
+                                XmlNodeList TestNode = xmlDoc.SelectNodes("Root/Test");
+
+                                for (int j = 0; j < TestNode.Count; j++)
                                 {
+                                    if (TestNode[j].Attributes["GumCheName"].Value == eventText)
+                                        MessageBox.Show("해당 검체에 등록된 시험이 있습니다. 시험을 먼저 삭제해 주세요");
+                                        return;
+                                 }
+
+                                        //xml 노드삭제
+                                        XmlNode deleteNode = node.ChildNodes[i];
+                                        XmlNode parentNode = deleteNode.ParentNode; // 삭제할 노드의 부모 노드 찾고
+
+                                        parentNode.RemoveChild(deleteNode);
+
+                                        RemoveEvent(_clickedEvent.Event);
                                     
-                                        
-                                       
-                                            //xml 노드삭제
-                                            XmlNode deleteNode = node.ChildNodes[i];
-                                            XmlNode parentNode = deleteNode.ParentNode; // 삭제할 노드의 부모 노드 찾고
+                            }
 
-                                            parentNode.RemoveChild(deleteNode);
-
-                                            RemoveEvent(_clickedEvent.Event);
-                                            
-                                        
-  
-                                }
                             } else if (ed.Event.Rank == 2)
                             {
                                 MessageBox.Show("시험명 삭제는 불가능합니다. 전체삭제를 이용해주세요.");

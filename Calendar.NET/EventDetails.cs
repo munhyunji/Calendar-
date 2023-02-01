@@ -129,8 +129,7 @@ namespace Calendar.NET
         private void FillValues()
         {
             String ev = _event.EventText.ToString();
-            EventTitle.Text = _event.EventText;
-
+            
             //검체 인경우
             if (_event.Rank == 1 )
             {
@@ -329,12 +328,6 @@ namespace Calendar.NET
             {
                 MessageBox.Show("설정 저장에 실패했습니다.");
             }
-
-
-            Calendar cal = new Calendar();
-            //cal.RemoveAllEvent();
-           cal.Events_ReLoad();
-
 
             Close();
         }

@@ -47,7 +47,7 @@ namespace Calendar.NET
             // Cancel_btn
             // 
             this.Cancel_btn.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Cancel_btn.Location = new System.Drawing.Point(258, 250);
+            this.Cancel_btn.Location = new System.Drawing.Point(24, 241);
             this.Cancel_btn.Name = "Cancel_btn";
             this.Cancel_btn.Size = new System.Drawing.Size(99, 26);
             this.Cancel_btn.TabIndex = 0;
@@ -59,9 +59,9 @@ namespace Calendar.NET
             // 
             this.btnOk.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnOk.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnOk.Location = new System.Drawing.Point(23, 250);
+            this.btnOk.Location = new System.Drawing.Point(136, 241);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(99, 26);
+            this.btnOk.Size = new System.Drawing.Size(221, 26);
             this.btnOk.TabIndex = 1;
             this.btnOk.Text = "등록";
             this.btnOk.UseVisualStyleBackColor = true;
