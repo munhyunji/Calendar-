@@ -150,8 +150,9 @@ namespace Calendar.NETDemo
             }
             String user_color_string = user_color.ToString();
 
-            //시험명, 시험자 선택 여부
-            if (!String.IsNullOrEmpty(test_name) && comboBox1.SelectedIndex != 0 && comboBox2.SelectedIndex != 0 ) {
+            //시험명, 선택 여부
+            // 시험자 선택여부 제거 230202
+            if (!String.IsNullOrEmpty(test_name) && comboBox1.SelectedIndex != 0 ) {
 
                 String GumCheInfo = comboBox1.SelectedItem.ToString();
                 String GumCheDate = GumCheInfo.Substring(1, 10);
