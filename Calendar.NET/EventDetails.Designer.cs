@@ -31,7 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventDetails));
             this.label1 = new System.Windows.Forms.Label();
             this.gbBasics = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.test_person = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtEventName2 = new CustomControls.RJControls.RJTextBox();
             this.txtTestAmt = new CustomControls.RJControls.RJTextBox();
             this.txtEventName1 = new CustomControls.RJControls.RJTextBox();
@@ -67,7 +69,9 @@
             // 
             // gbBasics
             // 
-            this.gbBasics.Controls.Add(this.label2);
+            this.gbBasics.Controls.Add(this.test_person);
+            this.gbBasics.Controls.Add(this.label9);
+            this.gbBasics.Controls.Add(this.label7);
             this.gbBasics.Controls.Add(this.txtEventName2);
             this.gbBasics.Controls.Add(this.txtTestAmt);
             this.gbBasics.Controls.Add(this.txtEventName1);
@@ -84,15 +88,40 @@
             this.gbBasics.TabStop = false;
             this.gbBasics.Text = "일정 설정";
             // 
-            // label2
+            // test_person
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("나눔고딕", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(93, 272);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(212, 16);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "\"【시험자】\" 는 수정/삭제하지마세요";
+            this.test_person.BackColor = System.Drawing.Color.Thistle;
+            this.test_person.FormattingEnabled = true;
+            this.test_person.Items.AddRange(new object[] {
+            "빈값",
+            "희해",
+            "아라",
+            "서영",
+            "미래"});
+            this.test_person.Location = new System.Drawing.Point(30, 301);
+            this.test_person.Name = "test_person";
+            this.test_person.Size = new System.Drawing.Size(54, 25);
+            this.test_person.TabIndex = 17;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("나눔고딕", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label9.Location = new System.Drawing.Point(80, 299);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(21, 28);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "】";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("나눔고딕", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.Location = new System.Drawing.Point(14, 299);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(21, 28);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "【";
             // 
             // txtEventName2
             // 
@@ -141,13 +170,13 @@
             this.txtEventName1.BorderSize = 2;
             this.txtEventName1.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEventName1.ForeColor = System.Drawing.Color.DimGray;
-            this.txtEventName1.Location = new System.Drawing.Point(17, 297);
+            this.txtEventName1.Location = new System.Drawing.Point(105, 297);
             this.txtEventName1.Margin = new System.Windows.Forms.Padding(4);
             this.txtEventName1.Multiline = false;
             this.txtEventName1.Name = "txtEventName1";
             this.txtEventName1.Padding = new System.Windows.Forms.Padding(7);
             this.txtEventName1.PasswordChar = false;
-            this.txtEventName1.Size = new System.Drawing.Size(265, 35);
+            this.txtEventName1.Size = new System.Drawing.Size(177, 35);
             this.txtEventName1.TabIndex = 9;
             this.txtEventName1.Texts = "";
             this.txtEventName1.UnderlinedStyle = false;
@@ -364,6 +393,8 @@
         private CustomControls.RJControls.RJTextBox txtEventName1;
         private CustomControls.RJControls.RJTextBox txtTestAmt;
         private CustomControls.RJControls.RJTextBox txtEventName2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox test_person;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -133,7 +133,10 @@ namespace Calendar.NETDemo
             //시험자
             String test_person = comboBox2.SelectedItem.ToString();
 
-            // Font tester = new Font(test_person, FontStyle.Bold);
+            if (test_person == "시험자를 선택하세요.")
+            {
+                test_person = "빈값";
+            }
 
             String test = "【" + test_person + "】 " + test_name;
          

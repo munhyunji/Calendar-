@@ -134,25 +134,33 @@ namespace Calendar.NET
             if (_event.Rank == 1 )
             {
                 txtEventName1.Texts = ev;
+                test_person.Enabled = false;
                 txtEventName2.Enabled = false;
                 txtTestAmt.Enabled = false;
 
             //시험명 인경우
             } else if (_event.Rank == 2 )
             {
-                txtEventName1.Texts = ev;
+                String ev1 = ev.Substring(ev.IndexOf("【")+1, 2);
+                test_person.SelectedItem = ev1;
+                String ev2 = ev.Substring(ev.IndexOf("】")+1);
+                
+                txtEventName1.Texts = ev2;
                 txtEventName2.Enabled = false;
                 pnlEventColor.Enabled = false;
             }
             //시험명+일차 인경우 
             else if (_event.Rank == 3 )
-            {           
+            {
+                String ev1 = ev.Substring(ev.IndexOf("【") + 1, ev.IndexOf("】") - 2);
+                test_person.SelectedItem = ev1;
                 
-               txtEventName1.Texts = ev.Substring(0, ev.IndexOf("일차")-1);
+               txtEventName1.Texts = ev.Substring(ev.IndexOf("】") + 1, ev.IndexOf("일차")-6);
                txtEventName2.Texts = ev.Substring(ev.LastIndexOf("일차")-2).Trim();
+               test_person.Enabled = false;
                txtEventName1.Enabled = false;
                txtTestAmt.Enabled = false;
-                pnlEventColor.Enabled = false;
+               pnlEventColor.Enabled = false;
             }
 
 
@@ -272,11 +280,12 @@ namespace Calendar.NET
                             {
                                 if (Test[i].Attributes["Name"].Value.Contains(_event.EventText.Trim()))
                                 {
-                                    Test[i].Attributes["Name"].Value = txtEventName1.Texts.Trim();
+                                    String txtEventName = "【" + test_person.SelectedItem.ToString() + "】" + " " + txtEventName1.Texts.Trim();
+                                    Test[i].Attributes["Name"].Value = txtEventName;
                                     Test[i].Attributes["Color"].Value = _newEvent.EventColor.ToString();
                                     Test[i].Attributes["GumAmt"].Value = txtTestAmt.Texts;
 
-                                    _newEvent.EventText = txtEventName1.Texts;
+                                    _newEvent.EventText = txtEventName;
 
                                 }
 
