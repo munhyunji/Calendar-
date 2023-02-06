@@ -235,7 +235,7 @@ namespace Calendar.NETDemo
 
             } else
             {
-                MessageBox.Show("검체명/시험명/시험자를 선택하세요");
+                MessageBox.Show("검체명/시험명을 선택하세요");
             }
         }
 
