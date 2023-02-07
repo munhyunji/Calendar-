@@ -1300,7 +1300,7 @@ namespace Calendar.NET
                                         parentNode.RemoveChild(deleteNode);
 
                                         RemoveEvent(_clickedEvent.Event);
-                                    
+                                        
                             }
 
                             } else if (ed.Event.Rank == 2)

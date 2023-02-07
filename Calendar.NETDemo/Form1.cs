@@ -230,8 +230,8 @@ namespace Calendar.NETDemo
                 comboBox2.SelectedIndex = 0;
                 gum_amt.Texts = "";
                 Uncheck_Click(null, null);
-                colorDialog2.Color = Color.Transparent;
-                panel2.BackColor = Color.Transparent;
+                //colorDialog2.Color = Color.Transparent;
+                //panel2.BackColor = Color.Transparent;
 
             } else
             {

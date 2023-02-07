@@ -83,7 +83,7 @@ namespace Calendar.NET
             return retval;
         }
 
-        private string RecurringFrequencyToString(RecurringFrequencies f)
+       /* private string RecurringFrequencyToString(RecurringFrequencies f)
         {
             string retval = "";
 
@@ -121,7 +121,7 @@ namespace Calendar.NET
                     break;
             }
             return retval;
-        }
+        } */
 
         /// <summary>
         /// 이벤트 데이터 불러오기 
