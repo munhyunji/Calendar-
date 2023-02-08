@@ -890,6 +890,7 @@
             this.gum_name.TabIndex = 0;
             this.gum_name.Texts = "";
             this.gum_name.UnderlinedStyle = false;
+          //  this.gum_name.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gum_name_KeyDown);
             // 
             // AddEvent2
             // 

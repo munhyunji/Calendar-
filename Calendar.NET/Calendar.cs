@@ -1289,8 +1289,10 @@ namespace Calendar.NET
                                 for (int j = 0; j < TestNode.Count; j++)
                                 {
                                     if (TestNode[j].Attributes["GumCheName"].Value == eventText)
+                                    {
                                         MessageBox.Show("해당 검체에 등록된 시험이 있습니다. 시험을 먼저 삭제해 주세요");
                                         return;
+                                    }
                                  }
 
                                         //xml 노드삭제

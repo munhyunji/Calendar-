@@ -107,7 +107,8 @@ namespace Calendar.NET
 
                         Calendar cal = new Calendar();
                         cal.AddEvent(Add_custom);
-                        
+
+                        Refresh();
 
                     } catch (Exception ex) {
                         MessageBox.Show(ex.ToString());
@@ -122,6 +123,8 @@ namespace Calendar.NET
                 
 
                 this.Close();
+                
+
             } else
             {
                 MessageBox.Show("시험일차와 내용을 작성해주세요.");

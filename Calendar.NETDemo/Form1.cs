@@ -497,5 +497,6 @@ namespace Calendar.NETDemo
             calendar1.RemoveAllEvent();           
             Form1_Load();
         }
+
     }
 }
