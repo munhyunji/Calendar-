@@ -102,6 +102,7 @@ namespace Calendar.NETDemo
 
                 gum_name.Texts = "";
                 dateTimePicker1.Checked = false;
+                
             }
             else
             {
@@ -155,7 +156,7 @@ namespace Calendar.NETDemo
 
             //시험명, 선택 여부
             // 시험자 선택여부 제거 230202
-            if (!String.IsNullOrEmpty(test_name) && comboBox1.SelectedIndex != 0 ) {
+            if (!String.IsNullOrEmpty(test_name) && comboBox1.SelectedItem.ToString() != "검체를 선택하세요.") {
 
                 String GumCheInfo = comboBox1.SelectedItem.ToString();
                 String GumCheDate = GumCheInfo.Substring(1, 10);
@@ -195,7 +196,7 @@ namespace Calendar.NETDemo
 
                         if (string.IsNullOrEmpty(eventText))
                         {
-                            eventText = "계수";
+                            eventText = "촬영";
                         }
                        
                         String DaysText = day + "일차 " + eventText;
@@ -462,6 +463,7 @@ namespace Calendar.NETDemo
                 //콤보박스 초기화
                 comboBox1.Items.Clear();
                 comboBox1.Items.Add("검체를 선택하세요.");
+                comboBox1.SelectedItem = "검체를 선택하세요."; 
 
                 XmlDocument xmlDoc = new XmlDocument();
                 xmlDoc.Load(XmlFileName);

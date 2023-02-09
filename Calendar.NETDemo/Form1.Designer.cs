@@ -374,6 +374,8 @@
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.Thistle;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox1.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.comboBox1.ForeColor = System.Drawing.SystemColors.Window;
             this.comboBox1.FormattingEnabled = true;
@@ -382,12 +384,15 @@
             this.comboBox1.Location = new System.Drawing.Point(69, 29);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(214, 28);
+            this.comboBox1.Sorted = true;
             this.comboBox1.TabIndex = 0;
             this.comboBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBox1_MouseClick);
             // 
             // comboBox2
             // 
             this.comboBox2.BackColor = System.Drawing.Color.Thistle;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox2.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.comboBox2.ForeColor = System.Drawing.SystemColors.Window;
             this.comboBox2.FormattingEnabled = true;
@@ -890,7 +895,6 @@
             this.gum_name.TabIndex = 0;
             this.gum_name.Texts = "";
             this.gum_name.UnderlinedStyle = false;
-          //  this.gum_name.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gum_name_KeyDown);
             // 
             // AddEvent2
             // 
@@ -965,6 +969,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.calendar1);
+            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";

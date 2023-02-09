@@ -562,8 +562,8 @@ namespace Calendar.NET
             {
                 var z = _calendarEvents[i];
 
-                if ((z.EventArea.Contains(e.X, e.Y) && z.Event.TooltipEnabled && _calendarView == CalendarViews.Month && z.Event.Rank == 3 ) ||
-                    (_calendarView == CalendarViews.Day && z.EventArea.Contains(e.X, e.Y + _scrollPanel.ScrollOffset) && z.Event.TooltipEnabled) && z.Event.Rank == 3)
+                if ((z.EventArea.Contains(e.X, e.Y) && z.Event.TooltipEnabled && _calendarView == CalendarViews.Month) ||
+                    (_calendarView == CalendarViews.Day && z.EventArea.Contains(e.X, e.Y + _scrollPanel.ScrollOffset) && z.Event.TooltipEnabled))
                 {
                     _eventTip.ShouldRender = false;
                     _showingToolTip = true;
