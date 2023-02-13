@@ -194,6 +194,7 @@ namespace Calendar.NETDemo
                         DateTime Added_datetime = dt.AddDays(day);
                         String Added_datetime_string = Added_datetime.ToString("yyyy-MM-dd");
 
+                        //계수-> 촬영
                         if (string.IsNullOrEmpty(eventText))
                         {
                             eventText = "촬영";
