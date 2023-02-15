@@ -85,6 +85,7 @@
             this.AddEvent2 = new Calendar.NETDemo.RJButton();
             this.RefreshBtn = new Calendar.NETDemo.RJButton();
             this.rjButton1 = new Calendar.NETDemo.RJButton();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
@@ -957,12 +958,21 @@
             this.rjButton1.Visible = false;
             this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(727, 12);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 23);
+            this.comboBox3.TabIndex = 80;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1532, 916);
+            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.RefreshBtn);
             this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.groupBox3);
@@ -1040,6 +1050,7 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private RJButton rjButton1;
         private RJButton RefreshBtn;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }
 
