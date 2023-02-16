@@ -113,22 +113,22 @@ namespace Calendar.NET
         public IEvent Clone()
         {
             return new HolidayEvent
-                         {
-                             CustomRecurringFunction = CustomRecurringFunction,
-                             Date = Date,
-                             Enabled = Enabled,
-                             EventColor = EventColor,
-                             EventFont = EventFont,
-                             EventText = EventText,
-                             EventTextColor = EventTextColor,
-                             IgnoreTimeComponent = IgnoreTimeComponent,
-                             Rank = Rank,
-                             ReadOnlyEvent = ReadOnlyEvent,
-                             RecurringFrequency = RecurringFrequency,
-                             ThisDayForwardOnly = ThisDayForwardOnly,
-                             EventLengthInHours = EventLengthInHours,
-                             TooltipEnabled = TooltipEnabled
-                         };
+            {
+                CustomRecurringFunction = CustomRecurringFunction,
+                Date = Date,
+                Enabled = Enabled,
+                EventColor = EventColor,
+                EventFont = EventFont,
+                EventText = EventText,
+                EventTextColor = EventTextColor,
+                IgnoreTimeComponent = IgnoreTimeComponent,
+                Rank = Rank,
+                ReadOnlyEvent = ReadOnlyEvent,
+                RecurringFrequency = RecurringFrequency,
+                ThisDayForwardOnly = ThisDayForwardOnly,
+                EventLengthInHours = EventLengthInHours,
+                TooltipEnabled = TooltipEnabled
+            };
         }
     }
 }

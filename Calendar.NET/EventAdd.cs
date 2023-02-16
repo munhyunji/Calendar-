@@ -1,10 +1,9 @@
 ﻿using System;
+using System.Drawing;
+using System.IO;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Xml;
-using System.Text.RegularExpressions;
-using System.IO;
-using Calendar.NET;
-using System.Drawing;
 
 namespace Calendar.NET
 {
@@ -39,7 +38,7 @@ namespace Calendar.NET
         public IEvent NewEvent
         {
             get { return NewEvent; }
-            
+
         }
 
         private void FillValue()
@@ -55,7 +54,7 @@ namespace Calendar.NET
         /// <param name="e"></param>
         private void btnOk_Click(object sender, EventArgs e)
         {
-             
+
 
             if (!string.IsNullOrEmpty(Date.Texts) && !string.IsNullOrEmpty(DateText.Texts))
             {
@@ -67,7 +66,7 @@ namespace Calendar.NET
                 String GumCheName = "";
                 String GumCheDate = "";
                 String GumAmt = "";
-                
+
                 xmlDoc = new XmlDocument();
                 xmlDoc.Load(XmlFileName);
 
@@ -110,27 +109,31 @@ namespace Calendar.NET
 
                         Refresh();
 
-                    } catch (Exception ex) {
+                    }
+                    catch (Exception ex)
+                    {
                         MessageBox.Show(ex.ToString());
                     }
 
 
-                } else
+                }
+                else
                 {
                     MessageBox.Show("XML 파일이 존재하지 않습니다.");
-                   
+
                 }
-                
+
 
                 this.Close();
-                
 
-            } else
+
+            }
+            else
             {
                 MessageBox.Show("시험일차와 내용을 작성해주세요.");
             }
         }
-                                          
+
         /// <summary>
         /// 취소버튼 클릭시
         /// </summary>
@@ -146,7 +149,7 @@ namespace Calendar.NET
             Regex num = new Regex(@"[0-9]"); //숫자만
             Boolean isMatch = num.IsMatch(Date.Texts);
 
-            if(!isMatch)
+            if (!isMatch)
             {
                 Date.Texts = "";
                 return;
@@ -160,7 +163,7 @@ namespace Calendar.NET
         /// <param name="e"></param>
         private void EventAdd_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter )
+            if (e.KeyCode == Keys.Enter)
             {
                 btnOk_Click(sender, e);
             }

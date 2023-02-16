@@ -47,6 +47,6 @@ namespace Calendar.NET
                 return comp1;
             }
             return rankComp;
-        } 
+        }
     }
 }

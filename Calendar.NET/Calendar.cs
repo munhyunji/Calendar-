@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml;
-using System.IO;
-using System.Text.RegularExpressions;
 
 
 
@@ -57,7 +56,7 @@ namespace Calendar.NET
         private bool _highlightCurrentDay;
         private CalendarViews _calendarView;
         private readonly ScrollPanel _scrollPanel;
-       
+
         private readonly List<IEvent> _events;
         private readonly List<Rectangle> _rectangles;
         private readonly Dictionary<int, Point> _calendarDays;
@@ -71,7 +70,7 @@ namespace Calendar.NET
 
         XmlDocument xmlDoc;
         String XmlFileName = "Data.xml";
-        
+
 
         private ToolStripMenuItem 시험일정전체삭제ToolStripMenuItem;
         private ToolStripMenuItem 시험일차추가하기ToolStripMenuItem;
@@ -93,7 +92,7 @@ namespace Calendar.NET
         }
 
         private IEvent _event;
-          
+
         public IEvent Event
         {
             get { return _event; }
@@ -193,7 +192,7 @@ namespace Calendar.NET
                 if (_loadPresetHolidays)
                 {
                     _events.Clear();
-                   // PresetHolidays();
+                    // PresetHolidays();
                     Refresh();
                 }
                 else
@@ -520,10 +519,10 @@ namespace Calendar.NET
         /// <param name="calendarEvent"></param>
         public void RemoveAllEvent()
         {
-           
+
             _events.RemoveRange(0, _events.Count);
             Refresh();
-           
+
 
         }
 
@@ -553,7 +552,7 @@ namespace Calendar.NET
         /// <param name="e"></param>
         private void CalendarMouseMove(object sender, MouseEventArgs e)
         {
-           
+
             if (!_showEventTooltips)
                 return;
 
@@ -582,10 +581,10 @@ namespace Calendar.NET
                             {
                                 if (z.Event.EventText.Contains(emp.Attributes["Name"].Value))
                                     // _eventTip.EventToolTipText = z.Event.EventText;
-                                    _eventTip.EventToolTipText = "검체 등록 일시 : " + emp.Attributes["GumCheDate"].Value + "\n" + "등록 검체 명 : " + emp.Attributes["GumCheName"].Value + "\n" + "검체량 : " + emp.Attributes["GumAmt"].Value;                                  
+                                    _eventTip.EventToolTipText = "검체 등록 일시 : " + emp.Attributes["GumCheDate"].Value + "\n" + "등록 검체 명 : " + emp.Attributes["GumCheName"].Value + "\n" + "검체량 : " + emp.Attributes["GumAmt"].Value;
                             }
                         }
-                    } 
+                    }
 
                     //if (z.Event.IgnoreTimeComponent == false)
                     //    _eventTip.EventToolTipText += "\n" + z.Event.Date.ToShortTimeString();
@@ -919,13 +918,13 @@ namespace Calendar.NET
                         g.DrawString(evnt.EventText, evnt.EventFont, new SolidBrush(evnt.EventTextColor), xStart, yStart + cellHourHeight / divisor);
 
                         var ce = new CalendarEvent
-                                     {
-                                         Event = evnt,
-                                         Date = dt,
-                                         EventArea = new Rectangle(xStart, yStart + cellHourHeight / divisor + 1,
+                        {
+                            Event = evnt,
+                            Date = dt,
+                            EventArea = new Rectangle(xStart, yStart + cellHourHeight / divisor + 1,
                                                                    ClientSize.Width - MarginSize * 2 - cellHourWidth - 3,
                                                                    cellHourHeight * ts.Hours)
-                                     };
+                        };
                         _calendarEvents.Add(ce);
                     }
                 }
@@ -1266,16 +1265,16 @@ namespace Calendar.NET
 
             if (File.Exists(XmlFileName))
             {
-                     //xml 속성가져오기
-                     XmlDocument xmlDoc = new XmlDocument();
-                     xmlDoc.Load(XmlFileName);
-   
-                     XmlNode node = xmlDoc.SelectSingleNode("Root");
-                     if (node != null)
-                     {
-                        
-                        for (int i = 0; i < node.ChildNodes.Count; i++)
-                        {
+                //xml 속성가져오기
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load(XmlFileName);
+
+                XmlNode node = xmlDoc.SelectSingleNode("Root");
+                if (node != null)
+                {
+
+                    for (int i = 0; i < node.ChildNodes.Count; i++)
+                    {
 
 
                         //검체 인경우
@@ -1293,51 +1292,53 @@ namespace Calendar.NET
                                         MessageBox.Show("해당 검체에 등록된 시험이 있습니다. 시험을 먼저 삭제해 주세요");
                                         return;
                                     }
-                                 }
+                                }
 
-                                        //xml 노드삭제
-                                        XmlNode deleteNode = node.ChildNodes[i];
-                                        XmlNode parentNode = deleteNode.ParentNode; // 삭제할 노드의 부모 노드 찾고
+                                //xml 노드삭제
+                                XmlNode deleteNode = node.ChildNodes[i];
+                                XmlNode parentNode = deleteNode.ParentNode; // 삭제할 노드의 부모 노드 찾고
 
-                                        parentNode.RemoveChild(deleteNode);
+                                parentNode.RemoveChild(deleteNode);
 
-                                        RemoveEvent(_clickedEvent.Event);
-                                        
+                                RemoveEvent(_clickedEvent.Event);
+
                             }
 
-                            } else if (ed.Event.Rank == 2)
+                        }
+                        else if (ed.Event.Rank == 2)
+                        {
+                            MessageBox.Show("시험명 삭제는 불가능합니다. 전체삭제를 이용해주세요.");
+                            break;
+                        }
+                        else if (ed.Event.Rank == 3)
+                        {
+                            if (node.ChildNodes[i].Attributes.GetNamedItem("NameDate") != null)
                             {
-                                MessageBox.Show("시험명 삭제는 불가능합니다. 전체삭제를 이용해주세요.");
-                                break;
-                            }
-                            else if (ed.Event.Rank == 3)
-                            {
-                                if (node.ChildNodes[i].Attributes.GetNamedItem("NameDate") != null)
+                                if (ed.Event.EventText.Contains(node.ChildNodes[i].Attributes["Name"].Value) && ed.Event.EventText.Contains(node.ChildNodes[i].Attributes["NameDate"].Value))
                                 {
-                                    if (ed.Event.EventText.Contains(node.ChildNodes[i].Attributes["Name"].Value) && ed.Event.EventText.Contains(node.ChildNodes[i].Attributes["NameDate"].Value))
-                                    {
-                                        XmlNode deleteNode = node.ChildNodes[i];
-                                        XmlNode parentNode = deleteNode.ParentNode;
+                                    XmlNode deleteNode = node.ChildNodes[i];
+                                    XmlNode parentNode = deleteNode.ParentNode;
 
-                                        parentNode.RemoveChild(deleteNode);
+                                    parentNode.RemoveChild(deleteNode);
 
-                                        RemoveEvent(_clickedEvent.Event);
-                                    }
+                                    RemoveEvent(_clickedEvent.Event);
                                 }
                             }
                         }
+                    }
 
-                        xmlDoc.Save(XmlFileName);
-                        xmlDoc = null;
+                    xmlDoc.Save(XmlFileName);
+                    xmlDoc = null;
 
-                        Refresh();
-                       
-                } 
-            } else
+                    Refresh();
+
+                }
+            }
+            else
             {
                 MessageBox.Show("파일이 없습니다..");
             }
-       
+
 
         }
 
@@ -1355,9 +1356,9 @@ namespace Calendar.NET
                     XmlNode node = xmlDoc.SelectSingleNode("Root");
 
                     //이벤트 제목과 동일한 노드 찾기
-                    XmlNodeList TestNode = xmlDoc.SelectNodes("descendant::Test[@Name='"+ed.Event.EventText.Trim().ToString()+"']");
+                    XmlNodeList TestNode = xmlDoc.SelectNodes("descendant::Test[@Name='" + ed.Event.EventText.Trim().ToString() + "']");
 
-                    foreach(XmlNode Testing in TestNode)
+                    foreach (XmlNode Testing in TestNode)
                     {
                         node.RemoveChild(Testing);
                     }
@@ -1365,9 +1366,10 @@ namespace Calendar.NET
                     xmlDoc = null;
 
                     Refresh();
-                                        
+
                 }
-            } else
+            }
+            else
             {
                 MessageBox.Show("시험일정 전체삭제는 시험명 선택 후 가능합니다.");
             }
