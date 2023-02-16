@@ -47,7 +47,7 @@ namespace Calendar.NETDemo
 
         public RashiRadioButton()
         {
-            this.MinimumSize = new Size(0, 24);
+            this.MinimumSize = new Size(0, 20);
         }
 
 
