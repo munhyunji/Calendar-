@@ -517,6 +517,15 @@ namespace Calendar.NET
         /// Removes All event from the calendar
         /// </summary>
         /// <param name="calendarEvent"></param>
+        public void RemoveAllEventTest()
+        {
+
+            _events.RemoveRange(0, 2);
+            Refresh();
+
+
+        }
+
         public void RemoveAllEvent()
         {
 

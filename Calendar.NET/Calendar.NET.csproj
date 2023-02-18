@@ -83,6 +83,7 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CalendarEvent.cs" />
+    <Compile Include="LoadEvents.cs" />
     <Compile Include="CustomEvent.cs" />
     <Compile Include="CustomRecurringFunctionAttribute.cs" />
     <Compile Include="EventAdd.cs">
