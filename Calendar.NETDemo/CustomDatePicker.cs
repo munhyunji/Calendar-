@@ -30,13 +30,13 @@ namespace Calendar.NETDemo
             {
                 fillColor = value;
                 //if (fillColor.GetBrightness() >= 0.6f)
-               // {
+                // {
                 //    CalenderImg = Properties.Resources.calendarDark;
-               // }
-               // else
-              //  {
-                    CalenderImg = Properties.Resources.calendarWhite;
-              //  }
+                // }
+                // else
+                //  {
+                CalenderImg = Properties.Resources.calendarWhite;
+                //  }
                 this.Invalidate();
             }
         }

@@ -176,12 +176,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Calendar.NET\Calendar.NET.csproj">
-      <Project>{6CBC43B6-E950-49B2-B14A-563C50FCD5C3}</Project>
-      <Name>Calendar.NET</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.5.2%28x86 및 x64%29</ProductName>
@@ -200,6 +194,12 @@
     <Content Include="dest.ico" />
     <None Include="Properties\calendarDark.png" />
     <None Include="Properties\calendarWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Calendar.NET\Calendar.NET.csproj">
+      <Project>{6cbc43b6-e950-49b2-b14a-563c50fcd5c3}</Project>
+      <Name>Calendar.NET</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

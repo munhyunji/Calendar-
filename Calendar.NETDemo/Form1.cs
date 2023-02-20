@@ -1,11 +1,10 @@
-﻿using System;
+﻿using Calendar.NET;
+using System;
 using System.Drawing;
-using System.Windows.Forms;
-using Calendar.NET;
-using System.Xml;
 using System.IO;
 using System.Text.RegularExpressions;
-using System.Reflection;
+using System.Windows.Forms;
+using System.Xml;
 
 
 namespace Calendar.NETDemo
@@ -13,13 +12,13 @@ namespace Calendar.NETDemo
     public partial class Form1 : Form
 
     {
-       
+
         String XmlFileName = "Data.xml";
 
         public Form1()
         {
             InitializeComponent();
-            
+
             calendar1.CalendarDate = DateTime.Today;
             calendar1.CalendarView = CalendarViews.Month;
             calendar1.AllowEditingEvents = true;
@@ -82,27 +81,27 @@ namespace Calendar.NETDemo
 
                 int IsSuccess = XML_save(GumCheName, null, total_datetime, user_color_string, null, null, null, "GumChe");
 
-                
+
                 //XML저장이 성공했을시에만...!! 
-               /* if (IsSuccess == 0 )
-                    {
-                    if (File.Exists(XmlFileName))
-                    {
-                        XmlDocument xmlDoc = new XmlDocument();
-                        xmlDoc.Load(XmlFileName);
+                /* if (IsSuccess == 0 )
+                     {
+                     if (File.Exists(XmlFileName))
+                     {
+                         XmlDocument xmlDoc = new XmlDocument();
+                         xmlDoc.Load(XmlFileName);
 
-                        //xml 속성가져오기
-                        XmlNodeList node = xmlDoc.SelectNodes("Root/GumChe");
+                         //xml 속성가져오기
+                         XmlNodeList node = xmlDoc.SelectNodes("Root/GumChe");
 
 
-                        comboBox1.Items.Add("("+total_datetime+") "+ GumCheName);
-                    }
-                    
-                }*/
+                         comboBox1.Items.Add("("+total_datetime+") "+ GumCheName);
+                     }
+
+                 }*/
 
                 gum_name.Texts = "";
                 dateTimePicker1.Checked = false;
-                
+
             }
             else
             {
@@ -120,7 +119,7 @@ namespace Calendar.NETDemo
         {
 
             DateTime dt = dateTimePicker1.Value;
-            
+
             //시험일자
             String datetime = dt.ToString("yyyy-MM-dd");
             //String datetime_time = dt_time.ToString("HH:mm:ss");
@@ -130,7 +129,7 @@ namespace Calendar.NETDemo
             //시험명
             String test_name = testTitle.Texts;
             int test_name_len = test_name.Length;
-            
+
             //시험자
             String test_person = comboBox2.SelectedItem.ToString();
 
@@ -140,7 +139,7 @@ namespace Calendar.NETDemo
             }
 
             String test = "【" + test_person + "】 " + test_name;
-         
+
             String aligned_test = TextAlignCenter_TestName(test);
 
             //검체량
@@ -156,7 +155,8 @@ namespace Calendar.NETDemo
 
             //시험명, 선택 여부
             // 시험자 선택여부 제거 230202
-            if (!String.IsNullOrEmpty(test_name) && comboBox1.SelectedItem.ToString() != "검체를 선택하세요.") {
+            if (!String.IsNullOrEmpty(test_name) && comboBox1.SelectedItem.ToString() != "검체를 선택하세요.")
+            {
 
                 String GumCheInfo = comboBox1.SelectedItem.ToString();
                 String GumCheDate = GumCheInfo.Substring(1, 10);
@@ -199,11 +199,11 @@ namespace Calendar.NETDemo
                         {
                             eventText = "촬영";
                         }
-                       
+
                         String DaysText = day + "일차 " + eventText;
-                       
-                        String total = aligned_test + "\n" +  TextAlignCenter_DaysName(test, DaysText);
-                        
+
+                        String total = aligned_test + "\n" + TextAlignCenter_DaysName(test, DaysText);
+
                         var added_test_case = new CustomEvent
                         {
                             Date = Added_datetime,
@@ -214,7 +214,7 @@ namespace Calendar.NETDemo
                             EventFont = new Font("나눔고딕", 8, FontStyle.Regular),
                             Rank = 3,
                             EventTextColor = Color.Black
-                            
+
                         };
 
                         calendar1.AddEvent(added_test_case);
@@ -235,14 +235,16 @@ namespace Calendar.NETDemo
                 //colorDialog2.Color = Color.Transparent;
                 //panel2.BackColor = Color.Transparent;
 
-            } else
+            }
+            else
             {
                 MessageBox.Show("검체명/시험명을 선택하세요");
             }
         }
 
 
-        private int XML_save(String text, String textDate, String datetime, String color, String GumCheName, String GumCheDate, String GumAmt, String nodeName) {
+        private int XML_save(String text, String textDate, String datetime, String color, String GumCheName, String GumCheDate, String GumAmt, String nodeName)
+        {
 
             XmlDocument xmlDoc;
 
@@ -251,25 +253,27 @@ namespace Calendar.NETDemo
 
             if (File.Exists(XmlFileName))
             {
-              
-                    try
+
+                try
+                {
+                    if (!String.IsNullOrEmpty(text))
                     {
-                        if (!String.IsNullOrEmpty(text))
-                        {
-                            XmlNode node = xmlDoc.SelectSingleNode("Root");
-                            // XmlElement root = xmlDoc.CreateElement("TestInfo");
-                            XmlElement childNode = xmlDoc.CreateElement(nodeName);
-                        
+                        XmlNode node = xmlDoc.SelectSingleNode("Root");
+                        // XmlElement root = xmlDoc.CreateElement("TestInfo");
+                        XmlElement childNode = xmlDoc.CreateElement(nodeName);
+
                         //검체인경우
-                        if (nodeName == "GumChe") {
+                        if (nodeName == "GumChe")
+                        {
                             childNode.SetAttribute("Name", text);
                             childNode.SetAttribute("Datetime", datetime);
                             childNode.SetAttribute("Color", color);
                             childNode.SetAttribute("GumAmt", GumAmt);
                             childNode.SetAttribute("Rank", "1");
 
-                        //시험명인경우  
-                        } else if(nodeName == "Test" && textDate == null)
+                            //시험명인경우  
+                        }
+                        else if (nodeName == "Test" && textDate == null)
                         {
                             childNode.SetAttribute("Name", text);
                             childNode.SetAttribute("Datetime", datetime);
@@ -279,8 +283,9 @@ namespace Calendar.NETDemo
                             childNode.SetAttribute("GumAmt", GumAmt);
                             childNode.SetAttribute("Rank", "2");
 
-                        //시험명+일차 인경우
-                        } else
+                            //시험명+일차 인경우
+                        }
+                        else
                         {
                             childNode.SetAttribute("Name", text);
                             childNode.SetAttribute("NameDate", textDate);
@@ -292,25 +297,25 @@ namespace Calendar.NETDemo
                             childNode.SetAttribute("Rank", "3");
                         }
 
-                            node.AppendChild(childNode);
-                            //node.AppendChild(root);
+                        node.AppendChild(childNode);
+                        //node.AppendChild(root);
 
-                            xmlDoc.Save(XmlFileName);
-                            xmlDoc = null;
-                            return 0;
-                        }
-                        else
-                        {
-                            MessageBox.Show("내용을 입력해주세요");
-                            return 1;
-                        }
+                        xmlDoc.Save(XmlFileName);
+                        xmlDoc = null;
+                        return 0;
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MessageBox.Show(ex.ToString());
+                        MessageBox.Show("내용을 입력해주세요");
                         return 1;
+                    }
                 }
-                
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                    return 1;
+                }
+
             }
             else
             {
@@ -319,18 +324,19 @@ namespace Calendar.NETDemo
             }
         }
 
-        private void Form1_Load()
+        public void Form1_Load()
         {
-           
+
             try
             {
-                if (File.Exists(XmlFileName)) {
+                if (File.Exists(XmlFileName))
+                {
                     XmlDocument xmlDoc = new XmlDocument();
                     xmlDoc.Load(XmlFileName);
 
                     //xml 속성가져오기
                     XmlNode node = xmlDoc.SelectSingleNode("Root");
-                                     
+
                     for (int i = 0; i < node.ChildNodes.Count; i++)
                     {
                         // attribute 존재하는지  검사 
@@ -338,15 +344,15 @@ namespace Calendar.NETDemo
 
                         if (node.ChildNodes[i].Attributes.GetNamedItem("NameDate") == null)
                         {
-                             nodeName = node.ChildNodes[i].Attributes["Name"].Value.ToString();
+                            nodeName = node.ChildNodes[i].Attributes["Name"].Value.ToString();
 
                         }
                         else
                         {
-                             nodeName = node.ChildNodes[i].Attributes["Name"].Value.ToString() + "\n" + TextAlignCenter_DaysName(node.ChildNodes[i].Attributes["Name"].Value.ToString(), node.ChildNodes[i].Attributes["NameDate"].Value);
+                            nodeName = node.ChildNodes[i].Attributes["Name"].Value.ToString() + "\n" + TextAlignCenter_DaysName(node.ChildNodes[i].Attributes["Name"].Value.ToString(), node.ChildNodes[i].Attributes["NameDate"].Value);
 
                         }
-                      
+
                         String datetime = node.ChildNodes[i].Attributes["Datetime"].Value.ToString();
                         String color = node.ChildNodes[i].Attributes["Color"].Value.ToString();
                         int rank = Int32.Parse(node.ChildNodes[i].Attributes["Rank"].Value.ToString());
@@ -366,10 +372,11 @@ namespace Calendar.NETDemo
                             int red = int.Parse(m.Groups["Red"].Value);
                             int green = int.Parse(m.Groups["Green"].Value);
                             int blue = int.Parse(m.Groups["Blue"].Value);
-                             c = Color.FromArgb(alpha, red, green, blue);
+                            c = Color.FromArgb(alpha, red, green, blue);
 
-                        } else
-                        {                           
+                        }
+                        else
+                        {
                             string real_color = color.Substring(color.IndexOf('[') + 1, color.IndexOf(']') - color.IndexOf('[') - 1);
                             c = Color.FromName(real_color);
                         }
@@ -384,10 +391,10 @@ namespace Calendar.NETDemo
                             EventFont = new Font("나눔고딕", 8, FontStyle.Regular),
                             EventTextColor = Color.Black,
                             Rank = rank
-                            
+
                         };
 
-                        calendar1.AddEvent(custom);                       
+                        calendar1.AddEvent(custom);
 
                     }
 
@@ -397,12 +404,13 @@ namespace Calendar.NETDemo
                     {
                         foreach (XmlElement GumcheNode in GumcheNodes)
                         {
-                            comboBox1.Items.Add("(" + GumcheNode.Attributes["Datetime"].Value +") " + GumcheNode.Attributes["Name"].Value);
+                            comboBox1.Items.Add("(" + GumcheNode.Attributes["Datetime"].Value + ") " + GumcheNode.Attributes["Name"].Value);
                         }
                     }
 
 
-                } else
+                }
+                else
                 {
                     MessageBox.Show("Xml 파일이 존재하지않습니다.");
                 }
@@ -410,7 +418,8 @@ namespace Calendar.NETDemo
                 comboBox1.SelectedIndex = 0;
                 comboBox2.SelectedIndex = 0;
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.ToString());
             }
 
@@ -424,9 +433,9 @@ namespace Calendar.NETDemo
         /// <returns></returns>
         private String TextAlignCenter_DaysName(String TestName, String DaysName)
         {
-           
-            DaysName =  DaysName.PadLeft(TestName.Length+1);
-            
+
+            DaysName = DaysName.PadLeft(TestName.Length + 1);
+
             return DaysName;
         }
 
@@ -434,7 +443,7 @@ namespace Calendar.NETDemo
         private String TextAlignCenter_TestName(String TestName)
         {
 
-            TestName = TestName.PadLeft(TestName.Length+1);
+            TestName = TestName.PadLeft(TestName.Length + 1);
 
             return TestName;
         }
@@ -464,7 +473,7 @@ namespace Calendar.NETDemo
                 //콤보박스 초기화
                 comboBox1.Items.Clear();
                 comboBox1.Items.Add("검체를 선택하세요.");
-                comboBox1.SelectedItem = "검체를 선택하세요."; 
+                comboBox1.SelectedItem = "검체를 선택하세요.";
 
                 XmlDocument xmlDoc = new XmlDocument();
                 xmlDoc.Load(XmlFileName);
@@ -472,16 +481,16 @@ namespace Calendar.NETDemo
                 //시험등록 comboBox에 item추가
                 XmlNodeList GumcheNodes = xmlDoc.SelectNodes("Root/GumChe");
 
-                    if (GumcheNodes != null)
+                if (GumcheNodes != null)
+                {
+                    foreach (XmlElement GumcheNode in GumcheNodes)
                     {
-                        foreach (XmlElement GumcheNode in GumcheNodes)
+                        if (GumcheNode.Attributes["Name"].Value != "")
                         {
-                            if (GumcheNode.Attributes["Name"].Value != "")
-                            {
                             comboBox1.Items.Add("(" + GumcheNode.Attributes["Datetime"].Value + ") " + GumcheNode.Attributes["Name"].Value);
-                            }
                         }
                     }
+                }
             }
             else
             {
@@ -497,7 +506,7 @@ namespace Calendar.NETDemo
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
 
-            calendar1.RemoveAllEvent();           
+            calendar1.RemoveAllEvent();
             Form1_Load();
         }
 
