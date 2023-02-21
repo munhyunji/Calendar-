@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 
 namespace Calendar.NETDemo
 {
@@ -21,7 +17,7 @@ namespace Calendar.NETDemo
         {
             get
             {
-               return checkColor;
+                return checkColor;
             }
             set
             {
@@ -88,7 +84,7 @@ namespace Calendar.NETDemo
                 else
                 {
                     PBorder.Color = unCheckColor;
-                    graphics.DrawEllipse(PBorder,rectangleBorder);
+                    graphics.DrawEllipse(PBorder, rectangleBorder);
                 }
 
                 graphics.DrawString(this.Text, this.Font, Btext,

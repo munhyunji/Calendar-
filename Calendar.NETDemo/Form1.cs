@@ -157,10 +157,11 @@ namespace Calendar.NETDemo
             // 시험자 선택여부 제거 230202
             if (!String.IsNullOrEmpty(test_name) && comboBox1.SelectedItem.ToString() != "검체를 선택하세요.")
             {
-
+                DateTime today = DateTime.Today;
                 String GumCheInfo = comboBox1.SelectedItem.ToString();
-                String GumCheDate = GumCheInfo.Substring(1, 10);
-                String GumCheName = GumCheInfo.Substring(12).TrimStart();
+                String GumCheDate = today.Year+ "-" + GumCheInfo.Substring(1,5);
+                
+                String GumCheName = GumCheInfo.Substring(8).TrimStart();
 
                 var test_case = new CustomEvent
                 {
@@ -487,7 +488,8 @@ namespace Calendar.NETDemo
                     {
                         if (GumcheNode.Attributes["Name"].Value != "")
                         {
-                            comboBox1.Items.Add("(" + GumcheNode.Attributes["Datetime"].Value + ") " + GumcheNode.Attributes["Name"].Value);
+                            String date = GumcheNode.Attributes["Datetime"].Value;
+                            comboBox1.Items.Add("(" + date.Substring(5) + ") " + GumcheNode.Attributes["Name"].Value);
                         }
                     }
                 }

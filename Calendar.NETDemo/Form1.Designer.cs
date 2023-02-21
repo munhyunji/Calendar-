@@ -78,16 +78,16 @@
             this.ddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ddToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
-            this.calendar1 = new Calendar.NET.Calendar();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gum_name = new CustomControls.RJControls.RJTextBox();
             this.AddEvent2 = new Calendar.NETDemo.RJButton();
+            this.calendar1 = new Calendar.NET.Calendar();
+            this.rashiRadioButton3 = new Calendar.NETDemo.RashiRadioButton();
+            this.rashiRadioButton2 = new Calendar.NETDemo.RashiRadioButton();
+            this.rashiRadioButton1 = new Calendar.NETDemo.RashiRadioButton();
             this.RefreshBtn = new Calendar.NETDemo.RJButton();
             this.rjButton1 = new Calendar.NETDemo.RJButton();
-            this.rashiRadioButton1 = new Calendar.NETDemo.RashiRadioButton();
-            this.rashiRadioButton2 = new Calendar.NETDemo.RashiRadioButton();
-            this.rashiRadioButton3 = new Calendar.NETDemo.RashiRadioButton();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
@@ -278,7 +278,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(19, 152);
+            this.label4.Location = new System.Drawing.Point(12, 152);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 17);
             this.label4.TabIndex = 37;
@@ -288,7 +288,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(18, 73);
+            this.label3.Location = new System.Drawing.Point(11, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 17);
             this.label3.TabIndex = 19;
@@ -384,9 +384,9 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "검체를 선택하세요."});
-            this.comboBox1.Location = new System.Drawing.Point(69, 29);
+            this.comboBox1.Location = new System.Drawing.Point(59, 29);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(214, 28);
+            this.comboBox1.Size = new System.Drawing.Size(239, 28);
             this.comboBox1.Sorted = true;
             this.comboBox1.TabIndex = 0;
             this.comboBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBox1_MouseClick);
@@ -405,9 +405,9 @@
             "아라",
             "서영",
             "미래"});
-            this.comboBox2.Location = new System.Drawing.Point(70, 147);
+            this.comboBox2.Location = new System.Drawing.Point(59, 147);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(214, 28);
+            this.comboBox2.Size = new System.Drawing.Size(239, 28);
             this.comboBox2.TabIndex = 3;
             // 
             // rjTextBox1
@@ -699,13 +699,13 @@
             this.gum_amt.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gum_amt.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gum_amt.ForeColor = System.Drawing.Color.DimGray;
-            this.gum_amt.Location = new System.Drawing.Point(70, 104);
+            this.gum_amt.Location = new System.Drawing.Point(59, 104);
             this.gum_amt.Margin = new System.Windows.Forms.Padding(4);
             this.gum_amt.Multiline = false;
             this.gum_amt.Name = "gum_amt";
             this.gum_amt.Padding = new System.Windows.Forms.Padding(7);
             this.gum_amt.PasswordChar = false;
-            this.gum_amt.Size = new System.Drawing.Size(213, 35);
+            this.gum_amt.Size = new System.Drawing.Size(238, 35);
             this.gum_amt.TabIndex = 2;
             this.gum_amt.Texts = "";
             this.gum_amt.UnderlinedStyle = false;
@@ -714,7 +714,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(17, 113);
+            this.label1.Location = new System.Drawing.Point(10, 113);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 17);
             this.label1.TabIndex = 81;
@@ -730,13 +730,13 @@
             this.testTitle.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.testTitle.ForeColor = System.Drawing.Color.DimGray;
             this.testTitle.ImeMode = System.Windows.Forms.ImeMode.Hangul;
-            this.testTitle.Location = new System.Drawing.Point(70, 63);
+            this.testTitle.Location = new System.Drawing.Point(59, 63);
             this.testTitle.Margin = new System.Windows.Forms.Padding(4);
             this.testTitle.Multiline = false;
             this.testTitle.Name = "testTitle";
             this.testTitle.Padding = new System.Windows.Forms.Padding(7);
             this.testTitle.PasswordChar = false;
-            this.testTitle.Size = new System.Drawing.Size(213, 35);
+            this.testTitle.Size = new System.Drawing.Size(238, 35);
             this.testTitle.TabIndex = 1;
             this.testTitle.Texts = "";
             this.testTitle.UnderlinedStyle = false;
@@ -785,7 +785,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label19.Location = new System.Drawing.Point(18, 31);
+            this.label19.Location = new System.Drawing.Point(11, 31);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(50, 17);
             this.label19.TabIndex = 77;
@@ -817,37 +817,6 @@
             this.ddToolStripMenuItem1.Name = "ddToolStripMenuItem1";
             this.ddToolStripMenuItem1.Size = new System.Drawing.Size(96, 24);
             this.ddToolStripMenuItem1.Text = "dd";
-            // 
-            // calendar1
-            // 
-            this.calendar1.AllowEditingEvents = false;
-            this.calendar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.calendar1.BackColor = System.Drawing.Color.Transparent;
-            this.calendar1.CalendarDate = new System.DateTime(2012, 4, 24, 13, 16, 0, 0);
-            this.calendar1.CalendarView = Calendar.NET.CalendarViews.Month;
-            this.calendar1.DateHeaderFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.calendar1.DayOfWeekFont = new System.Drawing.Font("Arial", 10F);
-            this.calendar1.DaysFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calendar1.DayViewTimeFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.calendar1.DimDisabledEvents = true;
-            this.calendar1.Event = null;
-            this.calendar1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.calendar1.HighlightCurrentDay = true;
-            this.calendar1.LoadPresetHolidays = true;
-            this.calendar1.Location = new System.Drawing.Point(331, -5);
-            this.calendar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.calendar1.Name = "calendar1";
-            this.calendar1.ShowArrowControls = true;
-            this.calendar1.ShowDashedBorderOnDisabledEvents = true;
-            this.calendar1.ShowDateInHeader = true;
-            this.calendar1.ShowDisabledEvents = false;
-            this.calendar1.ShowEventTooltips = true;
-            this.calendar1.ShowTodayButton = true;
-            this.calendar1.Size = new System.Drawing.Size(1204, 862);
-            this.calendar1.TabIndex = 0;
-            this.calendar1.TodayFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             // 
             // panel2
             // 
@@ -919,6 +888,85 @@
             this.AddEvent2.UseVisualStyleBackColor = false;
             this.AddEvent2.Click += new System.EventHandler(this.AddEvent2_Click);
             // 
+            // calendar1
+            // 
+            this.calendar1.AllowEditingEvents = false;
+            this.calendar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.calendar1.BackColor = System.Drawing.Color.Transparent;
+            this.calendar1.CalendarDate = new System.DateTime(2012, 4, 24, 13, 16, 0, 0);
+            this.calendar1.CalendarView = Calendar.NET.CalendarViews.Month;
+            this.calendar1.DateHeaderFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.calendar1.DayOfWeekFont = new System.Drawing.Font("Arial", 10F);
+            this.calendar1.DaysFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calendar1.DayViewTimeFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.calendar1.DimDisabledEvents = true;
+            this.calendar1.Event = null;
+            this.calendar1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.calendar1.HighlightCurrentDay = true;
+            this.calendar1.LoadPresetHolidays = true;
+            this.calendar1.Location = new System.Drawing.Point(331, -5);
+            this.calendar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.calendar1.Name = "calendar1";
+            this.calendar1.ShowArrowControls = true;
+            this.calendar1.ShowDashedBorderOnDisabledEvents = true;
+            this.calendar1.ShowDateInHeader = true;
+            this.calendar1.ShowDisabledEvents = false;
+            this.calendar1.ShowEventTooltips = true;
+            this.calendar1.ShowTodayButton = true;
+            this.calendar1.Size = new System.Drawing.Size(1204, 862);
+            this.calendar1.TabIndex = 0;
+            this.calendar1.TodayFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            // 
+            // rashiRadioButton3
+            // 
+            this.rashiRadioButton3.AutoSize = true;
+            this.rashiRadioButton3.CheckColor = System.Drawing.Color.Thistle;
+            this.rashiRadioButton3.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rashiRadioButton3.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.rashiRadioButton3.Location = new System.Drawing.Point(828, 14);
+            this.rashiRadioButton3.MinimumSize = new System.Drawing.Size(0, 24);
+            this.rashiRadioButton3.Name = "rashiRadioButton3";
+            this.rashiRadioButton3.Size = new System.Drawing.Size(71, 24);
+            this.rashiRadioButton3.TabIndex = 81;
+            this.rashiRadioButton3.TabStop = true;
+            this.rashiRadioButton3.Text = "시험";
+            this.rashiRadioButton3.UnCheckColor = System.Drawing.Color.Lavender;
+            this.rashiRadioButton3.UseVisualStyleBackColor = true;
+            // 
+            // rashiRadioButton2
+            // 
+            this.rashiRadioButton2.AutoSize = true;
+            this.rashiRadioButton2.CheckColor = System.Drawing.Color.Thistle;
+            this.rashiRadioButton2.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rashiRadioButton2.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.rashiRadioButton2.Location = new System.Drawing.Point(751, 14);
+            this.rashiRadioButton2.MinimumSize = new System.Drawing.Size(0, 24);
+            this.rashiRadioButton2.Name = "rashiRadioButton2";
+            this.rashiRadioButton2.Size = new System.Drawing.Size(71, 24);
+            this.rashiRadioButton2.TabIndex = 80;
+            this.rashiRadioButton2.TabStop = true;
+            this.rashiRadioButton2.Text = "검체";
+            this.rashiRadioButton2.UnCheckColor = System.Drawing.Color.Lavender;
+            this.rashiRadioButton2.UseVisualStyleBackColor = true;
+            // 
+            // rashiRadioButton1
+            // 
+            this.rashiRadioButton1.AutoSize = true;
+            this.rashiRadioButton1.CheckColor = System.Drawing.Color.Thistle;
+            this.rashiRadioButton1.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rashiRadioButton1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.rashiRadioButton1.Location = new System.Drawing.Point(674, 14);
+            this.rashiRadioButton1.MinimumSize = new System.Drawing.Size(0, 24);
+            this.rashiRadioButton1.Name = "rashiRadioButton1";
+            this.rashiRadioButton1.Size = new System.Drawing.Size(71, 24);
+            this.rashiRadioButton1.TabIndex = 50;
+            this.rashiRadioButton1.TabStop = true;
+            this.rashiRadioButton1.Text = "전체";
+            this.rashiRadioButton1.UnCheckColor = System.Drawing.Color.Lavender;
+            this.rashiRadioButton1.UseVisualStyleBackColor = true;
+            // 
             // RefreshBtn
             // 
             this.RefreshBtn.BackColor = System.Drawing.Color.Thistle;
@@ -959,54 +1007,6 @@
             this.rjButton1.UseVisualStyleBackColor = false;
             this.rjButton1.Visible = false;
             this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
-            // 
-            // rashiRadioButton1
-            // 
-            this.rashiRadioButton1.AutoSize = true;
-            this.rashiRadioButton1.CheckColor = System.Drawing.Color.Thistle;
-            this.rashiRadioButton1.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rashiRadioButton1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.rashiRadioButton1.Location = new System.Drawing.Point(674, 14);
-            this.rashiRadioButton1.MinimumSize = new System.Drawing.Size(0, 24);
-            this.rashiRadioButton1.Name = "rashiRadioButton1";
-            this.rashiRadioButton1.Size = new System.Drawing.Size(71, 24);
-            this.rashiRadioButton1.TabIndex = 50;
-            this.rashiRadioButton1.TabStop = true;
-            this.rashiRadioButton1.Text = "전체";
-            this.rashiRadioButton1.UnCheckColor = System.Drawing.Color.Lavender;
-            this.rashiRadioButton1.UseVisualStyleBackColor = true;
-            // 
-            // rashiRadioButton2
-            // 
-            this.rashiRadioButton2.AutoSize = true;
-            this.rashiRadioButton2.CheckColor = System.Drawing.Color.Thistle;
-            this.rashiRadioButton2.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rashiRadioButton2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.rashiRadioButton2.Location = new System.Drawing.Point(751, 14);
-            this.rashiRadioButton2.MinimumSize = new System.Drawing.Size(0, 24);
-            this.rashiRadioButton2.Name = "rashiRadioButton2";
-            this.rashiRadioButton2.Size = new System.Drawing.Size(71, 24);
-            this.rashiRadioButton2.TabIndex = 80;
-            this.rashiRadioButton2.TabStop = true;
-            this.rashiRadioButton2.Text = "검체";
-            this.rashiRadioButton2.UnCheckColor = System.Drawing.Color.Lavender;
-            this.rashiRadioButton2.UseVisualStyleBackColor = true;
-            // 
-            // rashiRadioButton3
-            // 
-            this.rashiRadioButton3.AutoSize = true;
-            this.rashiRadioButton3.CheckColor = System.Drawing.Color.Thistle;
-            this.rashiRadioButton3.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rashiRadioButton3.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.rashiRadioButton3.Location = new System.Drawing.Point(828, 14);
-            this.rashiRadioButton3.MinimumSize = new System.Drawing.Size(0, 24);
-            this.rashiRadioButton3.Name = "rashiRadioButton3";
-            this.rashiRadioButton3.Size = new System.Drawing.Size(71, 24);
-            this.rashiRadioButton3.TabIndex = 81;
-            this.rashiRadioButton3.TabStop = true;
-            this.rashiRadioButton3.Text = "시험";
-            this.rashiRadioButton3.UnCheckColor = System.Drawing.Color.Lavender;
-            this.rashiRadioButton3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
