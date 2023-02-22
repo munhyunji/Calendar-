@@ -350,10 +350,7 @@ namespace Calendar.NET
             }
 
             Close();
-            MessageBox.Show("LoadEvent가 실행됩니다.");
             
-            LoadEvents le = new LoadEvents();
-            le.Form1_Load();
 
         }
 
