@@ -24,8 +24,7 @@ namespace Calendar.NETDemo
             calendar1.AllowEditingEvents = true;
 
             dateTimePicker1.Format = DateTimePickerFormat.Long;//날짜 + 시간 형태
-
-            Form1_Load();
+            Form1_Load(null);
 
         }
 
@@ -325,7 +324,7 @@ namespace Calendar.NETDemo
             }
         }
 
-        public void Form1_Load()
+        public void Form1_Load(String type)
         {
 
             try
@@ -335,69 +334,137 @@ namespace Calendar.NETDemo
                     XmlDocument xmlDoc = new XmlDocument();
                     xmlDoc.Load(XmlFileName);
 
-                    //xml 속성가져오기
-                    XmlNode node = xmlDoc.SelectSingleNode("Root");
-
-                    for (int i = 0; i < node.ChildNodes.Count; i++)
+                    if (GumCheRb.Checked == false && TestRb.Checked == false)
                     {
-                        // attribute 존재하는지  검사 
-                        String nodeName;
 
-                        if (node.ChildNodes[i].Attributes.GetNamedItem("NameDate") == null)
+                        XmlNode node = xmlDoc.SelectSingleNode("Root");
+
+                        for (int i = 0; i < node.ChildNodes.Count; i++)
                         {
-                            nodeName = node.ChildNodes[i].Attributes["Name"].Value.ToString();
+                            // attribute 존재하는지  검사 
+                            String nodeName;
+
+                            if (node.ChildNodes[i].Attributes.GetNamedItem("NameDate") == null)
+                            {
+                                nodeName = node.ChildNodes[i].Attributes["Name"].Value.ToString();
+
+                            }
+                            else
+                            {
+                                nodeName = node.ChildNodes[i].Attributes["Name"].Value.ToString() + "\n" + TextAlignCenter_DaysName(node.ChildNodes[i].Attributes["Name"].Value.ToString(), node.ChildNodes[i].Attributes["NameDate"].Value);
+
+                            }
+
+                            String datetime = node.ChildNodes[i].Attributes["Datetime"].Value.ToString();
+                            String color = node.ChildNodes[i].Attributes["Color"].Value.ToString();
+                            int rank = Int32.Parse(node.ChildNodes[i].Attributes["Rank"].Value.ToString());
+
+                            Color c;
+
+                            //문자열이 숫자인지아닌지검사
+                            Regex r = new Regex("[0-9]");
+
+                            bool isNum = r.IsMatch(color);
+
+                            if (isNum)
+                            {
+                                Match m = Regex.Match(color, @"A=(?<Alpha>\d+),\s*R=(?<Red>\d+),\s*G=(?<Green>\d+),\s*B=(?<Blue>\d+)");
+
+                                int alpha = int.Parse(m.Groups["Alpha"].Value);
+                                int red = int.Parse(m.Groups["Red"].Value);
+                                int green = int.Parse(m.Groups["Green"].Value);
+                                int blue = int.Parse(m.Groups["Blue"].Value);
+                                c = Color.FromArgb(alpha, red, green, blue);
+
+                            }
+                            else
+                            {
+                                string real_color = color.Substring(color.IndexOf('[') + 1, color.IndexOf(']') - color.IndexOf('[') - 1);
+                                c = Color.FromName(real_color);
+                            }
+
+                            var custom = new CustomEvent
+                            {
+                                Date = DateTime.Parse(datetime),
+                                EventText = nodeName,
+                                EventColor = c,
+                                EventLengthInHours = 2f,
+                                RecurringFrequency = RecurringFrequencies.None,
+                                EventFont = new Font("나눔고딕", 8, FontStyle.Regular),
+                                EventTextColor = Color.Black,
+                                Rank = rank
+
+                            };
+
+                            calendar1.AddEvent(custom);
 
                         }
-                        else
+
+                    } else if (GumCheRb.Checked == true || TestRb.Checked == true) {
+                        XmlNodeList GumCheList = xmlDoc.SelectNodes(type);
+
+                        for (int i = 0; i< GumCheList.Count; i++)
                         {
-                            nodeName = node.ChildNodes[i].Attributes["Name"].Value.ToString() + "\n" + TextAlignCenter_DaysName(node.ChildNodes[i].Attributes["Name"].Value.ToString(), node.ChildNodes[i].Attributes["NameDate"].Value);
+                            // attribute 존재하는지  검사 
+                            String nodeName;
+
+                            if (GumCheList[i].Attributes.GetNamedItem("NameDate") == null)
+                            {
+                                nodeName = GumCheList[i].Attributes["Name"].Value.ToString();
+
+                            }
+                            else
+                            {
+                                nodeName = GumCheList[i].Attributes["Name"].Value.ToString() + "\n" + TextAlignCenter_DaysName(GumCheList[i].Attributes["Name"].Value.ToString(), GumCheList[i].Attributes["NameDate"].Value);
+
+                            }
+                            String datetime = GumCheList[i].Attributes["Datetime"].Value.ToString();
+                            String color = GumCheList[i].Attributes["Color"].Value.ToString();
+                            int rank = Int32.Parse(GumCheList[i].Attributes["Rank"].Value.ToString());
+
+                            Color c;
+
+                            //문자열이 숫자인지아닌지검사
+                            Regex r = new Regex("[0-9]");
+
+                            bool isNum = r.IsMatch(color);
+
+                            if (isNum)
+                            {
+                                Match m = Regex.Match(color, @"A=(?<Alpha>\d+),\s*R=(?<Red>\d+),\s*G=(?<Green>\d+),\s*B=(?<Blue>\d+)");
+
+                                int alpha = int.Parse(m.Groups["Alpha"].Value);
+                                int red = int.Parse(m.Groups["Red"].Value);
+                                int green = int.Parse(m.Groups["Green"].Value);
+                                int blue = int.Parse(m.Groups["Blue"].Value);
+                                c = Color.FromArgb(alpha, red, green, blue);
+
+                            }
+                            else
+                            {
+                                string real_color = color.Substring(color.IndexOf('[') + 1, color.IndexOf(']') - color.IndexOf('[') - 1);
+                                c = Color.FromName(real_color);
+                            }
+
+                            var custom = new CustomEvent
+                            {
+                                Date = DateTime.Parse(datetime),
+                                EventText = nodeName,
+                                EventColor = c,
+                                EventLengthInHours = 2f,
+                                RecurringFrequency = RecurringFrequencies.None,
+                                EventFont = new Font("나눔고딕", 8, FontStyle.Regular),
+                                EventTextColor = Color.Black,
+                                Rank = rank
+
+                            };
+
+                            calendar1.AddEvent(custom);
 
                         }
-
-                        String datetime = node.ChildNodes[i].Attributes["Datetime"].Value.ToString();
-                        String color = node.ChildNodes[i].Attributes["Color"].Value.ToString();
-                        int rank = Int32.Parse(node.ChildNodes[i].Attributes["Rank"].Value.ToString());
-
-                        Color c;
-
-                        //문자열이 숫자인지아닌지검사
-                        Regex r = new Regex("[0-9]");
-
-                        bool isNum = r.IsMatch(color);
-
-                        if (isNum)
-                        {
-                            Match m = Regex.Match(color, @"A=(?<Alpha>\d+),\s*R=(?<Red>\d+),\s*G=(?<Green>\d+),\s*B=(?<Blue>\d+)");
-
-                            int alpha = int.Parse(m.Groups["Alpha"].Value);
-                            int red = int.Parse(m.Groups["Red"].Value);
-                            int green = int.Parse(m.Groups["Green"].Value);
-                            int blue = int.Parse(m.Groups["Blue"].Value);
-                            c = Color.FromArgb(alpha, red, green, blue);
-
-                        }
-                        else
-                        {
-                            string real_color = color.Substring(color.IndexOf('[') + 1, color.IndexOf(']') - color.IndexOf('[') - 1);
-                            c = Color.FromName(real_color);
-                        }
-
-                        var custom = new CustomEvent
-                        {
-                            Date = DateTime.Parse(datetime),
-                            EventText = nodeName,
-                            EventColor = c,
-                            EventLengthInHours = 2f,
-                            RecurringFrequency = RecurringFrequencies.None,
-                            EventFont = new Font("나눔고딕", 8, FontStyle.Regular),
-                            EventTextColor = Color.Black,
-                            Rank = rank
-
-                        };
-
-                        calendar1.AddEvent(custom);
-
                     }
+
+
 
                     //시험등록 comboBox에 item추가
                     XmlNodeList GumcheNodes = xmlDoc.SelectNodes("Root/GumChe");
@@ -507,10 +574,30 @@ namespace Calendar.NETDemo
 
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
-
+            GumCheRb.Checked = false;
+            TestRb.Checked = false;
             calendar1.RemoveAllEvent();
-            Form1_Load();
+            Form1_Load("Root");
+           
         }
 
+        /// <summary>
+        /// 검체필터
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void GumCheRb_Click(object sender, EventArgs e)
+        {
+            calendar1.RemoveAllEvent();
+            Form1_Load("Root/GumChe");
+            Refresh();
+        }
+
+        private void TestRb_Click(object sender, EventArgs e)
+        {
+            calendar1.RemoveAllEvent();
+            Form1_Load("Root/Test");
+            Refresh();
+        }
     }
 }
