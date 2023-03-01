@@ -905,7 +905,7 @@
             this.calendar1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.calendar1.HighlightCurrentDay = true;
             this.calendar1.LoadPresetHolidays = true;
-            this.calendar1.Location = new System.Drawing.Point(331, -5);
+            this.calendar1.Location = new System.Drawing.Point(331, -16);
             this.calendar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.calendar1.Name = "calendar1";
             this.calendar1.ShowArrowControls = true;
@@ -914,7 +914,7 @@
             this.calendar1.ShowDisabledEvents = false;
             this.calendar1.ShowEventTooltips = true;
             this.calendar1.ShowTodayButton = true;
-            this.calendar1.Size = new System.Drawing.Size(1204, 862);
+            this.calendar1.Size = new System.Drawing.Size(1204, 945);
             this.calendar1.TabIndex = 0;
             this.calendar1.TodayFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             // 

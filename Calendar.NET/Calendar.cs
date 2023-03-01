@@ -348,7 +348,7 @@ namespace Calendar.NET
             _dimDisabledEvents = true;
             AllowEditingEvents = true;
             _highlightCurrentDay = true;
-            _calendarView = CalendarViews.Month;
+            _calendarView = CalendarViews.Day;
             _scrollPanel = new ScrollPanel();
 
             _scrollPanel.RightButtonClicked += ScrollPanelRightButtonClicked;
@@ -366,6 +366,8 @@ namespace Calendar.NET
 
             _scrollPanel.Visible = false;
             Controls.Add(_scrollPanel);
+
+            
         }
 
         private void InitializeComponent()
@@ -1031,6 +1033,7 @@ namespace Calendar.NET
                         if (!_calendarDays.ContainsKey(counter))
                             _calendarDays.Add(counter, new Point(xStart, (int)(yStart + 2f + g.MeasureString(counter.ToString(CultureInfo.InvariantCulture), new Font("나눔고딕", 10, FontStyle.Regular)).Height)));
 
+                        
                         if (_calendarDate.Year == DateTime.Now.Year && _calendarDate.Month == DateTime.Now.Month
                          && counter == DateTime.Now.Day && _highlightCurrentDay)
                         {
