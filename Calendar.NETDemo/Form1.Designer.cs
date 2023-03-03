@@ -924,7 +924,7 @@
             this.TestRb.CheckColor = System.Drawing.Color.Thistle;
             this.TestRb.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.TestRb.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.TestRb.Location = new System.Drawing.Point(741, 11);
+            this.TestRb.Location = new System.Drawing.Point(734, 11);
             this.TestRb.MinimumSize = new System.Drawing.Size(0, 24);
             this.TestRb.Name = "TestRb";
             this.TestRb.Size = new System.Drawing.Size(71, 24);
@@ -941,7 +941,7 @@
             this.GumCheRb.CheckColor = System.Drawing.Color.Thistle;
             this.GumCheRb.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.GumCheRb.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.GumCheRb.Location = new System.Drawing.Point(664, 11);
+            this.GumCheRb.Location = new System.Drawing.Point(667, 11);
             this.GumCheRb.MinimumSize = new System.Drawing.Size(0, 24);
             this.GumCheRb.Name = "GumCheRb";
             this.GumCheRb.Size = new System.Drawing.Size(71, 24);
