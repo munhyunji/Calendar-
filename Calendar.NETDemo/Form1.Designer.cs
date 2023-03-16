@@ -80,6 +80,24 @@
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rashiRadioButton10 = new Calendar.NETDemo.RashiRadioButton();
+            this.rashiRadioButton11 = new Calendar.NETDemo.RashiRadioButton();
+            this.rashiRadioButton12 = new Calendar.NETDemo.RashiRadioButton();
+            this.rashiRadioButton13 = new Calendar.NETDemo.RashiRadioButton();
+            this.rashiRadioButton14 = new Calendar.NETDemo.RashiRadioButton();
+            this.rashiRadioButton15 = new Calendar.NETDemo.RashiRadioButton();
+            this.rashiRadioButton16 = new Calendar.NETDemo.RashiRadioButton();
+            this.rashiRadioButton17 = new Calendar.NETDemo.RashiRadioButton();
+            this.rashiRadioButton18 = new Calendar.NETDemo.RashiRadioButton();
+            this.rashiRadioButton9 = new Calendar.NETDemo.RashiRadioButton();
+            this.rashiRadioButton1 = new Calendar.NETDemo.RashiRadioButton();
+            this.rashiRadioButton8 = new Calendar.NETDemo.RashiRadioButton();
+            this.rashiRadioButton7 = new Calendar.NETDemo.RashiRadioButton();
+            this.rashiRadioButton6 = new Calendar.NETDemo.RashiRadioButton();
+            this.rashiRadioButton5 = new Calendar.NETDemo.RashiRadioButton();
+            this.rashiRadioButton4 = new Calendar.NETDemo.RashiRadioButton();
+            this.rashiRadioButton3 = new Calendar.NETDemo.RashiRadioButton();
+            this.rashiRadioButton2 = new Calendar.NETDemo.RashiRadioButton();
             this.gum_name = new CustomControls.RJControls.RJTextBox();
             this.AddEvent2 = new Calendar.NETDemo.RJButton();
             this.calendar1 = new Calendar.NET.Calendar();
@@ -248,7 +266,7 @@
             this.groupBox3.Controls.Add(this.dateTimePicker1);
             this.groupBox3.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
-            this.groupBox3.Location = new System.Drawing.Point(22, 136);
+            this.groupBox3.Location = new System.Drawing.Point(22, 222);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -337,7 +355,7 @@
             this.groupBox2.Controls.Add(this.Text_date);
             this.groupBox2.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(22, 225);
+            this.groupBox2.Location = new System.Drawing.Point(22, 315);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -832,6 +850,24 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.rashiRadioButton10);
+            this.groupBox1.Controls.Add(this.rashiRadioButton11);
+            this.groupBox1.Controls.Add(this.rashiRadioButton12);
+            this.groupBox1.Controls.Add(this.rashiRadioButton13);
+            this.groupBox1.Controls.Add(this.rashiRadioButton14);
+            this.groupBox1.Controls.Add(this.rashiRadioButton15);
+            this.groupBox1.Controls.Add(this.rashiRadioButton16);
+            this.groupBox1.Controls.Add(this.rashiRadioButton17);
+            this.groupBox1.Controls.Add(this.rashiRadioButton18);
+            this.groupBox1.Controls.Add(this.rashiRadioButton9);
+            this.groupBox1.Controls.Add(this.rashiRadioButton1);
+            this.groupBox1.Controls.Add(this.rashiRadioButton8);
+            this.groupBox1.Controls.Add(this.rashiRadioButton7);
+            this.groupBox1.Controls.Add(this.rashiRadioButton6);
+            this.groupBox1.Controls.Add(this.rashiRadioButton5);
+            this.groupBox1.Controls.Add(this.rashiRadioButton4);
+            this.groupBox1.Controls.Add(this.rashiRadioButton3);
+            this.groupBox1.Controls.Add(this.rashiRadioButton2);
             this.groupBox1.Controls.Add(this.gum_name);
             this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Controls.Add(this.AddEvent2);
@@ -841,10 +877,280 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(304, 119);
+            this.groupBox1.Size = new System.Drawing.Size(304, 201);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " 검체";
+            // 
+            // rashiRadioButton10
+            // 
+            this.rashiRadioButton10.AutoSize = true;
+            this.rashiRadioButton10.BackColor = System.Drawing.Color.Gold;
+            this.rashiRadioButton10.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.rashiRadioButton10.Location = new System.Drawing.Point(266, 114);
+            this.rashiRadioButton10.MinimumSize = new System.Drawing.Size(0, 20);
+            this.rashiRadioButton10.Name = "rashiRadioButton10";
+            this.rashiRadioButton10.Size = new System.Drawing.Size(30, 20);
+            this.rashiRadioButton10.TabIndex = 96;
+            this.rashiRadioButton10.TabStop = true;
+            this.rashiRadioButton10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rashiRadioButton10.UnCheckColor = System.Drawing.Color.Gold;
+            this.rashiRadioButton10.UseVisualStyleBackColor = false;
+            // 
+            // rashiRadioButton11
+            // 
+            this.rashiRadioButton11.AutoSize = true;
+            this.rashiRadioButton11.BackColor = System.Drawing.Color.LemonChiffon;
+            this.rashiRadioButton11.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.rashiRadioButton11.Location = new System.Drawing.Point(137, 88);
+            this.rashiRadioButton11.MinimumSize = new System.Drawing.Size(0, 20);
+            this.rashiRadioButton11.Name = "rashiRadioButton11";
+            this.rashiRadioButton11.Size = new System.Drawing.Size(30, 20);
+            this.rashiRadioButton11.TabIndex = 88;
+            this.rashiRadioButton11.TabStop = true;
+            this.rashiRadioButton11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rashiRadioButton11.UnCheckColor = System.Drawing.Color.LemonChiffon;
+            this.rashiRadioButton11.UseVisualStyleBackColor = false;
+            // 
+            // rashiRadioButton12
+            // 
+            this.rashiRadioButton12.AutoSize = true;
+            this.rashiRadioButton12.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.rashiRadioButton12.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.rashiRadioButton12.Location = new System.Drawing.Point(233, 114);
+            this.rashiRadioButton12.MinimumSize = new System.Drawing.Size(0, 20);
+            this.rashiRadioButton12.Name = "rashiRadioButton12";
+            this.rashiRadioButton12.Size = new System.Drawing.Size(30, 20);
+            this.rashiRadioButton12.TabIndex = 95;
+            this.rashiRadioButton12.TabStop = true;
+            this.rashiRadioButton12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rashiRadioButton12.UnCheckColor = System.Drawing.Color.LightSteelBlue;
+            this.rashiRadioButton12.UseVisualStyleBackColor = false;
+            // 
+            // rashiRadioButton13
+            // 
+            this.rashiRadioButton13.AutoSize = true;
+            this.rashiRadioButton13.BackColor = System.Drawing.Color.PaleGreen;
+            this.rashiRadioButton13.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.rashiRadioButton13.Location = new System.Drawing.Point(201, 114);
+            this.rashiRadioButton13.MinimumSize = new System.Drawing.Size(0, 20);
+            this.rashiRadioButton13.Name = "rashiRadioButton13";
+            this.rashiRadioButton13.Size = new System.Drawing.Size(30, 20);
+            this.rashiRadioButton13.TabIndex = 94;
+            this.rashiRadioButton13.TabStop = true;
+            this.rashiRadioButton13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rashiRadioButton13.UnCheckColor = System.Drawing.Color.PaleGreen;
+            this.rashiRadioButton13.UseVisualStyleBackColor = false;
+            // 
+            // rashiRadioButton14
+            // 
+            this.rashiRadioButton14.AutoSize = true;
+            this.rashiRadioButton14.BackColor = System.Drawing.Color.GreenYellow;
+            this.rashiRadioButton14.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.rashiRadioButton14.Location = new System.Drawing.Point(169, 114);
+            this.rashiRadioButton14.MinimumSize = new System.Drawing.Size(0, 20);
+            this.rashiRadioButton14.Name = "rashiRadioButton14";
+            this.rashiRadioButton14.Size = new System.Drawing.Size(30, 20);
+            this.rashiRadioButton14.TabIndex = 93;
+            this.rashiRadioButton14.TabStop = true;
+            this.rashiRadioButton14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rashiRadioButton14.UnCheckColor = System.Drawing.Color.GreenYellow;
+            this.rashiRadioButton14.UseVisualStyleBackColor = false;
+            // 
+            // rashiRadioButton15
+            // 
+            this.rashiRadioButton15.AutoSize = true;
+            this.rashiRadioButton15.BackColor = System.Drawing.Color.OliveDrab;
+            this.rashiRadioButton15.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.rashiRadioButton15.Location = new System.Drawing.Point(137, 114);
+            this.rashiRadioButton15.MinimumSize = new System.Drawing.Size(0, 20);
+            this.rashiRadioButton15.Name = "rashiRadioButton15";
+            this.rashiRadioButton15.Size = new System.Drawing.Size(30, 20);
+            this.rashiRadioButton15.TabIndex = 92;
+            this.rashiRadioButton15.TabStop = true;
+            this.rashiRadioButton15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rashiRadioButton15.UnCheckColor = System.Drawing.Color.OliveDrab;
+            this.rashiRadioButton15.UseVisualStyleBackColor = false;
+            // 
+            // rashiRadioButton16
+            // 
+            this.rashiRadioButton16.AutoSize = true;
+            this.rashiRadioButton16.BackColor = System.Drawing.Color.CadetBlue;
+            this.rashiRadioButton16.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.rashiRadioButton16.Location = new System.Drawing.Point(105, 114);
+            this.rashiRadioButton16.MinimumSize = new System.Drawing.Size(0, 20);
+            this.rashiRadioButton16.Name = "rashiRadioButton16";
+            this.rashiRadioButton16.Size = new System.Drawing.Size(30, 20);
+            this.rashiRadioButton16.TabIndex = 91;
+            this.rashiRadioButton16.TabStop = true;
+            this.rashiRadioButton16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rashiRadioButton16.UnCheckColor = System.Drawing.Color.CadetBlue;
+            this.rashiRadioButton16.UseVisualStyleBackColor = false;
+            // 
+            // rashiRadioButton17
+            // 
+            this.rashiRadioButton17.AutoSize = true;
+            this.rashiRadioButton17.BackColor = System.Drawing.Color.LightSlateGray;
+            this.rashiRadioButton17.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.rashiRadioButton17.Location = new System.Drawing.Point(74, 114);
+            this.rashiRadioButton17.MinimumSize = new System.Drawing.Size(0, 20);
+            this.rashiRadioButton17.Name = "rashiRadioButton17";
+            this.rashiRadioButton17.Size = new System.Drawing.Size(30, 20);
+            this.rashiRadioButton17.TabIndex = 90;
+            this.rashiRadioButton17.TabStop = true;
+            this.rashiRadioButton17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rashiRadioButton17.UnCheckColor = System.Drawing.Color.LightSlateGray;
+            this.rashiRadioButton17.UseVisualStyleBackColor = false;
+            // 
+            // rashiRadioButton18
+            // 
+            this.rashiRadioButton18.AutoSize = true;
+            this.rashiRadioButton18.BackColor = System.Drawing.Color.Thistle;
+            this.rashiRadioButton18.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.rashiRadioButton18.Location = new System.Drawing.Point(43, 114);
+            this.rashiRadioButton18.MinimumSize = new System.Drawing.Size(0, 20);
+            this.rashiRadioButton18.Name = "rashiRadioButton18";
+            this.rashiRadioButton18.Size = new System.Drawing.Size(30, 20);
+            this.rashiRadioButton18.TabIndex = 89;
+            this.rashiRadioButton18.TabStop = true;
+            this.rashiRadioButton18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rashiRadioButton18.UnCheckColor = System.Drawing.Color.Thistle;
+            this.rashiRadioButton18.UseVisualStyleBackColor = false;
+            // 
+            // rashiRadioButton9
+            // 
+            this.rashiRadioButton9.AutoSize = true;
+            this.rashiRadioButton9.BackColor = System.Drawing.Color.Turquoise;
+            this.rashiRadioButton9.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.rashiRadioButton9.Location = new System.Drawing.Point(266, 88);
+            this.rashiRadioButton9.MinimumSize = new System.Drawing.Size(0, 20);
+            this.rashiRadioButton9.Name = "rashiRadioButton9";
+            this.rashiRadioButton9.Size = new System.Drawing.Size(30, 20);
+            this.rashiRadioButton9.TabIndex = 87;
+            this.rashiRadioButton9.TabStop = true;
+            this.rashiRadioButton9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rashiRadioButton9.UnCheckColor = System.Drawing.Color.Turquoise;
+            this.rashiRadioButton9.UseVisualStyleBackColor = false;
+            // 
+            // rashiRadioButton1
+            // 
+            this.rashiRadioButton1.AutoSize = true;
+            this.rashiRadioButton1.BackColor = System.Drawing.Color.PeachPuff;
+            this.rashiRadioButton1.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.rashiRadioButton1.Location = new System.Drawing.Point(12, 88);
+            this.rashiRadioButton1.MinimumSize = new System.Drawing.Size(0, 20);
+            this.rashiRadioButton1.Name = "rashiRadioButton1";
+            this.rashiRadioButton1.Size = new System.Drawing.Size(30, 20);
+            this.rashiRadioButton1.TabIndex = 79;
+            this.rashiRadioButton1.TabStop = true;
+            this.rashiRadioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rashiRadioButton1.UnCheckColor = System.Drawing.Color.PeachPuff;
+            this.rashiRadioButton1.UseVisualStyleBackColor = false;
+            // 
+            // rashiRadioButton8
+            // 
+            this.rashiRadioButton8.AutoSize = true;
+            this.rashiRadioButton8.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.rashiRadioButton8.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.rashiRadioButton8.Location = new System.Drawing.Point(233, 88);
+            this.rashiRadioButton8.MinimumSize = new System.Drawing.Size(0, 20);
+            this.rashiRadioButton8.Name = "rashiRadioButton8";
+            this.rashiRadioButton8.Size = new System.Drawing.Size(30, 20);
+            this.rashiRadioButton8.TabIndex = 86;
+            this.rashiRadioButton8.TabStop = true;
+            this.rashiRadioButton8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rashiRadioButton8.UnCheckColor = System.Drawing.Color.PaleTurquoise;
+            this.rashiRadioButton8.UseVisualStyleBackColor = false;
+            // 
+            // rashiRadioButton7
+            // 
+            this.rashiRadioButton7.AutoSize = true;
+            this.rashiRadioButton7.BackColor = System.Drawing.Color.Azure;
+            this.rashiRadioButton7.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.rashiRadioButton7.Location = new System.Drawing.Point(201, 88);
+            this.rashiRadioButton7.MinimumSize = new System.Drawing.Size(0, 20);
+            this.rashiRadioButton7.Name = "rashiRadioButton7";
+            this.rashiRadioButton7.Size = new System.Drawing.Size(30, 20);
+            this.rashiRadioButton7.TabIndex = 85;
+            this.rashiRadioButton7.TabStop = true;
+            this.rashiRadioButton7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rashiRadioButton7.UnCheckColor = System.Drawing.Color.Azure;
+            this.rashiRadioButton7.UseVisualStyleBackColor = false;
+            // 
+            // rashiRadioButton6
+            // 
+            this.rashiRadioButton6.AutoSize = true;
+            this.rashiRadioButton6.BackColor = System.Drawing.Color.RosyBrown;
+            this.rashiRadioButton6.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.rashiRadioButton6.Location = new System.Drawing.Point(12, 114);
+            this.rashiRadioButton6.MinimumSize = new System.Drawing.Size(0, 20);
+            this.rashiRadioButton6.Name = "rashiRadioButton6";
+            this.rashiRadioButton6.Size = new System.Drawing.Size(30, 20);
+            this.rashiRadioButton6.TabIndex = 84;
+            this.rashiRadioButton6.TabStop = true;
+            this.rashiRadioButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rashiRadioButton6.UnCheckColor = System.Drawing.Color.RosyBrown;
+            this.rashiRadioButton6.UseVisualStyleBackColor = false;
+            // 
+            // rashiRadioButton5
+            // 
+            this.rashiRadioButton5.AutoSize = true;
+            this.rashiRadioButton5.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.rashiRadioButton5.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.rashiRadioButton5.Location = new System.Drawing.Point(105, 88);
+            this.rashiRadioButton5.MinimumSize = new System.Drawing.Size(0, 20);
+            this.rashiRadioButton5.Name = "rashiRadioButton5";
+            this.rashiRadioButton5.Size = new System.Drawing.Size(30, 20);
+            this.rashiRadioButton5.TabIndex = 83;
+            this.rashiRadioButton5.TabStop = true;
+            this.rashiRadioButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rashiRadioButton5.UnCheckColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.rashiRadioButton5.UseVisualStyleBackColor = false;
+            // 
+            // rashiRadioButton4
+            // 
+            this.rashiRadioButton4.AutoSize = true;
+            this.rashiRadioButton4.BackColor = System.Drawing.Color.Khaki;
+            this.rashiRadioButton4.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.rashiRadioButton4.Location = new System.Drawing.Point(169, 88);
+            this.rashiRadioButton4.MinimumSize = new System.Drawing.Size(0, 20);
+            this.rashiRadioButton4.Name = "rashiRadioButton4";
+            this.rashiRadioButton4.Size = new System.Drawing.Size(30, 20);
+            this.rashiRadioButton4.TabIndex = 82;
+            this.rashiRadioButton4.TabStop = true;
+            this.rashiRadioButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rashiRadioButton4.UnCheckColor = System.Drawing.Color.Khaki;
+            this.rashiRadioButton4.UseVisualStyleBackColor = false;
+            // 
+            // rashiRadioButton3
+            // 
+            this.rashiRadioButton3.AutoSize = true;
+            this.rashiRadioButton3.BackColor = System.Drawing.Color.LightSalmon;
+            this.rashiRadioButton3.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.rashiRadioButton3.Location = new System.Drawing.Point(74, 88);
+            this.rashiRadioButton3.MinimumSize = new System.Drawing.Size(0, 20);
+            this.rashiRadioButton3.Name = "rashiRadioButton3";
+            this.rashiRadioButton3.Size = new System.Drawing.Size(30, 20);
+            this.rashiRadioButton3.TabIndex = 81;
+            this.rashiRadioButton3.TabStop = true;
+            this.rashiRadioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rashiRadioButton3.UnCheckColor = System.Drawing.Color.LightSalmon;
+            this.rashiRadioButton3.UseVisualStyleBackColor = false;
+            // 
+            // rashiRadioButton2
+            // 
+            this.rashiRadioButton2.AutoSize = true;
+            this.rashiRadioButton2.BackColor = System.Drawing.Color.LightCoral;
+            this.rashiRadioButton2.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.rashiRadioButton2.Location = new System.Drawing.Point(43, 88);
+            this.rashiRadioButton2.MinimumSize = new System.Drawing.Size(0, 20);
+            this.rashiRadioButton2.Name = "rashiRadioButton2";
+            this.rashiRadioButton2.Size = new System.Drawing.Size(30, 20);
+            this.rashiRadioButton2.TabIndex = 80;
+            this.rashiRadioButton2.TabStop = true;
+            this.rashiRadioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rashiRadioButton2.UnCheckColor = System.Drawing.Color.LightCoral;
+            this.rashiRadioButton2.UseVisualStyleBackColor = false;
             // 
             // gum_name
             // 
@@ -878,7 +1184,7 @@
             this.AddEvent2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddEvent2.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.AddEvent2.ForeColor = System.Drawing.Color.White;
-            this.AddEvent2.Location = new System.Drawing.Point(98, 72);
+            this.AddEvent2.Location = new System.Drawing.Point(98, 151);
             this.AddEvent2.Name = "AddEvent2";
             this.AddEvent2.Size = new System.Drawing.Size(98, 38);
             this.AddEvent2.TabIndex = 78;
@@ -1017,6 +1323,7 @@
             this.groupBox2.PerformLayout();
             this.contextMenuStrip2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1081,6 +1388,24 @@
         private RJButton RefreshBtn;
         private RashiRadioButton GumCheRb;
         private RashiRadioButton TestRb;
+        private RashiRadioButton rashiRadioButton4;
+        private RashiRadioButton rashiRadioButton3;
+        private RashiRadioButton rashiRadioButton2;
+        private RashiRadioButton rashiRadioButton1;
+        private RashiRadioButton rashiRadioButton8;
+        private RashiRadioButton rashiRadioButton7;
+        private RashiRadioButton rashiRadioButton6;
+        private RashiRadioButton rashiRadioButton5;
+        private RashiRadioButton rashiRadioButton9;
+        private RashiRadioButton rashiRadioButton10;
+        private RashiRadioButton rashiRadioButton11;
+        private RashiRadioButton rashiRadioButton12;
+        private RashiRadioButton rashiRadioButton13;
+        private RashiRadioButton rashiRadioButton14;
+        private RashiRadioButton rashiRadioButton15;
+        private RashiRadioButton rashiRadioButton16;
+        private RashiRadioButton rashiRadioButton17;
+        private RashiRadioButton rashiRadioButton18;
     }
 }
 
