@@ -52,15 +52,19 @@ namespace Calendar.NETDemo
                 DateTime dt = dateTimePicker1.Value;
                 //DateTime dt_time = dateTimePicker2.Value;
 
-                Color user_color = colorDialog2.Color;
+                /*Color user_color = colorDialog2.Color;
 
                 if (user_color == Color.Black)
                 {
                     user_color = Color.Transparent;
-                }
-                String user_color_string = user_color.ToString();
+                }*/
 
-
+                
+                Control color = Controls.Find("color" + 1, true)[0];
+                MessageBox.Show(color.BackColor.ToString());
+               
+                
+                
                 String datetime = dt.ToString("yyyy-MM-dd");
                 //String datetime_time = dt_time.ToString("HH:mm:ss");
                 // String total_datetime = datetime + " " + datetime_time;
@@ -71,7 +75,7 @@ namespace Calendar.NETDemo
                 {
                     Date = DateTime.Parse(total_datetime),
                     EventText = GumCheName,
-                    EventColor = user_color,
+                    EventColor = Color.Red,
                     EventLengthInHours = 2f,
                     RecurringFrequency = RecurringFrequencies.None,
                     EventFont = new Font("나눔고딕", 8, FontStyle.Regular),
@@ -81,25 +85,9 @@ namespace Calendar.NETDemo
 
                 calendar1.AddEvent(Specimen);
 
-                int IsSuccess = XML_save(GumCheName, null, total_datetime, user_color_string, null, null, null, "GumChe");
+                //int IsSuccess = XML_save(GumCheName, null, total_datetime, user_color_string, null, null, null, "GumChe");
 
-
-                //XML저장이 성공했을시에만...!! 
-                /* if (IsSuccess == 0 )
-                     {
-                     if (File.Exists(XmlFileName))
-                     {
-                         XmlDocument xmlDoc = new XmlDocument();
-                         xmlDoc.Load(XmlFileName);
-
-                         //xml 속성가져오기
-                         XmlNodeList node = xmlDoc.SelectNodes("Root/GumChe");
-
-
-                         comboBox1.Items.Add("("+total_datetime+") "+ GumCheName);
-                     }
-
-                 }*/
+                
 
                 gum_name.Texts = "";
                 dateTimePicker1.Checked = false;
@@ -582,6 +570,14 @@ namespace Calendar.NETDemo
             calendar1.RemoveAllEvent();
             Form1_Load("Root");
            
+        }
+
+        private void checkeditem(object sender, EventArgs e)
+        {
+            String z = sender.Name;
+
+            MessageBox.Show(z);
+            
         }
 
         /// <summary>
