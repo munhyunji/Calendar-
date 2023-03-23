@@ -46,12 +46,32 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new Calendar.NETDemo.RashiDateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.test_days = new Calendar.NETDemo.MyListBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox14 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox13 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox12 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox11 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox10 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox9 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox8 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox7 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox6 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox5 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox4 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox3 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox2 = new CustomControls.RJControls.RJTextBox();
+            this.gum_amt = new CustomControls.RJControls.RJTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.testTitle = new CustomControls.RJControls.RJTextBox();
+            this.Test_add = new Calendar.NETDemo.RJButton();
+            this.Uncheck = new Calendar.NETDemo.RJButton();
             this.label19 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -60,12 +80,6 @@
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.calendar1 = new Calendar.NET.Calendar();
-            this.TestRb = new Calendar.NETDemo.RashiRadioButton();
-            this.GumCheRb = new Calendar.NETDemo.RashiRadioButton();
-            this.RefreshBtn = new Calendar.NETDemo.RJButton();
-            this.rjButton1 = new Calendar.NETDemo.RJButton();
-            this.dateTimePicker1 = new Calendar.NETDemo.RashiDateTimePicker();
             this.color18 = new Calendar.NETDemo.RashiRadioButton();
             this.color5 = new Calendar.NETDemo.RashiRadioButton();
             this.color17 = new Calendar.NETDemo.RashiRadioButton();
@@ -86,25 +100,11 @@
             this.color2 = new Calendar.NETDemo.RashiRadioButton();
             this.gum_name = new CustomControls.RJControls.RJTextBox();
             this.AddEvent2 = new Calendar.NETDemo.RJButton();
-            this.test_days = new Calendar.NETDemo.MyListBox();
-            this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox14 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox13 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox12 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox11 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox10 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox9 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox8 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox7 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox6 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox5 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox4 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox3 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox2 = new CustomControls.RJControls.RJTextBox();
-            this.gum_amt = new CustomControls.RJControls.RJTextBox();
-            this.testTitle = new CustomControls.RJControls.RJTextBox();
-            this.Test_add = new Calendar.NETDemo.RJButton();
-            this.Uncheck = new Calendar.NETDemo.RJButton();
+            this.calendar1 = new Calendar.NET.Calendar();
+            this.TestRb = new Calendar.NETDemo.RashiRadioButton();
+            this.GumCheRb = new Calendar.NETDemo.RashiRadioButton();
+            this.RefreshBtn = new Calendar.NETDemo.RJButton();
+            this.rjButton1 = new Calendar.NETDemo.RJButton();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
@@ -275,6 +275,22 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "인수일시";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.BorderColor = System.Drawing.Color.Gray;
+            this.dateTimePicker1.BorderSize = 0;
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.InactiveCaptionText;
+            this.dateTimePicker1.FillColor = System.Drawing.Color.Thistle;
+            this.dateTimePicker1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(6, 33);
+            this.dateTimePicker1.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.ShowCheckBox = true;
+            this.dateTimePicker1.Size = new System.Drawing.Size(292, 35);
+            this.dateTimePicker1.TabIndex = 77;
+            this.dateTimePicker1.TextColor = System.Drawing.Color.White;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -348,6 +364,33 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "시험";
             // 
+            // test_days
+            // 
+            this.test_days.BackColor = System.Drawing.SystemColors.Window;
+            this.test_days.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.test_days.CheckOnClick = true;
+            this.test_days.ForeColor = System.Drawing.SystemColors.Window;
+            this.test_days.FormattingEnabled = true;
+            this.test_days.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14"});
+            this.test_days.Location = new System.Drawing.Point(98, 190);
+            this.test_days.Name = "test_days";
+            this.test_days.Size = new System.Drawing.Size(17, 414);
+            this.test_days.TabIndex = 78;
+            // 
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.Thistle;
@@ -383,563 +426,6 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(239, 28);
             this.comboBox2.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(10, 113);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 17);
-            this.label1.TabIndex = 81;
-            this.label1.Text = "검체량";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label19.Location = new System.Drawing.Point(11, 31);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(50, 17);
-            this.label19.TabIndex = 77;
-            this.label19.Text = "검체명";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // contextMenuStrip2
-            // 
-            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ddToolStripMenuItem,
-            this.ddToolStripMenuItem1});
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(97, 52);
-            // 
-            // ddToolStripMenuItem
-            // 
-            this.ddToolStripMenuItem.Name = "ddToolStripMenuItem";
-            this.ddToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
-            this.ddToolStripMenuItem.Text = "dd";
-            // 
-            // ddToolStripMenuItem1
-            // 
-            this.ddToolStripMenuItem1.Name = "ddToolStripMenuItem1";
-            this.ddToolStripMenuItem1.Size = new System.Drawing.Size(96, 24);
-            this.ddToolStripMenuItem1.Text = "dd";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(242, 32);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(49, 36);
-            this.panel2.TabIndex = 1;
-            this.panel2.Click += new System.EventHandler(this.panel2_DoubleClick);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.color18);
-            this.groupBox1.Controls.Add(this.color5);
-            this.groupBox1.Controls.Add(this.color17);
-            this.groupBox1.Controls.Add(this.color16);
-            this.groupBox1.Controls.Add(this.color15);
-            this.groupBox1.Controls.Add(this.color14);
-            this.groupBox1.Controls.Add(this.color13);
-            this.groupBox1.Controls.Add(this.color12);
-            this.groupBox1.Controls.Add(this.color11);
-            this.groupBox1.Controls.Add(this.color9);
-            this.groupBox1.Controls.Add(this.color1);
-            this.groupBox1.Controls.Add(this.color3);
-            this.groupBox1.Controls.Add(this.color8);
-            this.groupBox1.Controls.Add(this.color7);
-            this.groupBox1.Controls.Add(this.color10);
-            this.groupBox1.Controls.Add(this.color4);
-            this.groupBox1.Controls.Add(this.color6);
-            this.groupBox1.Controls.Add(this.color2);
-            this.groupBox1.Controls.Add(this.gum_name);
-            this.groupBox1.Controls.Add(this.panel2);
-            this.groupBox1.Controls.Add(this.AddEvent2);
-            this.groupBox1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(22, 13);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(304, 201);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = " 검체";
-            // 
-            // calendar1
-            // 
-            this.calendar1.AllowEditingEvents = false;
-            this.calendar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.calendar1.BackColor = System.Drawing.Color.Transparent;
-            this.calendar1.CalendarDate = new System.DateTime(2012, 4, 24, 13, 16, 0, 0);
-            this.calendar1.CalendarView = Calendar.NET.CalendarViews.Month;
-            this.calendar1.DateHeaderFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.calendar1.DayOfWeekFont = new System.Drawing.Font("Arial", 10F);
-            this.calendar1.DaysFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calendar1.DayViewTimeFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.calendar1.DimDisabledEvents = true;
-            this.calendar1.Event = null;
-            this.calendar1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.calendar1.HighlightCurrentDay = true;
-            this.calendar1.LoadPresetHolidays = true;
-            this.calendar1.Location = new System.Drawing.Point(331, -19);
-            this.calendar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.calendar1.Name = "calendar1";
-            this.calendar1.ShowArrowControls = true;
-            this.calendar1.ShowDashedBorderOnDisabledEvents = true;
-            this.calendar1.ShowDateInHeader = true;
-            this.calendar1.ShowDisabledEvents = false;
-            this.calendar1.ShowEventTooltips = true;
-            this.calendar1.ShowTodayButton = true;
-            this.calendar1.Size = new System.Drawing.Size(1204, 964);
-            this.calendar1.TabIndex = 0;
-            this.calendar1.TodayFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            // 
-            // TestRb
-            // 
-            this.TestRb.AutoSize = true;
-            this.TestRb.CheckColor = System.Drawing.Color.Thistle;
-            this.TestRb.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.TestRb.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.TestRb.Location = new System.Drawing.Point(734, 11);
-            this.TestRb.MinimumSize = new System.Drawing.Size(0, 24);
-            this.TestRb.Name = "TestRb";
-            this.TestRb.Size = new System.Drawing.Size(71, 24);
-            this.TestRb.TabIndex = 81;
-            this.TestRb.TabStop = true;
-            this.TestRb.Text = "시험";
-            this.TestRb.UnCheckColor = System.Drawing.Color.Lavender;
-            this.TestRb.UseVisualStyleBackColor = true;
-            this.TestRb.Click += new System.EventHandler(this.TestRb_Click);
-            // 
-            // GumCheRb
-            // 
-            this.GumCheRb.AutoSize = true;
-            this.GumCheRb.CheckColor = System.Drawing.Color.Thistle;
-            this.GumCheRb.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.GumCheRb.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.GumCheRb.Location = new System.Drawing.Point(667, 11);
-            this.GumCheRb.MinimumSize = new System.Drawing.Size(0, 24);
-            this.GumCheRb.Name = "GumCheRb";
-            this.GumCheRb.Size = new System.Drawing.Size(71, 24);
-            this.GumCheRb.TabIndex = 80;
-            this.GumCheRb.TabStop = true;
-            this.GumCheRb.Text = "검체";
-            this.GumCheRb.UnCheckColor = System.Drawing.Color.Lavender;
-            this.GumCheRb.UseVisualStyleBackColor = true;
-            this.GumCheRb.Click += new System.EventHandler(this.GumCheRb_Click);
-            // 
-            // RefreshBtn
-            // 
-            this.RefreshBtn.BackColor = System.Drawing.Color.Thistle;
-            this.RefreshBtn.BackgroundColor = System.Drawing.Color.Thistle;
-            this.RefreshBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.RefreshBtn.BorderRadius = 7;
-            this.RefreshBtn.BorderSize = 0;
-            this.RefreshBtn.FlatAppearance.BorderSize = 0;
-            this.RefreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RefreshBtn.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.RefreshBtn.ForeColor = System.Drawing.Color.White;
-            this.RefreshBtn.Location = new System.Drawing.Point(517, 7);
-            this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.Size = new System.Drawing.Size(139, 30);
-            this.RefreshBtn.TabIndex = 79;
-            this.RefreshBtn.Text = "새로고침";
-            this.RefreshBtn.TextColor = System.Drawing.Color.White;
-            this.RefreshBtn.UseVisualStyleBackColor = false;
-            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
-            // 
-            // rjButton1
-            // 
-            this.rjButton1.BackColor = System.Drawing.Color.LightPink;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.LightPink;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 7;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(518, 7);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(139, 30);
-            this.rjButton1.TabIndex = 78;
-            this.rjButton1.Text = "껐다 키기..";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            this.rjButton1.Visible = false;
-            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.BorderColor = System.Drawing.Color.Gray;
-            this.dateTimePicker1.BorderSize = 0;
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.InactiveCaptionText;
-            this.dateTimePicker1.FillColor = System.Drawing.Color.Thistle;
-            this.dateTimePicker1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(6, 33);
-            this.dateTimePicker1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.ShowCheckBox = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(292, 35);
-            this.dateTimePicker1.TabIndex = 77;
-            this.dateTimePicker1.TextColor = System.Drawing.Color.White;
-            // 
-            // color18
-            // 
-            this.color18.AutoSize = true;
-            this.color18.BackColor = System.Drawing.Color.Gold;
-            this.color18.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color18.Location = new System.Drawing.Point(266, 114);
-            this.color18.MinimumSize = new System.Drawing.Size(0, 20);
-            this.color18.Name = "color18";
-            this.color18.Size = new System.Drawing.Size(30, 20);
-            this.color18.TabIndex = 96;
-            this.color18.TabStop = true;
-            this.color18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.color18.UnCheckColor = System.Drawing.Color.Gold;
-            this.color18.UseVisualStyleBackColor = false;
-            // 
-            // color5
-            // 
-            this.color5.AutoSize = true;
-            this.color5.BackColor = System.Drawing.Color.Silver;
-            this.color5.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color5.Location = new System.Drawing.Point(137, 88);
-            this.color5.MinimumSize = new System.Drawing.Size(0, 20);
-            this.color5.Name = "color5";
-            this.color5.Size = new System.Drawing.Size(30, 20);
-            this.color5.TabIndex = 88;
-            this.color5.TabStop = true;
-            this.color5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.color5.UnCheckColor = System.Drawing.Color.Silver;
-            this.color5.UseVisualStyleBackColor = false;
-            // 
-            // color17
-            // 
-            this.color17.AutoSize = true;
-            this.color17.BackColor = System.Drawing.Color.Tan;
-            this.color17.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color17.Location = new System.Drawing.Point(233, 114);
-            this.color17.MinimumSize = new System.Drawing.Size(0, 20);
-            this.color17.Name = "color17";
-            this.color17.Size = new System.Drawing.Size(30, 20);
-            this.color17.TabIndex = 95;
-            this.color17.TabStop = true;
-            this.color17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.color17.UnCheckColor = System.Drawing.Color.Tan;
-            this.color17.UseVisualStyleBackColor = false;
-            // 
-            // color16
-            // 
-            this.color16.AutoSize = true;
-            this.color16.BackColor = System.Drawing.Color.PaleGreen;
-            this.color16.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color16.Location = new System.Drawing.Point(201, 114);
-            this.color16.MinimumSize = new System.Drawing.Size(0, 20);
-            this.color16.Name = "color16";
-            this.color16.Size = new System.Drawing.Size(30, 20);
-            this.color16.TabIndex = 94;
-            this.color16.TabStop = true;
-            this.color16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.color16.UnCheckColor = System.Drawing.Color.PaleGreen;
-            this.color16.UseVisualStyleBackColor = false;
-            // 
-            // color15
-            // 
-            this.color15.AutoSize = true;
-            this.color15.BackColor = System.Drawing.Color.GreenYellow;
-            this.color15.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color15.Location = new System.Drawing.Point(169, 114);
-            this.color15.MinimumSize = new System.Drawing.Size(0, 20);
-            this.color15.Name = "color15";
-            this.color15.Size = new System.Drawing.Size(30, 20);
-            this.color15.TabIndex = 93;
-            this.color15.TabStop = true;
-            this.color15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.color15.UnCheckColor = System.Drawing.Color.GreenYellow;
-            this.color15.UseVisualStyleBackColor = false;
-            // 
-            // color14
-            // 
-            this.color14.AutoSize = true;
-            this.color14.BackColor = System.Drawing.Color.OliveDrab;
-            this.color14.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color14.Location = new System.Drawing.Point(137, 114);
-            this.color14.MinimumSize = new System.Drawing.Size(0, 20);
-            this.color14.Name = "color14";
-            this.color14.Size = new System.Drawing.Size(30, 20);
-            this.color14.TabIndex = 92;
-            this.color14.TabStop = true;
-            this.color14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.color14.UnCheckColor = System.Drawing.Color.OliveDrab;
-            this.color14.UseVisualStyleBackColor = false;
-            // 
-            // color13
-            // 
-            this.color13.AutoSize = true;
-            this.color13.BackColor = System.Drawing.Color.CadetBlue;
-            this.color13.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color13.Location = new System.Drawing.Point(105, 114);
-            this.color13.MinimumSize = new System.Drawing.Size(0, 20);
-            this.color13.Name = "color13";
-            this.color13.Size = new System.Drawing.Size(30, 20);
-            this.color13.TabIndex = 91;
-            this.color13.TabStop = true;
-            this.color13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.color13.UnCheckColor = System.Drawing.Color.CadetBlue;
-            this.color13.UseVisualStyleBackColor = false;
-            // 
-            // color12
-            // 
-            this.color12.AutoSize = true;
-            this.color12.BackColor = System.Drawing.Color.LightSlateGray;
-            this.color12.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color12.Location = new System.Drawing.Point(74, 114);
-            this.color12.MinimumSize = new System.Drawing.Size(0, 20);
-            this.color12.Name = "color12";
-            this.color12.Size = new System.Drawing.Size(30, 20);
-            this.color12.TabIndex = 90;
-            this.color12.TabStop = true;
-            this.color12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.color12.UnCheckColor = System.Drawing.Color.LightSlateGray;
-            this.color12.UseVisualStyleBackColor = false;
-            // 
-            // color11
-            // 
-            this.color11.AutoSize = true;
-            this.color11.BackColor = System.Drawing.Color.Thistle;
-            this.color11.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color11.Location = new System.Drawing.Point(43, 114);
-            this.color11.MinimumSize = new System.Drawing.Size(0, 20);
-            this.color11.Name = "color11";
-            this.color11.Size = new System.Drawing.Size(30, 20);
-            this.color11.TabIndex = 89;
-            this.color11.TabStop = true;
-            this.color11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.color11.UnCheckColor = System.Drawing.Color.Thistle;
-            this.color11.UseVisualStyleBackColor = false;
-            // 
-            // color9
-            // 
-            this.color9.AutoSize = true;
-            this.color9.BackColor = System.Drawing.Color.Turquoise;
-            this.color9.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color9.Location = new System.Drawing.Point(266, 88);
-            this.color9.MinimumSize = new System.Drawing.Size(0, 20);
-            this.color9.Name = "color9";
-            this.color9.Size = new System.Drawing.Size(30, 20);
-            this.color9.TabIndex = 87;
-            this.color9.TabStop = true;
-            this.color9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.color9.UnCheckColor = System.Drawing.Color.Turquoise;
-            this.color9.UseVisualStyleBackColor = false;
-            // 
-            // color1
-            // 
-            this.color1.AutoSize = true;
-            this.color1.BackColor = System.Drawing.Color.LightCoral;
-            this.color1.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color1.Location = new System.Drawing.Point(11, 88);
-            this.color1.MinimumSize = new System.Drawing.Size(0, 20);
-            this.color1.Name = "color1";
-            this.color1.Size = new System.Drawing.Size(30, 20);
-            this.color1.TabIndex = 80;
-            this.color1.TabStop = true;
-            this.color1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.color1.UnCheckColor = System.Drawing.Color.LightCoral;
-            this.color1.UseVisualStyleBackColor = false;
-            this.color1.Click += new System.EventHandler(this.checkeditem);
-            // 
-            // color3
-            // 
-            this.color3.AutoSize = true;
-            this.color3.BackColor = System.Drawing.Color.PeachPuff;
-            this.color3.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color3.Location = new System.Drawing.Point(75, 88);
-            this.color3.MinimumSize = new System.Drawing.Size(0, 20);
-            this.color3.Name = "color3";
-            this.color3.Size = new System.Drawing.Size(30, 20);
-            this.color3.TabIndex = 79;
-            this.color3.TabStop = true;
-            this.color3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.color3.UnCheckColor = System.Drawing.Color.PeachPuff;
-            this.color3.UseVisualStyleBackColor = false;
-            this.color3.Click += new System.EventHandler(this.checkeditem);
-            // 
-            // color8
-            // 
-            this.color8.AutoSize = true;
-            this.color8.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.color8.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color8.Location = new System.Drawing.Point(233, 88);
-            this.color8.MinimumSize = new System.Drawing.Size(0, 20);
-            this.color8.Name = "color8";
-            this.color8.Size = new System.Drawing.Size(30, 20);
-            this.color8.TabIndex = 86;
-            this.color8.TabStop = true;
-            this.color8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.color8.UnCheckColor = System.Drawing.Color.PaleTurquoise;
-            this.color8.UseVisualStyleBackColor = false;
-            // 
-            // color7
-            // 
-            this.color7.AutoSize = true;
-            this.color7.BackColor = System.Drawing.Color.Azure;
-            this.color7.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color7.Location = new System.Drawing.Point(203, 88);
-            this.color7.MinimumSize = new System.Drawing.Size(0, 20);
-            this.color7.Name = "color7";
-            this.color7.Size = new System.Drawing.Size(30, 20);
-            this.color7.TabIndex = 85;
-            this.color7.TabStop = true;
-            this.color7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.color7.UnCheckColor = System.Drawing.Color.Azure;
-            this.color7.UseVisualStyleBackColor = false;
-            // 
-            // color10
-            // 
-            this.color10.AutoSize = true;
-            this.color10.BackColor = System.Drawing.Color.RosyBrown;
-            this.color10.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color10.Location = new System.Drawing.Point(12, 114);
-            this.color10.MinimumSize = new System.Drawing.Size(0, 20);
-            this.color10.Name = "color10";
-            this.color10.Size = new System.Drawing.Size(30, 20);
-            this.color10.TabIndex = 84;
-            this.color10.TabStop = true;
-            this.color10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.color10.UnCheckColor = System.Drawing.Color.RosyBrown;
-            this.color10.UseVisualStyleBackColor = false;
-            // 
-            // color4
-            // 
-            this.color4.AutoSize = true;
-            this.color4.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.color4.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color4.Location = new System.Drawing.Point(105, 88);
-            this.color4.MinimumSize = new System.Drawing.Size(0, 20);
-            this.color4.Name = "color4";
-            this.color4.Size = new System.Drawing.Size(30, 20);
-            this.color4.TabIndex = 83;
-            this.color4.TabStop = true;
-            this.color4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.color4.UnCheckColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.color4.UseVisualStyleBackColor = false;
-            // 
-            // color6
-            // 
-            this.color6.AutoSize = true;
-            this.color6.BackColor = System.Drawing.Color.Khaki;
-            this.color6.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color6.Location = new System.Drawing.Point(169, 88);
-            this.color6.MinimumSize = new System.Drawing.Size(0, 20);
-            this.color6.Name = "color6";
-            this.color6.Size = new System.Drawing.Size(30, 20);
-            this.color6.TabIndex = 82;
-            this.color6.TabStop = true;
-            this.color6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.color6.UnCheckColor = System.Drawing.Color.Khaki;
-            this.color6.UseVisualStyleBackColor = false;
-            // 
-            // color2
-            // 
-            this.color2.AutoSize = true;
-            this.color2.BackColor = System.Drawing.Color.LightSalmon;
-            this.color2.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color2.Location = new System.Drawing.Point(43, 88);
-            this.color2.MinimumSize = new System.Drawing.Size(0, 20);
-            this.color2.Name = "color2";
-            this.color2.Size = new System.Drawing.Size(30, 20);
-            this.color2.TabIndex = 81;
-            this.color2.TabStop = true;
-            this.color2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.color2.UnCheckColor = System.Drawing.Color.LightSalmon;
-            this.color2.UseVisualStyleBackColor = false;
-            this.color2.Click += new System.EventHandler(this.checkeditem);
-            // 
-            // gum_name
-            // 
-            this.gum_name.BackColor = System.Drawing.SystemColors.Window;
-            this.gum_name.BorderColor = System.Drawing.Color.Lavender;
-            this.gum_name.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.gum_name.BorderSize = 2;
-            this.gum_name.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gum_name.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gum_name.ForeColor = System.Drawing.Color.Black;
-            this.gum_name.ImeMode = System.Windows.Forms.ImeMode.Hangul;
-            this.gum_name.Location = new System.Drawing.Point(20, 32);
-            this.gum_name.Margin = new System.Windows.Forms.Padding(4);
-            this.gum_name.Multiline = false;
-            this.gum_name.Name = "gum_name";
-            this.gum_name.Padding = new System.Windows.Forms.Padding(7);
-            this.gum_name.PasswordChar = false;
-            this.gum_name.Size = new System.Drawing.Size(222, 35);
-            this.gum_name.TabIndex = 0;
-            this.gum_name.Texts = "";
-            this.gum_name.UnderlinedStyle = false;
-            // 
-            // AddEvent2
-            // 
-            this.AddEvent2.BackColor = System.Drawing.Color.Thistle;
-            this.AddEvent2.BackgroundColor = System.Drawing.Color.Thistle;
-            this.AddEvent2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.AddEvent2.BorderRadius = 7;
-            this.AddEvent2.BorderSize = 0;
-            this.AddEvent2.FlatAppearance.BorderSize = 0;
-            this.AddEvent2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddEvent2.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AddEvent2.ForeColor = System.Drawing.Color.White;
-            this.AddEvent2.Location = new System.Drawing.Point(98, 151);
-            this.AddEvent2.Name = "AddEvent2";
-            this.AddEvent2.Size = new System.Drawing.Size(98, 38);
-            this.AddEvent2.TabIndex = 78;
-            this.AddEvent2.Text = "검체 접수";
-            this.AddEvent2.TextColor = System.Drawing.Color.White;
-            this.AddEvent2.UseVisualStyleBackColor = false;
-            this.AddEvent2.Click += new System.EventHandler(this.AddEvent2_Click);
-            // 
-            // test_days
-            // 
-            this.test_days.BackColor = System.Drawing.SystemColors.Window;
-            this.test_days.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.test_days.CheckOnClick = true;
-            this.test_days.ForeColor = System.Drawing.SystemColors.Window;
-            this.test_days.FormattingEnabled = true;
-            this.test_days.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14"});
-            this.test_days.Location = new System.Drawing.Point(98, 190);
-            this.test_days.Name = "test_days";
-            this.test_days.Size = new System.Drawing.Size(17, 414);
-            this.test_days.TabIndex = 78;
             // 
             // rjTextBox1
             // 
@@ -1241,6 +727,16 @@
             this.gum_amt.Texts = "";
             this.gum_amt.UnderlinedStyle = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(10, 113);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 17);
+            this.label1.TabIndex = 81;
+            this.label1.Text = "검체량";
+            // 
             // testTitle
             // 
             this.testTitle.BackColor = System.Drawing.SystemColors.Window;
@@ -1301,6 +797,508 @@
             this.Uncheck.TextColor = System.Drawing.Color.White;
             this.Uncheck.UseVisualStyleBackColor = false;
             this.Uncheck.Click += new System.EventHandler(this.Uncheck_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label19.Location = new System.Drawing.Point(11, 31);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(50, 17);
+            this.label19.TabIndex = 77;
+            this.label19.Text = "검체명";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ddToolStripMenuItem,
+            this.ddToolStripMenuItem1});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(97, 52);
+            // 
+            // ddToolStripMenuItem
+            // 
+            this.ddToolStripMenuItem.Name = "ddToolStripMenuItem";
+            this.ddToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
+            this.ddToolStripMenuItem.Text = "dd";
+            // 
+            // ddToolStripMenuItem1
+            // 
+            this.ddToolStripMenuItem1.Name = "ddToolStripMenuItem1";
+            this.ddToolStripMenuItem1.Size = new System.Drawing.Size(96, 24);
+            this.ddToolStripMenuItem1.Text = "dd";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Location = new System.Drawing.Point(242, 32);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(49, 36);
+            this.panel2.TabIndex = 1;
+            this.panel2.Click += new System.EventHandler(this.panel2_DoubleClick);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.color18);
+            this.groupBox1.Controls.Add(this.color5);
+            this.groupBox1.Controls.Add(this.color17);
+            this.groupBox1.Controls.Add(this.color16);
+            this.groupBox1.Controls.Add(this.color15);
+            this.groupBox1.Controls.Add(this.color14);
+            this.groupBox1.Controls.Add(this.color13);
+            this.groupBox1.Controls.Add(this.color12);
+            this.groupBox1.Controls.Add(this.color11);
+            this.groupBox1.Controls.Add(this.color9);
+            this.groupBox1.Controls.Add(this.color1);
+            this.groupBox1.Controls.Add(this.color3);
+            this.groupBox1.Controls.Add(this.color8);
+            this.groupBox1.Controls.Add(this.color7);
+            this.groupBox1.Controls.Add(this.color10);
+            this.groupBox1.Controls.Add(this.color4);
+            this.groupBox1.Controls.Add(this.color6);
+            this.groupBox1.Controls.Add(this.color2);
+            this.groupBox1.Controls.Add(this.gum_name);
+            this.groupBox1.Controls.Add(this.panel2);
+            this.groupBox1.Controls.Add(this.AddEvent2);
+            this.groupBox1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
+            this.groupBox1.Location = new System.Drawing.Point(22, 13);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(304, 201);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = " 검체";
+            // 
+            // color18
+            // 
+            this.color18.AutoSize = true;
+            this.color18.BackColor = System.Drawing.Color.Gold;
+            this.color18.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.color18.Location = new System.Drawing.Point(266, 114);
+            this.color18.MinimumSize = new System.Drawing.Size(0, 20);
+            this.color18.Name = "color18";
+            this.color18.Size = new System.Drawing.Size(30, 20);
+            this.color18.TabIndex = 96;
+            this.color18.TabStop = true;
+            this.color18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.color18.UnCheckColor = System.Drawing.Color.Gold;
+            this.color18.UseVisualStyleBackColor = false;
+            // 
+            // color5
+            // 
+            this.color5.AutoSize = true;
+            this.color5.BackColor = System.Drawing.Color.Silver;
+            this.color5.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.color5.Location = new System.Drawing.Point(137, 88);
+            this.color5.MinimumSize = new System.Drawing.Size(0, 20);
+            this.color5.Name = "color5";
+            this.color5.Size = new System.Drawing.Size(30, 20);
+            this.color5.TabIndex = 88;
+            this.color5.TabStop = true;
+            this.color5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.color5.UnCheckColor = System.Drawing.Color.Silver;
+            this.color5.UseVisualStyleBackColor = false;
+            // 
+            // color17
+            // 
+            this.color17.AutoSize = true;
+            this.color17.BackColor = System.Drawing.Color.Tan;
+            this.color17.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.color17.Location = new System.Drawing.Point(233, 114);
+            this.color17.MinimumSize = new System.Drawing.Size(0, 20);
+            this.color17.Name = "color17";
+            this.color17.Size = new System.Drawing.Size(30, 20);
+            this.color17.TabIndex = 95;
+            this.color17.TabStop = true;
+            this.color17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.color17.UnCheckColor = System.Drawing.Color.Tan;
+            this.color17.UseVisualStyleBackColor = false;
+            // 
+            // color16
+            // 
+            this.color16.AutoSize = true;
+            this.color16.BackColor = System.Drawing.Color.PaleGreen;
+            this.color16.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.color16.Location = new System.Drawing.Point(201, 114);
+            this.color16.MinimumSize = new System.Drawing.Size(0, 20);
+            this.color16.Name = "color16";
+            this.color16.Size = new System.Drawing.Size(30, 20);
+            this.color16.TabIndex = 94;
+            this.color16.TabStop = true;
+            this.color16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.color16.UnCheckColor = System.Drawing.Color.PaleGreen;
+            this.color16.UseVisualStyleBackColor = false;
+            // 
+            // color15
+            // 
+            this.color15.AutoSize = true;
+            this.color15.BackColor = System.Drawing.Color.GreenYellow;
+            this.color15.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.color15.Location = new System.Drawing.Point(169, 114);
+            this.color15.MinimumSize = new System.Drawing.Size(0, 20);
+            this.color15.Name = "color15";
+            this.color15.Size = new System.Drawing.Size(30, 20);
+            this.color15.TabIndex = 93;
+            this.color15.TabStop = true;
+            this.color15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.color15.UnCheckColor = System.Drawing.Color.GreenYellow;
+            this.color15.UseVisualStyleBackColor = false;
+            // 
+            // color14
+            // 
+            this.color14.AutoSize = true;
+            this.color14.BackColor = System.Drawing.Color.OliveDrab;
+            this.color14.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.color14.Location = new System.Drawing.Point(137, 114);
+            this.color14.MinimumSize = new System.Drawing.Size(0, 20);
+            this.color14.Name = "color14";
+            this.color14.Size = new System.Drawing.Size(30, 20);
+            this.color14.TabIndex = 92;
+            this.color14.TabStop = true;
+            this.color14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.color14.UnCheckColor = System.Drawing.Color.OliveDrab;
+            this.color14.UseVisualStyleBackColor = false;
+            // 
+            // color13
+            // 
+            this.color13.AutoSize = true;
+            this.color13.BackColor = System.Drawing.Color.CadetBlue;
+            this.color13.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.color13.Location = new System.Drawing.Point(105, 114);
+            this.color13.MinimumSize = new System.Drawing.Size(0, 20);
+            this.color13.Name = "color13";
+            this.color13.Size = new System.Drawing.Size(30, 20);
+            this.color13.TabIndex = 91;
+            this.color13.TabStop = true;
+            this.color13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.color13.UnCheckColor = System.Drawing.Color.CadetBlue;
+            this.color13.UseVisualStyleBackColor = false;
+            // 
+            // color12
+            // 
+            this.color12.AutoSize = true;
+            this.color12.BackColor = System.Drawing.Color.LightSlateGray;
+            this.color12.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.color12.Location = new System.Drawing.Point(74, 114);
+            this.color12.MinimumSize = new System.Drawing.Size(0, 20);
+            this.color12.Name = "color12";
+            this.color12.Size = new System.Drawing.Size(30, 20);
+            this.color12.TabIndex = 90;
+            this.color12.TabStop = true;
+            this.color12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.color12.UnCheckColor = System.Drawing.Color.LightSlateGray;
+            this.color12.UseVisualStyleBackColor = false;
+            // 
+            // color11
+            // 
+            this.color11.AutoSize = true;
+            this.color11.BackColor = System.Drawing.Color.Thistle;
+            this.color11.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.color11.Location = new System.Drawing.Point(43, 114);
+            this.color11.MinimumSize = new System.Drawing.Size(0, 20);
+            this.color11.Name = "color11";
+            this.color11.Size = new System.Drawing.Size(30, 20);
+            this.color11.TabIndex = 89;
+            this.color11.TabStop = true;
+            this.color11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.color11.UnCheckColor = System.Drawing.Color.Thistle;
+            this.color11.UseVisualStyleBackColor = false;
+            // 
+            // color9
+            // 
+            this.color9.AutoSize = true;
+            this.color9.BackColor = System.Drawing.Color.Turquoise;
+            this.color9.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.color9.Location = new System.Drawing.Point(266, 88);
+            this.color9.MinimumSize = new System.Drawing.Size(0, 20);
+            this.color9.Name = "color9";
+            this.color9.Size = new System.Drawing.Size(30, 20);
+            this.color9.TabIndex = 87;
+            this.color9.TabStop = true;
+            this.color9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.color9.UnCheckColor = System.Drawing.Color.Turquoise;
+            this.color9.UseVisualStyleBackColor = false;
+            // 
+            // color1
+            // 
+            this.color1.AutoSize = true;
+            this.color1.BackColor = System.Drawing.Color.LightCoral;
+            this.color1.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.color1.Location = new System.Drawing.Point(11, 88);
+            this.color1.MinimumSize = new System.Drawing.Size(0, 20);
+            this.color1.Name = "color1";
+            this.color1.Size = new System.Drawing.Size(30, 20);
+            this.color1.TabIndex = 80;
+            this.color1.TabStop = true;
+            this.color1.Tag = "color1";
+            this.color1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.color1.UnCheckColor = System.Drawing.Color.LightCoral;
+            this.color1.UseVisualStyleBackColor = false;
+            // 
+            // color3
+            // 
+            this.color3.AutoSize = true;
+            this.color3.BackColor = System.Drawing.Color.PeachPuff;
+            this.color3.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.color3.Location = new System.Drawing.Point(75, 88);
+            this.color3.MinimumSize = new System.Drawing.Size(0, 20);
+            this.color3.Name = "color3";
+            this.color3.Size = new System.Drawing.Size(30, 20);
+            this.color3.TabIndex = 79;
+            this.color3.TabStop = true;
+            this.color3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.color3.UnCheckColor = System.Drawing.Color.PeachPuff;
+            this.color3.UseVisualStyleBackColor = false;
+            // 
+            // color8
+            // 
+            this.color8.AutoSize = true;
+            this.color8.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.color8.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.color8.Location = new System.Drawing.Point(233, 88);
+            this.color8.MinimumSize = new System.Drawing.Size(0, 20);
+            this.color8.Name = "color8";
+            this.color8.Size = new System.Drawing.Size(30, 20);
+            this.color8.TabIndex = 86;
+            this.color8.TabStop = true;
+            this.color8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.color8.UnCheckColor = System.Drawing.Color.PaleTurquoise;
+            this.color8.UseVisualStyleBackColor = false;
+            // 
+            // color7
+            // 
+            this.color7.AutoSize = true;
+            this.color7.BackColor = System.Drawing.Color.Azure;
+            this.color7.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.color7.Location = new System.Drawing.Point(203, 88);
+            this.color7.MinimumSize = new System.Drawing.Size(0, 20);
+            this.color7.Name = "color7";
+            this.color7.Size = new System.Drawing.Size(30, 20);
+            this.color7.TabIndex = 85;
+            this.color7.TabStop = true;
+            this.color7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.color7.UnCheckColor = System.Drawing.Color.Azure;
+            this.color7.UseVisualStyleBackColor = false;
+            // 
+            // color10
+            // 
+            this.color10.AutoSize = true;
+            this.color10.BackColor = System.Drawing.Color.RosyBrown;
+            this.color10.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.color10.Location = new System.Drawing.Point(12, 114);
+            this.color10.MinimumSize = new System.Drawing.Size(0, 20);
+            this.color10.Name = "color10";
+            this.color10.Size = new System.Drawing.Size(30, 20);
+            this.color10.TabIndex = 84;
+            this.color10.TabStop = true;
+            this.color10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.color10.UnCheckColor = System.Drawing.Color.RosyBrown;
+            this.color10.UseVisualStyleBackColor = false;
+            // 
+            // color4
+            // 
+            this.color4.AutoSize = true;
+            this.color4.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.color4.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.color4.Location = new System.Drawing.Point(105, 88);
+            this.color4.MinimumSize = new System.Drawing.Size(0, 20);
+            this.color4.Name = "color4";
+            this.color4.Size = new System.Drawing.Size(30, 20);
+            this.color4.TabIndex = 83;
+            this.color4.TabStop = true;
+            this.color4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.color4.UnCheckColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.color4.UseVisualStyleBackColor = false;
+            // 
+            // color6
+            // 
+            this.color6.AutoSize = true;
+            this.color6.BackColor = System.Drawing.Color.Khaki;
+            this.color6.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.color6.Location = new System.Drawing.Point(169, 88);
+            this.color6.MinimumSize = new System.Drawing.Size(0, 20);
+            this.color6.Name = "color6";
+            this.color6.Size = new System.Drawing.Size(30, 20);
+            this.color6.TabIndex = 82;
+            this.color6.TabStop = true;
+            this.color6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.color6.UnCheckColor = System.Drawing.Color.Khaki;
+            this.color6.UseVisualStyleBackColor = false;
+            // 
+            // color2
+            // 
+            this.color2.AutoSize = true;
+            this.color2.BackColor = System.Drawing.Color.LightSalmon;
+            this.color2.CheckColor = System.Drawing.Color.LightSeaGreen;
+            this.color2.Location = new System.Drawing.Point(43, 88);
+            this.color2.MinimumSize = new System.Drawing.Size(0, 20);
+            this.color2.Name = "color2";
+            this.color2.Size = new System.Drawing.Size(30, 20);
+            this.color2.TabIndex = 81;
+            this.color2.TabStop = true;
+            this.color2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.color2.UnCheckColor = System.Drawing.Color.LightSalmon;
+            this.color2.UseVisualStyleBackColor = false;
+            // 
+            // gum_name
+            // 
+            this.gum_name.BackColor = System.Drawing.SystemColors.Window;
+            this.gum_name.BorderColor = System.Drawing.Color.Lavender;
+            this.gum_name.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.gum_name.BorderSize = 2;
+            this.gum_name.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gum_name.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gum_name.ForeColor = System.Drawing.Color.Black;
+            this.gum_name.ImeMode = System.Windows.Forms.ImeMode.Hangul;
+            this.gum_name.Location = new System.Drawing.Point(20, 32);
+            this.gum_name.Margin = new System.Windows.Forms.Padding(4);
+            this.gum_name.Multiline = false;
+            this.gum_name.Name = "gum_name";
+            this.gum_name.Padding = new System.Windows.Forms.Padding(7);
+            this.gum_name.PasswordChar = false;
+            this.gum_name.Size = new System.Drawing.Size(222, 35);
+            this.gum_name.TabIndex = 0;
+            this.gum_name.Texts = "";
+            this.gum_name.UnderlinedStyle = false;
+            // 
+            // AddEvent2
+            // 
+            this.AddEvent2.BackColor = System.Drawing.Color.Thistle;
+            this.AddEvent2.BackgroundColor = System.Drawing.Color.Thistle;
+            this.AddEvent2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.AddEvent2.BorderRadius = 7;
+            this.AddEvent2.BorderSize = 0;
+            this.AddEvent2.FlatAppearance.BorderSize = 0;
+            this.AddEvent2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddEvent2.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AddEvent2.ForeColor = System.Drawing.Color.White;
+            this.AddEvent2.Location = new System.Drawing.Point(98, 151);
+            this.AddEvent2.Name = "AddEvent2";
+            this.AddEvent2.Size = new System.Drawing.Size(98, 38);
+            this.AddEvent2.TabIndex = 78;
+            this.AddEvent2.Text = "검체 접수";
+            this.AddEvent2.TextColor = System.Drawing.Color.White;
+            this.AddEvent2.UseVisualStyleBackColor = false;
+            this.AddEvent2.Click += new System.EventHandler(this.AddEvent2_Click);
+            // 
+            // calendar1
+            // 
+            this.calendar1.AllowEditingEvents = false;
+            this.calendar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.calendar1.BackColor = System.Drawing.Color.Transparent;
+            this.calendar1.CalendarDate = new System.DateTime(2012, 4, 24, 13, 16, 0, 0);
+            this.calendar1.CalendarView = Calendar.NET.CalendarViews.Month;
+            this.calendar1.DateHeaderFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.calendar1.DayOfWeekFont = new System.Drawing.Font("Arial", 10F);
+            this.calendar1.DaysFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calendar1.DayViewTimeFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.calendar1.DimDisabledEvents = true;
+            this.calendar1.Event = null;
+            this.calendar1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.calendar1.HighlightCurrentDay = true;
+            this.calendar1.LoadPresetHolidays = true;
+            this.calendar1.Location = new System.Drawing.Point(331, -19);
+            this.calendar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.calendar1.Name = "calendar1";
+            this.calendar1.ShowArrowControls = true;
+            this.calendar1.ShowDashedBorderOnDisabledEvents = true;
+            this.calendar1.ShowDateInHeader = true;
+            this.calendar1.ShowDisabledEvents = false;
+            this.calendar1.ShowEventTooltips = true;
+            this.calendar1.ShowTodayButton = true;
+            this.calendar1.Size = new System.Drawing.Size(1204, 964);
+            this.calendar1.TabIndex = 0;
+            this.calendar1.TodayFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            // 
+            // TestRb
+            // 
+            this.TestRb.AutoSize = true;
+            this.TestRb.CheckColor = System.Drawing.Color.Thistle;
+            this.TestRb.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TestRb.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.TestRb.Location = new System.Drawing.Point(734, 11);
+            this.TestRb.MinimumSize = new System.Drawing.Size(0, 24);
+            this.TestRb.Name = "TestRb";
+            this.TestRb.Size = new System.Drawing.Size(71, 24);
+            this.TestRb.TabIndex = 81;
+            this.TestRb.TabStop = true;
+            this.TestRb.Text = "시험";
+            this.TestRb.UnCheckColor = System.Drawing.Color.Lavender;
+            this.TestRb.UseVisualStyleBackColor = true;
+            this.TestRb.Click += new System.EventHandler(this.TestRb_Click);
+            // 
+            // GumCheRb
+            // 
+            this.GumCheRb.AutoSize = true;
+            this.GumCheRb.CheckColor = System.Drawing.Color.Thistle;
+            this.GumCheRb.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.GumCheRb.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.GumCheRb.Location = new System.Drawing.Point(667, 11);
+            this.GumCheRb.MinimumSize = new System.Drawing.Size(0, 24);
+            this.GumCheRb.Name = "GumCheRb";
+            this.GumCheRb.Size = new System.Drawing.Size(71, 24);
+            this.GumCheRb.TabIndex = 80;
+            this.GumCheRb.TabStop = true;
+            this.GumCheRb.Text = "검체";
+            this.GumCheRb.UnCheckColor = System.Drawing.Color.Lavender;
+            this.GumCheRb.UseVisualStyleBackColor = true;
+            this.GumCheRb.Click += new System.EventHandler(this.GumCheRb_Click);
+            // 
+            // RefreshBtn
+            // 
+            this.RefreshBtn.BackColor = System.Drawing.Color.Thistle;
+            this.RefreshBtn.BackgroundColor = System.Drawing.Color.Thistle;
+            this.RefreshBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.RefreshBtn.BorderRadius = 7;
+            this.RefreshBtn.BorderSize = 0;
+            this.RefreshBtn.FlatAppearance.BorderSize = 0;
+            this.RefreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RefreshBtn.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.RefreshBtn.ForeColor = System.Drawing.Color.White;
+            this.RefreshBtn.Location = new System.Drawing.Point(517, 7);
+            this.RefreshBtn.Name = "RefreshBtn";
+            this.RefreshBtn.Size = new System.Drawing.Size(139, 30);
+            this.RefreshBtn.TabIndex = 79;
+            this.RefreshBtn.Text = "새로고침";
+            this.RefreshBtn.TextColor = System.Drawing.Color.White;
+            this.RefreshBtn.UseVisualStyleBackColor = false;
+            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
+            // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.Color.LightPink;
+            this.rjButton1.BackgroundColor = System.Drawing.Color.LightPink;
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 7;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(518, 7);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(139, 30);
+            this.rjButton1.TabIndex = 78;
+            this.rjButton1.Text = "껐다 키기..";
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Visible = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
             // Form1
             // 

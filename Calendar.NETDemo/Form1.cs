@@ -59,11 +59,8 @@ namespace Calendar.NETDemo
                     user_color = Color.Transparent;
                 }*/
 
-                
-                Control color = Controls.Find("color" + 1, true)[0];
-                MessageBox.Show(color.BackColor.ToString());
-               
-                
+                String user_Color = checkedColor(sender, e);
+                MessageBox.Show(user_Color);
                 
                 String datetime = dt.ToString("yyyy-MM-dd");
                 //String datetime_time = dt_time.ToString("HH:mm:ss");
@@ -572,11 +569,11 @@ namespace Calendar.NETDemo
            
         }
 
-        private void checkeditem(object sender, EventArgs e)
+        private string checkedColor(object sender, EventArgs e)
         {
-            String z = sender.Name;
+            String colName = (sender as Control).Tag.ToString();
 
-            MessageBox.Show(z);
+            return colName;
             
         }
 
