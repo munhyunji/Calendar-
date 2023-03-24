@@ -59,8 +59,7 @@ namespace Calendar.NETDemo
                     user_color = Color.Transparent;
                 }*/
 
-                String user_Color = checkedColor(sender, e);
-                MessageBox.Show(user_Color);
+                //MessageBox.Show(user_Color);
                 
                 String datetime = dt.ToString("yyyy-MM-dd");
                 //String datetime_time = dt_time.ToString("HH:mm:ss");
@@ -514,14 +513,6 @@ namespace Calendar.NETDemo
             }
         }
 
-        private void panel2_DoubleClick(object sender, EventArgs e)
-        {
-            if (colorDialog2.ShowDialog() == DialogResult.OK)
-            {
-                panel2.BackColor = colorDialog2.Color;
-            }
-        }
-
         private void comboBox1_MouseClick(object sender, MouseEventArgs e)
         {
             if (File.Exists(XmlFileName))
@@ -569,12 +560,10 @@ namespace Calendar.NETDemo
            
         }
 
-        private string checkedColor(object sender, EventArgs e)
+        private void GetColorName(object sender)
         {
-            String colName = (sender as Control).Tag.ToString();
-
-            return colName;
-            
+            String coNa = ((CustomControls.RJControls.RJComboBox)sender).BackColor.ToString();
+            MessageBox.Show(coNa);
         }
 
         /// <summary>

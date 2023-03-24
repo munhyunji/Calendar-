@@ -78,7 +78,6 @@
             this.ddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ddToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.color18 = new Calendar.NETDemo.RashiRadioButton();
             this.color5 = new Calendar.NETDemo.RashiRadioButton();
@@ -835,18 +834,6 @@
             this.ddToolStripMenuItem1.Size = new System.Drawing.Size(96, 24);
             this.ddToolStripMenuItem1.Text = "dd";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(242, 32);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(49, 36);
-            this.panel2.TabIndex = 1;
-            this.panel2.Click += new System.EventHandler(this.panel2_DoubleClick);
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
@@ -869,7 +856,6 @@
             this.groupBox1.Controls.Add(this.color6);
             this.groupBox1.Controls.Add(this.color2);
             this.groupBox1.Controls.Add(this.gum_name);
-            this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Controls.Add(this.AddEvent2);
             this.groupBox1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
@@ -1163,13 +1149,13 @@
             this.gum_name.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gum_name.ForeColor = System.Drawing.Color.Black;
             this.gum_name.ImeMode = System.Windows.Forms.ImeMode.Hangul;
-            this.gum_name.Location = new System.Drawing.Point(20, 32);
+            this.gum_name.Location = new System.Drawing.Point(13, 32);
             this.gum_name.Margin = new System.Windows.Forms.Padding(4);
             this.gum_name.Multiline = false;
             this.gum_name.Name = "gum_name";
             this.gum_name.Padding = new System.Windows.Forms.Padding(7);
             this.gum_name.PasswordChar = false;
-            this.gum_name.Size = new System.Drawing.Size(222, 35);
+            this.gum_name.Size = new System.Drawing.Size(283, 35);
             this.gum_name.TabIndex = 0;
             this.gum_name.Texts = "";
             this.gum_name.UnderlinedStyle = false;
@@ -1362,7 +1348,6 @@
         private RJButton Test_add;
         private Calendar.NETDemo.RashiDateTimePicker dateTimePicker1;
         private RJButton AddEvent2;
-        private System.Windows.Forms.Panel panel2;
         private CustomControls.RJControls.RJTextBox gum_name;
         private System.Windows.Forms.GroupBox groupBox1;
         private CustomControls.RJControls.RJTextBox testTitle;
