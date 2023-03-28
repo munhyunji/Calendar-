@@ -1033,6 +1033,7 @@
             this.color1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.color1.UnCheckColor = System.Drawing.Color.LightCoral;
             this.color1.UseVisualStyleBackColor = false;
+            this.color1.Click += new System.EventHandler(this.GetColorName);
             // 
             // color3
             // 
@@ -1138,6 +1139,7 @@
             this.color2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.color2.UnCheckColor = System.Drawing.Color.LightSalmon;
             this.color2.UseVisualStyleBackColor = false;
+            this.color2.Click += new System.EventHandler(this.GetColorName);
             // 
             // gum_name
             // 

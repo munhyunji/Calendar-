@@ -560,12 +560,6 @@ namespace Calendar.NETDemo
            
         }
 
-        private void GetColorName(object sender)
-        {
-            String coNa = ((CustomControls.RJControls.RJComboBox)sender).BackColor.ToString();
-            MessageBox.Show(coNa);
-        }
-
         /// <summary>
         /// 검체필터
         /// </summary>
@@ -585,7 +579,10 @@ namespace Calendar.NETDemo
             Refresh();
         }
 
-
-
+        private void GetColorName(object sender)
+        {
+            String coNa = ((Calendar.NETDemo.RashiRadioButton)sender).BackColor.ToString();
+            MessageBox.Show(coNa);
+        }
     }
 }
