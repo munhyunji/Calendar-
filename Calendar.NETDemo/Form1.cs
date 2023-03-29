@@ -58,9 +58,10 @@ namespace Calendar.NETDemo
                 {
                     user_color = Color.Transparent;
                 }*/
-
+                String coNa = ((Calendar.NETDemo.RJButton)sender).BackColor.ToString();
+                MessageBox.Show(coNa);
                 //MessageBox.Show(user_Color);
-                
+
                 String datetime = dt.ToString("yyyy-MM-dd");
                 //String datetime_time = dt_time.ToString("HH:mm:ss");
                 // String total_datetime = datetime + " " + datetime_time;
@@ -581,8 +582,7 @@ namespace Calendar.NETDemo
 
         private void GetColorName(object sender)
         {
-            String coNa = ((Calendar.NETDemo.RashiRadioButton)sender).BackColor.ToString();
-            MessageBox.Show(coNa);
+            
         }
     }
 }
