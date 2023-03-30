@@ -59,7 +59,7 @@ namespace Calendar.NETDemo
                     user_color = Color.Transparent;
                 }*/
                 String coNa = ((Calendar.NETDemo.RJButton)sender).BackColor.ToString();
-                MessageBox.Show(coNa);
+                Color coNaCo = coNa.
                 //MessageBox.Show(user_Color);
 
                 String datetime = dt.ToString("yyyy-MM-dd");
@@ -72,7 +72,7 @@ namespace Calendar.NETDemo
                 {
                     Date = DateTime.Parse(total_datetime),
                     EventText = GumCheName,
-                    EventColor = Color.Red,
+                    EventColor = coNa,
                     EventLengthInHours = 2f,
                     RecurringFrequency = RecurringFrequencies.None,
                     EventFont = new Font("나눔고딕", 8, FontStyle.Regular),
