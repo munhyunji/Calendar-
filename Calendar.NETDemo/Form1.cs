@@ -14,6 +14,8 @@ namespace Calendar.NETDemo
     {
 
         String XmlFileName = "Data.xml";
+        String ColorName;
+        String SaveColorName;
 
         public Form1()
         {
@@ -58,12 +60,7 @@ namespace Calendar.NETDemo
                 {
                     user_color = Color.Transparent;
                 }*/
-                
-                    String ColorName = ((Calendar.NETDemo.RashiRadioButton)sender).BackColor.ToString();
-                    MessageBox.Show(ColorName);
-                
-                String UserColorName = GetSubstringByString("[", "]", ColorName);
-                
+
                 String datetime = dt.ToString("yyyy-MM-dd");
                 //String datetime_time = dt_time.ToString("HH:mm:ss");
                 // String total_datetime = datetime + " " + datetime_time;
@@ -74,7 +71,7 @@ namespace Calendar.NETDemo
                 {
                     Date = DateTime.Parse(total_datetime),
                     EventText = GumCheName,
-                    EventColor = Color.FromName(UserColorName),
+                    EventColor = Color.FromName(ColorName),
                     EventLengthInHours = 2f,
                     RecurringFrequency = RecurringFrequencies.None,
                     EventFont = new Font("나눔고딕", 8, FontStyle.Regular),
@@ -84,7 +81,7 @@ namespace Calendar.NETDemo
 
                 calendar1.AddEvent(Specimen);
 
-                //int IsSuccess = XML_save(GumCheName, null, total_datetime, user_color_string, null, null, null, "GumChe");
+                int IsSuccess = XML_save(GumCheName, null, total_datetime, SaveColorName, null, null, null, "GumChe");
 
                 gum_name.Texts = "";
                 dateTimePicker1.Checked = false;
@@ -95,19 +92,6 @@ namespace Calendar.NETDemo
                 MessageBox.Show("날짜를 선택하세요");
             }
         }
-
-        /// <summary>
-        /// 괄호안의 문자 추출 
-        /// </summary>
-        /// <param name="a">앞괄호</param>
-        /// <param name="b">뒷괄호</param>
-        /// <param name="c">추출 문자</param>
-        /// <returns></returns>
-        public string GetSubstringByString(string a, string b, string c)
-        {
-            return c.Substring((c.IndexOf(a) + a.Length), (c.IndexOf(b) - c.IndexOf(a) - a.Length));
-        }
-        
 
         /// <summary>
         /// 시험등록 버튼 
@@ -144,14 +128,6 @@ namespace Calendar.NETDemo
             //검체량
             String GumAmt = gum_amt.Texts;
 
-            Color UserColor = colorDialog2.Color;
-
-            if (UserColor == Color.Black)
-            {
-                UserColor = Color.Transparent;
-            }
-            String user_color_string = UserColor.ToString();
-
             //시험명, 선택 여부
             // 시험자 선택여부 제거 230202
             if (!String.IsNullOrEmpty(test_name) && comboBox1.SelectedItem.ToString() != "검체를 선택하세요.")
@@ -166,7 +142,7 @@ namespace Calendar.NETDemo
                 {
                     Date = DateTime.Parse(total_datetime),
                     EventText = aligned_test,
-                    EventColor = UserColor,
+                    EventColor = Color.FromName(ColorName),
                     EventLengthInHours = 2f,
                     RecurringFrequency = RecurringFrequencies.None,
                     EventFont = new Font("나눔고딕", 8, FontStyle.Regular),
@@ -176,7 +152,7 @@ namespace Calendar.NETDemo
                 };
 
                 calendar1.AddEvent(test_case);
-                XML_save(test, null, total_datetime, user_color_string, GumCheName, GumCheDate, GumAmt, "Test");
+                XML_save(test, null, total_datetime, SaveColorName, GumCheName, GumCheDate, GumAmt, "Test");
 
 
                 for (int i = 0; i < test_days.CheckedItems.Count; i++)
@@ -208,7 +184,7 @@ namespace Calendar.NETDemo
                         {
                             Date = Added_datetime,
                             EventText = total,
-                            EventColor = UserColor,
+                            EventColor = Color.FromName(ColorName),
                             EventLengthInHours = 2f,
                             RecurringFrequency = RecurringFrequencies.None,
                             EventFont = new Font("나눔고딕", 8, FontStyle.Regular),
@@ -218,7 +194,7 @@ namespace Calendar.NETDemo
                         };
 
                         calendar1.AddEvent(added_test_case);
-                        XML_save(test, DaysText, Added_datetime_string, user_color_string, GumCheName, GumCheDate, GumAmt, "Test");
+                        XML_save(test, DaysText, Added_datetime_string, SaveColorName, GumCheName, GumCheDate, GumAmt, "Test");
 
 
                         //textbox 초기화
@@ -242,8 +218,7 @@ namespace Calendar.NETDemo
             }
         }
 
-
-        private int XML_save(String text, String textDate, String datetime, String color, String GumCheName, String GumCheDate, String GumAmt, String nodeName)
+        private int XML_save(String text, String textDate, String datetime, String ColorName, String GumCheName, String GumCheDate, String GumAmt, String nodeName)
         {
 
             XmlDocument xmlDoc;
@@ -267,7 +242,7 @@ namespace Calendar.NETDemo
                         {
                             childNode.SetAttribute("Name", text);
                             childNode.SetAttribute("Datetime", datetime);
-                            childNode.SetAttribute("Color", color);
+                            childNode.SetAttribute("Color", ColorName);
                             childNode.SetAttribute("GumAmt", GumAmt);
                             childNode.SetAttribute("Rank", "1");
 
@@ -277,7 +252,7 @@ namespace Calendar.NETDemo
                         {
                             childNode.SetAttribute("Name", text);
                             childNode.SetAttribute("Datetime", datetime);
-                            childNode.SetAttribute("Color", color);
+                            childNode.SetAttribute("Color", ColorName);
                             childNode.SetAttribute("GumCheName", GumCheName);
                             childNode.SetAttribute("GumCheDate", GumCheDate);
                             childNode.SetAttribute("GumAmt", GumAmt);
@@ -290,7 +265,7 @@ namespace Calendar.NETDemo
                             childNode.SetAttribute("Name", text);
                             childNode.SetAttribute("NameDate", textDate);
                             childNode.SetAttribute("Datetime", datetime);
-                            childNode.SetAttribute("Color", color);
+                            childNode.SetAttribute("Color", ColorName);
                             childNode.SetAttribute("GumCheName", GumCheName);
                             childNode.SetAttribute("GumCheDate", GumCheDate);
                             childNode.SetAttribute("GumAmt", GumAmt);
@@ -592,9 +567,27 @@ namespace Calendar.NETDemo
             Refresh();
         }
 
-        private void GetColorName(object sender)
+
+        private void GetColorName(object sender, EventArgs e)
         {
-            
+             ColorName = GetSubstringByString("[","]",((Calendar.NETDemo.RashiRadioButton)sender).BackColor.ToString());
+            SaveColorName = ((Calendar.NETDemo.RashiRadioButton)sender).BackColor.ToString();
+            //MessageBox.Show(GetSubstringByString("[","]", ColorName));
         }
+
+        /// <summary>
+        /// 괄호안의 문자 추출 
+        /// </summary>
+        /// <param name="a">앞괄호</param>
+        /// <param name="b">뒷괄호</param>
+        /// <param name="c">추출 문자</param>
+        /// <returns></returns>
+        public string GetSubstringByString(string a, string b, string c)
+        {
+            return c.Substring((c.IndexOf(a) + a.Length), (c.IndexOf(b) - c.IndexOf(a) - a.Length));
+
+        }
+
+
     }
 }

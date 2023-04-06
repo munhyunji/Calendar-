@@ -873,7 +873,7 @@
             this.color18.AutoSize = true;
             this.color18.BackColor = System.Drawing.Color.Gold;
             this.color18.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color18.Location = new System.Drawing.Point(266, 114);
+            this.color18.Location = new System.Drawing.Point(263, 114);
             this.color18.MinimumSize = new System.Drawing.Size(0, 20);
             this.color18.Name = "color18";
             this.color18.Size = new System.Drawing.Size(30, 20);
@@ -882,13 +882,14 @@
             this.color18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.color18.UnCheckColor = System.Drawing.Color.Gold;
             this.color18.UseVisualStyleBackColor = false;
+            this.color18.Click += new System.EventHandler(this.GetColorName);
             // 
             // color5
             // 
             this.color5.AutoSize = true;
             this.color5.BackColor = System.Drawing.Color.Silver;
             this.color5.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color5.Location = new System.Drawing.Point(137, 88);
+            this.color5.Location = new System.Drawing.Point(134, 88);
             this.color5.MinimumSize = new System.Drawing.Size(0, 20);
             this.color5.Name = "color5";
             this.color5.Size = new System.Drawing.Size(30, 20);
@@ -897,13 +898,14 @@
             this.color5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.color5.UnCheckColor = System.Drawing.Color.Silver;
             this.color5.UseVisualStyleBackColor = false;
+            this.color5.Click += new System.EventHandler(this.GetColorName);
             // 
             // color17
             // 
             this.color17.AutoSize = true;
             this.color17.BackColor = System.Drawing.Color.Tan;
             this.color17.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color17.Location = new System.Drawing.Point(233, 114);
+            this.color17.Location = new System.Drawing.Point(230, 114);
             this.color17.MinimumSize = new System.Drawing.Size(0, 20);
             this.color17.Name = "color17";
             this.color17.Size = new System.Drawing.Size(30, 20);
@@ -912,13 +914,14 @@
             this.color17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.color17.UnCheckColor = System.Drawing.Color.Tan;
             this.color17.UseVisualStyleBackColor = false;
+            this.color17.Click += new System.EventHandler(this.GetColorName);
             // 
             // color16
             // 
             this.color16.AutoSize = true;
             this.color16.BackColor = System.Drawing.Color.PaleGreen;
             this.color16.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color16.Location = new System.Drawing.Point(201, 114);
+            this.color16.Location = new System.Drawing.Point(198, 114);
             this.color16.MinimumSize = new System.Drawing.Size(0, 20);
             this.color16.Name = "color16";
             this.color16.Size = new System.Drawing.Size(30, 20);
@@ -927,13 +930,14 @@
             this.color16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.color16.UnCheckColor = System.Drawing.Color.PaleGreen;
             this.color16.UseVisualStyleBackColor = false;
+            this.color16.Click += new System.EventHandler(this.GetColorName);
             // 
             // color15
             // 
             this.color15.AutoSize = true;
             this.color15.BackColor = System.Drawing.Color.GreenYellow;
             this.color15.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color15.Location = new System.Drawing.Point(169, 114);
+            this.color15.Location = new System.Drawing.Point(166, 114);
             this.color15.MinimumSize = new System.Drawing.Size(0, 20);
             this.color15.Name = "color15";
             this.color15.Size = new System.Drawing.Size(30, 20);
@@ -942,13 +946,14 @@
             this.color15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.color15.UnCheckColor = System.Drawing.Color.GreenYellow;
             this.color15.UseVisualStyleBackColor = false;
+            this.color15.Click += new System.EventHandler(this.GetColorName);
             // 
             // color14
             // 
             this.color14.AutoSize = true;
             this.color14.BackColor = System.Drawing.Color.OliveDrab;
             this.color14.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color14.Location = new System.Drawing.Point(137, 114);
+            this.color14.Location = new System.Drawing.Point(134, 114);
             this.color14.MinimumSize = new System.Drawing.Size(0, 20);
             this.color14.Name = "color14";
             this.color14.Size = new System.Drawing.Size(30, 20);
@@ -957,13 +962,14 @@
             this.color14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.color14.UnCheckColor = System.Drawing.Color.OliveDrab;
             this.color14.UseVisualStyleBackColor = false;
+            this.color14.Click += new System.EventHandler(this.GetColorName);
             // 
             // color13
             // 
             this.color13.AutoSize = true;
             this.color13.BackColor = System.Drawing.Color.CadetBlue;
             this.color13.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color13.Location = new System.Drawing.Point(105, 114);
+            this.color13.Location = new System.Drawing.Point(102, 114);
             this.color13.MinimumSize = new System.Drawing.Size(0, 20);
             this.color13.Name = "color13";
             this.color13.Size = new System.Drawing.Size(30, 20);
@@ -972,13 +978,14 @@
             this.color13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.color13.UnCheckColor = System.Drawing.Color.CadetBlue;
             this.color13.UseVisualStyleBackColor = false;
+            this.color13.Click += new System.EventHandler(this.GetColorName);
             // 
             // color12
             // 
             this.color12.AutoSize = true;
             this.color12.BackColor = System.Drawing.Color.LightSlateGray;
             this.color12.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color12.Location = new System.Drawing.Point(74, 114);
+            this.color12.Location = new System.Drawing.Point(71, 114);
             this.color12.MinimumSize = new System.Drawing.Size(0, 20);
             this.color12.Name = "color12";
             this.color12.Size = new System.Drawing.Size(30, 20);
@@ -987,13 +994,14 @@
             this.color12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.color12.UnCheckColor = System.Drawing.Color.LightSlateGray;
             this.color12.UseVisualStyleBackColor = false;
+            this.color12.Click += new System.EventHandler(this.GetColorName);
             // 
             // color11
             // 
             this.color11.AutoSize = true;
             this.color11.BackColor = System.Drawing.Color.Thistle;
             this.color11.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color11.Location = new System.Drawing.Point(43, 114);
+            this.color11.Location = new System.Drawing.Point(40, 114);
             this.color11.MinimumSize = new System.Drawing.Size(0, 20);
             this.color11.Name = "color11";
             this.color11.Size = new System.Drawing.Size(30, 20);
@@ -1002,13 +1010,14 @@
             this.color11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.color11.UnCheckColor = System.Drawing.Color.Thistle;
             this.color11.UseVisualStyleBackColor = false;
+            this.color11.Click += new System.EventHandler(this.GetColorName);
             // 
             // color9
             // 
             this.color9.AutoSize = true;
             this.color9.BackColor = System.Drawing.Color.Turquoise;
             this.color9.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color9.Location = new System.Drawing.Point(266, 88);
+            this.color9.Location = new System.Drawing.Point(263, 88);
             this.color9.MinimumSize = new System.Drawing.Size(0, 20);
             this.color9.Name = "color9";
             this.color9.Size = new System.Drawing.Size(30, 20);
@@ -1017,13 +1026,14 @@
             this.color9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.color9.UnCheckColor = System.Drawing.Color.Turquoise;
             this.color9.UseVisualStyleBackColor = false;
+            this.color9.Click += new System.EventHandler(this.GetColorName);
             // 
             // color1
             // 
             this.color1.AutoSize = true;
             this.color1.BackColor = System.Drawing.Color.LightCoral;
             this.color1.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color1.Location = new System.Drawing.Point(11, 88);
+            this.color1.Location = new System.Drawing.Point(8, 88);
             this.color1.MinimumSize = new System.Drawing.Size(0, 20);
             this.color1.Name = "color1";
             this.color1.Size = new System.Drawing.Size(30, 20);
@@ -1033,13 +1043,14 @@
             this.color1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.color1.UnCheckColor = System.Drawing.Color.LightCoral;
             this.color1.UseVisualStyleBackColor = false;
+            this.color1.Click += new System.EventHandler(this.GetColorName);
             // 
             // color3
             // 
             this.color3.AutoSize = true;
             this.color3.BackColor = System.Drawing.Color.PeachPuff;
             this.color3.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color3.Location = new System.Drawing.Point(75, 88);
+            this.color3.Location = new System.Drawing.Point(72, 88);
             this.color3.MinimumSize = new System.Drawing.Size(0, 20);
             this.color3.Name = "color3";
             this.color3.Size = new System.Drawing.Size(30, 20);
@@ -1048,13 +1059,14 @@
             this.color3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.color3.UnCheckColor = System.Drawing.Color.PeachPuff;
             this.color3.UseVisualStyleBackColor = false;
+            this.color3.Click += new System.EventHandler(this.GetColorName);
             // 
             // color8
             // 
             this.color8.AutoSize = true;
             this.color8.BackColor = System.Drawing.Color.PaleTurquoise;
             this.color8.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color8.Location = new System.Drawing.Point(233, 88);
+            this.color8.Location = new System.Drawing.Point(230, 88);
             this.color8.MinimumSize = new System.Drawing.Size(0, 20);
             this.color8.Name = "color8";
             this.color8.Size = new System.Drawing.Size(30, 20);
@@ -1063,13 +1075,14 @@
             this.color8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.color8.UnCheckColor = System.Drawing.Color.PaleTurquoise;
             this.color8.UseVisualStyleBackColor = false;
+            this.color8.Click += new System.EventHandler(this.GetColorName);
             // 
             // color7
             // 
             this.color7.AutoSize = true;
             this.color7.BackColor = System.Drawing.Color.Azure;
             this.color7.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color7.Location = new System.Drawing.Point(203, 88);
+            this.color7.Location = new System.Drawing.Point(200, 88);
             this.color7.MinimumSize = new System.Drawing.Size(0, 20);
             this.color7.Name = "color7";
             this.color7.Size = new System.Drawing.Size(30, 20);
@@ -1078,13 +1091,14 @@
             this.color7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.color7.UnCheckColor = System.Drawing.Color.Azure;
             this.color7.UseVisualStyleBackColor = false;
+            this.color7.Click += new System.EventHandler(this.GetColorName);
             // 
             // color10
             // 
             this.color10.AutoSize = true;
             this.color10.BackColor = System.Drawing.Color.RosyBrown;
             this.color10.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color10.Location = new System.Drawing.Point(12, 114);
+            this.color10.Location = new System.Drawing.Point(9, 114);
             this.color10.MinimumSize = new System.Drawing.Size(0, 20);
             this.color10.Name = "color10";
             this.color10.Size = new System.Drawing.Size(30, 20);
@@ -1093,13 +1107,14 @@
             this.color10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.color10.UnCheckColor = System.Drawing.Color.RosyBrown;
             this.color10.UseVisualStyleBackColor = false;
+            this.color10.Click += new System.EventHandler(this.GetColorName);
             // 
             // color4
             // 
             this.color4.AutoSize = true;
             this.color4.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.color4.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color4.Location = new System.Drawing.Point(105, 88);
+            this.color4.Location = new System.Drawing.Point(102, 88);
             this.color4.MinimumSize = new System.Drawing.Size(0, 20);
             this.color4.Name = "color4";
             this.color4.Size = new System.Drawing.Size(30, 20);
@@ -1108,13 +1123,14 @@
             this.color4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.color4.UnCheckColor = System.Drawing.Color.LightGoldenrodYellow;
             this.color4.UseVisualStyleBackColor = false;
+            this.color4.Click += new System.EventHandler(this.GetColorName);
             // 
             // color6
             // 
             this.color6.AutoSize = true;
             this.color6.BackColor = System.Drawing.Color.Khaki;
             this.color6.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color6.Location = new System.Drawing.Point(169, 88);
+            this.color6.Location = new System.Drawing.Point(166, 88);
             this.color6.MinimumSize = new System.Drawing.Size(0, 20);
             this.color6.Name = "color6";
             this.color6.Size = new System.Drawing.Size(30, 20);
@@ -1123,13 +1139,14 @@
             this.color6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.color6.UnCheckColor = System.Drawing.Color.Khaki;
             this.color6.UseVisualStyleBackColor = false;
+            this.color6.Click += new System.EventHandler(this.GetColorName);
             // 
             // color2
             // 
             this.color2.AutoSize = true;
             this.color2.BackColor = System.Drawing.Color.LightSalmon;
             this.color2.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.color2.Location = new System.Drawing.Point(43, 88);
+            this.color2.Location = new System.Drawing.Point(40, 88);
             this.color2.MinimumSize = new System.Drawing.Size(0, 20);
             this.color2.Name = "color2";
             this.color2.Size = new System.Drawing.Size(30, 20);
@@ -1138,6 +1155,7 @@
             this.color2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.color2.UnCheckColor = System.Drawing.Color.LightSalmon;
             this.color2.UseVisualStyleBackColor = false;
+            this.color2.Click += new System.EventHandler(this.GetColorName);
             // 
             // gum_name
             // 
