@@ -1275,82 +1275,88 @@ namespace Calendar.NET
             String eventText = ed.Event.EventText.Trim();
             String eventDate = ed.Event.Date.ToString("yyyy-MM-dd");
 
-            if (File.Exists(XmlFileName))
+            DialogResult DeleteOk = MessageBox.Show("일정 일자 : " + eventDate + "\n" + "일정 이름 : " + eventText + "\n\n을(를) 삭제 하시겠습니까?", "삭제 확인", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            //삭제 Yes
+            if (DeleteOk == DialogResult.Yes)
             {
-                //xml 속성가져오기
-                XmlDocument xmlDoc = new XmlDocument();
-                xmlDoc.Load(XmlFileName);
-
-                XmlNode node = xmlDoc.SelectSingleNode("Root");
-                if (node != null)
+                
+                if (File.Exists(XmlFileName))
                 {
+                    //xml 속성가져오기
+                    XmlDocument xmlDoc = new XmlDocument();
+                    xmlDoc.Load(XmlFileName);
 
-                    for (int i = 0; i < node.ChildNodes.Count; i++)
+                    XmlNode node = xmlDoc.SelectSingleNode("Root");
+                    if (node != null)
                     {
 
-
-                        //검체 인경우
-                        if (ed.Event.Rank == 1)
+                        for (int i = 0; i < node.ChildNodes.Count; i++)
                         {
-                            if (node.ChildNodes[i].Attributes["Name"].Value.Trim() == eventText)
+
+
+                            //검체 인경우
+                            if (ed.Event.Rank == 1)
                             {
-
-                                XmlNodeList TestNode = xmlDoc.SelectNodes("Root/Test");
-
-                                for (int j = 0; j < TestNode.Count; j++)
+                                if (node.ChildNodes[i].Attributes["Name"].Value.Trim() == eventText)
                                 {
-                                    if (TestNode[j].Attributes["GumCheName"].Value == eventText)
+
+                                    XmlNodeList TestNode = xmlDoc.SelectNodes("Root/Test");
+
+                                    for (int j = 0; j < TestNode.Count; j++)
                                     {
-                                        MessageBox.Show("해당 검체에 등록된 시험이 있습니다. 시험을 먼저 삭제해 주세요");
-                                        return;
+                                        if (TestNode[j].Attributes["GumCheName"].Value == eventText)
+                                        {
+                                            MessageBox.Show("해당 검체에 등록된 시험이 있습니다. 시험을 먼저 삭제해 주세요");
+                                            return;
+                                        }
                                     }
-                                }
 
-                                //xml 노드삭제
-                                XmlNode deleteNode = node.ChildNodes[i];
-                                XmlNode parentNode = deleteNode.ParentNode; // 삭제할 노드의 부모 노드 찾고
-
-                                parentNode.RemoveChild(deleteNode);
-
-                                RemoveEvent(_clickedEvent.Event);
-
-                            }
-
-                        }
-                        else if (ed.Event.Rank == 2)
-                        {
-                            MessageBox.Show("시험명 삭제는 불가능합니다. 전체삭제를 이용해주세요.");
-                            break;
-                        }
-                        else if (ed.Event.Rank == 3)
-                        {
-                            if (node.ChildNodes[i].Attributes.GetNamedItem("NameDate") != null)
-                            {
-                                if (ed.Event.EventText.Contains(node.ChildNodes[i].Attributes["Name"].Value) && ed.Event.EventText.Contains(node.ChildNodes[i].Attributes["NameDate"].Value))
-                                {
+                                    //xml 노드삭제
                                     XmlNode deleteNode = node.ChildNodes[i];
-                                    XmlNode parentNode = deleteNode.ParentNode;
+                                    XmlNode parentNode = deleteNode.ParentNode; // 삭제할 노드의 부모 노드 찾고
 
                                     parentNode.RemoveChild(deleteNode);
 
                                     RemoveEvent(_clickedEvent.Event);
+
+                                }
+
+                            }
+                            else if (ed.Event.Rank == 2)
+                            {
+                                MessageBox.Show("시험명 삭제는 불가능합니다. 전체삭제를 이용해주세요.");
+                                break;
+                            }
+                            else if (ed.Event.Rank == 3)
+                            {
+                                if (node.ChildNodes[i].Attributes.GetNamedItem("NameDate") != null)
+                                {
+                                    if (ed.Event.EventText.Contains(node.ChildNodes[i].Attributes["Name"].Value) && ed.Event.EventText.Contains(node.ChildNodes[i].Attributes["NameDate"].Value))
+                                    {
+                                        XmlNode deleteNode = node.ChildNodes[i];
+                                        XmlNode parentNode = deleteNode.ParentNode;
+
+                                        parentNode.RemoveChild(deleteNode);
+
+                                        RemoveEvent(_clickedEvent.Event);
+                                    }
                                 }
                             }
                         }
+
+                        xmlDoc.Save(XmlFileName);
+                        xmlDoc = null;
+
+                        Refresh();
+
                     }
-
-                    xmlDoc.Save(XmlFileName);
-                    xmlDoc = null;
-
-                    Refresh();
-
+                }
+                else
+                {
+                    MessageBox.Show("파일이 없습니다..");
                 }
             }
-            else
-            {
-                MessageBox.Show("파일이 없습니다..");
-            }
-
 
         }
 

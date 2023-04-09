@@ -104,7 +104,6 @@
             this.testTitle = new CustomControls.RJControls.RJTextBox();
             this.Test_add = new Calendar.NETDemo.RJButton();
             this.Uncheck = new Calendar.NETDemo.RJButton();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
@@ -1305,25 +1304,12 @@
             this.Uncheck.UseVisualStyleBackColor = false;
             this.Uncheck.Click += new System.EventHandler(this.Uncheck_Click);
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.DarkGray;
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.checkBox1.Location = new System.Drawing.Point(835, 11);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(89, 19);
-            this.checkBox1.TabIndex = 82;
-            this.checkBox1.Text = "삭제팝업";
-            this.checkBox1.UseVisualStyleBackColor = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1532, 916);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.TestRb);
             this.Controls.Add(this.GumCheRb);
             this.Controls.Add(this.RefreshBtn);
@@ -1424,7 +1410,6 @@
         private RashiRadioButton color13;
         private RashiRadioButton color12;
         private RashiRadioButton color11;
-        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
