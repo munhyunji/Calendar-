@@ -1364,32 +1364,42 @@ namespace Calendar.NET
         {
             var ed = new EventDetails { Event = _clickedEvent.Event };
 
-            if (ed.Event.Rank == 2)
+            String eventText = ed.Event.EventText.Trim();
+            String eventDate = ed.Event.Date.ToString("yyyy-MM-dd");
+
+            DialogResult DeleteOk = MessageBox.Show("일정 일자 : " + eventDate + "\n" + "일정 이름 : " + eventText + "\n\n을(를) 삭제 하시겠습니까?", "삭제 확인", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            //삭제 Yes
+            if (DeleteOk == DialogResult.Yes)
             {
-                if (File.Exists(XmlFileName))
+
+                if (ed.Event.Rank == 2)
                 {
-                    XmlDocument xmlDoc = new XmlDocument();
-                    xmlDoc.Load(XmlFileName);
-
-                    XmlNode node = xmlDoc.SelectSingleNode("Root");
-
-                    //이벤트 제목과 동일한 노드 찾기
-                    XmlNodeList TestNode = xmlDoc.SelectNodes("descendant::Test[@Name='" + ed.Event.EventText.Trim().ToString() + "']");
-
-                    foreach (XmlNode Testing in TestNode)
+                    if (File.Exists(XmlFileName))
                     {
-                        node.RemoveChild(Testing);
+                        XmlDocument xmlDoc = new XmlDocument();
+                        xmlDoc.Load(XmlFileName);
+
+                        XmlNode node = xmlDoc.SelectSingleNode("Root");
+
+                        //이벤트 제목과 동일한 노드 찾기
+                        XmlNodeList TestNode = xmlDoc.SelectNodes("descendant::Test[@Name='" + ed.Event.EventText.Trim().ToString() + "']");
+
+                        foreach (XmlNode Testing in TestNode)
+                        {
+                            node.RemoveChild(Testing);
+                        }
+                        xmlDoc.Save(XmlFileName);
+                        xmlDoc = null;
+
+                        Refresh();
+
                     }
-                    xmlDoc.Save(XmlFileName);
-                    xmlDoc = null;
-
-                    Refresh();
-
                 }
-            }
-            else
-            {
-                MessageBox.Show("시험일정 전체삭제는 시험명 선택 후 가능합니다.");
+                else
+                {
+                    MessageBox.Show("시험일정 전체삭제는 시험명 선택 후 가능합니다.");
+                }
             }
         }
 
