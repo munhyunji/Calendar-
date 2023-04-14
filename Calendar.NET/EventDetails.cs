@@ -164,8 +164,6 @@ namespace Calendar.NET
                 pnlEventColor.Enabled = false;
             }
 
-
-
             monthCalendar1.SelectionRange = new SelectionRange(_event.Date, _event.Date);
 
             //검체량 값 불러오기...,
@@ -240,18 +238,22 @@ namespace Calendar.NET
                 {
                     if (!String.IsNullOrEmpty(_newEvent.EventText))
                     {
+                        //검체인경우 
                         if (_event.Rank == 1)
                         {
                             XmlNodeList GumChe = xmlDoc.SelectNodes("Root/GumChe");
 
                             for (int i = 0; i < GumChe.Count; i++)
-                            {
+                            {   
+                                // 선택한 검체와 XML파일에서 동일한 검체명,일자를 찾은경우
                                 if (_event.EventText == GumChe[i].Attributes["Name"].Value && _event.Date.ToString("yyyy-MM-dd") == GumChe[i].Attributes["Datetime"].Value)
                                 {
+                                    //검체에 등록된 시험을 찾는다.
                                     XmlNodeList GumCheName = xmlDoc.SelectNodes("Root/Test");
 
                                     for (int j = 0; j < GumCheName.Count; j++)
                                     {
+                                        //선택한 검체와 동일한 검체명을 갖는 시험명,일자가 있는경우 
                                         if (_event.EventText == GumCheName[j].Attributes["GumCheName"].Value && _event.Date.ToString("yyyy-MM-dd") == GumCheName[j].Attributes["GumCheDate"].Value)
                                         {
                                             GumCheName[j].Attributes["GumCheName"].Value = txtEventName1.Texts;
@@ -272,6 +274,7 @@ namespace Calendar.NET
 
 
                         }
+                        //시험명인 경우
                         else if (_event.Rank == 2)
                         {
                             XmlNodeList Test = xmlDoc.SelectNodes("Root/Test");
@@ -308,6 +311,7 @@ namespace Calendar.NET
                             }
 
                         }
+                        //시험 n일차 일정인 경우
                         else if (_event.Rank == 3)
                         {
                             XmlNodeList TestDate = xmlDoc.SelectNodes("Root/Test");
