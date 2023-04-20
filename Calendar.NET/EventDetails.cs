@@ -232,6 +232,11 @@ namespace Calendar.NET
             xmlDoc = new XmlDocument();
             xmlDoc.Load(XmlFileName);
 
+            //선택한 검체의 DateTime
+            DateTime EventGumCheDateTime = _event.Date;
+            DateTime SelectedEventGumCheDateTime = monthCalendar1.SelectionStart;
+
+
             if (File.Exists(XmlFileName))
             {
                 try
@@ -256,15 +261,23 @@ namespace Calendar.NET
                                         //선택한 검체와 동일한 검체명을 갖는 시험명,일자가 있는경우 
                                         if (_event.EventText == GumCheName[j].Attributes["GumCheName"].Value && _event.Date.ToString("yyyy-MM-dd") == GumCheName[j].Attributes["GumCheDate"].Value)
                                         {
+                                           //날짜 차이 계산
+                                            TimeSpan ts = SelectedEventGumCheDateTime - EventGumCheDateTime ;
+
+                                            //선택한 검체 시험의 DateTime
+                                            DateTime TestDateTime = DateTime.Parse(GumCheName[j].Attributes["Datetime"].Value).AddDays(ts.Days);
+
+                                            //검체의 날짜가 변경되면 날짜의 차이만큼 DateTime 재설정
+                                            GumCheName[j].Attributes["Datetime"].Value = TestDateTime.ToString("yyyy-MM-dd");
                                             GumCheName[j].Attributes["GumCheName"].Value = txtEventName1.Texts;
-                                            GumCheName[j].Attributes["GumCheDate"].Value = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
+                                            GumCheName[j].Attributes["GumCheDate"].Value = SelectedEventGumCheDateTime.ToString("yyyy-MM-dd");
                                             GumCheName[j].Attributes["Color"].Value = pnlEventColor.BackColor.ToString();
                                         }
 
                                     }
 
                                     GumChe[i].Attributes["Name"].Value = txtEventName1.Texts;
-                                    GumChe[i].Attributes["Datetime"].Value = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
+                                    GumChe[i].Attributes["Datetime"].Value = SelectedEventGumCheDateTime.ToString("yyyy-MM-dd");
                                     GumChe[i].Attributes["Color"].Value = _newEvent.EventColor.ToString();
 
                                     _newEvent.EventText = txtEventName1.Texts;
