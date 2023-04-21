@@ -192,6 +192,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="dest.ico" />
+    <None Include="Resources\people.png" />
+    <None Include="Resources\dd1.png" />
+    <None Include="Resources\dd.png" />
+    <None Include="Resources\free-icon-reload-3580294.png" />
     <None Include="Properties\calendarDark.png" />
     <None Include="Properties\calendarWhite.png" />
   </ItemGroup>

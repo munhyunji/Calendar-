@@ -46,12 +46,32 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new Calendar.NETDemo.RashiDateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.test_days = new Calendar.NETDemo.MyListBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox14 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox13 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox12 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox11 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox10 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox9 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox8 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox7 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox6 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox5 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox4 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox3 = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox2 = new CustomControls.RJControls.RJTextBox();
+            this.gum_amt = new CustomControls.RJControls.RJTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.testTitle = new CustomControls.RJControls.RJTextBox();
+            this.Test_add = new Calendar.NETDemo.RJButton();
+            this.Uncheck = new Calendar.NETDemo.RJButton();
             this.label19 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -59,12 +79,6 @@
             this.ddToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.calendar1 = new Calendar.NET.Calendar();
-            this.TestRb = new Calendar.NETDemo.RashiRadioButton();
-            this.GumCheRb = new Calendar.NETDemo.RashiRadioButton();
-            this.RefreshBtn = new Calendar.NETDemo.RJButton();
-            this.rjButton1 = new Calendar.NETDemo.RJButton();
-            this.dateTimePicker1 = new Calendar.NETDemo.RashiDateTimePicker();
             this.color18 = new Calendar.NETDemo.RashiRadioButton();
             this.color5 = new Calendar.NETDemo.RashiRadioButton();
             this.color17 = new Calendar.NETDemo.RashiRadioButton();
@@ -85,25 +99,11 @@
             this.color2 = new Calendar.NETDemo.RashiRadioButton();
             this.gum_name = new CustomControls.RJControls.RJTextBox();
             this.AddEvent2 = new Calendar.NETDemo.RJButton();
-            this.test_days = new Calendar.NETDemo.MyListBox();
-            this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox14 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox13 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox12 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox11 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox10 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox9 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox8 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox7 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox6 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox5 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox4 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox3 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox2 = new CustomControls.RJControls.RJTextBox();
-            this.gum_amt = new CustomControls.RJControls.RJTextBox();
-            this.testTitle = new CustomControls.RJControls.RJTextBox();
-            this.Test_add = new Calendar.NETDemo.RJButton();
-            this.Uncheck = new Calendar.NETDemo.RJButton();
+            this.calendar1 = new Calendar.NET.Calendar();
+            this.TestRb = new Calendar.NETDemo.RashiRadioButton();
+            this.GumCheRb = new Calendar.NETDemo.RashiRadioButton();
+            this.rjButton1 = new Calendar.NETDemo.RJButton();
+            this.RefreshBtn = new Calendar.NETDemo.RJButton();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
@@ -274,6 +274,22 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "인수일시";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.BorderColor = System.Drawing.Color.Gray;
+            this.dateTimePicker1.BorderSize = 0;
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.InactiveCaptionText;
+            this.dateTimePicker1.FillColor = System.Drawing.Color.Thistle;
+            this.dateTimePicker1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(6, 33);
+            this.dateTimePicker1.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.ShowCheckBox = true;
+            this.dateTimePicker1.Size = new System.Drawing.Size(292, 35);
+            this.dateTimePicker1.TabIndex = 77;
+            this.dateTimePicker1.TextColor = System.Drawing.Color.White;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -347,6 +363,33 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "시험";
             // 
+            // test_days
+            // 
+            this.test_days.BackColor = System.Drawing.SystemColors.Window;
+            this.test_days.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.test_days.CheckOnClick = true;
+            this.test_days.ForeColor = System.Drawing.SystemColors.Window;
+            this.test_days.FormattingEnabled = true;
+            this.test_days.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14"});
+            this.test_days.Location = new System.Drawing.Point(98, 190);
+            this.test_days.Name = "test_days";
+            this.test_days.Size = new System.Drawing.Size(17, 414);
+            this.test_days.TabIndex = 78;
+            // 
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.Thistle;
@@ -383,6 +426,306 @@
             this.comboBox2.Size = new System.Drawing.Size(239, 28);
             this.comboBox2.TabIndex = 3;
             // 
+            // rjTextBox1
+            // 
+            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox1.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox1.BorderSize = 2;
+            this.rjTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rjTextBox1.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox1.Location = new System.Drawing.Point(166, 187);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox1.Multiline = true;
+            this.rjTextBox1.Name = "rjTextBox1";
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox1.PasswordChar = false;
+            this.rjTextBox1.Size = new System.Drawing.Size(119, 33);
+            this.rjTextBox1.TabIndex = 4;
+            this.rjTextBox1.Texts = "";
+            this.rjTextBox1.UnderlinedStyle = false;
+            // 
+            // rjTextBox14
+            // 
+            this.rjTextBox14.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox14.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox14.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox14.BorderSize = 2;
+            this.rjTextBox14.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox14.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rjTextBox14.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox14.Location = new System.Drawing.Point(166, 563);
+            this.rjTextBox14.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox14.Multiline = false;
+            this.rjTextBox14.Name = "rjTextBox14";
+            this.rjTextBox14.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox14.PasswordChar = false;
+            this.rjTextBox14.Size = new System.Drawing.Size(119, 32);
+            this.rjTextBox14.TabIndex = 17;
+            this.rjTextBox14.Texts = "";
+            this.rjTextBox14.UnderlinedStyle = false;
+            // 
+            // rjTextBox13
+            // 
+            this.rjTextBox13.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox13.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox13.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox13.BorderSize = 2;
+            this.rjTextBox13.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox13.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rjTextBox13.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox13.Location = new System.Drawing.Point(166, 533);
+            this.rjTextBox13.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox13.Multiline = false;
+            this.rjTextBox13.Name = "rjTextBox13";
+            this.rjTextBox13.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox13.PasswordChar = false;
+            this.rjTextBox13.Size = new System.Drawing.Size(119, 32);
+            this.rjTextBox13.TabIndex = 16;
+            this.rjTextBox13.Texts = "";
+            this.rjTextBox13.UnderlinedStyle = false;
+            // 
+            // rjTextBox12
+            // 
+            this.rjTextBox12.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox12.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox12.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox12.BorderSize = 2;
+            this.rjTextBox12.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox12.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rjTextBox12.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox12.Location = new System.Drawing.Point(166, 503);
+            this.rjTextBox12.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox12.Multiline = false;
+            this.rjTextBox12.Name = "rjTextBox12";
+            this.rjTextBox12.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox12.PasswordChar = false;
+            this.rjTextBox12.Size = new System.Drawing.Size(119, 32);
+            this.rjTextBox12.TabIndex = 15;
+            this.rjTextBox12.Texts = "";
+            this.rjTextBox12.UnderlinedStyle = false;
+            // 
+            // rjTextBox11
+            // 
+            this.rjTextBox11.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox11.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox11.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox11.BorderSize = 2;
+            this.rjTextBox11.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox11.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rjTextBox11.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox11.Location = new System.Drawing.Point(166, 473);
+            this.rjTextBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox11.Multiline = false;
+            this.rjTextBox11.Name = "rjTextBox11";
+            this.rjTextBox11.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox11.PasswordChar = false;
+            this.rjTextBox11.Size = new System.Drawing.Size(119, 32);
+            this.rjTextBox11.TabIndex = 14;
+            this.rjTextBox11.Texts = "";
+            this.rjTextBox11.UnderlinedStyle = false;
+            // 
+            // rjTextBox10
+            // 
+            this.rjTextBox10.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox10.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox10.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox10.BorderSize = 2;
+            this.rjTextBox10.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox10.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rjTextBox10.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox10.Location = new System.Drawing.Point(166, 447);
+            this.rjTextBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox10.Multiline = false;
+            this.rjTextBox10.Name = "rjTextBox10";
+            this.rjTextBox10.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox10.PasswordChar = false;
+            this.rjTextBox10.Size = new System.Drawing.Size(119, 32);
+            this.rjTextBox10.TabIndex = 13;
+            this.rjTextBox10.Texts = "";
+            this.rjTextBox10.UnderlinedStyle = false;
+            // 
+            // rjTextBox9
+            // 
+            this.rjTextBox9.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox9.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox9.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox9.BorderSize = 2;
+            this.rjTextBox9.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox9.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rjTextBox9.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox9.Location = new System.Drawing.Point(166, 421);
+            this.rjTextBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox9.Multiline = false;
+            this.rjTextBox9.Name = "rjTextBox9";
+            this.rjTextBox9.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox9.PasswordChar = false;
+            this.rjTextBox9.Size = new System.Drawing.Size(119, 32);
+            this.rjTextBox9.TabIndex = 12;
+            this.rjTextBox9.Texts = "";
+            this.rjTextBox9.UnderlinedStyle = false;
+            // 
+            // rjTextBox8
+            // 
+            this.rjTextBox8.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox8.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox8.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox8.BorderSize = 2;
+            this.rjTextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox8.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rjTextBox8.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox8.Location = new System.Drawing.Point(166, 390);
+            this.rjTextBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox8.Multiline = false;
+            this.rjTextBox8.Name = "rjTextBox8";
+            this.rjTextBox8.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox8.PasswordChar = false;
+            this.rjTextBox8.Size = new System.Drawing.Size(119, 32);
+            this.rjTextBox8.TabIndex = 11;
+            this.rjTextBox8.Texts = "";
+            this.rjTextBox8.UnderlinedStyle = false;
+            // 
+            // rjTextBox7
+            // 
+            this.rjTextBox7.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox7.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox7.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox7.BorderSize = 2;
+            this.rjTextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox7.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rjTextBox7.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox7.Location = new System.Drawing.Point(166, 362);
+            this.rjTextBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox7.Multiline = false;
+            this.rjTextBox7.Name = "rjTextBox7";
+            this.rjTextBox7.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox7.PasswordChar = false;
+            this.rjTextBox7.Size = new System.Drawing.Size(119, 32);
+            this.rjTextBox7.TabIndex = 10;
+            this.rjTextBox7.Texts = "";
+            this.rjTextBox7.UnderlinedStyle = false;
+            // 
+            // rjTextBox6
+            // 
+            this.rjTextBox6.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox6.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox6.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox6.BorderSize = 2;
+            this.rjTextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox6.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rjTextBox6.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox6.Location = new System.Drawing.Point(166, 334);
+            this.rjTextBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox6.Multiline = false;
+            this.rjTextBox6.Name = "rjTextBox6";
+            this.rjTextBox6.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox6.PasswordChar = false;
+            this.rjTextBox6.Size = new System.Drawing.Size(119, 32);
+            this.rjTextBox6.TabIndex = 9;
+            this.rjTextBox6.Texts = "";
+            this.rjTextBox6.UnderlinedStyle = false;
+            // 
+            // rjTextBox5
+            // 
+            this.rjTextBox5.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox5.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox5.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox5.BorderSize = 2;
+            this.rjTextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox5.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rjTextBox5.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox5.Location = new System.Drawing.Point(166, 306);
+            this.rjTextBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox5.Multiline = false;
+            this.rjTextBox5.Name = "rjTextBox5";
+            this.rjTextBox5.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox5.PasswordChar = false;
+            this.rjTextBox5.Size = new System.Drawing.Size(119, 32);
+            this.rjTextBox5.TabIndex = 8;
+            this.rjTextBox5.Texts = "";
+            this.rjTextBox5.UnderlinedStyle = false;
+            // 
+            // rjTextBox4
+            // 
+            this.rjTextBox4.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox4.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox4.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox4.BorderSize = 2;
+            this.rjTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox4.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rjTextBox4.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox4.Location = new System.Drawing.Point(166, 276);
+            this.rjTextBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox4.Multiline = false;
+            this.rjTextBox4.Name = "rjTextBox4";
+            this.rjTextBox4.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox4.PasswordChar = false;
+            this.rjTextBox4.Size = new System.Drawing.Size(119, 32);
+            this.rjTextBox4.TabIndex = 7;
+            this.rjTextBox4.Texts = "";
+            this.rjTextBox4.UnderlinedStyle = false;
+            // 
+            // rjTextBox3
+            // 
+            this.rjTextBox3.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox3.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox3.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox3.BorderSize = 2;
+            this.rjTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox3.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rjTextBox3.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox3.Location = new System.Drawing.Point(166, 247);
+            this.rjTextBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox3.Multiline = false;
+            this.rjTextBox3.Name = "rjTextBox3";
+            this.rjTextBox3.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox3.PasswordChar = false;
+            this.rjTextBox3.Size = new System.Drawing.Size(119, 32);
+            this.rjTextBox3.TabIndex = 6;
+            this.rjTextBox3.Texts = "";
+            this.rjTextBox3.UnderlinedStyle = false;
+            // 
+            // rjTextBox2
+            // 
+            this.rjTextBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox2.BorderColor = System.Drawing.Color.Lavender;
+            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.rjTextBox2.BorderSize = 2;
+            this.rjTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rjTextBox2.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rjTextBox2.ForeColor = System.Drawing.Color.DimGray;
+            this.rjTextBox2.Location = new System.Drawing.Point(166, 218);
+            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox2.Multiline = true;
+            this.rjTextBox2.Name = "rjTextBox2";
+            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox2.PasswordChar = false;
+            this.rjTextBox2.Size = new System.Drawing.Size(119, 33);
+            this.rjTextBox2.TabIndex = 5;
+            this.rjTextBox2.Texts = "";
+            this.rjTextBox2.UnderlinedStyle = false;
+            // 
+            // gum_amt
+            // 
+            this.gum_amt.BackColor = System.Drawing.SystemColors.Window;
+            this.gum_amt.BorderColor = System.Drawing.Color.Lavender;
+            this.gum_amt.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.gum_amt.BorderSize = 2;
+            this.gum_amt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gum_amt.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gum_amt.ForeColor = System.Drawing.Color.DimGray;
+            this.gum_amt.Location = new System.Drawing.Point(59, 104);
+            this.gum_amt.Margin = new System.Windows.Forms.Padding(4);
+            this.gum_amt.Multiline = false;
+            this.gum_amt.Name = "gum_amt";
+            this.gum_amt.Padding = new System.Windows.Forms.Padding(7);
+            this.gum_amt.PasswordChar = false;
+            this.gum_amt.Size = new System.Drawing.Size(238, 35);
+            this.gum_amt.TabIndex = 2;
+            this.gum_amt.Texts = "";
+            this.gum_amt.UnderlinedStyle = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -392,6 +735,67 @@
             this.label1.Size = new System.Drawing.Size(50, 17);
             this.label1.TabIndex = 81;
             this.label1.Text = "검체량";
+            // 
+            // testTitle
+            // 
+            this.testTitle.BackColor = System.Drawing.SystemColors.Window;
+            this.testTitle.BorderColor = System.Drawing.Color.Lavender;
+            this.testTitle.BorderFocusColor = System.Drawing.Color.Thistle;
+            this.testTitle.BorderSize = 2;
+            this.testTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.testTitle.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.testTitle.ForeColor = System.Drawing.Color.DimGray;
+            this.testTitle.ImeMode = System.Windows.Forms.ImeMode.Hangul;
+            this.testTitle.Location = new System.Drawing.Point(59, 63);
+            this.testTitle.Margin = new System.Windows.Forms.Padding(4);
+            this.testTitle.Multiline = false;
+            this.testTitle.Name = "testTitle";
+            this.testTitle.Padding = new System.Windows.Forms.Padding(7);
+            this.testTitle.PasswordChar = false;
+            this.testTitle.Size = new System.Drawing.Size(238, 35);
+            this.testTitle.TabIndex = 1;
+            this.testTitle.Texts = "";
+            this.testTitle.UnderlinedStyle = false;
+            // 
+            // Test_add
+            // 
+            this.Test_add.BackColor = System.Drawing.Color.Thistle;
+            this.Test_add.BackgroundColor = System.Drawing.Color.Thistle;
+            this.Test_add.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.Test_add.BorderRadius = 7;
+            this.Test_add.BorderSize = 0;
+            this.Test_add.FlatAppearance.BorderSize = 0;
+            this.Test_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Test_add.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Test_add.ForeColor = System.Drawing.Color.White;
+            this.Test_add.Location = new System.Drawing.Point(14, 533);
+            this.Test_add.Name = "Test_add";
+            this.Test_add.Size = new System.Drawing.Size(69, 55);
+            this.Test_add.TabIndex = 18;
+            this.Test_add.Text = "시험\r\n등록";
+            this.Test_add.TextColor = System.Drawing.Color.White;
+            this.Test_add.UseVisualStyleBackColor = false;
+            this.Test_add.Click += new System.EventHandler(this.Test_add_Click);
+            // 
+            // Uncheck
+            // 
+            this.Uncheck.BackColor = System.Drawing.Color.LightGray;
+            this.Uncheck.BackgroundColor = System.Drawing.Color.LightGray;
+            this.Uncheck.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.Uncheck.BorderRadius = 7;
+            this.Uncheck.BorderSize = 0;
+            this.Uncheck.FlatAppearance.BorderSize = 0;
+            this.Uncheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Uncheck.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Uncheck.ForeColor = System.Drawing.Color.White;
+            this.Uncheck.Location = new System.Drawing.Point(13, 218);
+            this.Uncheck.Name = "Uncheck";
+            this.Uncheck.Size = new System.Drawing.Size(78, 30);
+            this.Uncheck.TabIndex = 79;
+            this.Uncheck.Text = "전체 해제";
+            this.Uncheck.TextColor = System.Drawing.Color.White;
+            this.Uncheck.UseVisualStyleBackColor = false;
+            this.Uncheck.Click += new System.EventHandler(this.Uncheck_Click);
             // 
             // label19
             // 
@@ -463,128 +867,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " 검체";
-            // 
-            // calendar1
-            // 
-            this.calendar1.AllowEditingEvents = false;
-            this.calendar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.calendar1.BackColor = System.Drawing.Color.Transparent;
-            this.calendar1.CalendarDate = new System.DateTime(2012, 4, 24, 13, 16, 0, 0);
-            this.calendar1.CalendarView = Calendar.NET.CalendarViews.Month;
-            this.calendar1.DateHeaderFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.calendar1.DayOfWeekFont = new System.Drawing.Font("Arial", 10F);
-            this.calendar1.DaysFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calendar1.DayViewTimeFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.calendar1.DimDisabledEvents = true;
-            this.calendar1.Event = null;
-            this.calendar1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.calendar1.HighlightCurrentDay = true;
-            this.calendar1.LoadPresetHolidays = true;
-            this.calendar1.Location = new System.Drawing.Point(331, -19);
-            this.calendar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.calendar1.Name = "calendar1";
-            this.calendar1.ShowArrowControls = true;
-            this.calendar1.ShowDashedBorderOnDisabledEvents = true;
-            this.calendar1.ShowDateInHeader = true;
-            this.calendar1.ShowDisabledEvents = false;
-            this.calendar1.ShowEventTooltips = true;
-            this.calendar1.ShowTodayButton = true;
-            this.calendar1.Size = new System.Drawing.Size(1204, 964);
-            this.calendar1.TabIndex = 0;
-            this.calendar1.TodayFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            // 
-            // TestRb
-            // 
-            this.TestRb.AutoSize = true;
-            this.TestRb.CheckColor = System.Drawing.Color.Thistle;
-            this.TestRb.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.TestRb.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.TestRb.Location = new System.Drawing.Point(734, 11);
-            this.TestRb.MinimumSize = new System.Drawing.Size(0, 24);
-            this.TestRb.Name = "TestRb";
-            this.TestRb.Size = new System.Drawing.Size(71, 24);
-            this.TestRb.TabIndex = 81;
-            this.TestRb.TabStop = true;
-            this.TestRb.Text = "시험";
-            this.TestRb.UnCheckColor = System.Drawing.Color.Lavender;
-            this.TestRb.UseVisualStyleBackColor = true;
-            this.TestRb.Click += new System.EventHandler(this.TestRb_Click);
-            // 
-            // GumCheRb
-            // 
-            this.GumCheRb.AutoSize = true;
-            this.GumCheRb.CheckColor = System.Drawing.Color.Thistle;
-            this.GumCheRb.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.GumCheRb.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.GumCheRb.Location = new System.Drawing.Point(667, 11);
-            this.GumCheRb.MinimumSize = new System.Drawing.Size(0, 24);
-            this.GumCheRb.Name = "GumCheRb";
-            this.GumCheRb.Size = new System.Drawing.Size(71, 24);
-            this.GumCheRb.TabIndex = 80;
-            this.GumCheRb.TabStop = true;
-            this.GumCheRb.Text = "검체";
-            this.GumCheRb.UnCheckColor = System.Drawing.Color.Lavender;
-            this.GumCheRb.UseVisualStyleBackColor = true;
-            this.GumCheRb.Click += new System.EventHandler(this.GumCheRb_Click);
-            // 
-            // RefreshBtn
-            // 
-            this.RefreshBtn.BackColor = System.Drawing.Color.Thistle;
-            this.RefreshBtn.BackgroundColor = System.Drawing.Color.Thistle;
-            this.RefreshBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.RefreshBtn.BorderRadius = 7;
-            this.RefreshBtn.BorderSize = 0;
-            this.RefreshBtn.FlatAppearance.BorderSize = 0;
-            this.RefreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RefreshBtn.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.RefreshBtn.ForeColor = System.Drawing.Color.White;
-            this.RefreshBtn.Location = new System.Drawing.Point(517, 7);
-            this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.Size = new System.Drawing.Size(139, 30);
-            this.RefreshBtn.TabIndex = 79;
-            this.RefreshBtn.Text = "새로고침";
-            this.RefreshBtn.TextColor = System.Drawing.Color.White;
-            this.RefreshBtn.UseVisualStyleBackColor = false;
-            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
-            // 
-            // rjButton1
-            // 
-            this.rjButton1.BackColor = System.Drawing.Color.LightPink;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.LightPink;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 7;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(518, 7);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(139, 30);
-            this.rjButton1.TabIndex = 78;
-            this.rjButton1.Text = "껐다 키기..";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            this.rjButton1.Visible = false;
-            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.BorderColor = System.Drawing.Color.Gray;
-            this.dateTimePicker1.BorderSize = 0;
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.InactiveCaptionText;
-            this.dateTimePicker1.FillColor = System.Drawing.Color.Thistle;
-            this.dateTimePicker1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(6, 33);
-            this.dateTimePicker1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.ShowCheckBox = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(292, 35);
-            this.dateTimePicker1.TabIndex = 77;
-            this.dateTimePicker1.TextColor = System.Drawing.Color.White;
             // 
             // color18
             // 
@@ -916,393 +1198,110 @@
             this.AddEvent2.UseVisualStyleBackColor = false;
             this.AddEvent2.Click += new System.EventHandler(this.AddEvent2_Click);
             // 
-            // test_days
+            // calendar1
             // 
-            this.test_days.BackColor = System.Drawing.SystemColors.Window;
-            this.test_days.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.test_days.CheckOnClick = true;
-            this.test_days.ForeColor = System.Drawing.SystemColors.Window;
-            this.test_days.FormattingEnabled = true;
-            this.test_days.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14"});
-            this.test_days.Location = new System.Drawing.Point(98, 190);
-            this.test_days.Name = "test_days";
-            this.test_days.Size = new System.Drawing.Size(17, 414);
-            this.test_days.TabIndex = 78;
+            this.calendar1.AllowEditingEvents = false;
+            this.calendar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.calendar1.BackColor = System.Drawing.Color.Transparent;
+            this.calendar1.CalendarDate = new System.DateTime(2012, 4, 24, 13, 16, 0, 0);
+            this.calendar1.CalendarView = Calendar.NET.CalendarViews.Month;
+            this.calendar1.DateHeaderFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.calendar1.DayOfWeekFont = new System.Drawing.Font("Arial", 10F);
+            this.calendar1.DaysFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calendar1.DayViewTimeFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.calendar1.DimDisabledEvents = true;
+            this.calendar1.Event = null;
+            this.calendar1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.calendar1.HighlightCurrentDay = true;
+            this.calendar1.LoadPresetHolidays = true;
+            this.calendar1.Location = new System.Drawing.Point(331, -19);
+            this.calendar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.calendar1.Name = "calendar1";
+            this.calendar1.ShowArrowControls = true;
+            this.calendar1.ShowDashedBorderOnDisabledEvents = true;
+            this.calendar1.ShowDateInHeader = true;
+            this.calendar1.ShowDisabledEvents = false;
+            this.calendar1.ShowEventTooltips = true;
+            this.calendar1.ShowTodayButton = true;
+            this.calendar1.Size = new System.Drawing.Size(1204, 964);
+            this.calendar1.TabIndex = 0;
+            this.calendar1.TodayFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             // 
-            // rjTextBox1
+            // TestRb
             // 
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox1.Location = new System.Drawing.Point(166, 187);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = true;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.Size = new System.Drawing.Size(119, 33);
-            this.rjTextBox1.TabIndex = 4;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
+            this.TestRb.AutoSize = true;
+            this.TestRb.CheckColor = System.Drawing.Color.Thistle;
+            this.TestRb.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TestRb.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.TestRb.Location = new System.Drawing.Point(591, 2);
+            this.TestRb.MinimumSize = new System.Drawing.Size(0, 24);
+            this.TestRb.Name = "TestRb";
+            this.TestRb.Size = new System.Drawing.Size(71, 24);
+            this.TestRb.TabIndex = 81;
+            this.TestRb.TabStop = true;
+            this.TestRb.Text = "시험";
+            this.TestRb.UnCheckColor = System.Drawing.Color.Lavender;
+            this.TestRb.UseVisualStyleBackColor = true;
+            this.TestRb.Click += new System.EventHandler(this.TestRb_Click);
             // 
-            // rjTextBox14
+            // GumCheRb
             // 
-            this.rjTextBox14.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox14.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox14.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox14.BorderSize = 2;
-            this.rjTextBox14.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox14.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rjTextBox14.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox14.Location = new System.Drawing.Point(166, 563);
-            this.rjTextBox14.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox14.Multiline = false;
-            this.rjTextBox14.Name = "rjTextBox14";
-            this.rjTextBox14.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox14.PasswordChar = false;
-            this.rjTextBox14.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox14.TabIndex = 17;
-            this.rjTextBox14.Texts = "";
-            this.rjTextBox14.UnderlinedStyle = false;
+            this.GumCheRb.AutoSize = true;
+            this.GumCheRb.CheckColor = System.Drawing.Color.Thistle;
+            this.GumCheRb.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.GumCheRb.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.GumCheRb.Location = new System.Drawing.Point(524, 2);
+            this.GumCheRb.MinimumSize = new System.Drawing.Size(0, 24);
+            this.GumCheRb.Name = "GumCheRb";
+            this.GumCheRb.Size = new System.Drawing.Size(71, 24);
+            this.GumCheRb.TabIndex = 80;
+            this.GumCheRb.TabStop = true;
+            this.GumCheRb.Text = "검체";
+            this.GumCheRb.UnCheckColor = System.Drawing.Color.Lavender;
+            this.GumCheRb.UseVisualStyleBackColor = true;
+            this.GumCheRb.Click += new System.EventHandler(this.GumCheRb_Click);
             // 
-            // rjTextBox13
+            // rjButton1
             // 
-            this.rjTextBox13.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox13.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox13.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox13.BorderSize = 2;
-            this.rjTextBox13.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox13.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rjTextBox13.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox13.Location = new System.Drawing.Point(166, 533);
-            this.rjTextBox13.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox13.Multiline = false;
-            this.rjTextBox13.Name = "rjTextBox13";
-            this.rjTextBox13.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox13.PasswordChar = false;
-            this.rjTextBox13.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox13.TabIndex = 16;
-            this.rjTextBox13.Texts = "";
-            this.rjTextBox13.UnderlinedStyle = false;
+            this.rjButton1.BackColor = System.Drawing.Color.Transparent;
+            this.rjButton1.BackgroundColor = System.Drawing.Color.Transparent;
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 7;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Image = global::Calendar.NETDemo.Properties.Resources.people;
+            this.rjButton1.Location = new System.Drawing.Point(1293, 2);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(57, 46);
+            this.rjButton1.TabIndex = 79;
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
-            // rjTextBox12
+            // RefreshBtn
             // 
-            this.rjTextBox12.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox12.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox12.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox12.BorderSize = 2;
-            this.rjTextBox12.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox12.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rjTextBox12.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox12.Location = new System.Drawing.Point(166, 503);
-            this.rjTextBox12.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox12.Multiline = false;
-            this.rjTextBox12.Name = "rjTextBox12";
-            this.rjTextBox12.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox12.PasswordChar = false;
-            this.rjTextBox12.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox12.TabIndex = 15;
-            this.rjTextBox12.Texts = "";
-            this.rjTextBox12.UnderlinedStyle = false;
-            // 
-            // rjTextBox11
-            // 
-            this.rjTextBox11.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox11.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox11.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox11.BorderSize = 2;
-            this.rjTextBox11.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox11.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rjTextBox11.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox11.Location = new System.Drawing.Point(166, 473);
-            this.rjTextBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox11.Multiline = false;
-            this.rjTextBox11.Name = "rjTextBox11";
-            this.rjTextBox11.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox11.PasswordChar = false;
-            this.rjTextBox11.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox11.TabIndex = 14;
-            this.rjTextBox11.Texts = "";
-            this.rjTextBox11.UnderlinedStyle = false;
-            // 
-            // rjTextBox10
-            // 
-            this.rjTextBox10.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox10.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox10.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox10.BorderSize = 2;
-            this.rjTextBox10.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox10.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rjTextBox10.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox10.Location = new System.Drawing.Point(166, 447);
-            this.rjTextBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox10.Multiline = false;
-            this.rjTextBox10.Name = "rjTextBox10";
-            this.rjTextBox10.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox10.PasswordChar = false;
-            this.rjTextBox10.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox10.TabIndex = 13;
-            this.rjTextBox10.Texts = "";
-            this.rjTextBox10.UnderlinedStyle = false;
-            // 
-            // rjTextBox9
-            // 
-            this.rjTextBox9.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox9.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox9.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox9.BorderSize = 2;
-            this.rjTextBox9.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox9.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rjTextBox9.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox9.Location = new System.Drawing.Point(166, 421);
-            this.rjTextBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox9.Multiline = false;
-            this.rjTextBox9.Name = "rjTextBox9";
-            this.rjTextBox9.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox9.PasswordChar = false;
-            this.rjTextBox9.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox9.TabIndex = 12;
-            this.rjTextBox9.Texts = "";
-            this.rjTextBox9.UnderlinedStyle = false;
-            // 
-            // rjTextBox8
-            // 
-            this.rjTextBox8.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox8.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox8.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox8.BorderSize = 2;
-            this.rjTextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox8.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rjTextBox8.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox8.Location = new System.Drawing.Point(166, 390);
-            this.rjTextBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox8.Multiline = false;
-            this.rjTextBox8.Name = "rjTextBox8";
-            this.rjTextBox8.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox8.PasswordChar = false;
-            this.rjTextBox8.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox8.TabIndex = 11;
-            this.rjTextBox8.Texts = "";
-            this.rjTextBox8.UnderlinedStyle = false;
-            // 
-            // rjTextBox7
-            // 
-            this.rjTextBox7.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox7.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox7.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox7.BorderSize = 2;
-            this.rjTextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox7.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rjTextBox7.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox7.Location = new System.Drawing.Point(166, 362);
-            this.rjTextBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox7.Multiline = false;
-            this.rjTextBox7.Name = "rjTextBox7";
-            this.rjTextBox7.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox7.PasswordChar = false;
-            this.rjTextBox7.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox7.TabIndex = 10;
-            this.rjTextBox7.Texts = "";
-            this.rjTextBox7.UnderlinedStyle = false;
-            // 
-            // rjTextBox6
-            // 
-            this.rjTextBox6.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox6.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox6.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox6.BorderSize = 2;
-            this.rjTextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox6.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rjTextBox6.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox6.Location = new System.Drawing.Point(166, 334);
-            this.rjTextBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox6.Multiline = false;
-            this.rjTextBox6.Name = "rjTextBox6";
-            this.rjTextBox6.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox6.PasswordChar = false;
-            this.rjTextBox6.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox6.TabIndex = 9;
-            this.rjTextBox6.Texts = "";
-            this.rjTextBox6.UnderlinedStyle = false;
-            // 
-            // rjTextBox5
-            // 
-            this.rjTextBox5.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox5.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox5.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox5.BorderSize = 2;
-            this.rjTextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox5.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rjTextBox5.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox5.Location = new System.Drawing.Point(166, 306);
-            this.rjTextBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox5.Multiline = false;
-            this.rjTextBox5.Name = "rjTextBox5";
-            this.rjTextBox5.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox5.PasswordChar = false;
-            this.rjTextBox5.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox5.TabIndex = 8;
-            this.rjTextBox5.Texts = "";
-            this.rjTextBox5.UnderlinedStyle = false;
-            // 
-            // rjTextBox4
-            // 
-            this.rjTextBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox4.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox4.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox4.BorderSize = 2;
-            this.rjTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox4.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rjTextBox4.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox4.Location = new System.Drawing.Point(166, 276);
-            this.rjTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox4.Multiline = false;
-            this.rjTextBox4.Name = "rjTextBox4";
-            this.rjTextBox4.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox4.PasswordChar = false;
-            this.rjTextBox4.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox4.TabIndex = 7;
-            this.rjTextBox4.Texts = "";
-            this.rjTextBox4.UnderlinedStyle = false;
-            // 
-            // rjTextBox3
-            // 
-            this.rjTextBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox3.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox3.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox3.BorderSize = 2;
-            this.rjTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox3.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rjTextBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox3.Location = new System.Drawing.Point(166, 247);
-            this.rjTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox3.Multiline = false;
-            this.rjTextBox3.Name = "rjTextBox3";
-            this.rjTextBox3.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox3.PasswordChar = false;
-            this.rjTextBox3.Size = new System.Drawing.Size(119, 32);
-            this.rjTextBox3.TabIndex = 6;
-            this.rjTextBox3.Texts = "";
-            this.rjTextBox3.UnderlinedStyle = false;
-            // 
-            // rjTextBox2
-            // 
-            this.rjTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox2.BorderColor = System.Drawing.Color.Lavender;
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.rjTextBox2.BorderSize = 2;
-            this.rjTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox2.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rjTextBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox2.Location = new System.Drawing.Point(166, 218);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox2.Multiline = true;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.Size = new System.Drawing.Size(119, 33);
-            this.rjTextBox2.TabIndex = 5;
-            this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderlinedStyle = false;
-            // 
-            // gum_amt
-            // 
-            this.gum_amt.BackColor = System.Drawing.SystemColors.Window;
-            this.gum_amt.BorderColor = System.Drawing.Color.Lavender;
-            this.gum_amt.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.gum_amt.BorderSize = 2;
-            this.gum_amt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gum_amt.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gum_amt.ForeColor = System.Drawing.Color.DimGray;
-            this.gum_amt.Location = new System.Drawing.Point(59, 104);
-            this.gum_amt.Margin = new System.Windows.Forms.Padding(4);
-            this.gum_amt.Multiline = false;
-            this.gum_amt.Name = "gum_amt";
-            this.gum_amt.Padding = new System.Windows.Forms.Padding(7);
-            this.gum_amt.PasswordChar = false;
-            this.gum_amt.Size = new System.Drawing.Size(238, 35);
-            this.gum_amt.TabIndex = 2;
-            this.gum_amt.Texts = "";
-            this.gum_amt.UnderlinedStyle = false;
-            // 
-            // testTitle
-            // 
-            this.testTitle.BackColor = System.Drawing.SystemColors.Window;
-            this.testTitle.BorderColor = System.Drawing.Color.Lavender;
-            this.testTitle.BorderFocusColor = System.Drawing.Color.Thistle;
-            this.testTitle.BorderSize = 2;
-            this.testTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.testTitle.Font = new System.Drawing.Font("나눔고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.testTitle.ForeColor = System.Drawing.Color.DimGray;
-            this.testTitle.ImeMode = System.Windows.Forms.ImeMode.Hangul;
-            this.testTitle.Location = new System.Drawing.Point(59, 63);
-            this.testTitle.Margin = new System.Windows.Forms.Padding(4);
-            this.testTitle.Multiline = false;
-            this.testTitle.Name = "testTitle";
-            this.testTitle.Padding = new System.Windows.Forms.Padding(7);
-            this.testTitle.PasswordChar = false;
-            this.testTitle.Size = new System.Drawing.Size(238, 35);
-            this.testTitle.TabIndex = 1;
-            this.testTitle.Texts = "";
-            this.testTitle.UnderlinedStyle = false;
-            // 
-            // Test_add
-            // 
-            this.Test_add.BackColor = System.Drawing.Color.Thistle;
-            this.Test_add.BackgroundColor = System.Drawing.Color.Thistle;
-            this.Test_add.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.Test_add.BorderRadius = 7;
-            this.Test_add.BorderSize = 0;
-            this.Test_add.FlatAppearance.BorderSize = 0;
-            this.Test_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Test_add.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Test_add.ForeColor = System.Drawing.Color.White;
-            this.Test_add.Location = new System.Drawing.Point(14, 533);
-            this.Test_add.Name = "Test_add";
-            this.Test_add.Size = new System.Drawing.Size(69, 55);
-            this.Test_add.TabIndex = 18;
-            this.Test_add.Text = "시험\r\n등록";
-            this.Test_add.TextColor = System.Drawing.Color.White;
-            this.Test_add.UseVisualStyleBackColor = false;
-            this.Test_add.Click += new System.EventHandler(this.Test_add_Click);
-            // 
-            // Uncheck
-            // 
-            this.Uncheck.BackColor = System.Drawing.Color.LightGray;
-            this.Uncheck.BackgroundColor = System.Drawing.Color.LightGray;
-            this.Uncheck.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.Uncheck.BorderRadius = 7;
-            this.Uncheck.BorderSize = 0;
-            this.Uncheck.FlatAppearance.BorderSize = 0;
-            this.Uncheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Uncheck.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Uncheck.ForeColor = System.Drawing.Color.White;
-            this.Uncheck.Location = new System.Drawing.Point(13, 218);
-            this.Uncheck.Name = "Uncheck";
-            this.Uncheck.Size = new System.Drawing.Size(78, 30);
-            this.Uncheck.TabIndex = 79;
-            this.Uncheck.Text = "전체 해제";
-            this.Uncheck.TextColor = System.Drawing.Color.White;
-            this.Uncheck.UseVisualStyleBackColor = false;
-            this.Uncheck.Click += new System.EventHandler(this.Uncheck_Click);
+            this.RefreshBtn.BackColor = System.Drawing.Color.Transparent;
+            this.RefreshBtn.BackgroundColor = System.Drawing.Color.Transparent;
+            this.RefreshBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.RefreshBtn.BorderRadius = 7;
+            this.RefreshBtn.BorderSize = 0;
+            this.RefreshBtn.FlatAppearance.BorderSize = 0;
+            this.RefreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RefreshBtn.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.RefreshBtn.ForeColor = System.Drawing.Color.White;
+            this.RefreshBtn.Image = global::Calendar.NETDemo.Properties.Resources.dd1;
+            this.RefreshBtn.Location = new System.Drawing.Point(1349, 2);
+            this.RefreshBtn.Name = "RefreshBtn";
+            this.RefreshBtn.Size = new System.Drawing.Size(57, 46);
+            this.RefreshBtn.TabIndex = 79;
+            this.RefreshBtn.TextColor = System.Drawing.Color.White;
+            this.RefreshBtn.UseVisualStyleBackColor = false;
+            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
             // Form1
             // 
@@ -1312,8 +1311,8 @@
             this.ClientSize = new System.Drawing.Size(1532, 916);
             this.Controls.Add(this.TestRb);
             this.Controls.Add(this.GumCheRb);
-            this.Controls.Add(this.RefreshBtn);
             this.Controls.Add(this.rjButton1);
+            this.Controls.Add(this.RefreshBtn);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
@@ -1388,7 +1387,6 @@
         private MyListBox test_days;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private RJButton rjButton1;
         private RJButton RefreshBtn;
         private RashiRadioButton GumCheRb;
         private RashiRadioButton TestRb;
@@ -1410,6 +1408,7 @@
         private RashiRadioButton color13;
         private RashiRadioButton color12;
         private RashiRadioButton color11;
+        private RJButton rjButton1;
     }
 }
 
