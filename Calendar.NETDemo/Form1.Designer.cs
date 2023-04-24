@@ -102,7 +102,7 @@
             this.calendar1 = new Calendar.NET.Calendar();
             this.TestRb = new Calendar.NETDemo.RashiRadioButton();
             this.GumCheRb = new Calendar.NETDemo.RashiRadioButton();
-            this.rjButton1 = new Calendar.NETDemo.RJButton();
+            this.Schedulebtn = new Calendar.NETDemo.RJButton();
             this.RefreshBtn = new Calendar.NETDemo.RJButton();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -1263,25 +1263,25 @@
             this.GumCheRb.UseVisualStyleBackColor = true;
             this.GumCheRb.Click += new System.EventHandler(this.GumCheRb_Click);
             // 
-            // rjButton1
+            // Schedulebtn
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.Transparent;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 7;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Image = global::Calendar.NETDemo.Properties.Resources.people;
-            this.rjButton1.Location = new System.Drawing.Point(1293, 2);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(57, 46);
-            this.rjButton1.TabIndex = 79;
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            this.rjButton1.Click += new System.EventHandler(this.RefreshBtn_Click);
+            this.Schedulebtn.BackColor = System.Drawing.Color.Transparent;
+            this.Schedulebtn.BackgroundColor = System.Drawing.Color.Transparent;
+            this.Schedulebtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.Schedulebtn.BorderRadius = 7;
+            this.Schedulebtn.BorderSize = 0;
+            this.Schedulebtn.FlatAppearance.BorderSize = 0;
+            this.Schedulebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Schedulebtn.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Schedulebtn.ForeColor = System.Drawing.Color.White;
+            this.Schedulebtn.Image = global::Calendar.NETDemo.Properties.Resources.people;
+            this.Schedulebtn.Location = new System.Drawing.Point(1293, 2);
+            this.Schedulebtn.Name = "Schedulebtn";
+            this.Schedulebtn.Size = new System.Drawing.Size(57, 46);
+            this.Schedulebtn.TabIndex = 79;
+            this.Schedulebtn.TextColor = System.Drawing.Color.White;
+            this.Schedulebtn.UseVisualStyleBackColor = false;
+            this.Schedulebtn.Click += new System.EventHandler(this.Schedulebtn_Click);
             // 
             // RefreshBtn
             // 
@@ -1311,7 +1311,7 @@
             this.ClientSize = new System.Drawing.Size(1532, 916);
             this.Controls.Add(this.TestRb);
             this.Controls.Add(this.GumCheRb);
-            this.Controls.Add(this.rjButton1);
+            this.Controls.Add(this.Schedulebtn);
             this.Controls.Add(this.RefreshBtn);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
@@ -1408,7 +1408,7 @@
         private RashiRadioButton color13;
         private RashiRadioButton color12;
         private RashiRadioButton color11;
-        private RJButton rjButton1;
+        private RJButton Schedulebtn;
     }
 }
 

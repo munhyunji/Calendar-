@@ -83,6 +83,12 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CalendarEvent.cs" />
+    <Compile Include="ScheduleEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScheduleEvent.Designer.cs">
+      <DependentUpon>ScheduleEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoadEvents.cs" />
     <Compile Include="CustomEvent.cs" />
     <Compile Include="CustomRecurringFunctionAttribute.cs" />
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScheduleEvent.resx">
+      <DependentUpon>ScheduleEvent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ScrollPanel.resx">
       <DependentUpon>ScrollPanel.cs</DependentUpon>

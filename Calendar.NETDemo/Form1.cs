@@ -534,11 +534,6 @@ namespace Calendar.NETDemo
             }
         }
 
-        private void rjButton1_Click(object sender, EventArgs e)
-        {
-            Application.Restart();
-        }
-
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
             GumCheRb.Checked = false;
@@ -588,6 +583,14 @@ namespace Calendar.NETDemo
 
         }
 
+        private void Schedulebtn_Click(object sender, EventArgs e)
+        {
+            ScheduleEvent dig = new ScheduleEvent();
 
+            if(dig.ShowDialog() == DialogResult.OK )
+            {
+
+            }
+        }
     }
 }
