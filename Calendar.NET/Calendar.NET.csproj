@@ -83,6 +83,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CalendarEvent.cs" />
+    <Compile Include="RashiRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ScheduleEvent.cs">
       <SubType>Form</SubType>
     </Compile>
