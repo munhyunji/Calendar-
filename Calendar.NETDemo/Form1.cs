@@ -585,11 +585,11 @@ namespace Calendar.NETDemo
 
         private void Schedulebtn_Click(object sender, EventArgs e)
         {
-            ScheduleEvent dig = new ScheduleEvent();
+            ScheduleEvent SchEvnt = new ScheduleEvent();
 
-            if(dig.ShowDialog() == DialogResult.OK )
+            if(SchEvnt.ShowDialog() == DialogResult.OK )
             {
-
+                calendar1.AddEvent(SchEvnt.NewEvent);
             }
         }
     }

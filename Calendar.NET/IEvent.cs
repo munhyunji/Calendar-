@@ -44,10 +44,14 @@ namespace Calendar.NET
         /// Indicates that the event will occur every weekend on Saturday and Sunday
         /// </summary>
         EveryWeekend = 8,
+        ///
+        /// 
+        EverySun = 9,
         /// <summary>
         /// Indicates that the recuring schedule of this event is unique
         /// </summary>
         Custom = 99
+
     }
 
     /// <summary>

@@ -107,7 +107,7 @@ namespace Calendar.NET
                         Calendar cal = new Calendar();
                         cal.AddEvent(Add_custom);
 
-                        Refresh();
+                        cal.Refresh();
 
                     }
                     catch (Exception ex)

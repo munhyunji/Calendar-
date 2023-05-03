@@ -32,8 +32,8 @@ namespace Calendar.NET
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.EndCalendar = new System.Windows.Forms.MonthCalendar();
+            this.StartCalendar = new System.Windows.Forms.MonthCalendar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -43,15 +43,12 @@ namespace Calendar.NET
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.OkBtn = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.rashiRadioButton1 = new Calendar.NETDemo.RashiRadioButton();
-            this.rashiRadioButton2 = new Calendar.NETDemo.RashiRadioButton();
-            this.rashiRadioButton3 = new Calendar.NETDemo.RashiRadioButton();
-            this.rashiRadioButton4 = new Calendar.NETDemo.RashiRadioButton();
-            this.rashiRadioButton5 = new Calendar.NETDemo.RashiRadioButton();
+            this.ColorSelectBtn = new System.Windows.Forms.Button();
+            this.colorPanel = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -61,8 +58,8 @@ namespace Calendar.NET
             // 
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.monthCalendar2);
-            this.groupBox2.Controls.Add(this.monthCalendar1);
+            this.groupBox2.Controls.Add(this.EndCalendar);
+            this.groupBox2.Controls.Add(this.StartCalendar);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(550, 260);
@@ -88,17 +85,17 @@ namespace Calendar.NET
             this.label5.TabIndex = 2;
             this.label5.Text = "시작날짜";
             // 
-            // monthCalendar2
+            // EndCalendar
             // 
-            this.monthCalendar2.Location = new System.Drawing.Point(290, 44);
-            this.monthCalendar2.Name = "monthCalendar2";
-            this.monthCalendar2.TabIndex = 1;
+            this.EndCalendar.Location = new System.Drawing.Point(290, 44);
+            this.EndCalendar.Name = "EndCalendar";
+            this.EndCalendar.TabIndex = 1;
             // 
-            // monthCalendar1
+            // StartCalendar
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(12, 44);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 0;
+            this.StartCalendar.Location = new System.Drawing.Point(12, 44);
+            this.StartCalendar.Name = "StartCalendar";
+            this.StartCalendar.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -121,7 +118,6 @@ namespace Calendar.NET
             // 
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
-            "시험자를 선택하세요.",
             "희해",
             "아라",
             "서영",
@@ -135,7 +131,6 @@ namespace Calendar.NET
             // 
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
-            "시험자를 선택하세요.",
             "희해",
             "아라",
             "서영",
@@ -149,7 +144,6 @@ namespace Calendar.NET
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "시험자를 선택하세요.",
             "희해",
             "아라",
             "서영",
@@ -163,7 +157,6 @@ namespace Calendar.NET
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "시험자를 선택하세요.",
             "희해",
             "아라",
             "서영",
@@ -209,31 +202,20 @@ namespace Calendar.NET
             this.label1.TabIndex = 0;
             this.label1.Text = "1.";
             // 
-            // button1
+            // OkBtn
             // 
-            this.button1.Location = new System.Drawing.Point(122, 500);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 31);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "취소";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(346, 500);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 31);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "확인";
-            this.button2.UseVisualStyleBackColor = true;
+            this.OkBtn.Location = new System.Drawing.Point(229, 504);
+            this.OkBtn.Name = "OkBtn";
+            this.OkBtn.Size = new System.Drawing.Size(108, 31);
+            this.OkBtn.TabIndex = 12;
+            this.OkBtn.Text = "확인";
+            this.OkBtn.UseVisualStyleBackColor = true;
+            this.OkBtn.Click += new System.EventHandler(this.OkBtn_Click);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.rashiRadioButton5);
-            this.groupBox3.Controls.Add(this.rashiRadioButton4);
-            this.groupBox3.Controls.Add(this.rashiRadioButton3);
-            this.groupBox3.Controls.Add(this.rashiRadioButton2);
-            this.groupBox3.Controls.Add(this.rashiRadioButton1);
+            this.groupBox3.Controls.Add(this.ColorSelectBtn);
+            this.groupBox3.Controls.Add(this.colorPanel);
             this.groupBox3.Location = new System.Drawing.Point(302, 290);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(260, 167);
@@ -241,80 +223,28 @@ namespace Calendar.NET
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "색상";
             // 
-            // rashiRadioButton1
+            // ColorSelectBtn
             // 
-            this.rashiRadioButton1.AutoSize = true;
-            this.rashiRadioButton1.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.rashiRadioButton1.Location = new System.Drawing.Point(30, 54);
-            this.rashiRadioButton1.MinimumSize = new System.Drawing.Size(0, 20);
-            this.rashiRadioButton1.Name = "rashiRadioButton1";
-            this.rashiRadioButton1.Size = new System.Drawing.Size(157, 20);
-            this.rashiRadioButton1.TabIndex = 0;
-            this.rashiRadioButton1.TabStop = true;
-            this.rashiRadioButton1.Text = "rashiRadioButton1";
-            this.rashiRadioButton1.UnCheckColor = System.Drawing.Color.Gray;
-            this.rashiRadioButton1.UseVisualStyleBackColor = true;
+            this.ColorSelectBtn.Location = new System.Drawing.Point(157, 78);
+            this.ColorSelectBtn.Name = "ColorSelectBtn";
+            this.ColorSelectBtn.Size = new System.Drawing.Size(75, 23);
+            this.ColorSelectBtn.TabIndex = 1;
+            this.ColorSelectBtn.Text = "색 선택";
+            this.ColorSelectBtn.UseVisualStyleBackColor = true;
+            this.ColorSelectBtn.Click += new System.EventHandler(this.colorSelectBtn_Click);
             // 
-            // rashiRadioButton2
+            // colorPanel
             // 
-            this.rashiRadioButton2.AutoSize = true;
-            this.rashiRadioButton2.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.rashiRadioButton2.Location = new System.Drawing.Point(30, 80);
-            this.rashiRadioButton2.MinimumSize = new System.Drawing.Size(0, 20);
-            this.rashiRadioButton2.Name = "rashiRadioButton2";
-            this.rashiRadioButton2.Size = new System.Drawing.Size(157, 20);
-            this.rashiRadioButton2.TabIndex = 1;
-            this.rashiRadioButton2.TabStop = true;
-            this.rashiRadioButton2.Text = "rashiRadioButton2";
-            this.rashiRadioButton2.UnCheckColor = System.Drawing.Color.Gray;
-            this.rashiRadioButton2.UseVisualStyleBackColor = true;
-            // 
-            // rashiRadioButton3
-            // 
-            this.rashiRadioButton3.AutoSize = true;
-            this.rashiRadioButton3.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.rashiRadioButton3.Location = new System.Drawing.Point(30, 106);
-            this.rashiRadioButton3.MinimumSize = new System.Drawing.Size(0, 20);
-            this.rashiRadioButton3.Name = "rashiRadioButton3";
-            this.rashiRadioButton3.Size = new System.Drawing.Size(157, 20);
-            this.rashiRadioButton3.TabIndex = 2;
-            this.rashiRadioButton3.TabStop = true;
-            this.rashiRadioButton3.Text = "rashiRadioButton3";
-            this.rashiRadioButton3.UnCheckColor = System.Drawing.Color.Gray;
-            this.rashiRadioButton3.UseVisualStyleBackColor = true;
-            // 
-            // rashiRadioButton4
-            // 
-            this.rashiRadioButton4.AutoSize = true;
-            this.rashiRadioButton4.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.rashiRadioButton4.Location = new System.Drawing.Point(30, 132);
-            this.rashiRadioButton4.MinimumSize = new System.Drawing.Size(0, 20);
-            this.rashiRadioButton4.Name = "rashiRadioButton4";
-            this.rashiRadioButton4.Size = new System.Drawing.Size(157, 20);
-            this.rashiRadioButton4.TabIndex = 3;
-            this.rashiRadioButton4.TabStop = true;
-            this.rashiRadioButton4.Text = "rashiRadioButton4";
-            this.rashiRadioButton4.UnCheckColor = System.Drawing.Color.Gray;
-            this.rashiRadioButton4.UseVisualStyleBackColor = true;
-            // 
-            // rashiRadioButton5
-            // 
-            this.rashiRadioButton5.AutoSize = true;
-            this.rashiRadioButton5.CheckColor = System.Drawing.Color.LightSeaGreen;
-            this.rashiRadioButton5.Location = new System.Drawing.Point(30, 28);
-            this.rashiRadioButton5.MinimumSize = new System.Drawing.Size(0, 20);
-            this.rashiRadioButton5.Name = "rashiRadioButton5";
-            this.rashiRadioButton5.Size = new System.Drawing.Size(157, 20);
-            this.rashiRadioButton5.TabIndex = 4;
-            this.rashiRadioButton5.TabStop = true;
-            this.rashiRadioButton5.Text = "rashiRadioButton5";
-            this.rashiRadioButton5.UnCheckColor = System.Drawing.Color.Gray;
-            this.rashiRadioButton5.UseVisualStyleBackColor = true;
+            this.colorPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.colorPanel.Location = new System.Drawing.Point(33, 63);
+            this.colorPanel.Name = "colorPanel";
+            this.colorPanel.Size = new System.Drawing.Size(118, 58);
+            this.colorPanel.TabIndex = 0;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(21, 460);
+            this.label7.Location = new System.Drawing.Point(157, 474);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(249, 15);
             this.label7.TabIndex = 4;
@@ -327,8 +257,7 @@ namespace Calendar.NET
             this.ClientSize = new System.Drawing.Size(574, 560);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.OkBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Name = "ScheduleEvent";
@@ -341,7 +270,6 @@ namespace Calendar.NET
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,18 +286,16 @@ namespace Calendar.NET
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button OkBtn;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MonthCalendar monthCalendar2;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.MonthCalendar EndCalendar;
+        private System.Windows.Forms.MonthCalendar StartCalendar;
         private System.Windows.Forms.GroupBox groupBox3;
-        private Calendar.NETDemo.RashiRadioButton rashiRadioButton5;
-        private Calendar.NETDemo.RashiRadioButton rashiRadioButton4;
-        private Calendar.NETDemo.RashiRadioButton rashiRadioButton3;
-        private Calendar.NETDemo.RashiRadioButton rashiRadioButton2;
-        private Calendar.NETDemo.RashiRadioButton rashiRadioButton1;
+
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button ColorSelectBtn;
+        private System.Windows.Forms.Panel colorPanel;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
